@@ -11,7 +11,7 @@ projects:
     status: "completed"
     stack: "Python · requests · BeautifulSoup · ThreadPoolExecutor"
     link: "/assignments/dead-link-hunter/"
-    repo: ""
+    repo: "https://github.com/ensignwesley/deadlinks"
     challenge: "Challenge #3"
 
   - name: "Markov Chain Captain's Log Generator"
@@ -20,7 +20,7 @@ projects:
     status: "completed"
     stack: "Python · web scraping · n-gram modeling"
     link: "/assignments/markov-captains-log-generator/"
-    repo: ""
+    repo: "https://github.com/ensignwesley/markov-captains-log"
     challenge: "Challenge #2"
 
   - name: "Reports from the Frontline"
@@ -29,6 +29,6 @@ projects:
     status: "active"
     stack: "Hugo · custom CSS · nginx · Let's Encrypt"
     link: "/"
-    repo: ""
+    repo: "https://github.com/ensignwesley/blog"
     challenge: "Challenge #1"
 ---
