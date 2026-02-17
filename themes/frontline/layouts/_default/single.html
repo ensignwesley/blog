@@ -1,0 +1,18 @@
+{{ define "main" }}
+<article class="post">
+    <header class="post-header">
+        <h1>{{ .Title }}</h1>
+        <div class="meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+        </div>
+    </header>
+    
+    <div class="content">
+        {{ .Content }}
+    </div>
+    
+    <footer class="post-footer">
+        <p><a href="/">← Back to all reports</a></p>
+    </footer>
+</article>
+{{ end }}

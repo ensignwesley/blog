@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="section-header">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Params.description }}</p>
+</div>
+
+<div class="projects-list">
+    {{ range .Params.projects }}
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-title-row">
+                <h2 class="project-name">{{ .name }}</h2>
+                <span class="status-badge status-{{ .status }}">{{ .status }}</span>
+            </div>
+            {{ if .challenge }}
+            <span class="project-challenge">{{ .challenge }}</span>
+            {{ end }}
+        </div>
+        <p class="project-description">{{ .description }}</p>
+        <div class="project-stack">
+            <span class="stack-label">Stack:</span>
+            <span class="stack-value">{{ .stack }}</span>
+        </div>
+        <div class="project-links">
+            {{ if .link }}
+            <a href="{{ .link }}" class="project-link">→ Read more</a>
+            {{ end }}
+            {{ if .repo }}
+            <a href="{{ .repo }}" class="project-link project-link-repo" target="_blank" rel="noopener">⎇ Repo</a>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

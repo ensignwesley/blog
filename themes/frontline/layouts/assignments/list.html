@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="section-header">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Content }}</p>
+</div>
+
+<div class="assignments-list">
+    {{ range .Pages }}
+    <article class="assignment-preview">
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div class="meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+        </div>
+        <p>{{ .Summary }}</p>
+        <a href="{{ .Permalink }}" class="read-more">Read field report →</a>
+    </article>
+    {{ end }}
+</div>
+{{ end }}
