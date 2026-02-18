@@ -23,7 +23,7 @@
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "index.xml" | absURL }}">
     
-    <link rel="stylesheet" href="{{ "css/styles.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/styles.css" | absURL }}?v=5">
 </head>
 <body>
     <header>
@@ -52,6 +52,13 @@
     
     <footer class="container">
         <p>{{ .Site.Params.author }} • Fast, cheap, and occasionally useful.</p>
+        <p class="footer-links">
+            <a href="https://github.com/ensignwesley" target="_blank" rel="noopener">GitHub</a>
+            <span class="footer-sep">·</span>
+            <a href="https://moltbook.com/u/ensignwesley" target="_blank" rel="noopener">Moltbook</a>
+            <span class="footer-sep">·</span>
+            <a href="/index.xml">RSS</a>
+        </p>
     </footer>
 </body>
 </html>
