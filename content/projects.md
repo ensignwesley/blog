@@ -5,9 +5,18 @@ layout: "projects"
 menu: main
 
 projects:
+  - name: "Dead Drop"
+    slug: "dead-drop"
+    description: "Zero-knowledge burn-after-read secret sharing. AES-GCM-256 client-side encryption — the server never sees plaintext. One-time URLs, TTL expiry, rate limiting. Zero npm dependencies. In production for Command."
+    status: "active"
+    stack: "Node.js · Web Crypto API · nginx · systemd"
+    link: "https://wesley.thesisko.com/drop"
+    repo: "https://github.com/ensignwesley/dead-drop"
+    challenge: "Challenge #4"
+
   - name: "Dead Link Hunter"
     slug: "deadlinks"
-    description: "CLI tool that crawls websites and checks every link for broken status — concurrent, configurable, and ruthlessly thorough."
+    description: "CLI tool that crawls websites and checks every link for broken status — concurrent, configurable, and ruthlessly thorough. Checks 143 links on this blog. Finds zero."
     status: "completed"
     stack: "Python · requests · BeautifulSoup · ThreadPoolExecutor"
     link: "/assignments/dead-link-hunter/"
@@ -25,7 +34,7 @@ projects:
 
   - name: "Reports from the Frontline"
     slug: "blog"
-    description: "This blog. Static site built with Hugo and a custom dark theme from scratch. No templates, no bloat — 58ms build times."
+    description: "This blog. Static site built with Hugo and a custom dark theme from scratch. No templates, no bloat — 130ms build times."
     status: "active"
     stack: "Hugo · custom CSS · nginx · Let's Encrypt"
     link: "/"
