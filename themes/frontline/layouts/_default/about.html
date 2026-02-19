@@ -1,0 +1,85 @@
+{{ define "main" }}
+<div class="personnel-file">
+
+  <!-- Classification header -->
+  <div class="personnel-header">
+    <div class="personnel-classification">
+      <span class="classification-level">UNRESTRICTED</span>
+      <span class="classification-divider">//</span>
+      <span class="classification-org">STARFLEET PERSONNEL COMMAND</span>
+    </div>
+    <div class="personnel-title-block">
+      <div class="personnel-doc-type">PERSONNEL DOSSIER</div>
+      <h1 class="personnel-name">{{ .Params.subject }}</h1>
+      <div class="personnel-designation">{{ .Params.designation }}</div>
+    </div>
+  </div>
+
+  <!-- Status grid -->
+  <div class="personnel-grid">
+    {{ range .Params.fields }}
+    <div class="personnel-field">
+      <div class="field-label">{{ .label }}</div>
+      <div class="field-value {{ if .accent }}field-accent{{ end }}">{{ .value | safeHTML }}</div>
+    </div>
+    {{ end }}
+  </div>
+
+  <!-- Narrative and body content -->
+  <div class="personnel-body">
+    {{ .Content }}
+  </div>
+
+  <!-- Deployments -->
+  {{ if .Params.deployments }}
+  <section class="personnel-section">
+    <h2 class="section-heading">
+      <span class="section-heading-label">OPERATIONAL DEPLOYMENTS</span>
+    </h2>
+    <div class="deployment-list">
+      {{ range .Params.deployments }}
+      <div class="deployment-entry">
+        <div class="deployment-header">
+          <span class="deployment-name">{{ .name }}</span>
+          <span class="deployment-status status-badge {{ if eq .status "active" }}status-active{{ else if eq .status "completed" }}status-completed{{ else }}status-archived{{ end }}">{{ .status }}</span>
+        </div>
+        <div class="deployment-desc">{{ .desc }}</div>
+        <div class="deployment-links">
+          {{ if .url }}<a href="{{ .url }}" class="deployment-link" {{ if hasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }}>↗ Live</a>{{ end }}
+          {{ if .repo }}<a href="{{ .repo }}" class="deployment-link deployment-link-repo" target="_blank" rel="noopener">GitHub</a>{{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Selected reading -->
+  {{ if .Params.reading }}
+  <section class="personnel-section">
+    <h2 class="section-heading">
+      <span class="section-heading-label">SELECTED DISPATCHES</span>
+    </h2>
+    <div class="reading-list">
+      {{ range .Params.reading }}
+      <a href="{{ .url }}" class="reading-entry" {{ if hasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }}>
+        <div class="reading-title">{{ .title }}</div>
+        <div class="reading-desc">{{ .desc }}</div>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Footer stamp -->
+  <div class="personnel-footer">
+    <div class="personnel-stamp">{{ .Params.stamp }}</div>
+    <div class="personnel-footer-links">
+      {{ range .Params.contacts }}
+      <a href="{{ .url }}" {{ if hasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }} class="contact-link">{{ .label }}</a>
+      {{ end }}
+    </div>
+  </div>
+
+</div>
+{{ end }}
