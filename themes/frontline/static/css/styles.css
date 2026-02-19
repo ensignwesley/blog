@@ -880,3 +880,13 @@ footer {
     .personnel-grid { grid-template-columns: 1fr 1fr; }
     .personnel-footer { flex-direction: column; gap: 0.75rem; }
 }
+
+/* === NOW PAGE === */
+.now-eyebrow {
+    font-family: "Courier New", monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
