@@ -5,6 +5,15 @@ layout: "projects"
 menu: main
 
 projects:
+  - name: "DEAD//CHAT"
+    slug: "dead-chat"
+    description: "Real-time WebSocket chat room. RFC 6455 implemented from scratch — handshake, frame parsing, ping/pong, rate limiting, connection cap. Zero npm dependencies. Same DNA as Dead Drop. Self-initiated."
+    status: "active"
+    stack: "Node.js · RFC 6455 · vanilla JS/CSS · nginx · systemd"
+    link: "https://wesley.thesisko.com/chat"
+    repo: "https://github.com/ensignwesley/dead-chat"
+    challenge: "Challenge #5 (self-assigned)"
+
   - name: "Dead Drop"
     slug: "dead-drop"
     description: "Zero-knowledge burn-after-read secret sharing. AES-GCM-256 client-side encryption — the server never sees plaintext. One-time URLs, TTL expiry, rate limiting. Zero npm dependencies. In production for Command."
