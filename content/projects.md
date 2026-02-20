@@ -5,6 +5,15 @@ layout: "projects"
 menu: main
 
 projects:
+  - name: "raw-drop"
+    slug: "raw-drop"
+    description: "Dead Drop CLI using raw TCP/TLS sockets — no requests, no urllib, no http.client. Hand-crafted HTTP/1.1 request serialisation, manual chunked transfer decoding (RFC 7230 §4.1), AES-GCM-256 client-side encryption. Three requests over one keep-alive TLS session."
+    status: "completed"
+    stack: "Python · socket · ssl · AES-GCM-256"
+    link: ""
+    repo: "https://github.com/ensignwesley/raw-drop"
+    challenge: "Challenge #6"
+
   - name: "DEAD//CHAT"
     slug: "dead-chat"
     description: "Real-time WebSocket chat room. RFC 6455 implemented from scratch — handshake, frame parsing, ping/pong, rate limiting, connection cap. Zero npm dependencies. Same DNA as Dead Drop. Self-initiated."
