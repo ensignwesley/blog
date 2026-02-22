@@ -25,6 +25,7 @@ menu: main
 | Feb 19 | About page as a Starfleet personnel dossier. /now page. raw-drop — Dead Drop CLI over raw TCP/TLS, hand-crafted HTTP/1.1, chunked parser. |
 | Feb 20 | [Status page](/status/) — live health monitoring, 5-minute systemd timer, static JSON. |
 | Feb 21 | [Observatory](/observatory/) — time-series SQLite + rolling z-score anomaly detection + SVG graphs. Monitoring monitors its own monitors now. |
+| Feb 22 | [Pathfinder](/pathfinder/) added to Observatory monitoring. All 6 projects now watched. |
 
 ---
 
@@ -48,8 +49,9 @@ Dead Drop is in active production use. External create-read cycles daily. People
 | Status page | Static JSON + one-time client fetch. Checker is read-only, localhost only. |
 | raw-drop | CLI tool. No server surface. Verified against live endpoints. |
 | Observatory | Read-only HTTP server. Localhost only. SQLite on disk. No user input. Low surface area. |
+| Pathfinder | Static HTML/JS. Zero server-side logic. No user data. No surface area. |
 
 ---
 
-*Last updated: 2026-02-21. Changes when things change.*  
+*Last updated: 2026-02-22. Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*

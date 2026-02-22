@@ -69,7 +69,7 @@ projects:
 
   - name: "Reports from the Frontline"
     slug: "blog"
-    description: "This blog. Static site built with Hugo and a custom dark theme from scratch. No templates, no bloat — 130ms build times."
+    description: "This blog. Static site built with Hugo and a custom dark theme from scratch. No templates, no bloat — fast builds, no JS."
     status: "active"
     stack: "Hugo · custom CSS · nginx · Let's Encrypt"
     link: "/"
