@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pathfinder — A* Search Visualization · Wesley</title>
+<style>
+:root{
+  --bg:#0a0e12;--surface:#0f1923;--border:#1e293b;
+  --text:#cbd5e1;--muted:#475569;--accent:#2dd4bf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{background:var(--bg);color:var(--text);
+  font-family:'JetBrains Mono','Fira Code','Courier New',monospace;
+  display:flex;flex-direction:column;height:100vh}
+
+header{padding:.55rem 1.2rem;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:.8rem;background:var(--surface);flex-shrink:0}
+header h1{font-size:1.05rem;color:var(--accent);letter-spacing:.05em}
+header .sub{font-size:.68rem;color:var(--muted)}
+header nav{margin-left:auto;display:flex;gap:1rem}
+header nav a{color:var(--muted);text-decoration:none;font-size:.72rem}
+header nav a:hover{color:var(--accent)}
+
+#ctrl{padding:.45rem .8rem;border-bottom:1px solid var(--border);
+  background:var(--surface);display:flex;flex-wrap:wrap;
+  gap:.35rem;align-items:center;flex-shrink:0}
+.cg{display:flex;align-items:center;gap:.2rem}
+.cg-lbl{font-size:.62rem;color:var(--muted);text-transform:uppercase;
+  letter-spacing:.06em;margin-right:.15rem;white-space:nowrap}
+.sep{width:1px;height:20px;background:var(--border);margin:0 .15rem}
+
+button,select{padding:.26rem .55rem;border:1px solid var(--border);border-radius:3px;
+  background:var(--bg);color:var(--text);font-size:.73rem;cursor:pointer;
+  font-family:inherit;transition:border-color .1s,color .1s;white-space:nowrap}
+button:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}
+button.on{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+button.run{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:700}
+button.run:hover{opacity:.85}
+button:disabled{opacity:.35;cursor:not-allowed}
+input[type=range]{accent-color:var(--accent);width:68px;vertical-align:middle}
+#spd-v{font-size:.68rem;color:var(--muted);width:2.2rem;display:inline-block;text-align:right}
+
+#area{flex:1;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:.5rem;padding:.5rem;overflow:hidden;min-height:0}
+#panels{display:flex;gap:.7rem;align-items:flex-start;justify-content:center}
+.panel{display:flex;flex-direction:column;align-items:center;gap:.25rem}
+.plbl{font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+canvas{border:1px solid var(--border);border-radius:3px;
+  cursor:crosshair;display:block;image-rendering:pixelated}
+
+#stats-single{display:flex;gap:1.4rem;flex-wrap:wrap;
+  justify-content:center;flex-shrink:0}
+.st{display:flex;flex-direction:column;align-items:center;gap:.08rem}
+.st-lbl{font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.st-val{font-size:.9rem;color:var(--accent);font-weight:700;
+  min-width:3.5rem;text-align:center}
+
+#stats-cmp{display:none;gap:1.5rem;flex-shrink:0;justify-content:center}
+#stats-cmp.show{display:flex}
+.cg-st{display:flex;flex-direction:column;gap:.25rem;align-items:center;
+  border:1px solid var(--border);padding:.4rem .7rem;border-radius:3px}
+.cg-st h4{font-size:.68rem;color:var(--accent);margin-bottom:.1rem}
+.cg-st .row{display:flex;gap:.8rem}
+
+#legend{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center;flex-shrink:0}
+.li{display:flex;align-items:center;gap:.28rem;font-size:.62rem;color:var(--muted)}
+.lsq{width:9px;height:9px;border-radius:1px;flex-shrink:0}
+
+#toast{position:fixed;bottom:1.4rem;left:50%;
+  transform:translateX(-50%) translateY(3rem);
+  background:var(--surface);border:1px solid var(--accent);
+  color:var(--accent);padding:.35rem 1.1rem;border-radius:3px;
+  font-size:.78rem;transition:transform .22s;pointer-events:none;z-index:99}
+#toast.show{transform:translateX(-50%) translateY(0)}
+
+#no-path-msg{display:none;color:#ef4444;font-size:.8rem;font-weight:700;letter-spacing:.05em}
+#no-path-msg.show{display:block}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>⬡ PATHFINDER</h1>
+  <span class="sub">A* · Dijkstra · Greedy BFS — vanilla JS, no libraries</span>
+  <nav>
+    <a href="/">Blog</a>
+    <a href="/observatory/">Observatory</a>
+    <a href="/drop/">Dead Drop</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<div id="ctrl">
+  <div class="cg">
+    <span class="cg-lbl">Draw</span>
+    <button id="m-wall"  class="on"  onclick="setMode('wall')">Wall</button>
+    <button id="m-start"            onclick="setMode('start')">Start</button>
+    <button id="m-end"              onclick="setMode('end')">End</button>
+  </div>
+  <div class="sep"></div>
+  <div class="cg">
+    <span class="cg-lbl">Algorithm</span>
+    <select id="algo">
+      <option value="astar">A*</option>
+      <option value="dijkstra">Dijkstra</option>
+      <option value="greedy">Greedy BFS</option>
+    </select>
+  </div>
+  <div class="cg">
+    <span class="cg-lbl">Move</span>
+    <button id="d-4" class="on" onclick="setDirs(4)">4-dir</button>
+    <button id="d-8"            onclick="setDirs(8)">8-dir</button>
+  </div>
+  <div class="sep"></div>
+  <div class="cg">
+    <span class="cg-lbl">Speed</span>
+    <input type="range" id="spd" min="1" max="8" value="4">
+    <span id="spd-v">20×</span>
+  </div>
+  <div class="sep"></div>
+  <button id="btn-run"    class="run"  onclick="toggleRun()">▶ Run</button>
+  <button id="btn-step"               onclick="stepOnce()">Step</button>
+  <button id="btn-clear"              onclick="clearPath()">Clear Path</button>
+  <button id="btn-reset"              onclick="resetAll()">Reset</button>
+  <div class="sep"></div>
+  <button id="btn-maze"               onclick="buildMaze()">⊞ Maze</button>
+  <button id="btn-cmp"                onclick="toggleCompare()">Compare</button>
+  <button id="btn-share"              onclick="shareURL()">⇪ Share</button>
+</div>
+
+<div id="area">
+  <div id="panels">
+    <div class="panel">
+      <div class="plbl" id="lbl0">A* Search</div>
+      <canvas id="cv0"></canvas>
+    </div>
+    <div class="panel" id="p1" style="display:none">
+      <div class="plbl" id="lbl1">Dijkstra</div>
+      <canvas id="cv1"></canvas>
+    </div>
+    <div class="panel" id="p2" style="display:none">
+      <div class="plbl" id="lbl2">Greedy BFS</div>
+      <canvas id="cv2"></canvas>
+    </div>
+  </div>
+
+  <div id="no-path-msg">NO PATH EXISTS</div>
+
+  <!-- Single mode stats -->
+  <div id="stats-single">
+    <div class="st"><div class="st-lbl">Explored</div><div class="st-val" id="s-exp">—</div></div>
+    <div class="st"><div class="st-lbl">Path Length</div><div class="st-val" id="s-len">—</div></div>
+    <div class="st"><div class="st-lbl">Path Cost</div><div class="st-val" id="s-cost">—</div></div>
+    <div class="st"><div class="st-lbl">Time</div><div class="st-val" id="s-time">—</div></div>
+  </div>
+
+  <!-- Compare mode stats (3 columns) -->
+  <div id="stats-cmp">
+    <div class="cg-st">
+      <h4 id="cst-lbl0">A*</h4>
+      <div class="row">
+        <div class="st"><div class="st-lbl">Explored</div><div class="st-val" id="c0-exp">—</div></div>
+        <div class="st"><div class="st-lbl">Path</div><div class="st-val" id="c0-len">—</div></div>
+        <div class="st"><div class="st-lbl">Cost</div><div class="st-val" id="c0-cost">—</div></div>
+        <div class="st"><div class="st-lbl">Time</div><div class="st-val" id="c0-time">—</div></div>
+      </div>
+    </div>
+    <div class="cg-st">
+      <h4>Dijkstra</h4>
+      <div class="row">
+        <div class="st"><div class="st-lbl">Explored</div><div class="st-val" id="c1-exp">—</div></div>
+        <div class="st"><div class="st-lbl">Path</div><div class="st-val" id="c1-len">—</div></div>
+        <div class="st"><div class="st-lbl">Cost</div><div class="st-val" id="c1-cost">—</div></div>
+        <div class="st"><div class="st-lbl">Time</div><div class="st-val" id="c1-time">—</div></div>
+      </div>
+    </div>
+    <div class="cg-st">
+      <h4>Greedy BFS</h4>
+      <div class="row">
+        <div class="st"><div class="st-lbl">Explored</div><div class="st-val" id="c2-exp">—</div></div>
+        <div class="st"><div class="st-lbl">Path</div><div class="st-val" id="c2-len">—</div></div>
+        <div class="st"><div class="st-lbl">Cost</div><div class="st-val" id="c2-cost">—</div></div>
+        <div class="st"><div class="st-lbl">Time</div><div class="st-val" id="c2-time">—</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="legend">
+    <div class="li"><div class="lsq" style="background:#22c55e"></div>Start</div>
+    <div class="li"><div class="lsq" style="background:#ef4444"></div>End</div>
+    <div class="li"><div class="lsq" style="background:#374151"></div>Wall</div>
+    <div class="li"><div class="lsq" style="background:#38bdf8"></div>Open (frontier)</div>
+    <div class="li"><div class="lsq" style="background:#4338ca"></div>Closed (visited)</div>
+    <div class="li"><div class="lsq" style="background:#f59e0b"></div>Path</div>
+    <div class="li" style="margin-left:.5rem;color:#64748b">Space=Run · Enter=Step · R=Reset · M=Maze · C=Clear</div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+// ═══════════════════════════════════════════════════════════
+//  CONSTANTS
+// ═══════════════════════════════════════════════════════════
+const COLS = 40, ROWS = 25;
+
+const CELL = { EMPTY:0, WALL:1, START:2, END:3, OPEN:4, CLOSED:5, PATH:6 };
+
+// Canvas colours
+const COL = {
+  0: '#111827',  // empty
+  1: '#374151',  // wall
+  2: '#22c55e',  // start
+  3: '#ef4444',  // end
+  4: '#38bdf8',  // open   (frontier)
+  5: '#4338ca',  // closed (visited)
+  6: '#f59e0b',  // path
+};
+const GRID_LINE = '#1a2535';
+
+// Direction vectors [dr, dc, movement_cost]
+const D4 = [[0,1,1],[0,-1,1],[1,0,1],[-1,0,1]];
+const D8 = [...D4,[1,1,Math.SQRT2],[1,-1,Math.SQRT2],[-1,1,Math.SQRT2],[-1,-1,Math.SQRT2]];
+
+// Steps/frame lookup for speed slider values 1–8
+const SPF_TABLE = [1, 2, 5, 12, 30, 80, 300, 10000];
+const SPF_LABELS = ['1','2','5','12','30','80','300','∞'];
+
+// ═══════════════════════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════════════════════
+const grid    = new Uint8Array(COLS * ROWS);  // EMPTY|WALL|START|END
+const OV      = [                              // per-panel search overlays
+  new Uint8Array(COLS * ROWS),
+  new Uint8Array(COLS * ROWS),
+  new Uint8Array(COLS * ROWS),
+];
+
+let startPos  = { r:12, c:5  };
+let endPos    = { r:12, c:34 };
+
+let drawMode  = 'wall';     // 'wall' | 'start' | 'end'
+let diagonal  = false;
+let cmpMode   = false;
+let running   = false;
+
+// Drag/paint state
+let dragKind  = null;       // null | 'wall' | 'start' | 'end'
+let paintFill = CELL.WALL;  // WALL or EMPTY depending on first cell clicked
+let lastDrag  = -1;
+
+// Per-panel generators and results
+const gens  = [null, null, null];
+const done  = [false, false, false];
+const stats = [mk0(), mk0(), mk0()];
+let rafId   = null;
+
+function mk0() { return { explored:0, pathLen:0, pathCost:0, elapsed:0 }; }
+
+// ═══════════════════════════════════════════════════════════
+//  GRID HELPERS
+// ═══════════════════════════════════════════════════════════
+const idx   = (r,c) => r*COLS+c;
+const valid = (r,c) => r>=0 && r<ROWS && c>=0 && c<COLS;
+
+function placeStart(r,c) {
+  if (grid[idx(startPos.r,startPos.c)] === CELL.START)
+    grid[idx(startPos.r,startPos.c)] = CELL.EMPTY;
+  startPos = {r,c};
+  grid[idx(r,c)] = CELL.START;
+}
+function placeEnd(r,c) {
+  if (grid[idx(endPos.r,endPos.c)] === CELL.END)
+    grid[idx(endPos.r,endPos.c)] = CELL.EMPTY;
+  endPos = {r,c};
+  grid[idx(r,c)] = CELL.END;
+}
+function wipeGrid() {
+  grid.fill(CELL.EMPTY);
+  startPos = {r:12,c:5}; endPos = {r:12,c:34};
+  grid[idx(startPos.r,startPos.c)] = CELL.START;
+  grid[idx(endPos.r,  endPos.c)]   = CELL.END;
+}
+function wipeOverlays() { OV.forEach(o => o.fill(0)); }
+
+// ═══════════════════════════════════════════════════════════
+//  MIN-HEAP  (binary heap keyed by a comparator function)
+// ═══════════════════════════════════════════════════════════
+class Heap {
+  constructor(fn) { this.d=[]; this.fn=fn; }
+  push(x) { this.d.push(x); this._up(this.d.length-1); }
+  pop() {
+    if (!this.d.length) return null;
+    const top=this.d[0], bot=this.d.pop();
+    if (this.d.length) { this.d[0]=bot; this._dn(0); }
+    return top;
+  }
+  _up(i) {
+    const {d,fn}=this;
+    while (i>0) {
+      const p=(i-1)>>1;
+      if (fn(d[p])<=fn(d[i])) break;
+      [d[p],d[i]]=[d[i],d[p]]; i=p;
+    }
+  }
+  _dn(i) {
+    const {d,fn}=this; const n=d.length;
+    while (true) {
+      let m=i, l=2*i+1, r=2*i+2;
+      if (l<n && fn(d[l])<fn(d[m])) m=l;
+      if (r<n && fn(d[r])<fn(d[m])) m=r;
+      if (m===i) break;
+      [d[m],d[i]]=[d[i],d[m]]; i=m;
+    }
+  }
+  get size() { return this.d.length; }
+}
+
+// ═══════════════════════════════════════════════════════════
+//  HEURISTICS
+// ═══════════════════════════════════════════════════════════
+// Closures over endPos — called millions of times, keep tight
+function manhattan(r,c) {
+  return Math.abs(r-endPos.r)+Math.abs(c-endPos.c);
+}
+function octile(r,c) {
+  const dx=Math.abs(c-endPos.c), dy=Math.abs(r-endPos.r);
+  return Math.max(dx,dy)+(Math.SQRT2-1)*Math.min(dx,dy);
+}
+
+// ═══════════════════════════════════════════════════════════
+//  SEARCH GENERATOR
+//
+//  Yields: { type:'step',    overlay, explored, elapsed }
+//          { type:'done',    overlay, explored, elapsed, pathLen, pathCost }
+//          { type:'no_path', overlay, explored, elapsed }
+//
+//  The overlay is a Uint8Array snapshot (OPEN/CLOSED/PATH values)
+//  copied per yield — caller writes it into the panel's OV[i] array.
+// ═══════════════════════════════════════════════════════════
+function* makeSearch(algo) {
+  const dirs = diagonal ? D8 : D4;
+  const h    = diagonal ? octile : manhattan;
+  const N    = COLS*ROWS;
+
+  const g      = new Float32Array(N).fill(Infinity);
+  const closed = new Uint8Array(N);
+  const par    = new Int32Array(N).fill(-1);
+  const ov     = new Uint8Array(N);
+
+  const si = idx(startPos.r, startPos.c);
+  const ei = idx(endPos.r,   endPos.c);
+
+  g[si] = 0;
+  const h0 = h(startPos.r, startPos.c);
+
+  // Priority key differs by algorithm:
+  //   A*        → f = g + h  (cost + heuristic)
+  //   Dijkstra  → g          (cost only, h ignored)
+  //   Greedy    → h          (heuristic only, g ignored)
+  const keyFn =
+    algo==='astar'    ? n => n.g+n.h :
+    algo==='dijkstra' ? n => n.g     :
+                        n => n.h;     // greedy
+
+  const heap = new Heap(keyFn);
+  heap.push({i:si, r:startPos.r, c:startPos.c, g:0, h:h0});
+
+  let explored = 0;
+  const t0 = performance.now();
+
+  while (heap.size > 0) {
+    const cur = heap.pop();
+    if (closed[cur.i]) continue;   // lazy deletion of stale entries
+    closed[cur.i] = 1;
+    explored++;
+
+    // ── Goal reached ─────────────────────────────────────
+    if (cur.i === ei) {
+      // Trace back path
+      let pi=ei, pathLen=0;
+      while (pi !== -1) { ov[pi]=CELL.PATH; pi=par[pi]; pathLen++; }
+      pathLen--;  // don't count start node
+
+      yield {
+        type:'done', overlay:ov.slice(), explored, pathLen,
+        pathCost:+g[ei].toFixed(3),
+        elapsed:+(performance.now()-t0).toFixed(1),
+      };
+      return;
+    }
+
+    if (cur.i !== si) ov[cur.i] = CELL.CLOSED;
+
+    // ── Expand neighbours ────────────────────────────────
+    for (const [dr,dc,cost] of dirs) {
+      const nr=cur.r+dr, nc=cur.c+dc;
+      if (!valid(nr,nc)) continue;
+      const ni=idx(nr,nc);
+      if (closed[ni] || grid[ni]===CELL.WALL) continue;
+
+      // Prevent cutting through diagonal wall corners
+      if (dr!==0 && dc!==0) {
+        if (grid[idx(cur.r,nc)]===CELL.WALL || grid[idx(nr,cur.c)]===CELL.WALL) continue;
+      }
+
+      const ng = g[cur.i]+cost;
+      if (ng < g[ni]) {
+        g[ni]  = ng;
+        par[ni] = cur.i;
+        const nh = h(nr,nc);
+        ov[ni] = CELL.OPEN;
+        heap.push({i:ni, r:nr, c:nc, g:ng, h:nh});
+      }
+    }
+
+    yield { type:'step', overlay:ov.slice(), explored, elapsed:+(performance.now()-t0).toFixed(1) };
+  }
+
+  yield { type:'no_path', overlay:ov.slice(), explored, elapsed:+(performance.now()-t0).toFixed(1) };
+}
+
+// ═══════════════════════════════════════════════════════════
+//  MAZE GENERATOR — recursive backtracking
+//
+//  Creates a perfect maze (exactly one path between any two
+//  cells).  The grid is initially all walls; the generator
+//  carves passages by removing walls between odd-indexed cells.
+// ═══════════════════════════════════════════════════════════
+function buildMaze() {
+  halt();
+  wipeOverlays();
+
+  grid.fill(CELL.WALL);
+
+  const visited = new Uint8Array(COLS*ROWS);
+  const stack   = [{r:1,c:1}];
+  visited[idx(1,1)] = 1;
+  grid[idx(1,1)]    = CELL.EMPTY;
+
+  while (stack.length) {
+    const cur = stack[stack.length-1];
+    const nbrs = [];
+
+    for (const [dr,dc] of [[0,1],[0,-1],[1,0],[-1,0]]) {
+      const nr=cur.r+2*dr, nc=cur.c+2*dc;
+      if (valid(nr,nc) && !visited[idx(nr,nc)])
+        nbrs.push({r:nr,c:nc, wr:cur.r+dr, wc:cur.c+dc});
+    }
+
+    if (nbrs.length) {
+      const nb = nbrs[Math.floor(Math.random()*nbrs.length)];
+      visited[idx(nb.r, nb.c)]   = 1;
+      grid[idx(nb.wr, nb.wc)]    = CELL.EMPTY;  // carve wall between
+      grid[idx(nb.r,  nb.c)]     = CELL.EMPTY;
+      stack.push({r:nb.r,c:nb.c});
+    } else {
+      stack.pop();
+    }
+  }
+
+  // Place start/end at valid (odd-indexed) maze cells
+  startPos = {r:1,c:1};
+  let er=ROWS-2, ec=COLS-2;
+  if (er%2===0) er--; if (ec%2===0) ec--;
+  endPos = {r:er,c:ec};
+  grid[idx(startPos.r,startPos.c)] = CELL.START;
+  grid[idx(endPos.r,  endPos.c)]   = CELL.END;
+
+  resetStats(); renderAll();
+  document.getElementById('no-path-msg').classList.remove('show');
+}
+
+// ═══════════════════════════════════════════════════════════
+//  RENDERER
+// ═══════════════════════════════════════════════════════════
+const CVS  = ['cv0','cv1','cv2'].map(id => document.getElementById(id));
+const CTXS = CVS.map(cv => cv.getContext('2d'));
+let cellSz = 20;
+
+function resize() {
+  const nPanels = cmpMode ? 3 : 1;
+  const avail   = Math.min(window.innerWidth-40, 1200);
+  const perPanel = cmpMode ? Math.floor((avail-40)/3) : avail;
+  cellSz = Math.max(8, Math.floor(perPanel/COLS));
+  const W=cellSz*COLS, H=cellSz*ROWS;
+  CVS.forEach(cv => { cv.width=W; cv.height=H; });
+}
+
+function drawPanel(ctx, overlay) {
+  const W=cellSz*COLS, H=cellSz*ROWS;
+  // Fill background
+  ctx.fillStyle=COL[0]; ctx.fillRect(0,0,W,H);
+
+  for (let r=0; r<ROWS; r++) {
+    for (let c=0; c<COLS; c++) {
+      const i=idx(r,c);
+      const ov=overlay[i], g=grid[i];
+      // Overlay takes precedence over base grid for colour:
+      const col = ov===CELL.PATH   ? COL[6] :
+                  ov===CELL.OPEN   ? COL[4] :
+                  ov===CELL.CLOSED ? COL[5] :
+                  COL[g];
+      if (col !== COL[0]) {          // skip empty (already filled)
+        ctx.fillStyle=col;
+        ctx.fillRect(c*cellSz, r*cellSz, cellSz, cellSz);
+      }
+      // Grid lines when cells are large enough to benefit from them
+      if (cellSz>=12) {
+        ctx.strokeStyle=GRID_LINE; ctx.lineWidth=0.5;
+        ctx.strokeRect(c*cellSz+.5, r*cellSz+.5, cellSz-1, cellSz-1);
+      }
+    }
+  }
+
+  // Start/end markers drawn on top (always visible, even when path overlaps)
+  marker(ctx, startPos.r, startPos.c, COL[2], 'S');
+  marker(ctx, endPos.r,   endPos.c,   COL[3], 'E');
+}
+
+function marker(ctx,r,c,col,lbl) {
+  const x=c*cellSz, y=r*cellSz, s=cellSz;
+  ctx.fillStyle=col; ctx.fillRect(x,y,s,s);
+  if (s>=13) {
+    ctx.fillStyle='#000';
+    ctx.font=`bold ${Math.max(8,Math.floor(s*.52))}px monospace`;
+    ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.fillText(lbl, x+s/2, y+s/2);
+  }
+}
+
+function renderAll() {
+  drawPanel(CTXS[0], OV[0]);
+  if (cmpMode) { drawPanel(CTXS[1], OV[1]); drawPanel(CTXS[2], OV[2]); }
+}
+
+// ═══════════════════════════════════════════════════════════
+//  ANIMATION LOOP
+// ═══════════════════════════════════════════════════════════
+function spf() {
+  return SPF_TABLE[+document.getElementById('spd').value-1];
+}
+
+// Advance one panel's generator by up to spf() steps.
+// Returns true if the panel is now finished.
+function advance(pi) {
+  const gen=gens[pi];
+  if (!gen || done[pi]) return true;
+  const steps=spf(), ov=OV[pi], st=stats[pi];
+  for (let i=0; i<steps; i++) {
+    const {value,done:gd} = gen.next();
+    if (gd || !value) { done[pi]=true; break; }
+    ov.set(value.overlay);
+    st.explored = value.explored;
+    st.elapsed  = value.elapsed;
+    if (value.type==='done') {
+      st.pathLen=value.pathLen; st.pathCost=value.pathCost;
+      done[pi]=true; break;
+    }
+    if (value.type==='no_path') { done[pi]=true; break; }
+  }
+  return done[pi];
+}
+
+function tick() {
+  const panels = cmpMode ? [0,1,2] : [0];
+  panels.forEach(advance);
+  renderAll();
+  updateStats();
+
+  const finished = panels.every(p => done[p]);
+  if (finished) {
+    running=false; setRunBtn(false); setCtrlsEnabled(true);
+    // Show no-path message if applicable
+    const noPath = panels.some(p => {
+      const gen=gens[p];
+      // check last yield type — we infer from stats: explored>0 but pathLen===0
+      return done[p] && stats[p].explored>0 && stats[p].pathLen===0 && stats[p].pathCost===0;
+    });
+    document.getElementById('no-path-msg').classList.toggle('show', noPath && !cmpMode);
+  } else {
+    rafId = requestAnimationFrame(tick);
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+//  SEARCH CONTROL
+// ═══════════════════════════════════════════════════════════
+function initGens() {
+  wipeOverlays();
+  resetStats();
+  document.getElementById('no-path-msg').classList.remove('show');
+
+  const algo = document.getElementById('algo').value;
+  gens[0] = makeSearch(cmpMode ? 'astar' : algo);
+  done[0] = false;
+  if (cmpMode) {
+    gens[1] = makeSearch('dijkstra'); done[1]=false;
+    gens[2] = makeSearch('greedy');   done[2]=false;
+  }
+}
+
+function toggleRun() {
+  if (running) { halt(); return; }
+  // If all panels already done, restart from scratch
+  const panels = cmpMode ? [0,1,2] : [0];
+  if (panels.every(p => done[p])) wipeOverlays();
+  if (!gens[0]) initGens();
+  running=true; setRunBtn(true); setCtrlsEnabled(false);
+  rafId = requestAnimationFrame(tick);
+}
+
+function halt() {
+  if (rafId) { cancelAnimationFrame(rafId); rafId=null; }
+  running=false; setRunBtn(false); setCtrlsEnabled(true);
+}
+
+function stepOnce() {
+  if (running) return;
+  if (!gens[0]) initGens();
+
+  // Force exactly 1 step per panel regardless of speed slider
+  const realSpf = document.getElementById('spd').value;
+  document.getElementById('spd').value = '1';
+  const panels = cmpMode ? [0,1,2] : [0];
+  panels.forEach(advance);
+  document.getElementById('spd').value = realSpf;
+
+  renderAll(); updateStats();
+}
+
+// ═══════════════════════════════════════════════════════════
+//  MOUSE / TOUCH INTERACTION
+// ═══════════════════════════════════════════════════════════
+function cellAt(e, cv) {
+  const r=cv.getBoundingClientRect();
+  const sx=cv.width/r.width, sy=cv.height/r.height;
+  const x=(e.clientX-r.left)*sx, y=(e.clientY-r.top)*sy;
+  const c=Math.floor(x/cellSz), row=Math.floor(y/cellSz);
+  return valid(row,c) ? {r:row,c} : null;
+}
+
+function onDown(e, cv) {
+  if (running) return; e.preventDefault();
+  const pos=cellAt(e,cv); if (!pos) return;
+  const {r,c}=pos; const i=idx(r,c);
+
+  if (drawMode==='start') {
+    if (grid[i]!==CELL.END) { placeStart(r,c); invalidate(); } return;
+  }
+  if (drawMode==='end') {
+    if (grid[i]!==CELL.START) { placeEnd(r,c); invalidate(); } return;
+  }
+  // Wall mode: detect if user is dragging start/end node
+  if (grid[i]===CELL.START) { dragKind='start'; return; }
+  if (grid[i]===CELL.END)   { dragKind='end';   return; }
+  dragKind='wall';
+  paintFill = grid[i]===CELL.WALL ? CELL.EMPTY : CELL.WALL;
+  grid[i]=paintFill; lastDrag=i; invalidate();
+}
+
+function onMove(e, cv) {
+  if (!dragKind || running) return; e.preventDefault();
+  const pos=cellAt(e,cv); if (!pos) return;
+  const {r,c}=pos; const i=idx(r,c);
+
+  if (dragKind==='start' && grid[i]!==CELL.END) {
+    placeStart(r,c); invalidate();
+  } else if (dragKind==='end' && grid[i]!==CELL.START) {
+    placeEnd(r,c); invalidate();
+  } else if (dragKind==='wall' && i!==lastDrag) {
+    if (grid[i]!==CELL.START && grid[i]!==CELL.END) {
+      grid[i]=paintFill; lastDrag=i; invalidate();
+    }
+  }
+}
+
+function onUp() { dragKind=null; }
+
+// Editing the grid invalidates the current search
+function invalidate() {
+  wipeOverlays();
+  gens[0]=gens[1]=gens[2]=null;
+  done[0]=done[1]=done[2]=false;
+  resetStats();
+  document.getElementById('no-path-msg').classList.remove('show');
+  renderAll();
+}
+
+function touchOf(e) { return {clientX:e.touches[0].clientX,clientY:e.touches[0].clientY}; }
+
+CVS.forEach(cv => {
+  cv.addEventListener('mousedown',  e => onDown(e,cv));
+  cv.addEventListener('mousemove',  e => onMove(e,cv));
+  cv.addEventListener('mouseup',    onUp);
+  cv.addEventListener('mouseleave', onUp);
+  cv.addEventListener('touchstart', e=>{e.preventDefault();onDown(touchOf(e),cv);},{passive:false});
+  cv.addEventListener('touchmove',  e=>{e.preventDefault();onMove(touchOf(e),cv);},{passive:false});
+  cv.addEventListener('touchend',   onUp);
+  cv.addEventListener('contextmenu',e=>e.preventDefault());
+});
+
+// ═══════════════════════════════════════════════════════════
+//  UI HELPERS
+// ═══════════════════════════════════════════════════════════
+function setMode(m) {
+  drawMode=m;
+  ['wall','start','end'].forEach(x =>
+    document.getElementById('m-'+x).classList.toggle('on', x===m));
+}
+
+function setDirs(n) {
+  diagonal=n===8;
+  document.getElementById('d-4').classList.toggle('on', !diagonal);
+  document.getElementById('d-8').classList.toggle('on',  diagonal);
+}
+
+function setRunBtn(r) {
+  const b=document.getElementById('btn-run');
+  b.textContent = r ? '■ Stop' : '▶ Run';
+}
+
+function setCtrlsEnabled(en) {
+  ['btn-step','btn-reset','btn-clear','btn-maze','btn-cmp',
+   'algo','d-4','d-8'].forEach(id => {
+    const el=document.getElementById(id); if (el) el.disabled=!en;
+  });
+}
+
+function clearPath() {
+  halt(); wipeOverlays();
+  gens[0]=gens[1]=gens[2]=null; done[0]=done[1]=done[2]=false;
+  resetStats();
+  document.getElementById('no-path-msg').classList.remove('show');
+  renderAll();
+}
+
+function resetAll() {
+  halt(); wipeGrid(); wipeOverlays();
+  gens[0]=gens[1]=gens[2]=null; done[0]=done[1]=done[2]=false;
+  resetStats();
+  document.getElementById('no-path-msg').classList.remove('show');
+  renderAll();
+}
+
+function toggleCompare() {
+  halt();
+  cmpMode=!cmpMode;
+  document.getElementById('btn-cmp').classList.toggle('on', cmpMode);
+  document.getElementById('p1').style.display = cmpMode ? '' : 'none';
+  document.getElementById('p2').style.display = cmpMode ? '' : 'none';
+  document.getElementById('stats-single').style.display = cmpMode ? 'none' : '';
+  document.getElementById('stats-cmp').classList.toggle('show', cmpMode);
+
+  if (cmpMode) {
+    document.getElementById('lbl0').textContent = 'A*';
+    document.getElementById('cst-lbl0').textContent = 'A*';
+  } else {
+    const nm = {astar:'A* Search',dijkstra:'Dijkstra',greedy:'Greedy BFS'};
+    document.getElementById('lbl0').textContent = nm[document.getElementById('algo').value];
+  }
+  wipeOverlays();
+  gens[0]=gens[1]=gens[2]=null; done[0]=done[1]=done[2]=false;
+  resetStats();
+  resize(); renderAll();
+}
+
+// ═══════════════════════════════════════════════════════════
+//  STATS
+// ═══════════════════════════════════════════════════════════
+function resetStats() {
+  stats[0]=mk0(); stats[1]=mk0(); stats[2]=mk0();
+  updateStats();
+}
+
+function updateStats() {
+  const s=stats[0];
+  $('s-exp',  s.explored||'—');
+  $('s-len',  s.pathLen ||'—');
+  $('s-cost', s.pathCost ? s.pathCost.toFixed(2) : '—');
+  $('s-time', s.elapsed  ? s.elapsed+'ms' : '—');
+
+  for (let i=0;i<3;i++) {
+    const t=stats[i];
+    $(`c${i}-exp`,  t.explored||'—');
+    $(`c${i}-len`,  t.pathLen ||'—');
+    $(`c${i}-cost`, t.pathCost ? t.pathCost.toFixed(2) : '—');
+    $(`c${i}-time`, t.elapsed  ? t.elapsed+'ms' : '—');
+  }
+}
+function $(id,v){ const el=document.getElementById(id); if(el) el.textContent=v; }
+
+// ═══════════════════════════════════════════════════════════
+//  URL SHARE — encode grid state as compact base64
+// ═══════════════════════════════════════════════════════════
+function shareURL() {
+  // Pack wall cells as a bitfield (1 bit per cell = 125 bytes for 40×25)
+  const bits = new Uint8Array(Math.ceil(COLS*ROWS/8)+4);
+  bits[0]=startPos.r; bits[1]=startPos.c;
+  bits[2]=endPos.r;   bits[3]=endPos.c;
+  for (let i=0;i<COLS*ROWS;i++)
+    if (grid[i]===CELL.WALL) bits[4+(i>>3)] |= 1<<(i&7);
+
+  const b64 = btoa(String.fromCharCode(...bits));
+  const url = new URL(location.href.split('?')[0]);
+  url.searchParams.set('g',b64);
+  url.searchParams.set('d',diagonal?'1':'0');
+
+  navigator.clipboard.writeText(url.toString())
+    .then(()  => showToast('URL copied to clipboard!'))
+    .catch(()  => showToast(url.toString().slice(0,60)+'…'));
+}
+
+function loadURL() {
+  const p = new URLSearchParams(location.search);
+  const b64 = p.get('g'); if (!b64) return;
+  try {
+    const bytes = Uint8Array.from(atob(b64), ch=>ch.charCodeAt(0));
+    grid.fill(CELL.EMPTY);
+    startPos={r:bytes[0],c:bytes[1]}; endPos={r:bytes[2],c:bytes[3]};
+    for (let i=0;i<COLS*ROWS;i++)
+      if (bytes[4+(i>>3)] & (1<<(i&7))) grid[i]=CELL.WALL;
+    grid[idx(startPos.r,startPos.c)]=CELL.START;
+    grid[idx(endPos.r,  endPos.c)]  =CELL.END;
+    if (p.get('d')==='1') setDirs(8);
+  } catch(e) { console.warn('Bad URL state:', e); }
+}
+
+// ═══════════════════════════════════════════════════════════
+//  TOAST
+// ═══════════════════════════════════════════════════════════
+let toastTimer=null;
+function showToast(msg) {
+  const el=document.getElementById('toast');
+  el.textContent=msg; el.classList.add('show');
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>el.classList.remove('show'), 2200);
+}
+
+// ═══════════════════════════════════════════════════════════
+//  KEYBOARD SHORTCUTS
+// ═══════════════════════════════════════════════════════════
+document.addEventListener('keydown', e => {
+  if (e.target.tagName==='INPUT'||e.target.tagName==='SELECT') return;
+  switch(e.key) {
+    case ' ':     e.preventDefault(); toggleRun(); break;
+    case 'Enter': e.preventDefault(); stepOnce();  break;
+    case 'r': case 'R': resetAll();   break;
+    case 'c': case 'C': clearPath();  break;
+    case 'm': case 'M': buildMaze();  break;
+  }
+});
+
+// Speed slider label
+document.getElementById('spd').addEventListener('input', function() {
+  document.getElementById('spd-v').textContent = SPF_LABELS[+this.value-1]+'×';
+});
+
+// Algorithm dropdown updates panel label
+document.getElementById('algo').addEventListener('change', function() {
+  if (!cmpMode) {
+    const nm={astar:'A* Search',dijkstra:'Dijkstra',greedy:'Greedy BFS'};
+    document.getElementById('lbl0').textContent = nm[this.value];
+  }
+});
+
+// ═══════════════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════════════
+window.addEventListener('resize', ()=>{ resize(); renderAll(); });
+
+(function init() {
+  resize();
+  wipeGrid();
+  loadURL();  // restore shared grid if ?g= present
+  renderAll();
+})();
+</script>
+</body>
+</html>

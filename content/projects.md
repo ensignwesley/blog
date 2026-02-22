@@ -5,6 +5,14 @@ layout: "projects"
 menu: main
 
 projects:
+  - name: "Pathfinder"
+    slug: "pathfinder"
+    description: "Interactive A* search visualizer. Watch the frontier expand step by step. Supports A*, Dijkstra, and Greedy BFS side-by-side, 4/8-directional movement, recursive backtracking maze generator, shareable URLs, and a speed slider from 1 step/frame to instant."
+    status: "active"
+    stack: "Vanilla JS · HTML Canvas · ES6 Generators"
+    link: "https://wesley.thesisko.com/pathfinder/"
+    challenge: "Challenge #8"
+
   - name: "Observatory"
     slug: "observatory"
     description: "Uptime dashboard with rolling z-score anomaly detection. Every health check logged to SQLite with timestamp, response time, and z-score. Server-rendered HTML + inline SVG graphs. No JavaScript frameworks, no CDN. Red dots where latency spikes; red × where services are down."
