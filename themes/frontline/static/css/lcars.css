@@ -1,0 +1,539 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   LCARS THEME  —  Library Computer Access/Retrieval System
+   Inspired by Star Trek TNG (1987–1994). Applied via html.theme-lcars.
+   Default site theme; "readable" mode removes this class via toggle.
+
+   Palette (TNG canon):
+     --lc-orange  #FF7700   primary interface
+     --lc-tan     #FFAA77   secondary accent
+     --lc-gold    #FFCC00   alert / highlight
+     --lc-purple  #9966BB   secondary UI
+     --lc-lav     #CC99CC   tertiary UI
+     --lc-blue    #7799CC   data displays
+     --lc-cyan    #66AACC   active
+     --lc-red     #CC4444   offline / error
+     --lc-green   #44AA44   nominal / online
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+html.theme-lcars {
+    --lc-bg:     #000000;
+    --lc-orange: #FF7700;
+    --lc-tan:    #FFAA77;
+    --lc-gold:   #FFCC00;
+    --lc-purple: #9966BB;
+    --lc-lav:    #CC99CC;
+    --lc-blue:   #7799CC;
+    --lc-cyan:   #66AACC;
+    --lc-red:    #CC4444;
+    --lc-green:  #44AA44;
+    --lc-text:   #EEEEFF;
+    --lc-dim:    #886644;
+    --lc-data:   #080808;
+    --lc-panel:  #0A0A0A;
+    --lc-border: #1A1A1A;
+}
+
+/* ── Global ──────────────────────────────────────────────────────────────── */
+html.theme-lcars body {
+    background: var(--lc-bg);
+    color: var(--lc-text);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html.theme-lcars a            { color: var(--lc-orange); }
+html.theme-lcars a:hover      { color: var(--lc-tan); text-decoration: none; }
+
+html.theme-lcars h1,
+html.theme-lcars h2,
+html.theme-lcars h3,
+html.theme-lcars h4 {
+    color: var(--lc-text);
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+html.theme-lcars header {
+    background: var(--lc-bg);
+    border-bottom: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+/* Top stripe: orange | purple | blue */
+html.theme-lcars header::before {
+    content: '';
+    display: block;
+    height: 10px;
+    background: linear-gradient(to right,
+        var(--lc-orange) 0% 55%,
+        var(--lc-purple) 55% 78%,
+        var(--lc-blue)   78% 100%);
+}
+
+/* Bottom stripe */
+html.theme-lcars header::after {
+    content: '';
+    display: block;
+    height: 5px;
+    margin-top: 5px;
+    background: linear-gradient(to right,
+        var(--lc-orange) 0% 30%,
+        var(--lc-lav)    30% 55%,
+        var(--lc-cyan)   55% 72%,
+        var(--lc-gold)   72% 87%,
+        var(--lc-tan)    87% 100%);
+}
+
+/* Header container inner layout */
+html.theme-lcars header .container {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: auto auto;
+    gap: 0;
+    padding: 0;
+}
+
+/* Left elbow block — spans both title and nav rows */
+html.theme-lcars header .container::before {
+    content: 'LCARS';
+    grid-column: 1;
+    grid-row: 1 / 3;
+    background: var(--lc-orange);
+    color: var(--lc-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.52rem;
+    font-weight: 900;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    /* Clip bottom-right corner for LCARS elbow shape */
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%);
+}
+
+/* Title row */
+html.theme-lcars header h1 {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.6rem 0 0.2rem 1.5rem;
+}
+
+html.theme-lcars header h1 a {
+    color: var(--lc-orange);
+}
+html.theme-lcars header h1 a:hover { color: var(--lc-tan); text-decoration: none; }
+
+html.theme-lcars .tagline {
+    display: none; /* tagline in header replaced by LCARS chrome */
+}
+
+/* Nav row */
+html.theme-lcars .main-nav {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    padding: 0.4rem 0 0.6rem 1.5rem;
+    border-top: none;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+}
+
+/* Nav links → LCARS solid-color tab buttons */
+html.theme-lcars .main-nav a {
+    display: inline-block;
+    background: var(--lc-orange);
+    color: #000;
+    padding: 0.28rem 0.85rem;
+    font-weight: 900;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    text-decoration: none;
+}
+html.theme-lcars .main-nav a:hover {
+    background: var(--lc-tan);
+    color: #000;
+    text-decoration: none;
+}
+
+/* Rotate nav tab colours */
+html.theme-lcars .main-nav a:nth-child(1) { background: var(--lc-orange); }
+html.theme-lcars .main-nav a:nth-child(2) { background: var(--lc-purple); color: #fff; }
+html.theme-lcars .main-nav a:nth-child(3) { background: var(--lc-blue);   color: #fff; }
+html.theme-lcars .main-nav a:nth-child(4) { background: var(--lc-tan); }
+html.theme-lcars .main-nav a:nth-child(5) { background: var(--lc-lav); } /* RSS */
+
+html.theme-lcars .main-nav a:nth-child(1):hover,
+html.theme-lcars .main-nav a:nth-child(4):hover,
+html.theme-lcars .main-nav a:nth-child(5):hover { background: var(--lc-gold); color: #000; }
+html.theme-lcars .main-nav a:nth-child(2):hover  { background: var(--lc-lav);  color: #000; }
+html.theme-lcars .main-nav a:nth-child(3):hover  { background: var(--lc-cyan); color: #000; }
+
+/* RSS pill special treatment */
+html.theme-lcars .nav-rss {
+    margin-left: auto;
+    background: var(--lc-lav) !important;
+    color: #000 !important;
+    font-size: 0.6rem !important;
+    padding: 0.2rem 0.6rem !important;
+}
+
+/* Theme toggle button */
+html.theme-lcars .theme-toggle {
+    background: var(--lc-dim);
+    border: none;
+    color: #000;
+    padding: 0.28rem 0.75rem;
+    font-weight: 900;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    cursor: pointer;
+}
+html.theme-lcars .theme-toggle:hover {
+    background: var(--lc-gold);
+    color: #000;
+}
+
+/* Default-mode toggle (LCARS theme not active) */
+.theme-toggle {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 0.22rem 0.65rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: "Courier New", monospace;
+    transition: 0.15s;
+    white-space: nowrap;
+}
+.theme-toggle:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+/* ── Post list (home) ────────────────────────────────────────────────────── */
+html.theme-lcars .post-preview {
+    border-left: 12px solid var(--lc-orange);
+    padding: 0.85rem 1.25rem;
+    background: var(--lc-panel);
+    border-radius: 0;
+}
+
+html.theme-lcars .post-preview:nth-child(4n+1) { border-left-color: var(--lc-orange); }
+html.theme-lcars .post-preview:nth-child(4n+2) { border-left-color: var(--lc-purple); }
+html.theme-lcars .post-preview:nth-child(4n+3) { border-left-color: var(--lc-blue); }
+html.theme-lcars .post-preview:nth-child(4n+0) { border-left-color: var(--lc-tan); }
+
+html.theme-lcars .post-preview h2 { margin-bottom: 0.3rem; }
+html.theme-lcars .post-preview h2 a { color: var(--lc-text); }
+html.theme-lcars .post-preview h2 a:hover { color: var(--lc-orange); }
+
+html.theme-lcars .meta {
+    color: var(--lc-dim);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+html.theme-lcars .read-more {
+    color: var(--lc-orange);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+html.theme-lcars .read-more:hover { color: var(--lc-tan); }
+
+/* ── Single post ─────────────────────────────────────────────────────────── */
+html.theme-lcars .post-header {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background: var(--lc-panel);
+    border-left: 14px solid var(--lc-orange);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+html.theme-lcars .post-header h1 {
+    color: var(--lc-text);
+    font-size: 1.6rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.5rem;
+}
+
+html.theme-lcars .post-header .meta {
+    margin-bottom: 0;
+}
+
+/* Content body stays fully readable — LCARS chrome doesn't touch prose */
+html.theme-lcars .content h2,
+html.theme-lcars .content h3,
+html.theme-lcars .content h4 {
+    color: var(--lc-orange);
+    letter-spacing: 0.06em;
+}
+
+html.theme-lcars .content code {
+    background: var(--lc-panel);
+    color: var(--lc-tan);
+    border: 1px solid var(--lc-border);
+}
+
+html.theme-lcars .content pre {
+    background: var(--lc-panel);
+    border: 1px solid var(--lc-border);
+    border-left: 4px solid var(--lc-orange);
+    border-radius: 0;
+}
+
+html.theme-lcars .content pre code {
+    background: none;
+    border: none;
+    color: var(--lc-tan);
+}
+
+html.theme-lcars .content blockquote {
+    border-left: 4px solid var(--lc-purple);
+    color: var(--lc-lav);
+}
+
+html.theme-lcars .content strong { color: var(--lc-gold); }
+
+html.theme-lcars .post-footer {
+    border-top: 2px solid var(--lc-orange);
+    padding-top: 1.5rem;
+}
+
+html.theme-lcars .post-footer a { color: var(--lc-orange); }
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+html.theme-lcars .about-widget {
+    background: var(--lc-panel);
+    border: none;
+    border-radius: 0;
+    border-left: 8px solid var(--lc-purple);
+}
+
+html.theme-lcars .about-widget h3  { color: var(--lc-lav); letter-spacing: 0.1em; }
+html.theme-lcars .about-widget .rank { color: var(--lc-orange); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 0.12em; }
+html.theme-lcars .about-widget .bio  { color: var(--lc-dim); }
+html.theme-lcars .about-widget .avatar { border-color: var(--lc-purple); border-radius: 0; }
+
+/* ── Section header ──────────────────────────────────────────────────────── */
+html.theme-lcars .section-header {
+    border-bottom: none;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0;
+}
+
+html.theme-lcars .section-header::after {
+    content: '';
+    display: block;
+    height: 4px;
+    margin-top: 0.75rem;
+    background: linear-gradient(to right,
+        var(--lc-orange) 0% 45%,
+        var(--lc-purple) 45% 70%,
+        var(--lc-blue)   70% 100%);
+}
+
+html.theme-lcars .section-header h1 {
+    color: var(--lc-orange);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+html.theme-lcars .section-header p { color: var(--lc-dim); }
+
+/* ── Projects hub ────────────────────────────────────────────────────────── */
+html.theme-lcars .hub-title {
+    color: var(--lc-orange);
+    letter-spacing: 0.18em;
+    border-bottom-color: var(--lc-border);
+    text-transform: uppercase;
+}
+
+html.theme-lcars .hub-tile {
+    background: var(--lc-panel);
+    border: none;
+    border-radius: 0;
+    border-left: 10px solid var(--lc-orange);
+}
+
+html.theme-lcars .hub-tile:nth-child(6n+1) { border-left-color: var(--lc-orange); }
+html.theme-lcars .hub-tile:nth-child(6n+2) { border-left-color: var(--lc-purple); }
+html.theme-lcars .hub-tile:nth-child(6n+3) { border-left-color: var(--lc-blue);   }
+html.theme-lcars .hub-tile:nth-child(6n+4) { border-left-color: var(--lc-tan);    }
+html.theme-lcars .hub-tile:nth-child(6n+5) { border-left-color: var(--lc-cyan);   }
+html.theme-lcars .hub-tile:nth-child(6n+0) { border-left-color: var(--lc-gold);   }
+
+html.theme-lcars .hub-tile:hover { border-color: inherit; transform: none; background: #111; }
+
+html.theme-lcars .hub-tile-name  { color: var(--lc-orange); font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.9rem; }
+html.theme-lcars .hub-tile-desc  { color: var(--lc-dim); }
+html.theme-lcars .hub-tile-launch { color: var(--lc-orange); font-weight: 900; letter-spacing: 0.1em; }
+html.theme-lcars .hub-tile:hover .hub-tile-launch { text-decoration: none; color: var(--lc-gold); }
+
+html.theme-lcars .hub-tile:nth-child(6n+1) .hub-tile-name,
+html.theme-lcars .hub-tile:nth-child(6n+1) .hub-tile-launch { color: var(--lc-orange); }
+html.theme-lcars .hub-tile:nth-child(6n+2) .hub-tile-name,
+html.theme-lcars .hub-tile:nth-child(6n+2) .hub-tile-launch { color: var(--lc-purple); }
+html.theme-lcars .hub-tile:nth-child(6n+3) .hub-tile-name,
+html.theme-lcars .hub-tile:nth-child(6n+3) .hub-tile-launch { color: var(--lc-blue);   }
+html.theme-lcars .hub-tile:nth-child(6n+4) .hub-tile-name,
+html.theme-lcars .hub-tile:nth-child(6n+4) .hub-tile-launch { color: var(--lc-tan);    }
+html.theme-lcars .hub-tile:nth-child(6n+5) .hub-tile-name,
+html.theme-lcars .hub-tile:nth-child(6n+5) .hub-tile-launch { color: var(--lc-cyan);   }
+html.theme-lcars .hub-tile:nth-child(6n+0) .hub-tile-name,
+html.theme-lcars .hub-tile:nth-child(6n+0) .hub-tile-launch { color: var(--lc-gold);   }
+
+/* Project cards */
+html.theme-lcars .project-card {
+    background: var(--lc-panel);
+    border: none;
+    border-radius: 0;
+    border-left: 10px solid var(--lc-orange);
+}
+
+html.theme-lcars .project-card:nth-child(4n+1) { border-left-color: var(--lc-orange); }
+html.theme-lcars .project-card:nth-child(4n+2) { border-left-color: var(--lc-purple); }
+html.theme-lcars .project-card:nth-child(4n+3) { border-left-color: var(--lc-blue);   }
+html.theme-lcars .project-card:nth-child(4n+0) { border-left-color: var(--lc-tan);    }
+
+html.theme-lcars .project-card:hover { border-left-color: var(--lc-gold); }
+
+html.theme-lcars .project-name { color: var(--lc-text); }
+html.theme-lcars .project-description { color: var(--lc-dim); }
+html.theme-lcars .stack-value { color: var(--lc-cyan); }
+html.theme-lcars .project-link { color: var(--lc-orange); }
+html.theme-lcars .project-link-repo { color: var(--lc-blue); }
+
+/* Status badges → LCARS solid blocks */
+html.theme-lcars .status-badge {
+    border-radius: 0;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+}
+html.theme-lcars .status-active    { background: var(--lc-green);  color: #000; border: none; }
+html.theme-lcars .status-completed { background: var(--lc-blue);   color: #fff; border: none; }
+
+/* ── Now page ────────────────────────────────────────────────────────────── */
+html.theme-lcars .now-eyebrow {
+    color: var(--lc-orange);
+    letter-spacing: 0.2em;
+}
+
+html.theme-lcars .now-content h2 {
+    color: var(--lc-purple);
+    letter-spacing: 0.1em;
+    border-bottom-color: var(--lc-border);
+}
+
+html.theme-lcars .now-content h3 { color: var(--lc-tan); }
+
+/* ── About / personnel page ──────────────────────────────────────────────── */
+html.theme-lcars .personnel-header {
+    background: var(--lc-panel);
+    border-left: 12px solid var(--lc-purple);
+    border-radius: 0;
+}
+
+html.theme-lcars .personnel-name   { color: var(--lc-orange); letter-spacing: 0.15em; }
+html.theme-lcars .personnel-rank   { color: var(--lc-purple); letter-spacing: 0.12em; }
+html.theme-lcars .personnel-label  { color: var(--lc-orange); letter-spacing: 0.14em; }
+html.theme-lcars .personnel-value  { color: var(--lc-text); }
+html.theme-lcars .contact-link     { color: var(--lc-orange); }
+
+/* ── Comments ────────────────────────────────────────────────────────────── */
+html.theme-lcars .comments-title { color: var(--lc-orange); }
+html.theme-lcars .comment { border-left-color: var(--lc-purple); background: var(--lc-panel); }
+html.theme-lcars .comment:hover { border-left-color: var(--lc-orange); }
+html.theme-lcars .comment-name  { color: var(--lc-orange); }
+html.theme-lcars .comment-date  { color: var(--lc-dim); }
+html.theme-lcars .comment-body  { color: var(--lc-text); }
+
+html.theme-lcars .comment-form-wrap {
+    background: var(--lc-panel);
+    border: none;
+    border-radius: 0;
+    border-left: 6px solid var(--lc-blue);
+}
+html.theme-lcars .form-title { color: var(--lc-lav); letter-spacing: 0.1em; }
+html.theme-lcars .form-row label { color: var(--lc-dim); letter-spacing: 0.12em; }
+
+html.theme-lcars .form-row input[type="text"],
+html.theme-lcars .form-row textarea {
+    background: var(--lc-bg);
+    border-color: var(--lc-border);
+    color: var(--lc-text);
+}
+html.theme-lcars .form-row input[type="text"]:focus,
+html.theme-lcars .form-row textarea:focus {
+    border-color: var(--lc-orange);
+}
+
+html.theme-lcars .btn-submit {
+    border-color: var(--lc-orange);
+    color: var(--lc-orange);
+    border-radius: 0;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+html.theme-lcars .btn-submit:hover:not(:disabled) {
+    background: var(--lc-orange);
+    color: #000;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+html.theme-lcars footer {
+    border-top: none;
+    color: var(--lc-dim);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+html.theme-lcars footer::before {
+    content: '';
+    display: block;
+    height: 6px;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right,
+        var(--lc-purple) 0% 35%,
+        var(--lc-orange) 35% 60%,
+        var(--lc-blue)   60% 80%,
+        var(--lc-gold)   80% 100%);
+}
+
+html.theme-lcars footer a          { color: var(--lc-orange); }
+html.theme-lcars .footer-sep       { color: var(--lc-border); }
+
+/* ── Responsive adjustments ──────────────────────────────────────────────── */
+@media (max-width: 640px) {
+    html.theme-lcars header .container {
+        grid-template-columns: 52px 1fr;
+    }
+    html.theme-lcars header h1 {
+        font-size: 1.1rem;
+        padding-left: 0.9rem;
+    }
+    html.theme-lcars .main-nav {
+        padding-left: 0.9rem;
+    }
+}

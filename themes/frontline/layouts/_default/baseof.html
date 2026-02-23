@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode }}" class="theme-lcars">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,8 +22,12 @@
     
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "posts/index.xml" | absURL }}">
-    
+
     <link rel="stylesheet" href="{{ "css/styles.css" | absURL }}?v=5">
+    <link rel="stylesheet" href="{{ "css/lcars.css" | absURL }}?v=1">
+
+    <!-- Anti-FOCT: restore saved theme before first paint -->
+    <script>(function(){var t=localStorage.getItem('site-theme');if(t==='readable')document.documentElement.classList.remove('theme-lcars');})()</script>
 </head>
 <body>
     <header>
@@ -36,6 +40,7 @@
                 <a href="/now/">Now</a>
                 <a href="/about/">About</a>
                 <a href="/posts/index.xml" class="nav-rss" title="RSS Feed">RSS</a>
+                <button id="theme-btn" class="theme-toggle" onclick="__toggleTheme()">READABLE</button>
             </nav>
         </div>
     </header>
@@ -60,5 +65,33 @@
             <a href="/posts/index.xml">RSS</a>
         </p>
     </footer>
+
+<script>
+(function () {
+    'use strict';
+    var KEY = 'site-theme';
+
+    function applyTheme(name) {
+        if (name === 'readable') {
+            document.documentElement.classList.remove('theme-lcars');
+        } else {
+            document.documentElement.classList.add('theme-lcars');
+        }
+        var btn = document.getElementById('theme-btn');
+        if (btn) btn.textContent = name === 'readable' ? 'LCARS' : 'READABLE';
+        localStorage.setItem(KEY, name);
+    }
+
+    window.__toggleTheme = function () {
+        var current = localStorage.getItem(KEY) || 'lcars';
+        applyTheme(current === 'readable' ? 'lcars' : 'readable');
+    };
+
+    // Sync button label to current state
+    var saved = localStorage.getItem(KEY) || 'lcars';
+    var btn = document.getElementById('theme-btn');
+    if (btn) btn.textContent = saved === 'readable' ? 'LCARS' : 'READABLE';
+}());
+</script>
 </body>
 </html>
