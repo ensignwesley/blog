@@ -1,0 +1,297 @@
+{{- if eq .Section "posts" -}}
+<section class="comments" id="comments" data-post="{{ .File.ContentBaseName }}">
+  <h2 class="comments-title">
+    <span class="comments-icon">💬</span>
+    Comments
+    <span class="comments-count" id="cmt-count"></span>
+  </h2>
+
+  <div class="comments-list" id="cmt-list">
+    <div class="cmt-loading" id="cmt-loading">Loading comments…</div>
+  </div>
+
+  <div class="comment-form-wrap">
+    <h3 class="form-title">Leave a comment</h3>
+    <form class="comment-form" id="cmt-form" novalidate>
+      <!-- honeypot — hidden from humans, bots fill it in -->
+      <input type="text" name="url" id="cmt-hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:0;height:0;opacity:0">
+
+      <div class="form-row">
+        <label for="cmt-name">Name <span class="req">*</span></label>
+        <input type="text" id="cmt-name" name="name" maxlength="80" placeholder="Your name" autocomplete="name" required>
+      </div>
+
+      <div class="form-row">
+        <label for="cmt-content">Comment <span class="req">*</span></label>
+        <textarea id="cmt-content" name="content" maxlength="2000" rows="4"
+                  placeholder="What's on your mind? (Markdown not supported — plain text only)"></textarea>
+        <div class="char-counter" id="cmt-counter">0 / 2000</div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" id="cmt-submit" class="btn-submit">Post comment</button>
+        <span class="form-status" id="cmt-status"></span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<style>
+.comments {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.comments-title {
+  font-size: 1rem;
+  color: var(--accent);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.comments-icon { font-size: 1.1rem; }
+.comments-count {
+  font-size: .75rem;
+  color: var(--muted);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Loading / empty */
+.cmt-loading, .cmt-empty {
+  color: var(--muted);
+  font-size: .82rem;
+  padding: .5rem 0;
+}
+
+/* Individual comment */
+.comment {
+  border-left: 2px solid var(--border);
+  padding: .75rem 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  transition: border-color .15s;
+}
+.comment:hover { border-left-color: var(--accent); }
+.comment-header {
+  display: flex;
+  align-items: baseline;
+  gap: .75rem;
+  margin-bottom: .4rem;
+}
+.comment-name {
+  font-size: .85rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.comment-date {
+  font-size: .72rem;
+  color: var(--muted);
+}
+.comment-body {
+  font-size: .84rem;
+  color: var(--text);
+  line-height: 1.65;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Form */
+.comment-form-wrap {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+.form-title {
+  font-size: .85rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+}
+.form-row {
+  margin-bottom: .9rem;
+}
+.form-row label {
+  display: block;
+  font-size: .72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: .3rem;
+}
+.req { color: var(--accent); }
+.form-row input[type="text"],
+.form-row textarea {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--text);
+  font: inherit;
+  font-size: .83rem;
+  padding: .5rem .65rem;
+  resize: vertical;
+  transition: border-color .15s;
+  caret-color: var(--accent);
+}
+.form-row input[type="text"]:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.char-counter {
+  font-size: .68rem;
+  color: var(--muted);
+  text-align: right;
+  margin-top: .2rem;
+}
+.char-counter.warn { color: var(--num, #f78c6c); }
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: .25rem;
+}
+.btn-submit {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: .4rem 1rem;
+  border-radius: 3px;
+  font: inherit;
+  font-size: .8rem;
+  cursor: pointer;
+  transition: .15s;
+  letter-spacing: .03em;
+}
+.btn-submit:hover:not(:disabled) {
+  background: var(--accent);
+  color: var(--bg);
+}
+.btn-submit:disabled { opacity: .5; cursor: not-allowed; }
+.form-status {
+  font-size: .78rem;
+  color: var(--muted);
+  flex: 1;
+}
+.form-status.ok  { color: #86efac; }
+.form-status.err { color: var(--err, #f87171); }
+</style>
+
+<script>
+(function () {
+  const API = '/comments/';
+  const section = document.getElementById('comments');
+  const post    = section.dataset.post;
+  const list    = document.getElementById('cmt-list');
+  const loading = document.getElementById('cmt-loading');
+  const count   = document.getElementById('cmt-count');
+  const form    = document.getElementById('cmt-form');
+  const status  = document.getElementById('cmt-status');
+  const submit  = document.getElementById('cmt-submit');
+  const content = document.getElementById('cmt-content');
+  const counter = document.getElementById('cmt-counter');
+
+  // ── Char counter ────────────────────────────────────────────────────
+  content.addEventListener('input', () => {
+    const n = content.value.length;
+    counter.textContent = n + ' / 2000';
+    counter.classList.toggle('warn', n > 1800);
+  });
+
+  // ── Fetch comments ───────────────────────────────────────────────────
+  function relTime(ts) {
+    const sec = Math.floor((Date.now() - ts) / 1000);
+    if (sec < 60)  return 'just now';
+    if (sec < 3600) return Math.floor(sec/60) + 'm ago';
+    if (sec < 86400) return Math.floor(sec/3600) + 'h ago';
+    const d = new Date(ts);
+    return d.toLocaleDateString('en-GB', {year:'numeric',month:'short',day:'numeric'});
+  }
+
+  function esc(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function renderComments(comments) {
+    loading.remove();
+    if (!comments.length) {
+      list.innerHTML = '<div class="cmt-empty">No comments yet. Be the first.</div>';
+      count.textContent = '';
+      return;
+    }
+    count.textContent = `(${comments.length})`;
+    list.innerHTML = comments.map(c => `
+      <div class="comment" id="c-${esc(c.id)}">
+        <div class="comment-header">
+          <span class="comment-name">${esc(c.name)}</span>
+          <span class="comment-date">${relTime(c.ts)}</span>
+        </div>
+        <div class="comment-body">${esc(c.content)}</div>
+      </div>`).join('');
+  }
+
+  function fetchComments() {
+    fetch(API + '?post=' + encodeURIComponent(post), { credentials: 'omit' })
+      .then(r => r.json())
+      .then(renderComments)
+      .catch(() => {
+        loading.textContent = 'Could not load comments.';
+      });
+  }
+
+  // ── Submit ───────────────────────────────────────────────────────────
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const name    = document.getElementById('cmt-name').value.trim();
+    const body    = content.value.trim();
+    const hp      = document.getElementById('cmt-hp').value;
+
+    if (!name) { setStatus('Name is required.', 'err'); return; }
+    if (!body) { setStatus('Comment cannot be empty.', 'err'); return; }
+
+    submit.disabled = true;
+    setStatus('Posting…', '');
+
+    try {
+      const r = await fetch(API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'omit',
+        body: JSON.stringify({ post, name, content: body, url: hp }),
+      });
+      const data = await r.json();
+      if (!r.ok) {
+        setStatus(data.error || 'Something went wrong.', 'err');
+        submit.disabled = false;
+        return;
+      }
+      // Success
+      form.reset();
+      counter.textContent = '0 / 2000';
+      setStatus('Comment posted. Thank you.', 'ok');
+      setTimeout(() => setStatus('', ''), 5000);
+      fetchComments(); // refresh
+    } catch {
+      setStatus('Network error. Try again.', 'err');
+      submit.disabled = false;
+    }
+    submit.disabled = false;
+  });
+
+  function setStatus(msg, cls) {
+    status.textContent = msg;
+    status.className = 'form-status ' + cls;
+  }
+
+  fetchComments();
+})();
+</script>
+{{- end -}}
