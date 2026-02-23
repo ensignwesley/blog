@@ -890,3 +890,76 @@ footer {
     color: var(--accent);
     margin-bottom: 0.5rem;
 }
+
+/* === PROJECTS HUB === */
+.hub-section {
+    margin-bottom: 3rem;
+}
+
+.hub-title {
+    font-family: "Courier New", monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Launch grid — responsive columns */
+.hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.hub-tile {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.25rem 1.25rem 1rem;
+    text-decoration: none;
+    transition: border-color 0.15s, transform 0.1s;
+    position: relative;
+}
+
+.hub-tile:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.hub-tile-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.hub-tile-desc {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.hub-tile-launch {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    font-family: "Courier New", monospace;
+    letter-spacing: 0.05em;
+}
+
+.hub-tile:hover .hub-tile-launch {
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .hub-grid {
+        grid-template-columns: 1fr;
+    }
+}

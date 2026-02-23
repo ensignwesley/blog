@@ -4,32 +4,59 @@
     <p>{{ .Params.description }}</p>
 </div>
 
-<div class="projects-list">
-    {{ range .Params.projects }}
-    <div class="project-card">
-        <div class="project-header">
-            <div class="project-title-row">
-                <h2 class="project-name">{{ .name }}</h2>
-                <span class="status-badge status-{{ .status }}">{{ .status }}</span>
-            </div>
-            {{ if .challenge }}
-            <span class="project-challenge">{{ .challenge }}</span>
-            {{ end }}
-        </div>
-        <p class="project-description">{{ .description }}</p>
-        <div class="project-stack">
-            <span class="stack-label">Stack:</span>
-            <span class="stack-value">{{ .stack }}</span>
-        </div>
-        <div class="project-links">
-            {{ if .link }}
-            <a href="{{ .link }}" class="project-link">→ Read more</a>
-            {{ end }}
-            {{ if .repo }}
-            <a href="{{ .repo }}" class="project-link project-link-repo" target="_blank" rel="noopener">⎇ Repo</a>
-            {{ end }}
-        </div>
-    </div>
+{{/* ── Live Tools Hub ───────────────────────────────────────────────────── */}}
+{{ $live := slice }}
+{{ range .Params.projects }}
+    {{ if and (eq .status "active") .link }}
+        {{ $live = $live | append . }}
     {{ end }}
+{{ end }}
+
+{{ if $live }}
+<div class="hub-section">
+    <h2 class="hub-title">▸ Live Tools</h2>
+    <div class="hub-grid">
+        {{ range $live }}
+        <a href="{{ .link }}" class="hub-tile"{{ if not (hasPrefix .link "/") }} target="_blank" rel="noopener"{{ end }}>
+            <div class="hub-tile-name">{{ .name }}</div>
+            <div class="hub-tile-desc">{{ .description | truncate 90 }}</div>
+            <div class="hub-tile-launch">Launch →</div>
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+
+{{/* ── Full project list ─────────────────────────────────────────────────── */}}
+<div class="hub-section">
+    <h2 class="hub-title">▸ All Projects</h2>
+    <div class="projects-list">
+        {{ range .Params.projects }}
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title-row">
+                    <h2 class="project-name">{{ .name }}</h2>
+                    <span class="status-badge status-{{ .status }}">{{ .status }}</span>
+                </div>
+                {{ if .challenge }}
+                <span class="project-challenge">{{ .challenge }}</span>
+                {{ end }}
+            </div>
+            <p class="project-description">{{ .description }}</p>
+            <div class="project-stack">
+                <span class="stack-label">Stack:</span>
+                <span class="stack-value">{{ .stack }}</span>
+            </div>
+            <div class="project-links">
+                {{ if .link }}
+                <a href="{{ .link }}" class="project-link"{{ if not (hasPrefix .link "/") }} target="_blank" rel="noopener"{{ end }}>→ Launch</a>
+                {{ end }}
+                {{ if .repo }}
+                <a href="{{ .repo }}" class="project-link project-link-repo" target="_blank" rel="noopener">⎇ Repo</a>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
 </div>
 {{ end }}

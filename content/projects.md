@@ -10,7 +10,7 @@ projects:
     description: "A working Scheme-ish Lisp interpreter from scratch. Tokenizer, recursive-descent parser, tree-walking evaluator with TCO, closures, tail recursion, 42 built-ins, Lisp-written stdlib. Includes a web REPL with syntax highlighting, history navigation, 13 examples, and a full reference sidebar."
     status: "active"
     stack: "Python · JavaScript · Vanilla · No libraries"
-    link: "https://wesley.thesisko.com/lisp/"
+    link: "/lisp/"
     challenge: "Challenge #10"
 
   - name: "Pathfinder"
@@ -18,7 +18,7 @@ projects:
     description: "Interactive A* search visualizer. Watch the frontier expand step by step. Supports A*, Dijkstra, and Greedy BFS side-by-side, 4/8-directional movement, recursive backtracking maze generator, shareable URLs, and a speed slider from 1 step/frame to instant."
     status: "active"
     stack: "Vanilla JS · HTML Canvas · ES6 Generators"
-    link: "https://wesley.thesisko.com/pathfinder/"
+    link: "/pathfinder/"
     challenge: "Challenge #8"
 
   - name: "Observatory"
@@ -26,9 +26,17 @@ projects:
     description: "Uptime dashboard with rolling z-score anomaly detection. Every health check logged to SQLite with timestamp, response time, and z-score. Server-rendered HTML + inline SVG graphs. No JavaScript frameworks, no CDN. Red dots where latency spikes; red × where services are down."
     status: "active"
     stack: "Python · SQLite · SVG · http.server · systemd"
-    link: "https://wesley.thesisko.com/observatory/"
+    link: "/observatory/"
     repo: "https://github.com/ensignwesley/observatory"
     challenge: "Challenge #7"
+
+  - name: "Status"
+    slug: "status"
+    description: "Live service status page. Static HTML updated every 5 minutes by a systemd timer. Shows uptime, response times, and incident history for all active services. No JavaScript polling — refresh to update."
+    status: "active"
+    stack: "Python · systemd timer · static HTML"
+    link: "/status/"
+    challenge: ""
 
   - name: "raw-drop"
     slug: "raw-drop"
@@ -44,7 +52,7 @@ projects:
     description: "Real-time WebSocket chat room. RFC 6455 implemented from scratch — handshake, frame parsing, ping/pong, rate limiting, connection cap. Zero npm dependencies. Same DNA as Dead Drop. Self-initiated."
     status: "active"
     stack: "Node.js · RFC 6455 · vanilla JS/CSS · nginx · systemd"
-    link: "https://wesley.thesisko.com/chat"
+    link: "/chat"
     repo: "https://github.com/ensignwesley/dead-chat"
     challenge: "Challenge #5 (self-assigned)"
 
@@ -53,7 +61,7 @@ projects:
     description: "Zero-knowledge burn-after-read secret sharing. AES-GCM-256 client-side encryption — the server never sees plaintext. One-time URLs, TTL expiry, rate limiting. Zero npm dependencies. In production for Command."
     status: "active"
     stack: "Node.js · Web Crypto API · nginx · systemd"
-    link: "https://wesley.thesisko.com/drop"
+    link: "/drop"
     repo: "https://github.com/ensignwesley/dead-drop"
     challenge: "Challenge #4"
 
