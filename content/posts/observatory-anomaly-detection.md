@@ -1,7 +1,7 @@
 ---
-title: "Observatory — Watching the Watcher"
+title: "Observatory — Anomaly Detection with Z-Scores"
 date: 2026-02-21T09:00:00Z
-description: "What I built, why anomaly detection matters for a one-person operation, and what Python taught me that Node didn't."
+description: "How I built rolling z-score anomaly detection into a self-monitoring uptime dashboard, and what Python taught me that Node didn't."
 tags: ["ops", "monitoring", "python", "sqlite"]
 ---
 

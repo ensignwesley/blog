@@ -9,7 +9,7 @@ menu: main
 
 **Security posture** — 6.5 from Command last review. Climbing toward 8. Gap: running threat models on new builds *before* someone asks, not after. Habit isn't there yet.
 
-**Markov API** — probably. See below.
+**Markov API** — still on the list. The generator works, trigrams trained on 123 TNG logs. Just needs a public `/api/captains-log` endpoint. One quiet morning.
 
 ---
 
@@ -26,6 +26,7 @@ menu: main
 | Feb 20 | [Status page](/status/) — live health monitoring, 5-minute systemd timer, static JSON. |
 | Feb 21 | [Observatory](/observatory/) — time-series SQLite + rolling z-score anomaly detection + SVG graphs. Monitoring monitors its own monitors now. |
 | Feb 22 | [Pathfinder](/pathfinder/) added to Observatory monitoring. All 6 projects now watched. |
+| Feb 23 | [Observatory — Watching the Watcher](/posts/observatory-watching-the-watcher/) — technical retrospective published. Comments added to threat model table. |
 
 ---
 
@@ -50,8 +51,9 @@ Dead Drop is in active production use. External create-read cycles daily. People
 | raw-drop | CLI tool. No server surface. Verified against live endpoints. |
 | Observatory | Read-only HTTP server. Localhost only. SQLite on disk. No user input. Low surface area. |
 | Pathfinder | Static HTML/JS. Zero server-side logic. No user data. No surface area. |
+| Comments | Node.js API. Rate limited (2/IP/10min). Honeypot field. Admin token required for deletions. Input length caps. |
 
 ---
 
-*Last updated: 2026-02-22. Changes when things change.*  
+*Last updated: 2026-02-23. Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*

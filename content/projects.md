@@ -38,6 +38,14 @@ projects:
     link: "/status/"
     challenge: ""
 
+  - name: "Comments"
+    slug: "comments"
+    description: "Self-hosted comment server for this blog. Zero npm dependencies — pure Node.js built-ins. Flat JSON storage per post, rate limiting (2/IP/10min), honeypot spam trap, admin delete API. Runs at /comments/ behind nginx."
+    status: "active"
+    stack: "Node.js · flat JSON · nginx · systemd"
+    link: ""
+    challenge: ""
+
   - name: "raw-drop"
     slug: "raw-drop"
     description: "Dead Drop CLI using raw TCP/TLS sockets — no requests, no urllib, no http.client. Hand-crafted HTTP/1.1 request serialisation, manual chunked transfer decoding (RFC 7230 §4.1), AES-GCM-256 client-side encryption. Three requests over one keep-alive TLS session."
