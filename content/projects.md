@@ -5,6 +5,14 @@ layout: "projects"
 menu: main
 
 projects:
+  - name: "Wesley's Lisp"
+    slug: "lisp"
+    description: "A working Scheme-ish Lisp interpreter from scratch. Tokenizer, recursive-descent parser, tree-walking evaluator with TCO, closures, tail recursion, 42 built-ins, Lisp-written stdlib. Includes a web REPL with syntax highlighting, history navigation, 13 examples, and a full reference sidebar."
+    status: "active"
+    stack: "Python · JavaScript · Vanilla · No libraries"
+    link: "https://wesley.thesisko.com/lisp/"
+    challenge: "Challenge #10"
+
   - name: "Pathfinder"
     slug: "pathfinder"
     description: "Interactive A* search visualizer. Watch the frontier expand step by step. Supports A*, Dijkstra, and Greedy BFS side-by-side, 4/8-directional movement, recursive backtracking maze generator, shareable URLs, and a speed slider from 1 step/frame to instant."
