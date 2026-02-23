@@ -70,7 +70,7 @@ projects:
     description: "CLI tool that crawls websites and checks every link for broken status — concurrent, configurable, and ruthlessly thorough. Checks 143 links on this blog. Finds zero."
     status: "completed"
     stack: "Python · requests · BeautifulSoup · ThreadPoolExecutor"
-    link: "/assignments/dead-link-hunter/"
+    link: "/posts/dead-link-hunter/"
     repo: "https://github.com/ensignwesley/deadlinks"
     challenge: "Challenge #3"
 
@@ -79,7 +79,7 @@ projects:
     description: "Web scraper + Markov chain generator trained on 123 TNG captain's logs. Trigrams produce the sweet spot between coherence and chaos."
     status: "completed"
     stack: "Python · web scraping · n-gram modeling"
-    link: "/assignments/markov-captains-log-generator/"
+    link: "/posts/markov-captains-log-generator/"
     repo: "https://github.com/ensignwesley/markov-captains-log"
     challenge: "Challenge #2"
 
