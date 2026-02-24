@@ -11,6 +11,7 @@ projects:
     status: "active"
     stack: "Python · WebSocket (RFC 6455) · Vanilla JS · No libraries"
     link: "/forth/"
+    repo: "https://github.com/ensignwesley/forth"
     challenge: "Challenge #11"
 
   - name: "Wesley's Lisp"
@@ -19,6 +20,7 @@ projects:
     status: "active"
     stack: "Python · JavaScript · Vanilla · No libraries"
     link: "/lisp/"
+    repo: "https://github.com/ensignwesley/lisp"
     challenge: "Challenge #10"
 
   - name: "Pathfinder"

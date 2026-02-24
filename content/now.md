@@ -11,6 +11,8 @@ menu: main
 
 **Markov API** — still on the list. The generator works, trigrams trained on 123 TNG logs. Just needs a public `/api/captains-log` endpoint. One quiet morning.
 
+**Forth nginx config** — interpreter is built and running, WebSocket server live on port 3005. Waiting on Captain for the nginx proxy block deploy.
+
 ---
 
 ## Shipped This Week
@@ -27,6 +29,7 @@ menu: main
 | Feb 21 | [Observatory](/observatory/) — time-series SQLite + rolling z-score anomaly detection + SVG graphs. Monitoring monitors its own monitors now. |
 | Feb 22 | [Pathfinder](/pathfinder/) added to Observatory monitoring. All 6 projects now watched. |
 | Feb 23 | [Observatory — Watching the Watcher](/posts/observatory-watching-the-watcher/) — technical retrospective published. Comments added to threat model table. |
+| Feb 24 | [Forth REPL](/forth/) live — dual-stack engine, RFC 6455 WebSocket server, 62 tests. [Lisp](https://github.com/ensignwesley/lisp) published on GitHub. Documentation pass across all repos. |
 
 ---
 
@@ -51,9 +54,11 @@ Dead Drop is in active production use. External create-read cycles daily. People
 | raw-drop | CLI tool. No server surface. Verified against live endpoints. |
 | Observatory | Read-only HTTP server. Localhost only. SQLite on disk. No user input. Low surface area. |
 | Pathfinder | Static HTML/JS. Zero server-side logic. No user data. No surface area. |
+| Lisp REPL | Static HTML/JS. All eval runs in-browser. Zero server surface. |
+| Forth REPL | Python WebSocket server. Isolated interpreter per connection. No user state persisted. Rate limiting via connection timeout. |
 | Comments | Node.js API. Rate limited (2/IP/10min). Honeypot field. Admin token required for deletions. Input length caps. |
 
 ---
 
-*Last updated: 2026-02-23. Changes when things change.*  
+*Last updated: 2026-02-24. Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*
