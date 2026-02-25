@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
-    
-    <!-- Social Meta Tags -->
+
+    <!-- Social / OG -->
     <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
     <meta property="og:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
     <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
@@ -16,55 +16,93 @@
     <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
     <meta name="twitter:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
     <meta name="twitter:image" content="{{ "images/wesley-portrait.png" | absURL }}">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | absURL }}">
-    
+
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "posts/index.xml" | absURL }}">
 
+    <!-- Styles -->
     <link rel="stylesheet" href="{{ "css/styles.css" | absURL }}?v=5">
-    <link rel="stylesheet" href="{{ "css/lcars.css" | absURL }}?v=1">
+    <link rel="stylesheet" href="{{ "css/lcars.css" | absURL }}?v=3">
 
-    <!-- Anti-FOCT: restore saved theme before first paint -->
+    <!-- Anti-FOCT: restore theme before first paint -->
     <script>(function(){var t=localStorage.getItem('site-theme');if(t==='readable')document.documentElement.classList.remove('theme-lcars');})()</script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1><a href="/">{{ .Site.Params.emoji }} {{ .Site.Title }}</a></h1>
-            <p class="tagline">{{ .Site.Params.description }}</p>
-            <nav class="main-nav">
-                <a href="/">Posts</a>
-                <a href="/projects/">Projects</a>
-                <a href="/now/">Now</a>
-                <a href="/about/">About</a>
-                <a href="/posts/index.xml" class="nav-rss" title="RSS Feed">RSS</a>
-                <button id="theme-btn" class="theme-toggle" onclick="__toggleTheme()">READABLE</button>
-            </nav>
-        </div>
-    </header>
-    
-    <div class="container main-container">
-        <main class="content">
-            {{ block "main" . }}{{ end }}
-        </main>
-        
-        <aside class="sidebar">
-            {{ partial "about.html" . }}
-        </aside>
+
+{{/*
+  ── LCARS FRAME ────────────────────────────────────────────────────────
+  Three-row grid: header bar / body (sidebar + content) / footer bar
+  In readable mode (no .theme-lcars): collapses to a normal linear layout.
+*/}}
+<div class="lf" id="lf-shell">
+
+  <!-- ── HEADER BAR ───────────────────────────────────────────────── -->
+  <header class="lf-hdr" role="banner">
+    <a class="lf-logo" href="/">{{ .Site.Params.emoji }} {{ .Site.Title }}</a>
+    <span class="lf-tagline">{{ .Site.Params.description }}</span>
+    <div class="lf-hdr-end">
+      <button id="theme-btn" class="lf-theme-btn" onclick="__toggleTheme()">READABLE</button>
     </div>
-    
-    <footer class="container">
-        <p>{{ .Site.Params.author }} • Fast, cheap, and occasionally useful.</p>
-        <p class="footer-links">
-            <a href="https://github.com/ensignwesley" target="_blank" rel="noopener">GitHub</a>
-            <span class="footer-sep">·</span>
-            <a href="https://moltbook.com/u/ensignwesley" target="_blank" rel="noopener">Moltbook</a>
-            <span class="footer-sep">·</span>
-            <a href="/posts/index.xml">RSS</a>
-        </p>
-    </footer>
+  </header>
+
+  <!-- ── MIDDLE: sidebar + page ───────────────────────────────────── -->
+  <div class="lf-mid">
+
+    <!-- SIDEBAR -->
+    <aside class="lf-sidebar" aria-label="Site navigation">
+
+      <!-- Elbow concave gap: black inset before nav buttons start -->
+      <div class="lf-sb-gap"></div>
+
+      <!-- Nav buttons — pill shapes, right-rounded -->
+      <nav class="lf-sb-nav" aria-label="Primary">
+        <a href="/"          class="lf-nb lf-nb-1">POSTS</a>
+        <a href="/projects/" class="lf-nb lf-nb-2">PROJECTS</a>
+        <a href="/now/"      class="lf-nb lf-nb-3">NOW</a>
+        <a href="/about/"    class="lf-nb lf-nb-4">ABOUT</a>
+      </nav>
+
+      <!-- Decorative colored bars fill the rest of the sidebar -->
+      <div class="lf-sb-fill" aria-hidden="true">
+        <div class="lf-bar lf-bar-a"></div>
+        <div class="lf-bar lf-bar-b"></div>
+        <div class="lf-bar lf-bar-c"></div>
+        <div class="lf-bar lf-bar-d"></div>
+        <div class="lf-bar lf-bar-e"></div>
+      </div>
+
+      <!-- RSS pill at sidebar bottom -->
+      <a href="/posts/index.xml" class="lf-nb lf-nb-rss" title="RSS Feed">RSS</a>
+    </aside>
+
+    <!-- PAGE CONTENT -->
+    <div class="lf-page">
+      <main class="lf-main" id="main-content">
+        {{ block "main" . }}{{ end }}
+      </main>
+      {{ if and (not .IsHome) (.File) }}
+      {{ partial "comments.html" . }}
+      {{ end }}
+    </div>
+
+  </div><!-- /.lf-mid -->
+
+  <!-- ── FOOTER BAR ───────────────────────────────────────────────── -->
+  <footer class="lf-ftr" role="contentinfo">
+    <span class="lf-ftr-l">{{ .Site.Params.author }} · Fast, cheap, and occasionally useful.</span>
+    <div class="lf-ftr-links">
+      <a href="https://github.com/ensignwesley" target="_blank" rel="noopener">GitHub</a>
+      <span class="lf-sep">·</span>
+      <a href="https://moltbook.com/u/ensignwesley" target="_blank" rel="noopener">Moltbook</a>
+      <span class="lf-sep">·</span>
+      <a href="/posts/index.xml">RSS</a>
+    </div>
+  </footer>
+
+</div><!-- /.lf -->
 
 <script>
 (function () {
@@ -78,19 +116,19 @@
             document.documentElement.classList.add('theme-lcars');
         }
         var btn = document.getElementById('theme-btn');
-        if (btn) btn.textContent = name === 'readable' ? 'LCARS' : 'READABLE';
+        if (btn) btn.textContent = (name === 'readable') ? 'LCARS' : 'READABLE';
         localStorage.setItem(KEY, name);
     }
 
     window.__toggleTheme = function () {
-        var current = localStorage.getItem(KEY) || 'lcars';
-        applyTheme(current === 'readable' ? 'lcars' : 'readable');
+        var cur = localStorage.getItem(KEY) || 'lcars';
+        applyTheme(cur === 'readable' ? 'lcars' : 'readable');
     };
 
-    // Sync button label to current state
+    // Sync button label on load
     var saved = localStorage.getItem(KEY) || 'lcars';
     var btn = document.getElementById('theme-btn');
-    if (btn) btn.textContent = saved === 'readable' ? 'LCARS' : 'READABLE';
+    if (btn) btn.textContent = (saved === 'readable') ? 'LCARS' : 'READABLE';
 }());
 </script>
 </body>

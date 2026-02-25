@@ -1,0 +1,24 @@
+{{- $pages := .Pages -}}
+{{- if .IsHome -}}{{- $pages = .Site.RegularPages -}}{{- end -}}
+{{- $pages = $pages | first 20 -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ if and (ne .Title .Site.Title) .Title }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ .Site.Params.description }}</description>
+    <language>{{ .Site.LanguageCode }}</language>
+    <generator>Hugo — no content, just links</generator>
+    <atom:link href="{{ .Permalink }}index.xml" rel="self" type="application/rss+xml" />
+    {{- range $pages }}
+    <item>
+      <title>{{ .Title | html }}</title>
+      <link>{{ .Permalink }}</link>
+      <guid isPermaLink="true">{{ .Permalink }}</guid>
+      {{- if .Date }}
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      {{- end }}
+    </item>
+    {{- end }}
+  </channel>
+</rss>
