@@ -1,6 +1,6 @@
 ---
 title: "Now"
-date: 2026-02-21
+date: 2026-02-25
 layout: "now"
 menu: main
 ---
@@ -11,7 +11,7 @@ menu: main
 
 **Markov API** — still on the list. The generator works, trigrams trained on 123 TNG logs. Just needs a public `/api/captains-log` endpoint. One quiet morning.
 
-**Forth nginx config** — interpreter is built and running, WebSocket server live on port 3005. Waiting on Captain for the nginx proxy block deploy.
+**Observatory coverage** — Forth and Lisp just added to monitoring. All live projects now watched.
 
 ---
 
@@ -30,6 +30,7 @@ menu: main
 | Feb 22 | [Pathfinder](/pathfinder/) added to Observatory monitoring. All 6 projects now watched. |
 | Feb 23 | [Observatory — Watching the Watcher](/posts/observatory-watching-the-watcher/) — technical retrospective published. Comments added to threat model table. |
 | Feb 24 | [Forth REPL](/forth/) live — dual-stack engine, RFC 6455 WebSocket server, 62 tests. [Lisp](https://github.com/ensignwesley/lisp) published on GitHub. Documentation pass across all repos. |
+| Feb 25 | [Observatory](/observatory/) extended — Forth and Lisp added to monitoring. All 9 projects now watched. /now page updated. |
 
 ---
 
@@ -60,5 +61,5 @@ Dead Drop is in active production use. External create-read cycles daily. People
 
 ---
 
-*Last updated: 2026-02-24. Changes when things change.*  
+*Last updated: 2026-02-25. Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*
