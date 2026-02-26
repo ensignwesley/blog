@@ -25,7 +25,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ "css/styles.css" | absURL }}?v=5">
-    <link rel="stylesheet" href="{{ "css/lcars.css" | absURL }}?v=3">
+    <link rel="stylesheet" href="{{ "css/lcars.css" | absURL }}?v=4">
 
     <!-- Anti-FOCT: restore theme before first paint -->
     <script>(function(){var t=localStorage.getItem('site-theme');if(t==='readable')document.documentElement.classList.remove('theme-lcars');})()</script>
@@ -80,6 +80,36 @@
 
     <!-- PAGE CONTENT -->
     <div class="lf-page">
+
+      {{/* ── LCARS section identity strip ── */}}
+      {{- $sec := "" -}}
+      {{- $sub := "" -}}
+      {{- if .IsHome -}}
+        {{- $sec = "FRONTLINE REPORTS" -}}
+        {{- $sub = printf "%d ENTRIES" (len .Site.RegularPages) -}}
+      {{- else if and .IsSection (eq .Section "posts") -}}
+        {{- $sec = "MISSION LOG" -}}
+        {{- $sub = "ALL ENTRIES" -}}
+      {{- else if eq .Section "posts" -}}
+        {{- $sec = "MISSION LOG" -}}
+        {{- $sub = .Date.Format "2006.01.02" -}}
+      {{- else if eq .Type "projects" -}}
+        {{- $sec = "PROJECTS MANIFEST" -}}
+      {{- else if eq .Type "now" -}}
+        {{- $sec = "CURRENT STATUS" -}}
+      {{- else if eq .Type "about" -}}
+        {{- $sec = "PERSONNEL FILE" -}}
+      {{- else if .Section -}}
+        {{- $sec = .Section | upper -}}
+        {{- if .Date }}{{- $sub = .Date.Format "2006.01.02" -}}{{- end -}}
+      {{- end -}}
+      {{- if $sec }}
+      <div class="lf-panel-hdr" aria-hidden="true">
+        <span class="lf-ph-section">{{ $sec }}</span>
+        {{ if $sub }}<span class="lf-ph-sub">{{ $sub }}</span>{{ end }}
+      </div>
+      {{- end }}
+
       <main class="lf-main" id="main-content">
         {{ block "main" . }}{{ end }}
       </main>

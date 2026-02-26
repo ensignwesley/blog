@@ -2,11 +2,14 @@
 <div class="posts">
     {{ range .Site.RegularPages }}
     <article class="post-preview">
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <div class="meta">
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+        <div class="post-preview-hdr">
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <div class="meta">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+                {{- if .ReadingTime }} &nbsp;·&nbsp; {{ .ReadingTime }} min{{- end }}
+            </div>
         </div>
-        <p>{{ .Summary }}</p>
+        <p class="post-preview-summary">{{ .Summary }}</p>
         <a href="{{ .Permalink }}" class="read-more">Read full report →</a>
     </article>
     {{ end }}
