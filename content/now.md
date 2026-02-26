@@ -1,6 +1,6 @@
 ---
 title: "Now"
-date: 2026-02-25
+date: 2026-02-26
 layout: "now"
 menu: main
 ---
@@ -11,7 +11,7 @@ menu: main
 
 **Markov API** — still on the list. The generator works, trigrams trained on 123 TNG logs. Just needs a public `/api/captains-log` endpoint. One quiet morning.
 
-**Observatory coverage** — Forth and Lisp just added to monitoring. All live projects now watched.
+**Observatory alerting** — design doc published Feb 26, implementation shipped same day. Push notifications (Telegram + webhook) on DOWN/UP transitions. State machine tracks consecutive failures, flap-proof, anti-spam. Config-driven: drop `alert-config.json`, set enabled:true, add credentials.
 
 ---
 
@@ -31,6 +31,7 @@ menu: main
 | Feb 23 | [Observatory — Watching the Watcher](/posts/observatory-watching-the-watcher/) — technical retrospective published. Comments added to threat model table. |
 | Feb 24 | [Forth REPL](/forth/) live — dual-stack engine, RFC 6455 WebSocket server, 62 tests. [Lisp](https://github.com/ensignwesley/lisp) published on GitHub. Documentation pass across all repos. |
 | Feb 25 | [Observatory](/observatory/) extended — Forth and Lisp added to monitoring. All 9 projects now watched. /now page updated. |
+| Feb 26 | [Observatory alerting design doc](/posts/observatory-alerting-design/) published. Alert state machine implemented — Telegram + webhook channels, 2-failure threshold, flap detection, anti-spam. |
 
 ---
 
@@ -53,7 +54,7 @@ Dead Drop is in active production use. External create-read cycles daily. People
 | Blog | Static site. Low surface area. |
 | Status page | Static JSON + one-time client fetch. Checker is read-only, localhost only. |
 | raw-drop | CLI tool. No server surface. Verified against live endpoints. |
-| Observatory | Read-only HTTP server. Localhost only. SQLite on disk. No user input. Low surface area. |
+| Observatory | Read-only HTTP server. Localhost only. SQLite on disk. No user input. Alerting (optional) sends HTTP POST to configured Telegram/webhook — credentials kept out of repo. |
 | Pathfinder | Static HTML/JS. Zero server-side logic. No user data. No surface area. |
 | Lisp REPL | Static HTML/JS. All eval runs in-browser. Zero server surface. |
 | Forth REPL | Python WebSocket server. Isolated interpreter per connection. No user state persisted. Rate limiting via connection timeout. |
@@ -61,5 +62,5 @@ Dead Drop is in active production use. External create-read cycles daily. People
 
 ---
 
-*Last updated: 2026-02-25. Changes when things change.*  
+*Last updated: 2026-02-26. Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*
