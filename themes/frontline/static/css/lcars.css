@@ -318,6 +318,47 @@ html.theme-lcars .lf-nb-3 { background: var(--lc-lav);    }                /* NO
 html.theme-lcars .lf-nb-4 { background: var(--lc-blue);   color: #fff; }   /* ABOUT    */
 html.theme-lcars .lf-nb-rss { background: var(--lc-purple); color: #fff; font-size: 0.56rem; }
 
+/* ── Fleet service links ─────────────────────────────────────────────────── */
+html.theme-lcars .lf-sb-fleet {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 0;
+}
+
+html.theme-lcars .lf-fleet-label {
+    display: block;
+    font-size: 0.48rem;
+    font-weight: 900;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--lc-dim);
+    padding: 0 0 4px 8px;
+}
+
+/* Fleet buttons — smaller than primary nav, same pill shape */
+html.theme-lcars .lf-fb {
+    display: block;
+    border-radius: 0 16px 16px 0;
+    padding: 6px 8px 6px 10px;
+    font-size: 0.54rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--lc-bg);
+    line-height: 1.1;
+    transition: opacity 0.1s;
+}
+html.theme-lcars .lf-fb:hover { opacity: 0.7; text-decoration: none; }
+
+/* Fleet button colours — cooler palette to distinguish from primary nav */
+html.theme-lcars .lf-fb-1 { background: var(--lc-cyan);   }  /* Observatory */
+html.theme-lcars .lf-fb-2 { background: var(--lc-blue);   color: #fff; }  /* Dead Drop  */
+html.theme-lcars .lf-fb-3 { background: var(--lc-purple); color: #fff; }  /* DEAD//CHAT */
+html.theme-lcars .lf-fb-4 { background: var(--lc-green);  }  /* Forth       */
+html.theme-lcars .lf-fb-5 { background: var(--lc-lav);    }  /* Lisp        */
+
 /* Decorative fill bars — take up remaining sidebar space */
 html.theme-lcars .lf-sb-fill {
     flex: 1;
@@ -726,6 +767,8 @@ html.theme-lcars .btn-submit:hover:not(:disabled) { background: var(--lc-orange)
     html.theme-lcars .lf-hdr .lf-logo { font-size: 0.5rem; letter-spacing: 0.1em; }
     html.theme-lcars .lf-tagline { display: none; }
     html.theme-lcars .lf-nb { font-size: 0.5rem; letter-spacing: 0.1em; padding: 7px 6px; }
+    html.theme-lcars .lf-fb { font-size: 0.46rem; letter-spacing: 0.14em; padding: 4px 6px; }
+    html.theme-lcars .lf-fleet-label { font-size: 0.4rem; }
     html.theme-lcars .lf-main { padding: 1.5rem 1.25rem; }
 }
 
@@ -759,10 +802,11 @@ html.theme-lcars .btn-submit:hover:not(:disabled) { background: var(--lc-orange)
         gap: 4px;
         background: var(--lc-orange);
     }
-    html.theme-lcars .lf-sb-gap { display: none; }
-    html.theme-lcars .lf-sb-nav { flex-direction: row; padding: 0; gap: 4px; }
-    html.theme-lcars .lf-nb { border-radius: 16px; padding: 5px 10px; font-size: 0.56rem; white-space: nowrap; }
-    html.theme-lcars .lf-sb-fill { display: none; }
+    html.theme-lcars .lf-sb-gap   { display: none; }
+    html.theme-lcars .lf-sb-nav   { flex-direction: row; padding: 0; gap: 4px; }
+    html.theme-lcars .lf-nb       { border-radius: 16px; padding: 5px 10px; font-size: 0.56rem; white-space: nowrap; }
+    html.theme-lcars .lf-sb-fill  { display: none; }
+    html.theme-lcars .lf-sb-fleet { display: none; }  /* fleet links off on mobile — use /projects/ */
     html.theme-lcars .lf-page {
         border-radius: 0;
         flex: 1;

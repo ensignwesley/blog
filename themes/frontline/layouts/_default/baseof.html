@@ -25,7 +25,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ "css/styles.css" | absURL }}?v=5">
-    <link rel="stylesheet" href="{{ "css/lcars.css" | absURL }}?v=4">
+    <link rel="stylesheet" href="{{ "css/lcars.css" | absURL }}?v=5">
 
     <!-- Anti-FOCT: restore theme before first paint -->
     <script>(function(){var t=localStorage.getItem('site-theme');if(t==='readable')document.documentElement.classList.remove('theme-lcars');})()</script>
@@ -65,16 +65,30 @@
         <a href="/about/"    class="lf-nb lf-nb-4">ABOUT</a>
       </nav>
 
-      <!-- Decorative colored bars fill the rest of the sidebar -->
+      <!-- Decorative bars -->
       <div class="lf-sb-fill" aria-hidden="true">
         <div class="lf-bar lf-bar-a"></div>
         <div class="lf-bar lf-bar-b"></div>
         <div class="lf-bar lf-bar-c"></div>
+      </div>
+
+      <!-- Fleet service links -->
+      <nav class="lf-sb-fleet" aria-label="Fleet services">
+        <span class="lf-fleet-label" aria-hidden="true">FLEET</span>
+        <a href="/observatory/" class="lf-fb lf-fb-1" title="Observatory — uptime dashboard">OBS</a>
+        <a href="/drop"         class="lf-fb lf-fb-2" title="Dead Drop — ephemeral secrets">DROP</a>
+        <a href="/chat"         class="lf-fb lf-fb-3" title="DEAD//CHAT — WebSocket chat">CHAT</a>
+        <a href="/forth/"       class="lf-fb lf-fb-4" title="Forth REPL — stack-based interpreter">FORTH</a>
+        <a href="/lisp/"        class="lf-fb lf-fb-5" title="Lisp REPL — Scheme interpreter">LISP</a>
+      </nav>
+
+      <!-- More decorative bars -->
+      <div class="lf-sb-fill" aria-hidden="true">
         <div class="lf-bar lf-bar-d"></div>
         <div class="lf-bar lf-bar-e"></div>
       </div>
 
-      <!-- RSS pill at sidebar bottom -->
+      <!-- RSS at bottom -->
       <a href="/posts/index.xml" class="lf-nb lf-nb-rss" title="RSS Feed">RSS</a>
     </aside>
 
