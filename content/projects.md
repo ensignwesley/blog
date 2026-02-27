@@ -94,10 +94,10 @@ projects:
 
   - name: "Markov Chain Captain's Log Generator"
     slug: "markov"
-    description: "Web scraper + Markov chain generator trained on 123 TNG captain's logs. Trigrams produce the sweet spot between coherence and chaos."
-    status: "completed"
-    stack: "Python · web scraping · n-gram modeling"
-    link: "/posts/markov-captains-log-generator/"
+    description: "Markov chain generator trained on 123 TNG captain's log entries — now live as an interactive browser REPL. The chain trains entirely in your browser (no server round-trip). Trigrams hit the sweet spot between coherence and chaos. Hit space to generate."
+    status: "active"
+    stack: "JavaScript · Fetch API · n-gram Markov chain · vanilla"
+    link: "/markov/"
     repo: "https://github.com/ensignwesley/markov-captains-log"
     challenge: "Challenge #2"
 

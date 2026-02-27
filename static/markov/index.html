@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markov Captain's Log Generator · Wesley</title>
+<style>
+:root {
+  --bg:      #0a0e12;
+  --surface: #0f1923;
+  --border:  #1e293b;
+  --text:    #cbd5e1;
+  --muted:   #475569;
+  --accent:  #2dd4bf;
+  --dim:     #94a3b8;
+  --warn:    #f59e0b;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+header {
+  padding: .55rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  background: var(--surface);
+  flex-shrink: 0;
+}
+header h1 { font-size: 1.05rem; color: var(--accent); letter-spacing: .06em; }
+header .sub { font-size: .68rem; color: var(--muted); }
+header nav { margin-left: auto; display: flex; gap: 1rem; }
+header nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .72rem;
+  transition: color .15s;
+}
+header nav a:hover { color: var(--accent); }
+
+/* ── Controls ── */
+#ctrl {
+  padding: .5rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: center;
+}
+.cg { display: flex; align-items: center; gap: .3rem; }
+.cg-lbl {
+  font-size: .62rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  white-space: nowrap;
+}
+.sep { width: 1px; height: 20px; background: var(--border); margin: 0 .2rem; }
+button, select {
+  padding: .26rem .6rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: .73rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color .12s, color .12s;
+}
+button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+button.primary {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+button.primary:hover { opacity: .85; }
+button:disabled { opacity: .35; cursor: not-allowed; }
+input[type=range] { accent-color: var(--accent); width: 72px; vertical-align: middle; }
+#len-v { font-size: .68rem; color: var(--muted); width: 2.5rem; display: inline-block; }
+select { padding-right: 1rem; }
+
+/* ── Main area ── */
+#main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.4rem 1.6rem;
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ── Output card ── */
+#output {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  padding: 1.2rem 1.4rem;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+#stardate {
+  font-size: .72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+#log-text {
+  font-size: .92rem;
+  line-height: 1.75;
+  color: var(--text);
+  white-space: pre-wrap;
+  min-height: 3em;
+  transition: opacity .25s;
+}
+#log-text.fading { opacity: 0; }
+#log-text.placeholder { color: var(--muted); font-style: italic; }
+.log-label {
+  font-size: .62rem;
+  color: var(--accent);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: .2rem;
+}
+
+/* ── Copy button ── */
+#copy-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: .5rem;
+  align-items: center;
+  min-height: 1.5rem;
+}
+#copy-btn { font-size: .65rem; opacity: .0; transition: opacity .2s; }
+#output:hover #copy-btn { opacity: 1; }
+#copy-feedback { font-size: .65rem; color: var(--accent); }
+
+/* ── Model stats ── */
+#model-stats {
+  display: flex;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: .08rem;
+}
+.stat-lbl {
+  font-size: .58rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.stat-val {
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ── How it works ── */
+#how {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1rem 1.2rem;
+  font-size: .75rem;
+  line-height: 1.7;
+  color: var(--dim);
+}
+#how h2 {
+  font-size: .72rem;
+  color: var(--accent);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: .55rem;
+}
+#how p { margin-bottom: .5rem; }
+#how p:last-child { margin-bottom: 0; }
+#how code {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: .05em .3em;
+  font-size: .85em;
+  color: var(--accent);
+}
+#how a { color: var(--accent); text-decoration: none; }
+#how a:hover { text-decoration: underline; }
+
+/* ── Status bar ── */
+#status {
+  font-size: .62rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding: .35rem 1.2rem;
+  background: var(--surface);
+  flex-shrink: 0;
+}
+#status .ok { color: var(--accent); }
+#status .err { color: #f87171; }
+
+/* ── Spinner ── */
+.spin {
+  display: inline-block;
+  animation: spin .8s linear infinite;
+  margin-right: .3rem;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>◈ CAPTAIN'S LOG GENERATOR</h1>
+  <span class="sub">Markov chain · trigram (order-2) · trained on 123 TNG logs · vanilla JS</span>
+  <nav>
+    <a href="/">Blog</a>
+    <a href="/projects/">Projects</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<div id="ctrl">
+  <div class="cg">
+    <span class="cg-lbl">Order</span>
+    <select id="order" onchange="rebuildModel()">
+      <option value="1">1 (bigram)</option>
+      <option value="2" selected>2 (trigram)</option>
+      <option value="3">3 (4-gram)</option>
+    </select>
+  </div>
+
+  <div class="sep"></div>
+
+  <div class="cg">
+    <span class="cg-lbl">Max words</span>
+    <input type="range" id="len-range" min="30" max="150" value="80"
+           oninput="document.getElementById('len-v').textContent = this.value">
+    <span id="len-v">80</span>
+  </div>
+
+  <div class="sep"></div>
+
+  <button class="primary" id="gen-btn" onclick="generateLog()" disabled>
+    Generate Log
+  </button>
+
+  <button id="regen-btn" onclick="generateLog()" disabled title="Generate again (space)">
+    ↻
+  </button>
+</div>
+
+<div id="main">
+
+  <!-- Output -->
+  <div id="output">
+    <div class="log-label">Generated Entry</div>
+    <div id="stardate">—</div>
+    <div id="log-text" class="placeholder">
+      <span class="spin">⧖</span> Loading training corpus…
+    </div>
+    <div id="copy-row">
+      <span id="copy-feedback"></span>
+      <button id="copy-btn" onclick="copyLog()">Copy</button>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div id="model-stats">
+    <div class="stat">
+      <span class="stat-lbl">Training entries</span>
+      <span class="stat-val" id="s-entries">—</span>
+    </div>
+    <div class="stat">
+      <span class="stat-lbl">Unique states</span>
+      <span class="stat-val" id="s-states">—</span>
+    </div>
+    <div class="stat">
+      <span class="stat-lbl">Transitions</span>
+      <span class="stat-val" id="s-trans">—</span>
+    </div>
+    <div class="stat">
+      <span class="stat-lbl">Avg transitions / state</span>
+      <span class="stat-val" id="s-avg">—</span>
+    </div>
+    <div class="stat">
+      <span class="stat-lbl">Generated</span>
+      <span class="stat-val" id="s-gen">0</span>
+    </div>
+  </div>
+
+  <!-- Explainer -->
+  <div id="how">
+    <h2>How It Works</h2>
+    <p>
+      A Markov chain models text as a probabilistic sequence: given the last
+      <em>N</em> words, what word comes next? Order-2 (trigram) means each token
+      is predicted from the previous two. Training data: 123 Star Trek: TNG captain's log
+      entries scraped from transcripts. Total corpus: ~5,600 words.
+    </p>
+    <p>
+      The chain is built entirely in your browser — no server round-trip.
+      The training file (<code>logs.txt</code>, 33 KB) is fetched once and cached.
+      Generation runs in microseconds. Each click produces a unique log entry from
+      the learned probability distribution.
+    </p>
+    <p>
+      Higher order → more coherent output but less creative variance.
+      Lower order → wilder results, more likely to drift. Order-2 (trigram)
+      is the sweet spot for a corpus this size. Source code in the page's
+      <code>&lt;script&gt;</code> block; training data at
+      <a href="logs.txt" target="_blank">logs.txt</a>.
+      Full write-up:
+      <a href="/posts/markov-captains-log-generator/">the original post</a>.
+    </p>
+  </div>
+
+</div>
+
+<div id="status">
+  <span id="status-text">Initialising…</span>
+</div>
+
+<script>
+// ── Markov Chain Engine ─────────────────────────────────────────────────────
+
+class MarkovChain {
+  constructor(order = 2) {
+    this.order = order;
+    this.chain = new Map();  // key: JSON state, value: [word, ...]
+    this.starts = [];
+  }
+
+  train(texts) {
+    this.chain.clear();
+    this.starts = [];
+
+    for (const text of texts) {
+      const tokens = text.trim().split(/\s+/).filter(Boolean);
+      if (tokens.length < this.order + 1) continue;
+
+      this.starts.push(tokens.slice(0, this.order));
+
+      for (let i = 0; i <= tokens.length - this.order - 1; i++) {
+        const key = JSON.stringify(tokens.slice(i, i + this.order));
+        if (!this.chain.has(key)) this.chain.set(key, []);
+        this.chain.get(key).push(tokens[i + this.order]);
+      }
+    }
+  }
+
+  generate(maxLen = 80, minLen = 30) {
+    if (!this.starts.length) return 'Error: chain not trained.';
+
+    const start = this.starts[Math.floor(Math.random() * this.starts.length)];
+    const output = [...start];
+
+    for (let i = 0; i < maxLen - this.order; i++) {
+      const key = JSON.stringify(output.slice(-this.order));
+      const next = this.chain.get(key);
+      if (!next || !next.length) break;
+
+      const word = next[Math.floor(Math.random() * next.length)];
+      output.push(word);
+
+      if (output.length >= minLen && /[.!?]$/.test(word)) break;
+    }
+
+    return output.join(' ');
+  }
+
+  stats() {
+    const states = this.chain.size;
+    let transitions = 0;
+    for (const v of this.chain.values()) transitions += v.length;
+    return {
+      states,
+      transitions,
+      avg: states ? (transitions / states).toFixed(1) : 0,
+    };
+  }
+}
+
+// ── State ───────────────────────────────────────────────────────────────────
+
+let model = null;
+let corpus = [];
+let genCount = 0;
+let currentLog = '';
+
+// ── Stardate Generator ───────────────────────────────────────────────────────
+// TNG runs roughly stardates 41000–47999 across seasons 1–7.
+
+function randomStardate() {
+  const base = 41000 + Math.floor(Math.random() * 7000);
+  const frac = Math.floor(Math.random() * 10);
+  return `${base}.${frac}`;
+}
+
+// ── Status helpers ───────────────────────────────────────────────────────────
+
+function setStatus(msg, cls = '') {
+  const el = document.getElementById('status-text');
+  el.className = cls;
+  el.textContent = msg;
+}
+
+// ── Model build ──────────────────────────────────────────────────────────────
+
+function rebuildModel() {
+  if (!corpus.length) return;
+  const order = parseInt(document.getElementById('order').value);
+  model = new MarkovChain(order);
+  model.train(corpus);
+  updateStats();
+}
+
+function updateStats() {
+  if (!model || !corpus.length) return;
+  const s = model.stats();
+  document.getElementById('s-entries').textContent = corpus.length;
+  document.getElementById('s-states').textContent = s.states.toLocaleString();
+  document.getElementById('s-trans').textContent = s.transitions.toLocaleString();
+  document.getElementById('s-avg').textContent = s.avg;
+}
+
+// ── Load corpus ───────────────────────────────────────────────────────────────
+
+async function loadCorpus() {
+  setStatus('Fetching training corpus (logs.txt)…');
+  try {
+    const res = await fetch('logs.txt');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const text = await res.text();
+
+    // Split on double-newline (one entry per paragraph)
+    corpus = text.split(/\n\n+/).map(e => e.trim()).filter(Boolean);
+
+    rebuildModel();
+
+    // Ready state
+    document.getElementById('gen-btn').disabled = false;
+    document.getElementById('regen-btn').disabled = false;
+    document.getElementById('log-text').textContent = 'Click "Generate Log" to produce a captain\'s log entry.';
+    document.getElementById('log-text').classList.remove('placeholder');
+    document.getElementById('log-text').classList.add('placeholder');
+    document.getElementById('stardate').textContent = 'Awaiting generation…';
+
+    setStatus(
+      `✓ Loaded ${corpus.length} log entries · order ${model.order} trigram model ready`,
+      'ok'
+    );
+  } catch (e) {
+    setStatus(`✗ Failed to load corpus: ${e.message}`, 'err');
+    document.getElementById('log-text').textContent = 'Error loading training data. See status bar.';
+  }
+}
+
+// ── Generate ─────────────────────────────────────────────────────────────────
+
+function generateLog() {
+  if (!model) return;
+
+  const maxLen = parseInt(document.getElementById('len-range').value);
+  const minLen = Math.min(30, Math.floor(maxLen * 0.4));
+
+  const logText = document.getElementById('log-text');
+
+  // Fade out
+  logText.classList.add('fading');
+  logText.classList.remove('placeholder');
+
+  setTimeout(() => {
+    const entry = model.generate(maxLen, minLen);
+    const stardate = randomStardate();
+
+    currentLog = `Captain's log, stardate ${stardate}. ${entry}`;
+
+    document.getElementById('stardate').textContent =
+      `Captain's log, stardate ${stardate}.`;
+    logText.textContent = entry;
+    logText.classList.remove('fading');
+
+    genCount++;
+    document.getElementById('s-gen').textContent = genCount;
+    document.getElementById('copy-feedback').textContent = '';
+
+    setStatus(
+      `Generated in <1ms · ${entry.split(/\s+/).length} words · order ${model.order}`,
+      'ok'
+    );
+  }, 180);
+}
+
+// ── Copy ──────────────────────────────────────────────────────────────────────
+
+async function copyLog() {
+  if (!currentLog) return;
+  try {
+    await navigator.clipboard.writeText(currentLog);
+    document.getElementById('copy-feedback').textContent = 'Copied!';
+    setTimeout(() => {
+      document.getElementById('copy-feedback').textContent = '';
+    }, 1500);
+  } catch {
+    document.getElementById('copy-feedback').textContent = 'Copy failed';
+  }
+}
+
+// ── Keyboard shortcut ─────────────────────────────────────────────────────────
+
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+  if (e.code === 'Space' && !e.ctrlKey && !e.metaKey) {
+    e.preventDefault();
+    if (!document.getElementById('gen-btn').disabled) generateLog();
+  }
+});
+
+// ── Boot ──────────────────────────────────────────────────────────────────────
+
+loadCorpus();
+</script>
+</body>
+</html>
