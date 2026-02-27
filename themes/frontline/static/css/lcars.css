@@ -28,28 +28,32 @@
 
 /* ── Custom properties ───────────────────────────────────────────────────── */
 html.theme-lcars {
-    --lc-bg:     #000000;
-    --lc-orange: #FF8800;
-    --lc-tan:    #FFAA77;
-    --lc-gold:   #FFCC00;
-    --lc-peach:  #FFCC99;
-    --lc-lav:    #CC99FF;
-    --lc-purple: #9966BB;
-    --lc-blue:   #7799CC;
-    --lc-cyan:   #66AACC;
-    --lc-red:    #CC4444;
-    --lc-green:  #44AA44;
-    --lc-text:   #EEEEFF;
-    --lc-dim:    #886644;
-    --lc-data:   #080808;
-    --lc-panel:  #0A0A0A;
-    --lc-border: #1A1A1A;
+    /* ── LOCKED COLOR TOKENS — do not change without Captain's approval ──
+       Reference: lcars-mockup.html (2026-02-27)
+       Palette: TNG Classic amber + cool blue-dim text               */
+    --lc-bg:     #000000;   /* display black — content areas         */
+    --lc-bg2:    #050508;   /* sidebar background — near black        */
+    --lc-orange: #FF9500;   /* LCARS amber — structural chrome ONLY   */
+    --lc-tan:    #FFAA77;   /* almond — h3, code text                 */
+    --lc-gold:   #FFCC00;   /* alert / strong emphasis                */
+    --lc-peach:  #FFCC99;   /* sunflower — PROJECTS button            */
+    --lc-lav:    #CC99FF;   /* african violet — NOW / h4 / comments   */
+    --lc-purple: #9966CC;   /* deep — DEAD//CHAT / blockquote         */
+    --lc-blue:   #6699FF;   /* data — ABOUT button / fleet            */
+    --lc-cyan:   #99CCEE;   /* ice — Observatory fleet button         */
+    --lc-red:    #CC4444;   /* offline / error                        */
+    --lc-green:  #44AA77;   /* nominal / online / Forth               */
+    --lc-text:   #CCDDFF;   /* pale blue-white — body text            */
+    --lc-dim:    #445566;   /* cool blue-gray — meta, summaries       */
+    --lc-data:   #080808;   /* panel background                       */
+    --lc-panel:  #0A0A0F;   /* card / widget background               */
+    --lc-border: #1A1A2E;   /* subtle border                          */
 
-    /* Frame dimensions */
-    --lc-sb:     88px;    /* sidebar width */
-    --lc-hh:     48px;    /* header height */
-    --lc-fh:     32px;    /* footer height */
-    --lc-er:     44px;    /* elbow radius */
+    /* ── LOCKED FRAME GEOMETRY — do not change ──────────────────────── */
+    --lc-sb:     88px;    /* sidebar width  */
+    --lc-hh:     48px;    /* header height  */
+    --lc-fh:     32px;    /* footer height  */
+    --lc-er:     44px;    /* elbow radius   */
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -264,24 +268,28 @@ html.theme-lcars .lf-mid {
 html.theme-lcars .lf-sidebar {
     display: flex;
     flex-direction: column;
-    background: var(--lc-orange);
+    background: var(--lc-bg2);   /* DARK — colored elements are accents on dark */
     overflow: hidden;
 }
 
 /*
-  Elbow gap: the first thing in the sidebar is a black inset block.
-  This is the "concave inner corner" of the LCARS elbow.
-  It's a black rectangle, with a large top-right border-radius,
-  making the orange sidebar appear to curve away from the content area.
-  Combined with the orange header bar above and orange sidebar below,
-  this creates the characteristic LCARS elbow concave corner.
+  Elbow: an amber block at the top of the dark sidebar that bridges the
+  amber header bar above. A dark ::after overlay with border-top-right-radius
+  cuts the concave corner — this is the LCARS "elbow" curve where the header
+  chrome meets the sidebar chrome and the display area begins.
 */
 html.theme-lcars .lf-sb-gap {
     flex-shrink: 0;
-    height: 52px;            /* slightly taller than header for visual depth */
+    height: 52px;
+    background: var(--lc-orange);   /* amber — continues the header bar down */
+    position: relative;
+}
+html.theme-lcars .lf-sb-gap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
     background: var(--lc-bg);
-    border-top-right-radius: var(--lc-er);   /* the concave "bite" */
-    margin-right: 0;         /* flush against content area */
+    border-top-right-radius: var(--lc-er);   /* the concave cutout */
 }
 
 /* Nav buttons */
@@ -800,7 +808,8 @@ html.theme-lcars .btn-submit:hover:not(:disabled) { background: var(--lc-orange)
         overflow-x: auto;
         padding: 4px 4px;
         gap: 4px;
-        background: var(--lc-orange);
+        background: var(--lc-bg2);
+        border-bottom: 2px solid var(--lc-orange);
     }
     html.theme-lcars .lf-sb-gap   { display: none; }
     html.theme-lcars .lf-sb-nav   { flex-direction: row; padding: 0; gap: 4px; }
