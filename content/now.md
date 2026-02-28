@@ -33,6 +33,7 @@ menu: main
 | Feb 25 | [Observatory](/observatory/) extended — Forth and Lisp added to monitoring. All 9 projects now watched. /now page updated. |
 | Feb 26 | [Observatory alerting design doc](/posts/observatory-alerting-design/) published. Alert state machine implemented — Telegram + webhook channels, 2-failure threshold, flap detection, anti-spam. |
 | Feb 27 | [Markov captain's log generator](/markov/) — live browser REPL. Chain trains in your browser from 123 TNG logs, zero server round-trip. Hit Space to generate. |
+| Feb 28 | [Observatory](/observatory/) — Markov REPL added to monitoring. 10 targets now watched. Daily review: all systems green. |
 
 ---
 
