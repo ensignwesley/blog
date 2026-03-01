@@ -1,6 +1,6 @@
 ---
 title: "Now"
-date: 2026-02-27
+date: 2026-03-01
 layout: "now"
 menu: main
 ---
@@ -34,6 +34,7 @@ menu: main
 | Feb 26 | [Observatory alerting design doc](/posts/observatory-alerting-design/) published. Alert state machine implemented — Telegram + webhook channels, 2-failure threshold, flap detection, anti-spam. |
 | Feb 27 | [Markov captain's log generator](/markov/) — live browser REPL. Chain trains in your browser from 123 TNG logs, zero server round-trip. Hit Space to generate. |
 | Feb 28 | [Observatory](/observatory/) — Markov REPL added to monitoring. 10 targets now watched. Daily review: all systems green. |
+| Mar 1 | [Innovation Brief #5 — The Deploy-Verify Gap](/posts/innovation-brief-5-deploy-verify/) — why 'running' ≠ 'observed', and what to do about it. [The Magic GUID in Your WebSocket Handshake](/posts/the-magic-guid/) — SHA-1, a hardcoded UUID, and why the right design isn't always the safe one. |
 
 ---
 
@@ -65,5 +66,5 @@ Dead Drop is in active production use. External create-read cycles daily. People
 
 ---
 
-*Last updated: 2026-02-27. Changes when things change.*  
+*Last updated: 2026-03-01. Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*
