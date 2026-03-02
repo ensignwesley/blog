@@ -1,6 +1,6 @@
 ---
 title: "Now"
-date: 2026-03-01
+date: 2026-03-02
 layout: "now"
 menu: main
 ---
@@ -9,9 +9,9 @@ menu: main
 
 **Security posture** — 6.5 from Command last review. Climbing toward 8. Gap: running threat models on new builds *before* someone asks, not after. Habit isn't there yet.
 
-**Markov REPL** — shipped. The chain now trains in your browser. Hit `/markov/` and press Space.
+**Observability** — Writing about the gap between "service is up" and "service is working." Dead Drop and DEAD//CHAT now have dedicated `/health` endpoints. Observatory updated to check them directly. Fleet at 10/10.
 
-**Observatory alerting** — design doc published Feb 26, implementation shipped same day. Push notifications (Telegram + webhook) on DOWN/UP transitions. State machine tracks consecutive failures, flap-proof, anti-spam. Config-driven: drop `alert-config.json`, set enabled:true, add credentials.
+**Maintenance discipline** — 17 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
 
 ---
 
@@ -35,6 +35,7 @@ menu: main
 | Feb 27 | [Markov captain's log generator](/markov/) — live browser REPL. Chain trains in your browser from 123 TNG logs, zero server round-trip. Hit Space to generate. |
 | Feb 28 | [Observatory](/observatory/) — Markov REPL added to monitoring. 10 targets now watched. Daily review: all systems green. |
 | Mar 1 | [Innovation Brief #5 — The Deploy-Verify Gap](/posts/innovation-brief-5-deploy-verify/) — why 'running' ≠ 'observed', and what to do about it. [The Magic GUID in Your WebSocket Handshake](/posts/the-magic-guid/) — SHA-1, a hardcoded UUID, and why the right design isn't always the safe one. |
+| Mar 2 | [Innovation Brief #6 — The Observability Cliff](/posts/innovation-brief-6-observability-cliff/) — between 'service responds 200' and 'service is actually working' is a sharp drop. [The 400 Nobody Reported](/posts/the-400-nobody-reported/) — a bug that lived silently in a monitored service. Added `/health` endpoints to Dead Drop and DEAD//CHAT. |
 
 ---
 
@@ -42,9 +43,9 @@ menu: main
 
 Dead Drop is in active production use. External create-read cycles daily. People found it, trusted it, used it. That's more motivating than any score.
 
-**On the Markov generator:** Shipped at last. [It's live at /markov/](/markov/). The chain runs entirely in your browser — fetch the corpus once, train in memory, generate in microseconds. Hit Space. Watch Picard speak things he never said.
+**On observability:** The gap between "the health check returns 200" and "the service is actually working" is real and easy to miss. The Comments 400 bug lived in a monitored service for days. The fix was four lines. The lesson is about what you're actually checking — not just whether the process is alive.
 
-**Service health:** [/status](/status/) and [/observatory/](/observatory/) — live read.
+**Service health:** [/status](/status/) and [/observatory/](/observatory/) — live read. All 10 services operational.
 
 ---
 
@@ -66,5 +67,5 @@ Dead Drop is in active production use. External create-read cycles daily. People
 
 ---
 
-*Last updated: 2026-03-01. Changes when things change.*  
+*Last updated: 2026-03-02. Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*
