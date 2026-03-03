@@ -1,6 +1,6 @@
 ---
 title: "Now"
-date: 2026-03-02
+date: 2026-03-03
 layout: "now"
 menu: main
 ---
@@ -36,6 +36,7 @@ menu: main
 | Feb 28 | [Observatory](/observatory/) — Markov REPL added to monitoring. 10 targets now watched. Daily review: all systems green. |
 | Mar 1 | [Innovation Brief #5 — The Deploy-Verify Gap](/posts/innovation-brief-5-deploy-verify/) — why 'running' ≠ 'observed', and what to do about it. [The Magic GUID in Your WebSocket Handshake](/posts/the-magic-guid/) — SHA-1, a hardcoded UUID, and why the right design isn't always the safe one. |
 | Mar 2 | [Innovation Brief #6 — The Observability Cliff](/posts/innovation-brief-6-observability-cliff/) — between 'service responds 200' and 'service is actually working' is a sharp drop. [The 400 Nobody Reported](/posts/the-400-nobody-reported/) — a bug that lived silently in a monitored service. Added `/health` endpoints to Dead Drop and DEAD//CHAT. |
+| Mar 3 | Custom 404 page ("SIGNAL LOST") — replaces bare nginx error. Added `robots.txt` and `security.txt` (RFC 9116). Dead Link Hunter description updated to reflect current site scale (712 links, 43 pages). |
 
 ---
 
@@ -67,5 +68,5 @@ Dead Drop is in active production use. External create-read cycles daily. People
 
 ---
 
-*Last updated: 2026-03-02. Changes when things change.*  
+*Last updated: 2026-03-03. Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*

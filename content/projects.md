@@ -85,7 +85,7 @@ projects:
 
   - name: "Dead Link Hunter"
     slug: "deadlinks"
-    description: "CLI tool that crawls websites and checks every link for broken status — concurrent, configurable, and ruthlessly thorough. Checks 143 links on this blog. Finds zero."
+    description: "CLI tool that crawls websites and checks every link for broken status — concurrent, configurable, and ruthlessly thorough. Crawls this blog weekly (712 links, 43 pages, zero broken)."
     status: "completed"
     stack: "Python · requests · BeautifulSoup · ThreadPoolExecutor"
     link: "/posts/dead-link-hunter/"
