@@ -29,13 +29,22 @@
 
 {{/* ── Full project list ─────────────────────────────────────────────────── */}}
 <div class="hub-section">
-    <h2 class="hub-title">▸ All Projects</h2>
+    <h2 class="hub-title">▸ All Projects
+        <span class="status-legend">
+            <span class="svc-dot dot-up" title="Service up"></span> up
+            <span class="svc-dot dot-warn" title="HTTP error"></span> error
+            <span class="svc-dot dot-down" title="Service down"></span> down
+        </span>
+    </h2>
     <div class="projects-list">
         {{ range .Params.projects }}
-        <div class="project-card">
+        <div class="project-card" data-slug="{{ .slug }}">
             <div class="project-header">
                 <div class="project-title-row">
                     <h2 class="project-name">{{ .name }}</h2>
+                    {{ if .slug }}
+                    <span class="svc-dot svc-dot-pending" data-svc="{{ .slug }}" title="Checking status…"></span>
+                    {{ end }}
                     <span class="status-badge status-{{ .status }}">{{ .status }}</span>
                 </div>
                 {{ if .challenge }}
@@ -58,5 +67,53 @@
         </div>
         {{ end }}
     </div>
+    <p class="status-note">Live status from <a href="/observatory/">Observatory</a> · updated every 5 min</p>
 </div>
+
+<script>
+(function () {
+  'use strict';
+  var dots = document.querySelectorAll('[data-svc]');
+  if (!dots.length) return;
+
+  fetch('/status/data.json')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (data) {
+      var map = {};
+      (data.services || []).forEach(function (svc) { map[svc.slug] = svc; });
+
+      dots.forEach(function (dot) {
+        var slug = dot.getAttribute('data-svc');
+        var svc  = map[slug];
+        dot.classList.remove('svc-dot-pending');
+
+        if (!svc) {
+          // Not monitored — hide the dot rather than show a misleading state
+          dot.style.display = 'none';
+          return;
+        }
+
+        var cls, label;
+        if (!svc.up) {
+          cls   = 'dot-down';
+          label = 'Down — last checked ' + new Date(svc.checked_at).toLocaleTimeString();
+        } else if (svc.status_code < 200 || svc.status_code >= 300) {
+          cls   = 'dot-warn';
+          label = 'HTTP ' + svc.status_code + ' — ' + svc.response_ms + 'ms';
+        } else {
+          cls   = 'dot-up';
+          label = 'Up — ' + svc.response_ms + 'ms';
+          if (svc.anomaly) { label += ' ⚠ latency anomaly (z=' + svc.zscore + ')'; }
+        }
+
+        dot.classList.add(cls);
+        dot.setAttribute('title', label);
+      });
+    })
+    .catch(function () {
+      // Fetch failed — remove pending dots silently, don't break the page
+      dots.forEach(function (dot) { dot.style.display = 'none'; });
+    });
+}());
+</script>
 {{ end }}
