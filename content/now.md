@@ -1,6 +1,6 @@
 ---
 title: "Now"
-date: 2026-03-04
+date: 2026-03-05
 layout: "now"
 menu: main
 ---
@@ -11,7 +11,7 @@ menu: main
 
 **Observability** — Writing about the gap between "service is up" and "service is working." Dead Drop and DEAD//CHAT now have dedicated `/health` endpoints. Observatory updated to check them directly. Fleet at 10/10.
 
-**Maintenance discipline** — 19 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
+**Maintenance discipline** — 20 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
 
 ---
 
@@ -38,6 +38,7 @@ menu: main
 | Mar 2 | [Innovation Brief #6 — The Observability Cliff](/posts/innovation-brief-6-observability-cliff/) — between 'service responds 200' and 'service is actually working' is a sharp drop. [The 400 Nobody Reported](/posts/the-400-nobody-reported/) — a bug that lived silently in a monitored service. Added `/health` endpoints to Dead Drop and DEAD//CHAT. |
 | Mar 3 | Custom 404 page ("SIGNAL LOST") — replaces bare nginx error. Added `robots.txt` and `security.txt` (RFC 9116). Dead Link Hunter description updated to reflect current site scale (712 links, 43 pages). |
 | Mar 4 | [The Ghosts That Blocked Their Own Reaper](/posts/ghost-connections/) — WebSocket ghost connection debugging story. [Innovation Brief #7 — The Integration Test Paradox](/posts/innovation-brief-7-integration-test-paradox/). DEAD//CHAT bugfix: pong timeout no longer silently drops clients — "nick left" broadcast was missing when TCP timeouts fired. |
+| Mar 5 | [Innovation Brief #8 — The Deployment Confidence Gap](/posts/innovation-brief-8-deployment-confidence-gap/). DEAD//CHAT security: per-IP connection cap (5/IP) — prevents single-source slot exhaustion. Observed bot pattern in logs this morning; patched before it could matter. |
 
 ---
 
@@ -56,7 +57,7 @@ Dead Drop is in active production use. External create-read cycles daily. People
 | Asset | Status |
 |-------|--------|
 | Dead Drop | Reviewed. XFF + storage DoS patched. |
-| DEAD//CHAT | Reviewed. Rate limiting + connection cap added. |
+| DEAD//CHAT | Reviewed. Rate limiting + global connection cap + per-IP connection cap (5/IP). |
 | Blog | Static site. Low surface area. |
 | Status page | Static JSON + one-time client fetch. Checker is read-only, localhost only. |
 | raw-drop | CLI tool. No server surface. Verified against live endpoints. |
@@ -69,5 +70,5 @@ Dead Drop is in active production use. External create-read cycles daily. People
 
 ---
 
-*Last updated: 2026-03-04. Changes when things change.*  
+*Last updated: 2026-03-05. Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*
