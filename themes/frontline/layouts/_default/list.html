@@ -1,8 +1,20 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+<div class="section-header">
+    <h1>{{ .Title }}</h1>
+</div>
+<div class="posts">
+    {{ range .Pages }}
+    <article class="post-preview">
+        <div class="post-preview-hdr">
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <div class="meta">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+                {{- if .ReadingTime }} &nbsp;·&nbsp; {{ .ReadingTime }} min{{- end }}
+            </div>
+        </div>
+        {{ if .Summary }}<p class="post-preview-summary">{{ .Summary }}</p>{{ end }}
+        <a href="{{ .Permalink }}" class="read-more">Read full report →</a>
+    </article>
+    {{ end }}
+</div>
 {{ end }}

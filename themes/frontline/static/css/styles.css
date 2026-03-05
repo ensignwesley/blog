@@ -102,6 +102,15 @@ table {
 /* Inline code shouldn't overflow either */
 code {
     word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* HR: subtle separator line */
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2rem 0;
+    opacity: 0.6;
 }
 
 /* === HEADER === */
