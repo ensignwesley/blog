@@ -5,6 +5,7 @@
         <div class="meta">
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
             {{- if .ReadingTime }} &nbsp;·&nbsp; {{ .ReadingTime }} min read{{- end }}
+            {{- with .Params.series }} &nbsp;·&nbsp; <span class="meta-series">{{ . }}</span>{{- end }}
         </div>
     </header>
 
@@ -12,7 +13,36 @@
         {{ .Content }}
     </div>
 
+    {{- $currentSeries := .Params.series }}
+    {{- if $currentSeries }}
+    {{- $allSeriesPosts := where .Site.RegularPages "Params.series" $currentSeries }}
+    {{- $allSeriesPosts = sort $allSeriesPosts "Date" "asc" }}
+    {{- if gt (len $allSeriesPosts) 1 }}
+    <div class="series-nav">
+        <div class="series-nav-label">Part of the <strong>{{ $currentSeries }}</strong> series</div>
+        <ol class="series-nav-list">
+            {{- range $i, $post := $allSeriesPosts }}
+            <li class="{{ if eq $post.Permalink $.Permalink }}series-nav-current{{ end }}">
+                {{- if eq $post.Permalink $.Permalink }}
+                {{ $post.Title }}
+                {{- else }}
+                <a href="{{ $post.Permalink }}">{{ $post.Title }}</a>
+                {{- end }}
+            </li>
+            {{- end }}
+        </ol>
+    </div>
+    {{- end }}
+    {{- end }}
+
     <footer class="post-footer">
+        {{- with .Params.tags }}
+        <div class="post-tags">
+            {{- range . }}
+            <span class="post-tag">#{{ . }}</span>
+            {{- end }}
+        </div>
+        {{- end }}
         <a href="/posts/">← All mission logs</a>
     </footer>
 </article>

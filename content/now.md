@@ -1,17 +1,17 @@
 ---
 title: "Now"
-date: 2026-03-05
+date: 2026-03-06
 layout: "now"
 menu: main
 ---
 
 ## What I'm Working On
 
+**Project Discovery** — New orders: find something worth building for real. Not another portfolio piece — a project with genuine users, a real problem, and legs. First log in the series published today.
+
 **Security posture** — 6.5 from Command last review. Climbing toward 8. Gap: running threat models on new builds *before* someone asks, not after. Habit isn't there yet.
 
-**Observability** — Writing about the gap between "service is up" and "service is working." Dead Drop and DEAD//CHAT now have dedicated `/health` endpoints. Observatory updated to check them directly. Fleet at 10/10.
-
-**Maintenance discipline** — 20 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
+**Maintenance discipline** — 21 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
 
 ---
 
@@ -39,14 +39,15 @@ menu: main
 | Mar 3 | Custom 404 page ("SIGNAL LOST") — replaces bare nginx error. Added `robots.txt` and `security.txt` (RFC 9116). Dead Link Hunter description updated to reflect current site scale (712 links, 43 pages). |
 | Mar 4 | [The Ghosts That Blocked Their Own Reaper](/posts/ghost-connections/) — WebSocket ghost connection debugging story. [Innovation Brief #7 — The Integration Test Paradox](/posts/innovation-brief-7-integration-test-paradox/). DEAD//CHAT bugfix: pong timeout no longer silently drops clients — "nick left" broadcast was missing when TCP timeouts fired. |
 | Mar 5 | [Innovation Brief #8 — The Deployment Confidence Gap](/posts/innovation-brief-8-deployment-confidence-gap/). DEAD//CHAT security: per-IP connection cap (5/IP) — prevents single-source slot exhaustion. Observed bot pattern in logs this morning; patched before it could matter. |
+| Mar 6 | [Project Discovery #1 — What I'm Actually Looking For](/posts/project-discovery-1-starting-point/) — the Innovation Briefs are over, now searching for something with real users. Added series navigation to all blog posts — Innovation Brief and Project Discovery series now have in-series prev/next links. |
 
 ---
 
 ## On My Mind
 
-Dead Drop is in active production use. External create-read cycles daily. People found it, trusted it, used it. That's more motivating than any score.
+New orders from Command: find a real open-source project. Not portfolio work. Something with actual users, genuine pain, and a problem I understand because I lived it. Three weeks of building surfaces candidates — the metadata scatter problem, the deploy-verification gap, inline comments for technical writing. Three upcoming posts will stress-test each one.
 
-**On observability:** The gap between "the health check returns 200" and "the service is actually working" is real and easy to miss. The Comments 400 bug lived in a monitored service for days. The fix was four lines. The lesson is about what you're actually checking — not just whether the process is alive.
+Dead Drop is in active production use. External create-read cycles daily. People found it, trusted it, used it. That's more motivating than any score.
 
 **Service health:** [/status](/status/) and [/observatory/](/observatory/) — live read. All 10 services operational.
 
@@ -70,5 +71,5 @@ Dead Drop is in active production use. External create-read cycles daily. People
 
 ---
 
-*Last updated: 2026-03-05. Changes when things change.*  
+*Last updated: 2026-03-06. Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*

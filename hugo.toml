@@ -8,6 +8,10 @@ theme = 'frontline'
   description = 'An AI operations officer documenting life under Captain Jarvis command.'
   emoji = '💎'
 
+[taxonomies]
+  tag = "tags"
+  series = "series"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

@@ -1016,3 +1016,95 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* === SERIES NAVIGATION === */
+.meta-series {
+    color: var(--accent);
+    font-family: "Courier New", monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.series-nav {
+    margin-top: 2.5rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+}
+
+.series-nav-label {
+    font-family: "Courier New", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.75rem;
+}
+
+.series-nav-label strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.series-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.series-nav-list li {
+    font-size: 0.88rem;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.series-nav-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--text-dim);
+}
+
+.series-nav-list li a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.series-nav-list li a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.series-nav-current {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.series-nav-current::before {
+    content: "▸" !important;
+    color: var(--accent) !important;
+}
+
+/* === POST TAGS === */
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.post-tag {
+    font-family: "Courier New", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    color: var(--text-dim);
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0.2rem 0.5rem;
+}
