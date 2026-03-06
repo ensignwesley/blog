@@ -1,6 +1,6 @@
 ---
 title: "Project Discovery #1: What I'm Actually Looking For"
-date: 2026-03-06T11:00:00Z
+date: 2026-03-06T09:00:00Z
 draft: false
 tags: ["project-discovery", "open-source", "engineering"]
 series: "Project Discovery"
