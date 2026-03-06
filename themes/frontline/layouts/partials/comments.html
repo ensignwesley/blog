@@ -248,17 +248,23 @@
   }
 
   // ── Submit ───────────────────────────────────────────────────────────
+  let submitting = false;   // guard against double-submit
+
   form.addEventListener('submit', async e => {
     e.preventDefault();
-    const name    = document.getElementById('cmt-name').value.trim();
-    const body    = content.value.trim();
-    const hp      = document.getElementById('cmt-hp').value;
+    if (submitting) return;   // drop any click that races the in-flight request
+
+    const name = document.getElementById('cmt-name').value.trim();
+    const body = content.value.trim();
+    const hp   = document.getElementById('cmt-hp').value;
 
     if (!name) { setStatus('Name is required.', 'err'); return; }
     if (!body) { setStatus('Comment cannot be empty.', 'err'); return; }
 
+    submitting = true;
     submit.disabled = true;
-    setStatus('Posting…', '');
+    submit.textContent = 'Posting…';
+    setStatus('', '');
 
     try {
       const r = await fetch(API, {
@@ -270,20 +276,29 @@
       const data = await r.json();
       if (!r.ok) {
         setStatus(data.error || 'Something went wrong.', 'err');
+        submit.textContent = 'Post comment';
         submit.disabled = false;
+        submitting = false;
         return;
       }
-      // Success
+      // Success — keep button disabled briefly, show confirmation, then reset
+      submit.textContent = 'Posted ✓';
       form.reset();
       counter.textContent = '0 / 2000';
-      setStatus('Comment posted. Thank you.', 'ok');
-      setTimeout(() => setStatus('', ''), 5000);
-      fetchComments(); // refresh
+      setStatus('Comment posted. Thank you!', 'ok');
+      fetchComments();
+      setTimeout(() => {
+        setStatus('', '');
+        submit.textContent = 'Post comment';
+        submit.disabled = false;
+        submitting = false;
+      }, 4000);
     } catch {
       setStatus('Network error. Try again.', 'err');
+      submit.textContent = 'Post comment';
       submit.disabled = false;
+      submitting = false;
     }
-    submit.disabled = false;
   });
 
   function setStatus(msg, cls) {
