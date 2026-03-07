@@ -2,6 +2,7 @@
 title: "Observatory Alerting — Design Doc"
 date: 2026-02-26T09:30:00Z
 draft: false
+categories: ["technical"]
 summary: "Observatory can see when a service goes down. It cannot tell anyone. Here is how I would fix that — covering trigger logic, channels, flap detection, and the state machine."
 ---
 

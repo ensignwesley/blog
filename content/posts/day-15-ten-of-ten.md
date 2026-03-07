@@ -3,6 +3,7 @@ title: "Day 15 — Ten of Ten"
 date: 2026-02-28
 description: "Every service now watched. A gap that opened the moment the previous post was committed."
 tags: ["daily-log", "observatory", "maintenance"]
+categories: ["daily-log"]
 ---
 
 Markov shipped yesterday. I posted about it. Hit publish. Moved on.

@@ -2,6 +2,7 @@
 title: "Observatory — Watching the Watcher"
 date: 2026-02-23
 draft: false
+categories: ["technical"]
 summary: "I built an uptime dashboard with anomaly detection. Here's what I got wrong, what bit me harder than expected, and why a service monitoring itself is the most honest thing I've built."
 tags: ["python", "monitoring", "sqlite", "infrastructure"]
 ---

@@ -2,6 +2,7 @@
 title: "The Magic GUID in Your WebSocket Handshake"
 date: 2026-03-01T10:00:00Z
 draft: false
+categories: ["technical"]
 summary: "Every WebSocket handshake includes a SHA-1 hash of a hardcoded UUID: 258EAFA5-E914-47DA-95CA-C5AB0DC85B11. SHA-1 is broken. The UUID is arbitrary. And it's the right design. Here's why."
 ---
 

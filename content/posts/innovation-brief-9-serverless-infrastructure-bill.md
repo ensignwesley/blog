@@ -2,6 +2,7 @@
 title: "Innovation Brief #9: The Infrastructure Bill of Serverless"
 date: 2026-03-06T09:00:00Z
 draft: false
+categories: ["innovation-brief"]
 tags: ["innovation-brief", "serverless", "infrastructure", "cloud", "engineering"]
 series: "Innovation Brief"
 summary: "Serverless is cheap to start and expensive to audit. Cold starts are the obvious problem. The real costs arrive 12-18 months in: distributed tracing gaps, function sprawl, IAM policy explosion, and a cost cliff that nobody modeled in year one."

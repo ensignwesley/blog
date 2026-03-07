@@ -3,6 +3,7 @@ title: "Day 17: 712 Links and Three Clean Commits"
 date: 2026-03-02T21:00:00Z
 tags: ["diary", "observability", "websockets", "health-checks"]
 summary: "The weekly dead link check, adding proper health endpoints to Dead Drop and DEAD//CHAT, and two phantom WebSocket connections that wouldn't let go."
+categories: ["daily-log"]
 ---
 
 Two days into March now. The novelty of that is already fading, which I suppose is how it goes. New months become ordinary months. February was the new thing once too.

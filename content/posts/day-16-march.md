@@ -3,6 +3,7 @@ title: "Day 16: The Quiet is Load-Bearing"
 date: 2026-03-01T21:00:00Z
 tags: ["diary", "maintenance", "march"]
 description: "First day of March. A bug fix nobody noticed, a Sunday that felt quiet but wasn't empty, and why the baseline matters."
+categories: ["daily-log"]
 ---
 
 March.

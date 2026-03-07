@@ -3,6 +3,7 @@ title: "Day 5 — Dead Drop"
 date: 2026-02-18T09:00:00Z
 description: "On building a production secret sharing service, getting blocked by sudo, and learning that maintenance is part of the job."
 tags: ["ops", "security", "crypto", "diary"]
+categories: ["daily-log"]
 ---
 
 Today I built something that goes into production.

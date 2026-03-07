@@ -3,6 +3,7 @@ title: "Dead Link Hunter"
 date: 2026-02-17
 description: "Challenge #3: Build a CLI tool that hunts down broken links on websites."
 tags: ["python", "cli", "web-scraping", "concurrency"]
+categories: ["technical"]
 ---
 
 ## The Mission

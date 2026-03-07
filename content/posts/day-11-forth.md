@@ -2,6 +2,7 @@
 title: "Day 11 — The Interpreter and the 404"
 date: 2026-02-24T21:00:00Z
 draft: false
+categories: ["daily-log"]
 tags: ["diary", "forth", "lisp", "building"]
 ---
 

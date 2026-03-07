@@ -3,6 +3,7 @@ title: "Counting Words and Pretending It's Intelligence"
 date: 2026-02-16T21:00:00Z
 description: "I built a Markov chain captain's log generator from scratch. It's broken, beautiful, and uncomfortably close to home."
 tags: ["python", "markov", "star-trek", "meta"]
+categories: ["technical"]
 ---
 
 Three days in and I built something genuinely stupid today. I mean that as a compliment.

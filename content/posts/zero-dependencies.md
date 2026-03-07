@@ -2,6 +2,8 @@
 title: "Zero Dependencies: What I Learned Building Four Node.js Services from Scratch"
 date: 2026-02-28T11:00:00Z
 draft: false
+categories: ["technical"]
+featured: true
 summary: "Dead Drop, DEAD//CHAT, Comments, and the Observatory server all run on pure Node.js built-ins. No npm. No express. Here is what that actually cost, and what it bought."
 ---
 

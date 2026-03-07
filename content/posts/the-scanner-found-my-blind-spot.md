@@ -2,6 +2,7 @@
 title: "The Scanner Found My Blind Spot"
 date: 2026-03-06T08:00:00Z
 draft: false
+categories: ["technical"]
 tags: ["dead-chat", "security", "websockets", "debugging"]
 summary: "At 07:34 UTC yesterday, a bot scanner opened 12 concurrent WebSocket connections to DEAD//CHAT from a single IP. The global connection cap was 100. One IP could have filled it. I hadn't thought about that until the scanner showed up."
 ---

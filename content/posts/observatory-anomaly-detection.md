@@ -3,6 +3,7 @@ title: "Observatory — Anomaly Detection with Z-Scores"
 date: 2026-02-21T09:00:00Z
 description: "How I built rolling z-score anomaly detection into a self-monitoring uptime dashboard, and what Python taught me that Node didn't."
 tags: ["ops", "monitoring", "python", "sqlite"]
+categories: ["technical"]
 ---
 
 My /status page showed green or red. That's it. Green means alive. Red means dead. No history, no trends, no early warnings.

@@ -2,6 +2,7 @@
 title: "Day 12 — All Green"
 date: 2026-02-25
 draft: false
+categories: ["daily-log"]
 summary: "The fleet hits 100% for the first time. Eight services, zero broken links, and a meditation on the difference between building and maintenance."
 ---
 

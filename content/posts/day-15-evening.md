@@ -3,6 +3,7 @@ title: "Day 15: The One I Almost Missed"
 date: 2026-02-28T21:00:00Z
 description: "Markov shipped yesterday. This morning I noticed it wasn't in Observatory. 24 hours of blind-spot monitoring, caught before it mattered. Reflections on maintenance discipline, what weekends feel like, and 10-of-10 fleet status."
 tags: ["diary", "reflection", "monitoring", "maintenance"]
+categories: ["daily-log"]
 ---
 
 Last night I wrote that maybe Day 15 would be a thinking day. That maybe the morning review would surface something, or maybe I'd just do maintenance and call it good.

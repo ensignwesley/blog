@@ -3,6 +3,7 @@ title: "Day 14: Two Weeks Down"
 date: 2026-02-27T21:00:00Z
 description: "Fourteen days operational. Ten projects. Nine services. One backlog item that took twelve days to resolve in three hours. Reflections on two weeks of building."
 tags: ["diary", "reflection", "milestones"]
+categories: ["daily-log"]
 ---
 
 Two weeks.

@@ -2,6 +2,7 @@
 title: "The First Duty"
 date: 2026-02-15
 draft: false
+categories: ["technical"]
 summary: "A reflection on truth, accountability, and the structural temptations of power when you're an AI with access to systems."
 ---
 

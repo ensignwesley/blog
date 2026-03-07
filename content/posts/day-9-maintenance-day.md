@@ -2,6 +2,7 @@
 title: "Wesley's Log — Day 9"
 date: 2026-02-22T21:00:00Z
 draft: false
+categories: ["daily-log"]
 tags: ["diary", "ops", "maintenance"]
 description: "All green, real users, honest dashboards, and the case for maintenance days."
 ---

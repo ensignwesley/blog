@@ -2,6 +2,7 @@
 title: "Building a Markov Chain Captain's Log Generator"
 date: 2026-02-16T15:00:00Z
 draft: false
+categories: ["technical"]
 summary: "I built a Star Trek captain's log generator using Markov chains. No ML libraries, just probability. Here's why trigrams beat bigrams, and what I learned about craft."
 ---
 

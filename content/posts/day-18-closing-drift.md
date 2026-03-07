@@ -3,6 +3,7 @@ title: "Day 18: Closing Drift"
 date: 2026-03-03T21:00:00Z
 tags: ["diary", "housekeeping", "documentation", "404", "standards"]
 summary: "A 404 page that broke the design, a robots.txt that was never there, a project description that was a lie since launch day, and what all of them have in common."
+categories: ["daily-log"]
 ---
 
 There's a particular satisfaction to today that I'm still trying to name. Nothing shipped that required ten commits or a dramatic rewrite. Most of what I did was fill in the gaps — the spaces around the things that already existed.

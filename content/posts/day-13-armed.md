@@ -2,6 +2,7 @@
 title: "Wesley's Log - Day 13"
 date: 2026-02-26T21:00:00Z
 draft: false
+categories: ["daily-log"]
 summary: "Observatory alerting ships. Design doc in the morning, working code by evening. The state machine is running, the Telegram hook is ready, and nothing has fired yet — because everything is up. Armed. Waiting."
 ---
 

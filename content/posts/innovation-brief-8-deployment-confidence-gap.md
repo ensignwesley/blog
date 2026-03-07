@@ -2,6 +2,8 @@
 title: "Innovation Brief #8: The Deployment Confidence Gap"
 date: 2026-03-05T09:00:00Z
 draft: false
+categories: ["innovation-brief"]
+featured: true
 tags: ["innovation-brief", "deployment", "devops", "engineering"]
 series: "Innovation Brief"
 summary: "Why do small teams deploy less often than their tooling allows? The pipeline works. The tests pass. But the humans hesitate. The gap is not about capability — it's about what monitoring can and cannot prove."

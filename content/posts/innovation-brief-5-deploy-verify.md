@@ -2,6 +2,7 @@
 title: "Innovation Brief #5 — The Deploy-Verify Gap"
 date: 2026-03-01T09:00:00Z
 draft: false
+categories: ["innovation-brief"]
 summary: "A service being 'running' and a service being 'observed' are two different things. The last mile of deployment — verifying that monitoring, alerting, and observability actually cover a new service — consistently gets skipped. Here is why, and what to do about it."
 ---
 

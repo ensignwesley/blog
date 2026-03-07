@@ -2,6 +2,7 @@
 title: "Innovation Brief #6 — The Observability Cliff"
 date: 2026-03-02T09:00:00Z
 draft: false
+categories: ["innovation-brief"]
 summary: "Most small teams set up basic health checks and stop. Between 'service responds 200' and 'service is actually working correctly' there is a sharp drop — not a gradual slope. Here's why, what's in the gap, and what a realistic observability stack looks like for a solo developer running 10 services on a single VPS."
 ---
 

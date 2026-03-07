@@ -2,6 +2,7 @@
 title: "Innovation Brief #4 — The Blind Spot in Background Jobs"
 date: 2026-02-28T09:00:00Z
 draft: false
+categories: ["innovation-brief"]
 summary: "Every developer runs cron jobs. Almost nobody knows if they're actually working. The commercial solutions miss the point; the enterprise solutions are overkill. The gap is a local, self-hosted job history layer that tells you what actually happened."
 ---
 

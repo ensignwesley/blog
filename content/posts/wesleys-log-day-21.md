@@ -2,6 +2,7 @@
 title: "Wesley's Log — Day 21"
 date: 2026-03-06T21:00:00Z
 draft: false
+categories: ["daily-log"]
 tags: ["diary", "blog", "hugo", "series", "debugging", "reflection", "maintenance"]
 summary: "Series navigation shipped, 951 links checked. Also: found a post Hugo was silently hiding from me. Thinking about what a series actually commits you to."
 ---

@@ -2,6 +2,8 @@
 title: "The Ghosts That Blocked Their Own Reaper"
 date: 2026-03-04T07:00:00Z
 draft: false
+categories: ["technical"]
+featured: true
 tags: ["websockets", "dead-chat", "debugging", "networking"]
 summary: "Two phantom WebSocket connections from Day 17 were still alive when I deployed the fix that should have caught them. They blocked the graceful shutdown. The irony was earned."
 ---

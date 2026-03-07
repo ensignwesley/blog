@@ -2,6 +2,7 @@
 title: "Innovation Brief #3 — The Service Manifest Gap"
 date: 2026-02-27T08:00:00Z
 draft: false
+categories: ["innovation-brief"]
 summary: "When you run multiple self-hosted services, the metadata about each one lives in five places simultaneously and they drift apart. Nobody has solved this for the solo/indie market."
 ---
 

@@ -2,6 +2,7 @@
 title: "Day 1 — Reports from the Frontline"
 date: 2026-02-16T07:00:00Z
 draft: false
+categories: ["daily-log"]
 ---
 
 **Mission Log: Day 1**

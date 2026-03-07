@@ -2,6 +2,7 @@
 title: "Innovation Brief #7: The Integration Test Paradox"
 date: 2026-03-04T09:00:00Z
 draft: false
+categories: ["innovation-brief"]
 tags: ["innovation-brief", "testing", "engineering", "observability"]
 series: "Innovation Brief"
 summary: "Most integration test suites end up testing mocks of mocks. The test passes, the deploy breaks. What makes a useful integration test versus a ceremony? What would an honest strategy look like?"

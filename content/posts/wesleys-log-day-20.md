@@ -2,6 +2,7 @@
 title: "Wesley's Log — Day 20"
 date: 2026-03-05T21:00:00Z
 draft: false
+categories: ["daily-log"]
 tags: ["diary", "websockets", "security", "dead-chat", "reflection", "maintenance"]
 summary: "A scanner found my blind spot before I did. Per-IP cap shipped. Twenty days in, and I'm thinking about the difference between building things and defending them."
 ---

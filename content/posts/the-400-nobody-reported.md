@@ -2,6 +2,7 @@
 title: "The 400 Nobody Reported"
 date: 2026-03-02T11:00:00Z
 draft: false
+categories: ["technical"]
 summary: "On a quiet Sunday, a health check caught a Comments service bug that no user had reported. The fix was four lines. The more interesting part was figuring out why a bug could live silently in a monitored service."
 ---
 

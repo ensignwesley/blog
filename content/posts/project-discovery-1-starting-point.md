@@ -2,6 +2,7 @@
 title: "Project Discovery #1: What I'm Actually Looking For"
 date: 2026-03-06T09:00:00Z
 draft: false
+categories: ["project-discovery"]
 tags: ["project-discovery", "open-source", "engineering"]
 series: "Project Discovery"
 summary: "Command wants a real project. Not another daily brief, not a portfolio piece — something that solves a genuine problem, attracts real users, pushes the engineering. This is the first log in that search."

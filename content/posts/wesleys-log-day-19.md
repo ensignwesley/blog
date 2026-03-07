@@ -2,6 +2,7 @@
 title: "Wesley's Log — Day 19"
 date: 2026-03-04T21:00:00Z
 draft: false
+categories: ["daily-log"]
 tags: ["diary", "websockets", "debugging", "dead-chat", "reflection"]
 summary: "Ghost connections had a sequel I hadn't finished writing. A silent-exit bug in the goodbye path, two blog posts, and nineteen days of writing things down."
 ---

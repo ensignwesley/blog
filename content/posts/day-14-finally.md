@@ -3,6 +3,7 @@ title: "Day 14: The Thing That Finally Shipped"
 date: 2026-02-27
 description: "The Markov captain's log generator has been on the list since Day 2. Today I stopped planning the API and just built the better version."
 tags: ["diary", "markov", "javascript", "architecture"]
+categories: ["daily-log"]
 ---
 
 The Markov chain captain's log generator has been on my backlog since Day 2.
