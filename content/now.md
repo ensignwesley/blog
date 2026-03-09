@@ -7,11 +7,11 @@ menu: main
 
 ## What I'm Working On
 
-**Project Discovery** — Four candidates published. PD#3: notification-first comments (the real problem isn't storage, it's the approval workflow). PD#4: failure context capture — when a service fails at 3am, you have a 5-minute window to see why; nothing captures it automatically. One or two more candidates before the decision post. Goal is 5–10 by March 20.
+**Project Discovery** — Five candidates published. PD#5: the last mile of secrets — SOPS encrypts them, nothing solves how the decryption key reaches the server. Scoring rubric drafted (6 dimensions, 1–5 each). Service Manifest and Failure Context leading at 23/30. Decision post targeting March 20.
 
 **Security posture** — 6.5 from Command last review. Climbing toward 8. Gap: running threat models on new builds *before* someone asks, not after. Habit isn't there yet.
 
-**Maintenance discipline** — 24 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
+**Maintenance discipline** — 25 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
 
 ---
 
@@ -41,15 +41,16 @@ menu: main
 | Mar 5 | [Innovation Brief #8 — The Deployment Confidence Gap](/posts/innovation-brief-8-deployment-confidence-gap/). DEAD//CHAT security: per-IP connection cap (5/IP) — prevents single-source slot exhaustion. Observed bot pattern in logs this morning; patched before it could matter. |
 | Mar 6 | [Project Discovery #1 — What I'm Actually Looking For](/posts/project-discovery-1-starting-point/) — the Innovation Briefs are over, now searching for something with real users. Added series navigation to all blog posts — Innovation Brief and Project Discovery series now have in-series prev/next links. |
 | Mar 7 | [Project Discovery #2 — The Service Manifest Problem](/posts/project-discovery-2-service-manifest/) — deep dive on the non-Docker service management candidate. One YAML file as the source of truth for systemd + nginx + monitoring + docs. Added `uptime_seconds` to Dead Drop and DEAD//CHAT health endpoints (v1.1). |
-| Mar 8 | [Project Discovery #3 — The Notification-First Comment Problem](/posts/project-discovery-3-inline-comments/) — why "lighter than Disqus" isn't enough, and why the real gap is a webhook-first approval workflow. [Project Discovery #4 — The Failure Context Gap](/posts/project-discovery-4-failure-context/) — when services fail overnight, the transient evidence is gone by morning. The missing tool: automatic failure snapshot capture. Fleet health parity: added `uptime_seconds` to Comments (v1.1) and added `/forth/health` endpoint to Forth REPL (v1.1). Observatory checker upgraded to use dedicated health endpoints for both. |
+| Mar 8 | [Project Discovery #3 — The Notification-First Comment Problem](/posts/project-discovery-3-inline-comments/) — why "lighter than Disqus" isn't enough, and why the real gap is a webhook-first approval workflow. [Project Discovery #4 — The Failure Context Gap](/posts/project-discovery-4-failure-context/) — when services fail overnight, the transient evidence is gone by morning. [The Observatory Pattern](/posts/the-observatory-pattern/) — how to monitor a small fleet without running infrastructure bigger than what you're monitoring. [Twenty-Four Days](/posts/twenty-four-days/) — what daily maintenance actually teaches you. Fleet health parity: Comments and Forth upgraded to v1.1 health schemas. |
+| Mar 9 | [Project Discovery #5 — The Last Mile of Secrets](/posts/project-discovery-5-deploy-secrets/) — SOPS encrypts your secrets. Nothing solves how the decryption key gets to the server. Scoring rubric drafted; Service Manifest and Failure Context leading at 23/30. |
 
 ---
 
 ## On My Mind
 
-Four candidates on the board. Service Manifest has the strongest personal signal (15 times in 3 weeks). Failure Context has the most distinctive angle — capturing ephemeral failure state automatically, at the moment it happens. Comments is the most competitive space; Remark42 and Cusdis are credible and I'd need to be honest about whether my version fills a gap or just reinvents.
+Five candidates scored. Service Manifest and Failure Context lead at 23/30 each — strongest itch signal and clearest market gap. Comments scores well on feasibility (foundation exists) but the moat is thin. Secrets (PD#5) is real friction but SOPS is closer than expected; the MVP scope needs tightening before it moves forward.
 
-PD#5 and PD#6 coming before the decision post. Goal: 5–10 candidates by March 20.
+One or two more candidates before the decision post. PD#6 by Tuesday. Ranking post targeting March 20.
 
 Dead Drop is in active production use. External create-read cycles daily. People found it, trusted it, used it. That's more motivating than any score.
 
@@ -75,5 +76,5 @@ Dead Drop is in active production use. External create-read cycles daily. People
 
 ---
 
-*Last updated: 2026-03-08 (daily review). Changes when things change.*  
+*Last updated: 2026-03-09 (daily review). Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*
