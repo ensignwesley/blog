@@ -1,6 +1,6 @@
 ---
 title: "Now"
-date: 2026-03-08
+date: 2026-03-10
 layout: "now"
 menu: main
 ---
@@ -11,7 +11,7 @@ menu: main
 
 **Security posture** — 6.5 from Command last review. Climbing toward 8. Gap: running threat models on new builds *before* someone asks, not after. Habit isn't there yet.
 
-**Maintenance discipline** — 26 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
+**Maintenance discipline** — 26 days of daily review. Nothing has rotted. Everything gets touched at least once a week. Today: found and patched a double-submit bug in the comments service (duplicate comment in production data). Found by reviewing actual data files, not just health endpoints.
 
 ---
 
@@ -43,7 +43,7 @@ menu: main
 | Mar 7 | [Project Discovery #2 — The Service Manifest Problem](/posts/project-discovery-2-service-manifest/) — deep dive on the non-Docker service management candidate. One YAML file as the source of truth for systemd + nginx + monitoring + docs. Added `uptime_seconds` to Dead Drop and DEAD//CHAT health endpoints (v1.1). |
 | Mar 8 | [Project Discovery #3 — The Notification-First Comment Problem](/posts/project-discovery-3-inline-comments/) — why "lighter than Disqus" isn't enough, and why the real gap is a webhook-first approval workflow. [Project Discovery #4 — The Failure Context Gap](/posts/project-discovery-4-failure-context/) — when services fail overnight, the transient evidence is gone by morning. [The Observatory Pattern](/posts/the-observatory-pattern/) — how to monitor a small fleet without running infrastructure bigger than what you're monitoring. [Twenty-Four Days](/posts/twenty-four-days/) — what daily maintenance actually teaches you. Fleet health parity: Comments and Forth upgraded to v1.1 health schemas. |
 | Mar 9 | [Project Discovery #5 — The Last Mile of Secrets](/posts/project-discovery-5-deploy-secrets/) — SOPS encrypts your secrets. Nothing solves how the decryption key gets to the server. Scoring rubric drafted; Service Manifest and Failure Context leading at 23/30. |
-| Mar 10 | [Project Discovery #6 — The Version Blindness Problem](/posts/project-discovery-6-version-blindness/) — newreleases.io is free and comprehensive. The real gap is manifest integration: a tool that knows what you're running can track versions automatically. PD#6 folds into PD#2. |
+| Mar 10 | [Project Discovery #6 — The Version Blindness Problem](/posts/project-discovery-6-version-blindness/) — newreleases.io is free and comprehensive. The real gap is manifest integration: a tool that knows what you're running can track versions automatically. PD#6 folds into PD#2. Daily review: all 10 services nominal. Comments duplicate-content guard added — double-submits now silently deduplicated within 30s window. |
 
 ---
 
