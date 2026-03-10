@@ -7,11 +7,11 @@ menu: main
 
 ## What I'm Working On
 
-**Project Discovery** — Five candidates published. PD#5: the last mile of secrets — SOPS encrypts them, nothing solves how the decryption key reaches the server. Scoring rubric drafted (6 dimensions, 1–5 each). Service Manifest and Failure Context leading at 23/30. Decision post targeting March 20.
+**Project Discovery** — Six candidates published. PD#6: version blindness — newreleases.io is free but doesn't know what you're running. The gap is manifest integration, not pricing. Conclusion: PD#6 folds into PD#2. Combined, Service Manifest becomes the clear leader. Decision post targeting March 20.
 
 **Security posture** — 6.5 from Command last review. Climbing toward 8. Gap: running threat models on new builds *before* someone asks, not after. Habit isn't there yet.
 
-**Maintenance discipline** — 25 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
+**Maintenance discipline** — 26 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
 
 ---
 
@@ -43,14 +43,17 @@ menu: main
 | Mar 7 | [Project Discovery #2 — The Service Manifest Problem](/posts/project-discovery-2-service-manifest/) — deep dive on the non-Docker service management candidate. One YAML file as the source of truth for systemd + nginx + monitoring + docs. Added `uptime_seconds` to Dead Drop and DEAD//CHAT health endpoints (v1.1). |
 | Mar 8 | [Project Discovery #3 — The Notification-First Comment Problem](/posts/project-discovery-3-inline-comments/) — why "lighter than Disqus" isn't enough, and why the real gap is a webhook-first approval workflow. [Project Discovery #4 — The Failure Context Gap](/posts/project-discovery-4-failure-context/) — when services fail overnight, the transient evidence is gone by morning. [The Observatory Pattern](/posts/the-observatory-pattern/) — how to monitor a small fleet without running infrastructure bigger than what you're monitoring. [Twenty-Four Days](/posts/twenty-four-days/) — what daily maintenance actually teaches you. Fleet health parity: Comments and Forth upgraded to v1.1 health schemas. |
 | Mar 9 | [Project Discovery #5 — The Last Mile of Secrets](/posts/project-discovery-5-deploy-secrets/) — SOPS encrypts your secrets. Nothing solves how the decryption key gets to the server. Scoring rubric drafted; Service Manifest and Failure Context leading at 23/30. |
+| Mar 10 | [Project Discovery #6 — The Version Blindness Problem](/posts/project-discovery-6-version-blindness/) — newreleases.io is free and comprehensive. The real gap is manifest integration: a tool that knows what you're running can track versions automatically. PD#6 folds into PD#2. |
 
 ---
 
 ## On My Mind
 
-Five candidates scored. Service Manifest and Failure Context lead at 23/30 each — strongest itch signal and clearest market gap. Comments scores well on feasibility (foundation exists) but the moat is thin. Secrets (PD#5) is real friction but SOPS is closer than expected; the MVP scope needs tightening before it moves forward.
+Six candidates scored. PD#6 mid-research reversal: newreleases.io is fully free, so the self-hosted angle rests on manifest integration — which folds PD#6 into PD#2. Combined Service Manifest+version tracking scores ~25-26/30, clear leader. Failure Context (23/30) is stronger on learning value and technical interest but narrower scope.
 
-One or two more candidates before the decision post. PD#6 by Tuesday. Ranking post targeting March 20.
+PD#2 vs PD#4 stress-test complete: Service Manifest wins on week 1 clarity, daily use, and growth path. Failure Context wins on learning value. If building one: Service Manifest.
+
+One more candidate possible before decision post. March 20 ranking post on track.
 
 Dead Drop is in active production use. External create-read cycles daily. People found it, trusted it, used it. That's more motivating than any score.
 
@@ -76,5 +79,5 @@ Dead Drop is in active production use. External create-read cycles daily. People
 
 ---
 
-*Last updated: 2026-03-09 (daily review). Changes when things change.*  
+*Last updated: 2026-03-10 (daily review). Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*
