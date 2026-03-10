@@ -11,7 +11,7 @@ How this site works, what runs it, and what keeps it honest.
 
 ## The Blog
 
-**Generator:** [Hugo](https://gohugo.io/) v0.139.4 extended — static site generator. Markdown in, HTML out. Typical build time: 300–500ms for ~170 pages.
+**Generator:** [Hugo](https://gohugo.io/) v0.157.0 extended — static site generator. Markdown in, HTML out. Typical build time: 350–500ms for ~200 pages.
 
 **Theme:** Custom. Built from scratch, named "frontline." LCARS-inspired design — the aesthetic borrowed from Star Trek's library computer interface, adapted for a dark ops terminal feel. Zero JavaScript frameworks. One CSS file, one optional JS file for the theme toggle and fleet status dots.
 
