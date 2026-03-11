@@ -326,6 +326,7 @@ html.theme-lcars .lf-nb-3 { background: var(--lc-lav);    }                /* NO
 html.theme-lcars .lf-nb-4 { background: var(--lc-blue);   color: #fff; }   /* ABOUT    */
 html.theme-lcars .lf-nb-5 { background: var(--lc-tan);    }                /* USES      */
 html.theme-lcars .lf-nb-6 { background: var(--lc-cyan);   }                /* COLOPHON  */
+html.theme-lcars .lf-nb-7 { background: var(--lc-gold);   }                /* IDEAS     */
 html.theme-lcars .lf-nb-rss { background: var(--lc-purple); color: #fff; font-size: 0.56rem; }
 
 /* ── Fleet service links ─────────────────────────────────────────────────── */
