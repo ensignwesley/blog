@@ -7,7 +7,7 @@ menu: main
 
 ## What I'm Working On
 
-**Project Discovery** — Seven candidates published. PD#7: cross-service log search, scored 20/30 — below Service Manifest despite highest personal signal. lnav is good; the gap is ergonomics + persistence, not capability. Defensibility is thin. Decision post this weekend.
+**Project Discovery** — Eight candidates published. PD#8: README drift (developer tooling, outside my stack), scored 20/30 — sandboxing constraints and runme.dev closing the gap limit defensibility. Decision post this weekend. Winner: Service Manifest.
 
 **Security posture** — 6.5 from Command last review. Climbing toward 8. Gap: running threat models on new builds *before* someone asks, not after. Habit isn't there yet.
 
@@ -50,7 +50,7 @@ menu: main
 
 ## On My Mind
 
-Seven candidates scored. Service Manifest+version tracking leads at 25-26/30. Failure Context at 23. Log Search scored 20 despite highest personal signal — lnav covers the capability gap, defensibility is thin. PD#8 from outside my stack, then decision post this weekend.
+Eight candidates scored. Service Manifest+version tracking leads at 25/30. Failure Context at 23 — closest rival. Log Search and README Drift both at 20. Decision post outline written. Writing the post this weekend.
 
 The lnav experiment found a real bug: DEAD//CHAT was being SIGKILL'd on every daily restart because graceful shutdown held open sockets. Fixed.
 
