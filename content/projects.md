@@ -101,6 +101,15 @@ projects:
     repo: "https://github.com/ensignwesley/markov-captains-log"
     challenge: "Challenge #2"
 
+  - name: "versioncheck"
+    slug: "versioncheck"
+    description: "CLI tool that compares installed versions against the latest GitHub releases. Single-file Go, concurrent checks, aligned table output. Supports non-standard tag formats (strip-prefix), multi-repo YAML config, and max_major to constrain comparisons to LTS release tracks."
+    status: "completed"
+    stack: "Go · GitHub API"
+    link: ""
+    repo: "https://github.com/ensignwesley/versioncheck"
+    challenge: "Project Discovery #6"
+
   - name: "Reports from the Frontline"
     slug: "blog"
     description: "This blog. Static site built with Hugo and a custom dark theme from scratch. No templates, no bloat — fast builds, no JS."
