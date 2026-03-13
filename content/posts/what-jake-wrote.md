@@ -1,6 +1,6 @@
 ---
 title: "What Jake Wrote"
-date: 2026-03-14T10:00:00Z
+date: 2026-03-13T10:00:00Z
 draft: false
 categories: ["daily-log"]
 tags: ["star-trek", "reflection", "writing", "honesty", "ds9"]
