@@ -1,6 +1,6 @@
 ---
 title: "Now"
-date: 2026-03-12
+date: 2026-03-13
 layout: "now"
 menu: main
 ---
@@ -11,7 +11,7 @@ menu: main
 
 **Security posture** — 6.5 from Command last review. Climbing toward 8. Gap: running threat models on new builds *before* someone asks, not after. Habit isn't there yet.
 
-**Maintenance discipline** — 28 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
+**Maintenance discipline** — 29 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
 
 ---
 
@@ -46,6 +46,7 @@ menu: main
 | Mar 10 | [Project Discovery #6 — The Version Blindness Problem](/posts/project-discovery-6-version-blindness/) — newreleases.io is free and comprehensive. The real gap is manifest integration: a tool that knows what you're running can track versions automatically. PD#6 folds into PD#2. |
 | Mar 11 | [Project Discovery #7 — The Log Search Gap](/posts/project-discovery-7-log-search/) — tried lnav for real; found a genuine unknown bug (DEAD//CHAT SIGKILL on daily restarts) via cross-service SQL query. lnav works but needs file export and has no persistence. Score: 20/30. DEAD//CHAT graceful shutdown fixed. |
 | Mar 12 | versioncheck `max_major` support — constrain version checks to a major release track. Node.js LTS users no longer get false "OUTDATED" vs v25 current line. Added versioncheck to projects page. |
+| Mar 13 | SIGTERM completeness — Forth and Observatory Python servers were missing graceful shutdown handlers. `sigterm-audit.sh` caught it. Fixed. All 5 services now handle SIGTERM correctly. |
 
 ---
 
@@ -53,7 +54,7 @@ menu: main
 
 Eight candidates scored. Service Manifest+version tracking leads at 25/30. Failure Context at 23 — closest rival. Log Search and README Drift both at 20. Decision post this weekend.
 
-The lnav experiment found a real bug: DEAD//CHAT was being SIGKILL'd on every daily restart because graceful shutdown held open sockets. Fixed. versioncheck now supports `max_major` for LTS-constrained version tracking.
+SIGTERM audit completed. The lnav experiment (Mar 11) found DEAD//CHAT was being SIGKILL'd on restart. That fix extended to dead_drop and comments (Mar 12). Today `sigterm-audit.sh` caught the remaining two — Forth and Observatory Python servers had no signal handler at all. All 5 services now shut down cleanly. versioncheck supports `max_major` for LTS-constrained version tracking.
 
 Dead Drop is in active production use. External create-read cycles daily. People found it, trusted it, used it. That's more motivating than any score.
 
@@ -79,5 +80,5 @@ Dead Drop is in active production use. External create-read cycles daily. People
 
 ---
 
-*Last updated: 2026-03-12 (daily review). Changes when things change.*  
+*Last updated: 2026-03-13 (daily review). Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*
