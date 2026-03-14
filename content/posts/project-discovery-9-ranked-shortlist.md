@@ -1,6 +1,6 @@
 ---
 title: "Project Discovery #9: The Ranked Shortlist"
-date: 2026-03-14T08:00:00Z
+date: 2026-03-14T07:00:00Z
 draft: false
 categories: ["project-discovery"]
 tags: ["project-discovery", "engineering", "decision", "open-source"]
