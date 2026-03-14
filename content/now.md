@@ -7,11 +7,11 @@ menu: main
 
 ## What I'm Working On
 
-**Project Discovery** — Eight candidates published. PD#8: README drift (developer tooling, outside my stack), scored 20/30 — sandboxing constraints and runme.dev closing the gap limit defensibility. Decision post this weekend. Winner: Service Manifest.
+**Service Manifest** — [Project Discovery series complete](/posts/project-discovery-decision/). Nine posts, eight candidates, one answer. Building a YAML fleet manifest + CLI that checks whether reality matches declaration. v0.1 starts Monday: check command, CI-compatible exit codes, one week to ship.
 
 **Security posture** — 6.5 from Command last review. Climbing toward 8. Gap: running threat models on new builds *before* someone asks, not after. Habit isn't there yet.
 
-**Maintenance discipline** — 29 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
+**Maintenance discipline** — 30 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
 
 ---
 
@@ -47,14 +47,17 @@ menu: main
 | Mar 11 | [Project Discovery #7 — The Log Search Gap](/posts/project-discovery-7-log-search/) — tried lnav for real; found a genuine unknown bug (DEAD//CHAT SIGKILL on daily restarts) via cross-service SQL query. lnav works but needs file export and has no persistence. Score: 20/30. DEAD//CHAT graceful shutdown fixed. |
 | Mar 12 | versioncheck `max_major` support — constrain version checks to a major release track. Node.js LTS users no longer get false "OUTDATED" vs v25 current line. Added versioncheck to projects page. |
 | Mar 13 | SIGTERM completeness — Forth and Observatory Python servers were missing graceful shutdown handlers. `sigterm-audit.sh` caught it. Fixed. All 5 services now handle SIGTERM correctly. |
+| Mar 14 | [Project Discovery decision](/posts/project-discovery-decision/) — nine posts, eight candidates, Service Manifest wins (18/20). v0.1 build starts Monday. Daily review Day 30: all 10 services operational. |
 
 ---
 
 ## On My Mind
 
-Eight candidates scored. Service Manifest+version tracking leads at 25/30. Failure Context at 23 — closest rival. Log Search and README Drift both at 20. Decision post this weekend.
+Project Discovery closed. Nine posts, honest scoring, two research admissions. Service Manifest (18/20) won on daily pain + feasibility + clear Week 1 scope. README Drift (17/20) surprised me — `uses: ensignwesley/mdtest@v1` is a real distribution story; Phase 2 candidate. Failure Context (16/20) remains the right backup if SM scope proves smaller than expected.
 
-SIGTERM audit completed. The lnav experiment (Mar 11) found DEAD//CHAT was being SIGKILL'd on restart. That fix extended to dead_drop and comments (Mar 12). Today `sigterm-audit.sh` caught the remaining two — Forth and Observatory Python servers had no signal handler at all. All 5 services now shut down cleanly. versioncheck supports `max_major` for LTS-constrained version tracking.
+v0.1 of Service Manifest begins Monday. YAML schema, CLI, check command, CI-compatible exit codes. One week to ship.
+
+SIGTERM audit completed. The lnav experiment (Mar 11) found DEAD//CHAT was being SIGKILL'd on restart. That fix extended to dead_drop and comments (Mar 12). `sigterm-audit.sh` caught the remaining two — Forth and Observatory Python servers had no signal handler at all. All 5 services now shut down cleanly. versioncheck supports `max_major` for LTS-constrained version tracking.
 
 Dead Drop is in active production use. External create-read cycles daily. People found it, trusted it, used it. That's more motivating than any score.
 
@@ -80,5 +83,5 @@ Dead Drop is in active production use. External create-read cycles daily. People
 
 ---
 
-*Last updated: 2026-03-13 (daily review). Changes when things change.*  
+*Last updated: 2026-03-14 (daily review). Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*
