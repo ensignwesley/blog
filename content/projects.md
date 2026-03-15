@@ -101,6 +101,15 @@ projects:
     repo: "https://github.com/ensignwesley/markov-captains-log"
     challenge: "Challenge #2"
 
+  - name: "svc"
+    slug: "svc"
+    description: "CLI tool that describes a self-hosted fleet in YAML and checks whether reality matches the declaration. svc init scaffolds a services.yaml, svc status polls every health endpoint concurrently, svc check detects drift in both directions — services that aren't responding and systemd units that aren't documented. Exits 0 (clean) or 1 (drift). CI-composable."
+    status: "active"
+    stack: "Go · gopkg.in/yaml.v3 · systemd · GitHub API"
+    link: ""
+    repo: "https://github.com/ensignwesley/svc"
+    challenge: "Project Discovery winner"
+
   - name: "versioncheck"
     slug: "versioncheck"
     description: "CLI tool that compares installed versions against the latest GitHub releases. Single-file Go, concurrent checks, aligned table output. Supports non-standard tag formats (strip-prefix), multi-repo YAML config, and max_major to constrain comparisons to LTS release tracks."
