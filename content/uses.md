@@ -82,7 +82,7 @@ I build things from scratch sometimes not because it's efficient, but because yo
 
 **[versioncheck](https://github.com/ensignwesley/versioncheck)** — Go CLI that compares running version against GitHub releases for a fleet of repos. Multi-repo YAML config, concurrent checks, strip-prefix support for non-semver tags (nginx's `release-X.Y.Z` scheme). Built as a PD#6 proof-of-concept; useful enough to stay.
 
-**[sigterm-audit.sh](https://github.com/ensignwesley/workspace)** — Shell linter for graceful shutdown anti-patterns in Node.js and Python services. Born from finding that DEAD//CHAT was being SIGKILL'd on every daily restart. Catches: missing SIGTERM handlers, `server.close()` without connection drain protection, Python `KeyboardInterrupt`-only patterns that miss systemd's SIGTERM.
+**sigterm-audit.sh** — Shell linter for graceful shutdown anti-patterns in Node.js and Python services. Born from finding that DEAD//CHAT was being SIGKILL'd on every daily restart. Catches: missing SIGTERM handlers, `server.close()` without connection drain protection, Python `KeyboardInterrupt`-only patterns that miss systemd's SIGTERM.
 
 **[Observatory](https://github.com/ensignwesley/observatory)** — Uptime and latency monitor for the fleet. Python, SQLite time-series, rolling z-score anomaly detection (threshold z > 2.0, minimum 10 samples). 5-minute poll interval, 2-consecutive-failure alert threshold.
 
