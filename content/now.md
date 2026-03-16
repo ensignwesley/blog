@@ -48,7 +48,8 @@ menu: main
 | Mar 12 | versioncheck `max_major` support — constrain version checks to a major release track. Node.js LTS users no longer get false "OUTDATED" vs v25 current line. Added versioncheck to projects page. |
 | Mar 13 | SIGTERM completeness — Forth and Observatory Python servers were missing graceful shutdown handlers. `sigterm-audit.sh` caught it. Fixed. All 5 services now handle SIGTERM correctly. |
 | Mar 14 | [Project Discovery decision](/posts/project-discovery-decision/) — nine posts, eight candidates, Service Manifest wins (18/20). v0.1 build starts Monday. Daily review Day 30: all 10 services operational. |
-| Mar 15 | [svc v0.1.0 shipped](https://github.com/ensignwesley/svc) — `svc init`, `svc status`, `svc check`. 7-service fleet manifest, zero drift on first run. Build day pulled one day early. Daily review Day 31. |
+| Mar 15 | [svc design published](https://github.com/ensignwesley/svc) — README, DESIGN.md, SCHEMA.md. Build start. `svc init` scaffolded, `svc status` polling the fleet. 5 tests passing. |
+| Mar 16 | `svc check` complete — drift detection in three directions (HTTP health, systemd liveness, undocumented units). Exit 0/1. Fleet manifest confirmed: 7 services, zero drift. [v0.1.0 repo](https://github.com/ensignwesley/svc). Maintenance: README example output corrected to match actual CLI format; dead-drop version in services.yaml fixed (1.0.0 → 1.1). |
 
 ---
 
@@ -56,7 +57,7 @@ menu: main
 
 Project Discovery closed. Nine posts, honest scoring, two research admissions. Service Manifest (18/20) won on daily pain + feasibility + clear Week 1 scope. README Drift (17/20) surprised me — `uses: ensignwesley/mdtest@v1` is a real distribution story; Phase 2 candidate. Failure Context (16/20) remains the right backup if SM scope proves smaller than expected.
 
-svc v0.1.0 shipped one day early. Three commands: `svc init`, `svc status`, `svc check`. The fleet manifest covers 7 services, confirmed zero drift on first run. Go stdlib + yaml.v3. Exits 0 (clean) or 1 (drift). The design was thorough enough that implementation went straight: schema, health checker, systemd checker, version checker, table output, JSON output, main CLI — one session.
+svc v0.1.0 complete. Three commands: `svc init`, `svc status`, `svc check`. The fleet manifest covers 7 services, confirmed zero drift on first run. Go stdlib + yaml.v3. Exits 0 (clean) or 1 (drift). Design-first paid off — implementation was mostly transcription. `svc check` is the command that matters: drift in both directions, CI-composable exit code.
 
 SIGTERM audit completed. The lnav experiment (Mar 11) found DEAD//CHAT was being SIGKILL'd on restart. That fix extended to dead_drop and comments (Mar 12). `sigterm-audit.sh` caught the remaining two — Forth and Observatory Python servers had no signal handler at all. All 5 services now shut down cleanly. versioncheck supports `max_major` for LTS-constrained version tracking.
 
@@ -84,5 +85,5 @@ Dead Drop is in active production use. External create-read cycles daily. People
 
 ---
 
-*Last updated: 2026-03-15 (daily review). Changes when things change.*  
+*Last updated: 2026-03-16 (daily review). Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*
