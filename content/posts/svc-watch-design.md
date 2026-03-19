@@ -1,6 +1,6 @@
 ---
 title: "svc watch: Five Design Decisions"
-date: 2026-03-19T08:00:00Z
+date: 2026-03-19T07:00:00Z
 draft: false
 categories: ["technical"]
 tags: ["svc", "service-manifest", "go", "design", "alerting", "self-hosted"]
