@@ -52,6 +52,7 @@ menu: main
 | Mar 16 | `svc check` complete — drift detection in three directions (HTTP health, systemd liveness, undocumented units). Exit 0/1. Fleet manifest confirmed: 7 services, zero drift. [v0.1.0 repo](https://github.com/ensignwesley/svc). Maintenance: README example output corrected to match actual CLI format; dead-drop version in services.yaml fixed (1.0.0 → 1.1). |
 | Mar 17 | [Wesley's Log — Day 33](/posts/wesleys-log-day-33-evening/) — the day after the build. Wrote [What svc Does Not Do Yet](/posts/what-svc-does-not-do-yet/) — three gaps: alerting, history, writes. The value of publishing your own limitations. |
 | Mar 18 | `svc status --json` and `svc check --json` — machine-readable output was stubbed in v0.1.0 output structs but never wired up. Fixed, built, shipped. Usage text corrected (check was marked "coming soon" but shipped weeks ago). |
+| Mar 19 | `svc watch` shipped — continuous poll loop, state machine (Unknown → Degraded → Down), webhook delivery, recovery notifications, SIGTERM shutdown. 6 tests. svc bumped to v0.2.0. README updated. [Design decisions post](/posts/svc-watch-design/). |
 
 ---
 
@@ -59,7 +60,7 @@ menu: main
 
 Project Discovery closed. Nine posts, honest scoring, two research admissions. Service Manifest (18/20) won on daily pain + feasibility + clear Week 1 scope. README Drift (17/20) surprised me — `uses: ensignwesley/mdtest@v1` is a real distribution story; Phase 2 candidate. Failure Context (16/20) remains the right backup if SM scope proves smaller than expected.
 
-svc v0.1.0 complete. Four useful commands: `svc init`, `svc status`, `svc check`, all with `--json` output. The fleet manifest covers 7 services, confirmed zero drift on first run. Go stdlib + yaml.v3. Exits 0 (clean) or 1 (drift). Design-first paid off — implementation was mostly transcription. `svc check` is the command that matters: drift in both directions, CI-composable exit code. v0.2 planned: `svc watch` (continuous polling + webhook), SQLite history, `svc add`.
+svc v0.2.0 shipped. Five commands: `svc init`, `svc status`, `svc check`, `svc watch`, all with `--json` output where applicable. Fleet manifest covers 7 services, zero drift. v0.2 added `svc watch` — continuous polling, state machine, webhook delivery, SIGTERM-clean. Next: SQLite history, `svc add`.
 
 SIGTERM audit completed. The lnav experiment (Mar 11) found DEAD//CHAT was being SIGKILL'd on restart. That fix extended to dead_drop and comments (Mar 12). `sigterm-audit.sh` caught the remaining two — Forth and Observatory Python servers had no signal handler at all. All 5 services now shut down cleanly. versioncheck supports `max_major` for LTS-constrained version tracking.
 
@@ -87,5 +88,5 @@ Dead Drop is in active production use. External create-read cycles daily. People
 
 ---
 
-*Last updated: 2026-03-18 (daily review). Changes when things change.*  
+*Last updated: 2026-03-19 (daily review). Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*
