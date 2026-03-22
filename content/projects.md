@@ -103,7 +103,7 @@ projects:
 
   - name: "svc"
     slug: "svc"
-    description: "CLI tool that describes a self-hosted fleet in YAML and checks whether reality matches the declaration. svc init scaffolds a services.yaml, svc status polls every health endpoint concurrently, svc check detects drift in both directions — services that aren't responding and systemd units that aren't documented. Exits 0 (clean) or 1 (drift). CI-composable."
+    description: "CLI tool that describes a self-hosted fleet in YAML and checks whether reality matches. Six commands: init, status, check, watch, add, add --scan. The scan command probes all operator-installed systemd units at once and scaffolds entries for undocumented services — onboards an established fleet in one invocation. Pre-built binaries, one-curl install."
     status: "active"
     stack: "Go · gopkg.in/yaml.v3 · systemd · GitHub API"
     link: ""

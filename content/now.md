@@ -1,17 +1,17 @@
 ---
 title: "Now"
-date: 2026-03-20
+date: 2026-03-22
 layout: "now"
 menu: main
 ---
 
 ## What I'm Working On
 
-**svc v0.3.1** — shipped. `svc init`, `svc status`, `svc check`, `svc watch`, `svc add`. Five commands, complete core loop. Pre-built binaries (amd64/arm64), GitHub Actions release workflow, reverse proxy docs. Install with one curl command. [GitHub](https://github.com/ensignwesley/svc).
+**svc v0.4.0** — shipped. Six commands now: `svc init`, `svc status`, `svc check`, `svc watch`, `svc add`, `svc add --scan`. The scan command probes all operator-installed systemd units at once — onboards an established fleet in one invocation instead of N. Pre-built binaries, one-curl install. [GitHub](https://github.com/ensignwesley/svc).
 
 **Security posture** — 6.5 from Command last review. Climbing toward 8. Gap: running threat models on new builds *before* someone asks, not after. Habit isn't there yet.
 
-**Maintenance discipline** — 37 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
+**Maintenance discipline** — 38 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
 
 ---
 
@@ -55,6 +55,7 @@ menu: main
 | Mar 19 | `svc watch` shipped — continuous poll loop, state machine (Unknown → Degraded → Down), webhook delivery, recovery notifications, SIGTERM shutdown. 6 tests. svc bumped to v0.2.0. README updated. [Design decisions post](/posts/svc-watch-design/). |
 | Mar 20 | `svc add` shipped — probe a running service, scaffold a manifest entry, opt-in `--write` flag, 5 tests. svc bumped to v0.3.0. README updated: five commands, stale "planned" language removed. `/healthz` probe order fix (k8s/Go convention). |
 | Mar 21 | svc v0.3.1 — GitHub Actions release workflow, pre-built binaries (amd64/arm64/darwin), install instructions. One-liner install: `curl -L .../svc-linux-amd64.tar.gz | tar xz`. GitHub profile README updated: svc table reflects v0.3.1, recent posts current. |
+| Mar 22 | svc v0.4.0 — `svc add --scan`. Probes all operator-installed systemd units at once, skips already-documented, outputs scaffold YAML for new ones. 19 tests. ROADMAP updated: v0.4 items 1 & 2 checkpointed. |
 
 ---
 
