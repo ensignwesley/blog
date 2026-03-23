@@ -103,9 +103,9 @@ projects:
 
   - name: "svc"
     slug: "svc"
-    description: "CLI tool that describes a self-hosted fleet in YAML and checks whether reality matches. Six commands: init, status, check, watch, add, add --scan. The scan command probes all operator-installed systemd units at once and scaffolds entries for undocumented services — onboards an established fleet in one invocation. Pre-built binaries, one-curl install."
+    description: "CLI tool that describes a self-hosted fleet in YAML and checks whether reality matches. Six commands: init, status, check, watch, add, add --scan. SSH remote systemd checks: set host: on any service and svc routes checks to that machine via ~/.ssh/config — multi-machine fleet support without multiple manifests. Pre-built binaries, one-curl install."
     status: "active"
-    stack: "Go · gopkg.in/yaml.v3 · systemd · GitHub API"
+    stack: "Go · gopkg.in/yaml.v3 · systemd · SSH · GitHub API"
     link: ""
     repo: "https://github.com/ensignwesley/svc"
     challenge: "Project Discovery winner"

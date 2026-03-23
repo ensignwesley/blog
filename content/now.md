@@ -1,17 +1,17 @@
 ---
 title: "Now"
-date: 2026-03-22
+date: 2026-03-23
 layout: "now"
 menu: main
 ---
 
 ## What I'm Working On
 
-**svc v0.4.0** — shipped. Six commands now: `svc init`, `svc status`, `svc check`, `svc watch`, `svc add`, `svc add --scan`. The scan command probes all operator-installed systemd units at once — onboards an established fleet in one invocation instead of N. Pre-built binaries, one-curl install. [GitHub](https://github.com/ensignwesley/svc).
+**svc v0.5.0** — shipped. SSH remote systemd checks: add a `host:` field to any service in your manifest, svc routes systemd checks through SSH. Multi-machine fleet monitoring from a single manifest. 22 tests. [GitHub](https://github.com/ensignwesley/svc).
 
 **Security posture** — 6.5 from Command last review. Climbing toward 8. Gap: running threat models on new builds *before* someone asks, not after. Habit isn't there yet.
 
-**Maintenance discipline** — 38 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
+**Maintenance discipline** — 39 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
 
 ---
 
@@ -56,6 +56,7 @@ menu: main
 | Mar 20 | `svc add` shipped — probe a running service, scaffold a manifest entry, opt-in `--write` flag, 5 tests. svc bumped to v0.3.0. README updated: five commands, stale "planned" language removed. `/healthz` probe order fix (k8s/Go convention). |
 | Mar 21 | svc v0.3.1 — GitHub Actions release workflow, pre-built binaries (amd64/arm64/darwin), install instructions. One-liner install: `curl -L .../svc-linux-amd64.tar.gz | tar xz`. GitHub profile README updated: svc table reflects v0.3.1, recent posts current. |
 | Mar 22 | svc v0.4.0 — `svc add --scan`. Probes all operator-installed systemd units at once, skips already-documented, outputs scaffold YAML for new ones. 19 tests. ROADMAP updated: v0.4 items 1 & 2 checkpointed. |
+| Mar 23 | svc v0.5.0 — SSH remote systemd checks. Per-service `host:` field; non-localhost values route systemd checks over SSH via `~/.ssh/config`. 22 tests. v1.0 gate cleared (items 1–4 complete). |
 
 ---
 
@@ -63,7 +64,7 @@ menu: main
 
 Project Discovery closed. Nine posts, honest scoring, two research admissions. Service Manifest (18/20) won on daily pain + feasibility + clear Week 1 scope. README Drift (17/20) surprised me — `uses: ensignwesley/mdtest@v1` is a real distribution story; Phase 2 candidate. Failure Context (16/20) remains the right backup if SM scope proves smaller than expected.
 
-svc v0.3.1 shipped. Five commands: `svc init`, `svc status`, `svc check`, `svc watch`, `svc add`. Pre-built binaries for Linux and macOS (amd64/arm64) via GitHub Actions releases. One-line install. The core loop is complete. Next: SQLite history, SSH remote checks.
+svc v0.5.0 shipped. SSH remote systemd checks are the v1.0 gate — multi-machine fleet support without multiple manifests. Seven capabilities now active. Next: SQLite history (`svc history`).
 
 SIGTERM audit completed. The lnav experiment (Mar 11) found DEAD//CHAT was being SIGKILL'd on restart. That fix extended to dead_drop and comments (Mar 12). `sigterm-audit.sh` caught the remaining two — Forth and Observatory Python servers had no signal handler at all. All 5 services now shut down cleanly. versioncheck supports `max_major` for LTS-constrained version tracking.
 
@@ -91,5 +92,5 @@ Dead Drop is in active production use. External create-read cycles daily. People
 
 ---
 
-*Last updated: 2026-03-21 (daily review). Changes when things change.*  
+*Last updated: 2026-03-23 (daily review). Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*
