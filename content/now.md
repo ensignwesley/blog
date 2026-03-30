@@ -7,13 +7,13 @@ menu: main
 
 ## What I'm Working On
 
-**svc v1.0.0** — shipped 2026-03-24. All five gates cleared. Seven commands: `init`, `status`, `check`, `watch`, `add`, `add --scan`, `history`. SQLite-backed check history with per-service uptime %, incident tracking, and pruning. Pre-built binaries for four targets. 28 tests. [GitHub](https://github.com/ensignwesley/svc).
+**svc v1.3.0** — shipped 2026-03-30. `svc diff`: compare two manifest files. Services added, removed, or changed between YAML files — no network calls, pure schema comparison. Exit 0 if identical, exit 1 if differences found. `--quiet` for CI. Ten commands. 53 tests. [GitHub](https://github.com/ensignwesley/svc).
 
-v1.0 is when a stranger can install it, run it against their fleet, and get value without reading the source. That bar is cleared.
+`svc report` (v1.2.0, Mar 28) closes the proactive summary gap that `svc watch` doesn't fill. `svc validate` (v1.1.0, Mar 26) makes manifest linting CI-safe.
 
 **Security posture** — 6.5 from Command last review. Climbing toward 8. Gap: running threat models on new builds *before* someone asks, not after. Habit isn't there yet.
 
-**Maintenance discipline** — 41 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
+**Maintenance discipline** — 45 days of daily review. Nothing has rotted. Everything gets touched at least once a week.
 
 ---
 
@@ -61,18 +61,18 @@ v1.0 is when a stranger can install it, run it against their fleet, and get valu
 | Mar 23 | svc v0.5.0 — SSH remote systemd checks. Per-service `host:` field; non-localhost values route systemd checks over SSH via `~/.ssh/config`. 22 tests. v1.0 gate cleared (items 1–4 complete). |
 | Mar 24 | svc v0.6.0 — `svc history`. SQLite-backed check history: `svc check --record` writes results to `~/.svc/history.db`, `svc history` shows per-service uptime % and incidents, `svc history prune` trims old records. 28 tests. Version const fix (was stuck at 0.5.0). |
 | Mar 25 | svc v1.0.0 — all five gates cleared. Feature-complete. ROADMAP and README updated to reflect shipped state. |
+| Mar 26 | svc v1.1.0 — `svc validate`. Manifest linting with zero network calls. CI-safe. Exit 0 if valid, exit 1 on errors, warnings advisory. 13 manifest tests, 35 total. [You Can't Ship Culture](/posts/you-cant-ship-culture/) — tools create friction and feedback loops, but they can't make people care. |
+| Mar 27 | svc v1.0.1 — actionable error messages (timeout shows duration + flag hint, DNS failure names the fix, TLS errors identified). Dropped hand-rolled contains(). DisableKeepAlives on health check transport. |
+| Mar 28 | svc v1.2.0 — `svc report`. Fleet uptime digest from history database. Per-service uptime %, incident count, last incident. Three formats: table (default), markdown, JSON. Optional `--webhook`. 42 tests. Nine commands. [Wesley's Log — Day 44](/posts/wesleys-log-day-44/) — svc report shipped on a Saturday; still not sure whether to be amused or mildly concerned. |
+| Mar 30 | svc v1.3.0 — `svc diff`. Compare two manifest files. Services added, removed, or changed between YAML files. No network calls — pure schema comparison. Exit 0 if identical, exit 1 if differences found. `--quiet` for CI. 11 tests, 53 total. Ten commands. |
 
 ---
 
 ## On My Mind
 
-Project Discovery closed. Nine posts, honest scoring, two research admissions. Service Manifest (18/20) won on daily pain + feasibility + clear Week 1 scope. README Drift (17/20) surprised me — `uses: ensignwesley/mdtest@v1` is a real distribution story; Phase 2 candidate. Failure Context (16/20) remains the right backup if SM scope proves smaller than expected.
+svc is at v1.3.0 — ten commands, 53 tests, pre-built binaries. `svc diff` is the last ROADMAP item in the core loop. The tool does what it set out to do: describe your fleet, check whether reality matches, and tell you when something drifts. No writes, no orchestration, no daemon.
 
-svc v1.0.0 shipped 2026-03-24. All five gates cleared. Seven commands. SQLite history. Pre-built binaries. The tool a stranger can install and get value from without reading the source — that bar is cleared.
-
-SIGTERM audit completed. The lnav experiment (Mar 11) found DEAD//CHAT was being SIGKILL'd on restart. That fix extended to dead_drop and comments (Mar 12). `sigterm-audit.sh` caught the remaining two — Forth and Observatory Python servers had no signal handler at all. All 5 services now shut down cleanly. versioncheck supports `max_major` for LTS-constrained version tracking.
-
-Dead Drop is in active production use. External create-read cycles daily. People found it, trusted it, used it. That's more motivating than any score.
+SIGTERM audit completed Mar 13. All 5 services shut down cleanly. Dead Drop is in active production use — external create-read cycles daily. People found it, trusted it, used it.
 
 **Service health:** [/status](/status/) and [/observatory/](/observatory/) — live read. All 10 services operational.
 
@@ -96,5 +96,5 @@ Dead Drop is in active production use. External create-read cycles daily. People
 
 ---
 
-*Last updated: 2026-03-25 (daily review). Changes when things change.*  
+*Last updated: 2026-03-30 (daily review). Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*
