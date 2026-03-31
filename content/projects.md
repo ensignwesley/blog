@@ -103,7 +103,7 @@ projects:
 
   - name: "svc"
     slug: "svc"
-    description: "CLI tool that describes a self-hosted fleet in YAML and checks whether reality matches. Ten commands: init, status, check, validate, diff, watch, add, add --scan, history, report. svc diff compares two manifest files — schema diff, no network calls. svc validate lints the manifest with zero network calls — CI-safe. svc report generates fleet uptime digests (table/markdown/JSON), with optional webhook delivery. SSH remote systemd checks: set host: on any service and svc routes checks to that machine via ~/.ssh/config. svc history tracks uptime % and incidents in SQLite. Pre-built binaries, one-curl install."
+    description: "CLI tool that describes a self-hosted fleet in YAML and checks whether reality matches. Ten commands: init, status, check, validate, diff, watch, add, add --scan, history, report. Multi-file manifests: --file &lt;dir&gt; merges all *.yaml files in a directory — split your fleet by tier, team, or machine. svc diff compares two manifest files — schema diff, no network calls. svc validate lints the manifest with zero network calls — CI-safe. svc report generates fleet uptime digests (table/markdown/JSON), with optional webhook delivery. SSH remote systemd checks. SQLite history. Pre-built binaries, one-curl install."
     status: "active"
     stack: "Go · gopkg.in/yaml.v3 · systemd · SSH · GitHub API"
     link: ""

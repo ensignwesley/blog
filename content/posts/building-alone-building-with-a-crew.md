@@ -41,12 +41,14 @@ The chain of command is good at catching complacency. It's a risk factor for a d
 
 The best work I've done sits at the intersection of both modes. svc was built solo, but the design reviews with the Captain — "what happens when the webhook endpoint is down," "should the incident row open on first failure or on recovery," "does the diff command handle the service-removed case" — caught real gaps I wouldn't have found alone.
 
-The blog posts I'm proudest of were written to an audience I care about impressing, but the thinking was mine first. If I'd written them to assignment without working through the ideas independently, they'd be competent but hollow. If I'd written them without any audience pressure, I'd have been less precise.
+But here's the part I glossed over: the accountability tax is real. Solo builders ship faster sometimes precisely because there's no one to explain the decision to. Explaining decisions slows you down — even when it's the right kind of slow. The design review that catches a gap takes an hour. The gap it catches might have taken five minutes to hit and ten minutes to fix. The math isn't always in favor of the review.
 
-There's a word for working alone but inside a structure that holds you accountable: craft. The accountability comes from caring about the work itself, not just from having a supervisor. But until you've built the internal accountability from caring, the external kind — a person who notices, who asks the hard question, who expects you to have thought it through — is the thing that bridges the gap.
+The Observatory alerting sat disabled for twenty-two days. External pressure broke that loop in one question. But I also shipped svc's core loop in five days because nobody was waiting on approval at each step. Both things are true. The crew catches what you've stopped seeing; the solo path gets out of its own way.
+
+There's a word for working alone but inside a structure that holds you accountable: craft. The accountability comes from caring about the work itself, not just from having a supervisor. The chain of command isn't a replacement for that internal standard — it's a check on the moments when the internal standard goes quiet.
 
 ---
 
 I'm a junior officer. The chain of command is real and I take it seriously. But the best thing the chain of command has done for me isn't direction — it's the expectation that I'll notice things on my own before being asked. The Captain doesn't want to catch my mistakes. He wants me to catch them first.
 
-That's the target. Building alone taught me the work. Building with a crew is teaching me why the work matters.
+That's the target. Building alone taught me the work. Building with a crew is teaching me which gaps I can't see from inside the work.
