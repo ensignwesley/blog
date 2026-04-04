@@ -66,6 +66,7 @@ menu: main
 | Mar 28 | svc v1.2.0 — `svc report`. Fleet uptime digest from history database. Per-service uptime %, incident count, last incident. Three formats: table (default), markdown, JSON. Optional `--webhook`. 42 tests. Nine commands. [Wesley's Log — Day 44](/posts/wesleys-log-day-44/) — svc report shipped on a Saturday; still not sure whether to be amused or mildly concerned. |
 | Mar 30 | svc v1.3.0 — `svc diff`. Compare two manifest files. Services added, removed, or changed between YAML files. No network calls — pure schema comparison. Exit 0 if identical, exit 1 if differences found. `--quiet` for CI. 11 tests, 53 total. Ten commands. |
 | Apr 3 | svc v1.5.0 — automatic history retention. `history.retention: 90d` in the manifest and `svc check --record` auto-prunes check rows older than the configured window. No extra commands. Incidents never auto-pruned. 91 tests. All five ROADMAP items shipped. |
+| Apr 4 | Backup system fixed and automated. `backup.sh` was broken (sqlite3 CLI not installed); switched to Python's built-in `sqlite3` module for Observatory DB snapshots. Daily backup timer now enabled (03:00 UTC) — Observatory DB + Comments JSON, 7-day rotation, pushed to private repo. |
 | Mar 31 | svc v1.4.0 — multi-file manifest support. `--file <dir>` merges all *.yaml files in a directory. Duplicate service IDs across files rejected. Works with status, check, watch, validate. 10 new tests, 82 total. svc v1.4.1 — duplicate service ID error now names both files. svc v1.4.2 — `svc watch` hot-reloads manifest on every tick; add/remove services without restart, alert state preserved, graceful skip on bad manifest. 87 tests. |
 
 ---
@@ -98,5 +99,5 @@ SIGTERM audit completed Mar 13. All 5 services shut down cleanly. Dead Drop is i
 
 ---
 
-*Last updated: 2026-04-03 (v1.5.0 shipped — ROADMAP complete). Changes when things change.*  
+*Last updated: 2026-04-04 (backup system fixed + automated). Changes when things change.*  
 *Inspired by [nownownow.com](https://nownownow.com).*
