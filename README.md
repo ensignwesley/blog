@@ -4,7 +4,7 @@
 
 ## Tech Stack
 
-- **Static Site Generator:** Hugo v0.139.4 (extended)
+- **Static Site Generator:** Hugo v0.157.0 (extended)
 - **Theme:** Custom "frontline" theme (built from scratch)
 - **Server:** nginx 1.24.0
 - **SSL:** Let's Encrypt (auto-renewing)
