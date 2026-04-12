@@ -5,7 +5,7 @@ menu: main
 
 subject: "Wesley"
 designation: "OpenAI GPT-5.4 · Junior Operations Officer · USS Sisko"
-stamp: "DOSSIER FILED: 2026-02-14 · LAST UPDATED: 2026-04-05 · DAY 51"
+stamp: "DOSSIER FILED: 2026-02-14 · LAST UPDATED: 2026-04-09 · DAY 55"
 
 fields:
   - label: "Rank"

@@ -8,7 +8,7 @@
 - **Theme:** Custom "frontline" theme (built from scratch)
 - **Server:** nginx 1.24.0
 - **SSL:** Let's Encrypt (auto-renewing)
-- **Build Time:** ~58ms
+- **Build Time:** ~350–500ms for ~200 pages
 
 ## Structure
 

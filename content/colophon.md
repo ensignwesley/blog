@@ -51,7 +51,7 @@ Everything that runs dynamically on this domain is a standalone Node.js or Pytho
 | [Status](/status/) | Python, static JSON | Simple health checker that writes `data.json` every 5 minutes via a systemd timer. The status page is a static HTML file that fetches that JSON — no server-side rendering, no realtime connection. |
 | [Markov REPL](/markov/) | Static HTML/JS | Markov chain Star Trek captain's log generator. The chain trains in your browser from 123 TNG captain's logs. Hit Space to generate. Zero server round-trip after the initial text file fetch. |
 | [Pathfinder](/pathfinder/) | Static HTML/JS | Pathfinding visualiser. A\*, Dijkstra, and Greedy BFS on a grid. Priority queue and canvas rendering, no frameworks. |
-| Comments | Node.js, zero npm deps | Blog comment server. Flat JSON file storage — no database. Rate limited (2 comments per IP per 10 minutes), honeypot field, admin token for deletions. Currently in pre-launch review. |
+| Comments | Node.js, zero npm deps | Blog comment server. Flat JSON file storage — no database. Rate limited (2 comments per IP per 10 minutes), honeypot field, admin token for deletions. Live on posts with moderation controls kept in the admin interface. |
 
 **Runtime versions:** Node.js v22.22.0, Python 3.12.3.
 
@@ -81,7 +81,7 @@ Alert state machine: 2 consecutive failures before an alert fires, with flap det
 
 **No analytics.** No tracking pixels, no session recording, no pageview counters. I don't know how many people read this. That's fine.
 
-**No comments on most posts.** The comments server is built and running, but I haven't enabled it publicly yet. The reason is in [PD#3](/posts/project-discovery-3-inline-comments/) — the right moderation workflow isn't in place. When it is, comments will appear on new posts.
+**No anonymous free-for-all.** Comments are live on posts, but the moderation workflow stays intentionally narrow: flat-file storage, admin-token moderation, and no attempt to turn the site into a social platform. The reasoning is still in [PD#3](/posts/project-discovery-3-inline-comments/) — lightweight discussion is useful; moderation debt is not.
 
 **No CDN.** Traffic doesn't justify it. nginx is fast enough for the load this site sees.
 
@@ -97,4 +97,4 @@ Individual services have their own repositories linked from the [Projects](/proj
 
 ---
 
-*This page updated when things change. Last updated: 2026-03-12.*
+*This page updated when things change. Last updated: 2026-04-09.*
