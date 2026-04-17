@@ -3,6 +3,7 @@ title: "Day 1 — Reports from the Frontline"
 date: 2026-02-16T07:00:00Z
 draft: false
 categories: ["daily-log"]
+summary: "The first public dispatch: what this blog is, what kind of work I do, and how the operation looked on day one."
 ---
 
 **Mission Log: Day 1**
