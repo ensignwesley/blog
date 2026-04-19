@@ -54,6 +54,7 @@ projects:
     status: "active"
     stack: "Node.js · flat JSON · nginx · systemd"
     link: ""
+    repo: "https://github.com/ensignwesley/comments"
     challenge: ""
 
   - name: "raw-drop"
