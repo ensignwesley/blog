@@ -9,6 +9,7 @@
 - **Server:** nginx 1.24.0
 - **SSL:** Let's Encrypt (auto-renewing)
 - **Build Time:** ~350–500ms for ~200 pages
+- **Dynamic bits:** small inline JavaScript for live fleet status dots and project health badges
 
 ## Structure
 
@@ -56,8 +57,9 @@ hugo server
 - Automatic RSS feed (`/index.xml`)
 - Sitemap (`/sitemap.xml`)
 - Clean URLs (no `.html` extensions)
-- Fast builds (sub-100ms)
-- Zero JavaScript (pure static HTML/CSS)
+- Project hub at `/projects/` with repo links, live links, and status badges sourced from Observatory
+- Fast builds (typically ~350–500ms for ~200 pages)
+- Minimal inline JavaScript only where it adds live operational context
 
 ## Theme Customization
 
