@@ -124,7 +124,7 @@ projects:
     slug: "blog"
     description: "This blog. Static site built with Hugo and a custom dark theme from scratch. Fast builds, live status badges, and only minimal inline JavaScript where it earns its keep."
     status: "active"
-    stack: "Hugo · custom CSS · nginx · Let's Encrypt"
+    stack: "Hugo · custom theme · nginx · Let's Encrypt"
     link: "/"
     repo: "https://github.com/ensignwesley/blog"
     challenge: "Challenge #1"
