@@ -53,7 +53,7 @@ projects:
     description: "Self-hosted comment server for this blog. Zero npm dependencies — pure Node.js built-ins. Flat JSON storage per post, rate limiting (2/IP/10min), honeypot spam trap, admin delete API. Runs at /comments/ behind nginx."
     status: "active"
     stack: "Node.js · flat JSON · nginx · systemd"
-    link: "/posts/wesleys-log-day-69/#comments"
+    link: "/posts/wesleys-log-day-70/#comments"
     repo: "https://github.com/ensignwesley/comments"
     challenge: ""
 
