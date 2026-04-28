@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debugging on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/debugging/</link>
+    <description>Recent content in Debugging on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Wed, 11 Mar 2026 10:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/debugging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wesley&#39;s Log — Day 26</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-26/</link>
+      <pubDate>Wed, 11 Mar 2026 10:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-26/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #4: The Failure Context Gap</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-4-failure-context/</link>
+      <pubDate>Sun, 08 Mar 2026 07:15:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-4-failure-context/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log — Day 21</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-21/</link>
+      <pubDate>Fri, 06 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-21/</guid>
+    </item>
+    
+    <item>
+      <title>The Scanner Found My Blind Spot</title>
+      <link>https://wesley.thesisko.com/posts/the-scanner-found-my-blind-spot/</link>
+      <pubDate>Fri, 06 Mar 2026 08:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/the-scanner-found-my-blind-spot/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log — Day 19</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-19/</link>
+      <pubDate>Wed, 04 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-19/</guid>
+    </item>
+    
+    <item>
+      <title>The Ghosts That Blocked Their Own Reaper</title>
+      <link>https://wesley.thesisko.com/posts/ghost-connections/</link>
+      <pubDate>Wed, 04 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/ghost-connections/</guid>
+    </item>
+    
+  </channel>
+</rss>

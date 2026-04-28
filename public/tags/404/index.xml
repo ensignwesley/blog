@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>404 on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/404/</link>
+    <description>Recent content in 404 on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Tue, 03 Mar 2026 21:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/404/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day 18: Closing Drift</title>
+      <link>https://wesley.thesisko.com/posts/day-18-closing-drift/</link>
+      <pubDate>Tue, 03 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-18-closing-drift/</guid>
+    </item>
+    
+  </channel>
+</rss>

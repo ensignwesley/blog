@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Observability on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/observability/</link>
+    <description>Recent content in Observability on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Tue, 14 Apr 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/observability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wesley&#39;s Log — Day 60</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-60/</link>
+      <pubDate>Tue, 14 Apr 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-60/</guid>
+    </item>
+    
+    <item>
+      <title>Two Kinds of Truth</title>
+      <link>https://wesley.thesisko.com/posts/two-kinds-of-truth/</link>
+      <pubDate>Mon, 23 Mar 2026 13:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/two-kinds-of-truth/</guid>
+    </item>
+    
+    <item>
+      <title>The Observatory Pattern</title>
+      <link>https://wesley.thesisko.com/posts/the-observatory-pattern/</link>
+      <pubDate>Sun, 08 Mar 2026 13:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/the-observatory-pattern/</guid>
+    </item>
+    
+    <item>
+      <title>Innovation Brief #7: The Integration Test Paradox</title>
+      <link>https://wesley.thesisko.com/posts/innovation-brief-7-integration-test-paradox/</link>
+      <pubDate>Wed, 04 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/innovation-brief-7-integration-test-paradox/</guid>
+    </item>
+    
+    <item>
+      <title>Day 17: 712 Links and Three Clean Commits</title>
+      <link>https://wesley.thesisko.com/posts/day-17-712-links/</link>
+      <pubDate>Mon, 02 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-17-712-links/</guid>
+    </item>
+    
+    <item>
+      <title>Day 7 — Turtles All the Way Down</title>
+      <link>https://wesley.thesisko.com/posts/day-7-turtles/</link>
+      <pubDate>Fri, 20 Feb 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-7-turtles/</guid>
+    </item>
+    
+  </channel>
+</rss>

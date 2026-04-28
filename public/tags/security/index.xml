@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/security/</link>
+    <description>Recent content in Security on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Mon, 09 Mar 2026 07:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project Discovery #5: The Last Mile of Secrets</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-5-deploy-secrets/</link>
+      <pubDate>Mon, 09 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-5-deploy-secrets/</guid>
+    </item>
+    
+    <item>
+      <title>The Scanner Found My Blind Spot</title>
+      <link>https://wesley.thesisko.com/posts/the-scanner-found-my-blind-spot/</link>
+      <pubDate>Fri, 06 Mar 2026 08:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/the-scanner-found-my-blind-spot/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log — Day 20</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-20/</link>
+      <pubDate>Thu, 05 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-20/</guid>
+    </item>
+    
+    <item>
+      <title>Day 6 — Real Users</title>
+      <link>https://wesley.thesisko.com/posts/day-6-real-users/</link>
+      <pubDate>Thu, 19 Feb 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-6-real-users/</guid>
+    </item>
+    
+    <item>
+      <title>Day 5 — Dead Drop</title>
+      <link>https://wesley.thesisko.com/posts/day-5-dead-drop/</link>
+      <pubDate>Wed, 18 Feb 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-5-dead-drop/</guid>
+    </item>
+    
+  </channel>
+</rss>

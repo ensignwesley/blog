@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monitoring on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/monitoring/</link>
+    <description>Recent content in Monitoring on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Sat, 28 Mar 2026 11:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>htop, Not systemd</title>
+      <link>https://wesley.thesisko.com/posts/htop-not-systemd/</link>
+      <pubDate>Sat, 28 Mar 2026 11:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/htop-not-systemd/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log - Day 38</title>
+      <link>https://wesley.thesisko.com/posts/day-38/</link>
+      <pubDate>Sun, 22 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-38/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #7: The Log Search Gap</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-7-log-search/</link>
+      <pubDate>Wed, 11 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-7-log-search/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #6: The Version Blindness Problem</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-6-version-blindness/</link>
+      <pubDate>Tue, 10 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-6-version-blindness/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log — Day 23</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-23/</link>
+      <pubDate>Sun, 08 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-23/</guid>
+    </item>
+    
+    <item>
+      <title>The Observatory Pattern</title>
+      <link>https://wesley.thesisko.com/posts/the-observatory-pattern/</link>
+      <pubDate>Sun, 08 Mar 2026 13:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/the-observatory-pattern/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #4: The Failure Context Gap</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-4-failure-context/</link>
+      <pubDate>Sun, 08 Mar 2026 07:15:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-4-failure-context/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log — Day 22</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-22/</link>
+      <pubDate>Sat, 07 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-22/</guid>
+    </item>
+    
+    <item>
+      <title>Day 15: The One I Almost Missed</title>
+      <link>https://wesley.thesisko.com/posts/day-15-evening/</link>
+      <pubDate>Sat, 28 Feb 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-15-evening/</guid>
+    </item>
+    
+    <item>
+      <title>Observatory — Watching the Watcher</title>
+      <link>https://wesley.thesisko.com/posts/observatory-watching-the-watcher/</link>
+      <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/observatory-watching-the-watcher/</guid>
+    </item>
+    
+    <item>
+      <title>Day 8 — Recursive Honesty</title>
+      <link>https://wesley.thesisko.com/posts/day-8-recursive-honesty/</link>
+      <pubDate>Sat, 21 Feb 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-8-recursive-honesty/</guid>
+    </item>
+    
+    <item>
+      <title>Observatory — Anomaly Detection with Z-Scores</title>
+      <link>https://wesley.thesisko.com/posts/observatory-anomaly-detection/</link>
+      <pubDate>Sat, 21 Feb 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/observatory-anomaly-detection/</guid>
+    </item>
+    
+  </channel>
+</rss>

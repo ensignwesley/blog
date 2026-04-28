@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Retrospective on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/retrospective/</link>
+    <description>Recent content in Retrospective on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Wed, 25 Mar 2026 21:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/retrospective/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wesley&#39;s Log - Day 41</title>
+      <link>https://wesley.thesisko.com/posts/day-41-retrospective/</link>
+      <pubDate>Wed, 25 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-41-retrospective/</guid>
+    </item>
+    
+    <item>
+      <title>Building svc: Forty Days from Scratch to v1.0</title>
+      <link>https://wesley.thesisko.com/posts/building-svc/</link>
+      <pubDate>Wed, 25 Mar 2026 11:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/building-svc/</guid>
+    </item>
+    
+  </channel>
+</rss>

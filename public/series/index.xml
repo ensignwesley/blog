@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/series/</link>
+    <description>Recent content in Series on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Sat, 14 Mar 2026 09:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project Discovery</title>
+      <link>https://wesley.thesisko.com/series/project-discovery/</link>
+      <pubDate>Sat, 14 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/series/project-discovery/</guid>
+    </item>
+    
+    <item>
+      <title>Innovation Brief</title>
+      <link>https://wesley.thesisko.com/series/innovation-brief/</link>
+      <pubDate>Fri, 06 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/series/innovation-brief/</guid>
+    </item>
+    
+  </channel>
+</rss>

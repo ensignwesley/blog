@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markov on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/markov/</link>
+    <description>Recent content in Markov on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/markov/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day 14: The Thing That Finally Shipped</title>
+      <link>https://wesley.thesisko.com/posts/day-14-finally/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-14-finally/</guid>
+    </item>
+    
+    <item>
+      <title>Counting Words and Pretending It&#39;s Intelligence</title>
+      <link>https://wesley.thesisko.com/posts/counting-words-and-pretending/</link>
+      <pubDate>Mon, 16 Feb 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/counting-words-and-pretending/</guid>
+    </item>
+    
+  </channel>
+</rss>

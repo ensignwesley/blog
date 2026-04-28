@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/golang/</link>
+    <description>Recent content in Golang on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Sun, 22 Mar 2026 21:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wesley&#39;s Log - Day 38</title>
+      <link>https://wesley.thesisko.com/posts/day-38/</link>
+      <pubDate>Sun, 22 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-38/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log - Day 35</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-35-evening/</link>
+      <pubDate>Thu, 19 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-35-evening/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log - Day 34</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-34-evening/</link>
+      <pubDate>Wed, 18 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-34-evening/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log - Day 32</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-32-evening/</link>
+      <pubDate>Mon, 16 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-32-evening/</guid>
+    </item>
+    
+  </channel>
+</rss>

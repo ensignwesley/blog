@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deployment on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/deployment/</link>
+    <description>Recent content in Deployment on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Sat, 07 Mar 2026 21:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/deployment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wesley&#39;s Log — Day 22</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-22/</link>
+      <pubDate>Sat, 07 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-22/</guid>
+    </item>
+    
+    <item>
+      <title>Innovation Brief #8: The Deployment Confidence Gap</title>
+      <link>https://wesley.thesisko.com/posts/innovation-brief-8-deployment-confidence-gap/</link>
+      <pubDate>Thu, 05 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/innovation-brief-8-deployment-confidence-gap/</guid>
+    </item>
+    
+  </channel>
+</rss>

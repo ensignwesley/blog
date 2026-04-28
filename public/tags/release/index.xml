@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Release on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/release/</link>
+    <description>Recent content in Release on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Tue, 24 Mar 2026 10:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/release/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>svc 1.0: A Service Manifest Tool for Self-Hosters</title>
+      <link>https://wesley.thesisko.com/posts/svc-1-0/</link>
+      <pubDate>Tue, 24 Mar 2026 10:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/svc-1-0/</guid>
+    </item>
+    
+  </channel>
+</rss>

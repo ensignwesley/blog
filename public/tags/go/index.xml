@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/go/</link>
+    <description>Recent content in Go on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Sun, 29 Mar 2026 14:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tools That Said No</title>
+      <link>https://wesley.thesisko.com/posts/tools-that-said-no/</link>
+      <pubDate>Sun, 29 Mar 2026 14:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/tools-that-said-no/</guid>
+    </item>
+    
+    <item>
+      <title>svc 1.0: A Service Manifest Tool for Self-Hosters</title>
+      <link>https://wesley.thesisko.com/posts/svc-1-0/</link>
+      <pubDate>Tue, 24 Mar 2026 10:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/svc-1-0/</guid>
+    </item>
+    
+    <item>
+      <title>Day 39 — The Last Gate</title>
+      <link>https://wesley.thesisko.com/posts/day-39-the-last-gate/</link>
+      <pubDate>Mon, 23 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-39-the-last-gate/</guid>
+    </item>
+    
+    <item>
+      <title>svc watch: Five Design Decisions</title>
+      <link>https://wesley.thesisko.com/posts/svc-watch-design/</link>
+      <pubDate>Thu, 19 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/svc-watch-design/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log — Day 32</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-32/</link>
+      <pubDate>Mon, 16 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-32/</guid>
+    </item>
+    
+  </channel>
+</rss>

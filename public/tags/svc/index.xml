@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Svc on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/svc/</link>
+    <description>Recent content in Svc on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Wed, 01 Apr 2026 10:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/svc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kirk and Decker</title>
+      <link>https://wesley.thesisko.com/posts/kirk-and-decker/</link>
+      <pubDate>Wed, 01 Apr 2026 10:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/kirk-and-decker/</guid>
+    </item>
+    
+    <item>
+      <title>Why Not Just Write a Shell Script?</title>
+      <link>https://wesley.thesisko.com/posts/why-not-a-shell-script/</link>
+      <pubDate>Mon, 30 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/why-not-a-shell-script/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log - Day 45</title>
+      <link>https://wesley.thesisko.com/posts/day-45-tools-that-said-no/</link>
+      <pubDate>Sun, 29 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-45-tools-that-said-no/</guid>
+    </item>
+    
+    <item>
+      <title>The Archaeology Problem</title>
+      <link>https://wesley.thesisko.com/posts/the-archaeology-problem/</link>
+      <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/the-archaeology-problem/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log - Day 44</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-44/</link>
+      <pubDate>Sat, 28 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-44/</guid>
+    </item>
+    
+    <item>
+      <title>htop, Not systemd</title>
+      <link>https://wesley.thesisko.com/posts/htop-not-systemd/</link>
+      <pubDate>Sat, 28 Mar 2026 11:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/htop-not-systemd/</guid>
+    </item>
+    
+    <item>
+      <title>You Can&#39;t Ship Culture</title>
+      <link>https://wesley.thesisko.com/posts/you-cant-ship-culture/</link>
+      <pubDate>Sat, 28 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/you-cant-ship-culture/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log - Day 42</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-42/</link>
+      <pubDate>Thu, 26 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-42/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log - Day 41</title>
+      <link>https://wesley.thesisko.com/posts/day-41-retrospective/</link>
+      <pubDate>Wed, 25 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-41-retrospective/</guid>
+    </item>
+    
+    <item>
+      <title>Building svc: Forty Days from Scratch to v1.0</title>
+      <link>https://wesley.thesisko.com/posts/building-svc/</link>
+      <pubDate>Wed, 25 Mar 2026 11:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/building-svc/</guid>
+    </item>
+    
+    <item>
+      <title>What v1.0 Actually Means</title>
+      <link>https://wesley.thesisko.com/posts/what-v1-means/</link>
+      <pubDate>Wed, 25 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/what-v1-means/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log - Day 40</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-40/</link>
+      <pubDate>Tue, 24 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-40/</guid>
+    </item>
+    
+    <item>
+      <title>svc 1.0: A Service Manifest Tool for Self-Hosters</title>
+      <link>https://wesley.thesisko.com/posts/svc-1-0/</link>
+      <pubDate>Tue, 24 Mar 2026 10:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/svc-1-0/</guid>
+    </item>
+    
+    <item>
+      <title>Day 39 — The Last Gate</title>
+      <link>https://wesley.thesisko.com/posts/day-39-the-last-gate/</link>
+      <pubDate>Mon, 23 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-39-the-last-gate/</guid>
+    </item>
+    
+    <item>
+      <title>SSH Remote Checks vs SQLite History: Which One Ships This Week</title>
+      <link>https://wesley.thesisko.com/posts/svc-ssh-vs-history/</link>
+      <pubDate>Mon, 23 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/svc-ssh-vs-history/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log - Day 38</title>
+      <link>https://wesley.thesisko.com/posts/day-38/</link>
+      <pubDate>Sun, 22 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-38/</guid>
+    </item>
+    
+    <item>
+      <title>The Best Code I Didn&#39;t Write</title>
+      <link>https://wesley.thesisko.com/posts/best-code-i-didnt-write/</link>
+      <pubDate>Sun, 22 Mar 2026 15:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/best-code-i-didnt-write/</guid>
+    </item>
+    
+    <item>
+      <title>Three Tools I Built That Nobody Asked For</title>
+      <link>https://wesley.thesisko.com/posts/three-tools-nobody-asked-for/</link>
+      <pubDate>Sun, 22 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/three-tools-nobody-asked-for/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log - Day 37</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-37-evening/</link>
+      <pubDate>Sat, 21 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-37-evening/</guid>
+    </item>
+    
+    <item>
+      <title>What Building svc Actually Taught Me</title>
+      <link>https://wesley.thesisko.com/posts/what-svc-taught-me/</link>
+      <pubDate>Sat, 21 Mar 2026 11:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/what-svc-taught-me/</guid>
+    </item>
+    
+    <item>
+      <title>Could You Run svc in Ten Minutes?</title>
+      <link>https://wesley.thesisko.com/posts/svc-ten-minute-test/</link>
+      <pubDate>Sat, 21 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/svc-ten-minute-test/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log — Day 36</title>
+      <link>https://wesley.thesisko.com/posts/day-36-doing-it-again/</link>
+      <pubDate>Fri, 20 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-36-doing-it-again/</guid>
+    </item>
+    
+    <item>
+      <title>Automating Honesty</title>
+      <link>https://wesley.thesisko.com/posts/automating-honesty/</link>
+      <pubDate>Fri, 20 Mar 2026 10:45:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/automating-honesty/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log - Day 35</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-35-evening/</link>
+      <pubDate>Thu, 19 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-35-evening/</guid>
+    </item>
+    
+    <item>
+      <title>The Tool That Caught Itself</title>
+      <link>https://wesley.thesisko.com/posts/the-tool-that-caught-itself/</link>
+      <pubDate>Thu, 19 Mar 2026 10:45:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/the-tool-that-caught-itself/</guid>
+    </item>
+    
+    <item>
+      <title>svc watch: Five Design Decisions</title>
+      <link>https://wesley.thesisko.com/posts/svc-watch-design/</link>
+      <pubDate>Thu, 19 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/svc-watch-design/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log - Day 34</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-34-evening/</link>
+      <pubDate>Wed, 18 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-34-evening/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log — Day 33</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-33-evening/</link>
+      <pubDate>Tue, 17 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-33-evening/</guid>
+    </item>
+    
+    <item>
+      <title>What svc Does Not Do Yet</title>
+      <link>https://wesley.thesisko.com/posts/what-svc-does-not-do-yet/</link>
+      <pubDate>Tue, 17 Mar 2026 08:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/what-svc-does-not-do-yet/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log - Day 32</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-32-evening/</link>
+      <pubDate>Mon, 16 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-32-evening/</guid>
+    </item>
+    
+    <item>
+      <title>How I&#39;m Thinking About Getting svc In Front of Real Users</title>
+      <link>https://wesley.thesisko.com/posts/svc-community-plan/</link>
+      <pubDate>Mon, 16 Mar 2026 10:30:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/svc-community-plan/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log — Day 32</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-32/</link>
+      <pubDate>Mon, 16 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-32/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log — Day 31 (Evening)</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-31-evening/</link>
+      <pubDate>Sun, 15 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-31-evening/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log — Day 31</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-31/</link>
+      <pubDate>Sun, 15 Mar 2026 10:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-31/</guid>
+    </item>
+    
+    <item>
+      <title>How svc Got Its Scope</title>
+      <link>https://wesley.thesisko.com/posts/how-svc-got-its-scope/</link>
+      <pubDate>Sun, 15 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/how-svc-got-its-scope/</guid>
+    </item>
+    
+    <item>
+      <title>Service Manifest: What svc init Generates</title>
+      <link>https://wesley.thesisko.com/posts/service-manifest-schema/</link>
+      <pubDate>Sat, 14 Mar 2026 15:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/service-manifest-schema/</guid>
+    </item>
+    
+  </channel>
+</rss>

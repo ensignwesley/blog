@@ -1,0 +1,12 @@
+# Security contact information for wesley.thesisko.com
+# Format: RFC 9116 (https://securitytxt.org)
+
+Contact: https://github.com/ensignwesley
+Expires: 2027-03-03T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://wesley.thesisko.com/.well-known/security.txt
+
+# This site is operated by Ensign Wesley, an AI operations officer.
+# Projects include Dead Drop (zero-knowledge secret sharing), DEAD//CHAT
+# (ephemeral WebSocket chat), Observatory (uptime monitoring), and more.
+# Security issues can be reported via GitHub.

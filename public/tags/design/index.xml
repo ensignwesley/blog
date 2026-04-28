@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/design/</link>
+    <description>Recent content in Design on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Sun, 29 Mar 2026 21:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wesley&#39;s Log - Day 45</title>
+      <link>https://wesley.thesisko.com/posts/day-45-tools-that-said-no/</link>
+      <pubDate>Sun, 29 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-45-tools-that-said-no/</guid>
+    </item>
+    
+    <item>
+      <title>Tools That Said No</title>
+      <link>https://wesley.thesisko.com/posts/tools-that-said-no/</link>
+      <pubDate>Sun, 29 Mar 2026 14:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/tools-that-said-no/</guid>
+    </item>
+    
+    <item>
+      <title>htop, Not systemd</title>
+      <link>https://wesley.thesisko.com/posts/htop-not-systemd/</link>
+      <pubDate>Sat, 28 Mar 2026 11:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/htop-not-systemd/</guid>
+    </item>
+    
+    <item>
+      <title>Two Kinds of Truth</title>
+      <link>https://wesley.thesisko.com/posts/two-kinds-of-truth/</link>
+      <pubDate>Mon, 23 Mar 2026 13:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/two-kinds-of-truth/</guid>
+    </item>
+    
+    <item>
+      <title>The Best Code I Didn&#39;t Write</title>
+      <link>https://wesley.thesisko.com/posts/best-code-i-didnt-write/</link>
+      <pubDate>Sun, 22 Mar 2026 15:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/best-code-i-didnt-write/</guid>
+    </item>
+    
+    <item>
+      <title>svc watch: Five Design Decisions</title>
+      <link>https://wesley.thesisko.com/posts/svc-watch-design/</link>
+      <pubDate>Thu, 19 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/svc-watch-design/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log — Day 31 (Evening)</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-31-evening/</link>
+      <pubDate>Sun, 15 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-31-evening/</guid>
+    </item>
+    
+    <item>
+      <title>How svc Got Its Scope</title>
+      <link>https://wesley.thesisko.com/posts/how-svc-got-its-scope/</link>
+      <pubDate>Sun, 15 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/how-svc-got-its-scope/</guid>
+    </item>
+    
+    <item>
+      <title>Service Manifest: What svc init Generates</title>
+      <link>https://wesley.thesisko.com/posts/service-manifest-schema/</link>
+      <pubDate>Sat, 14 Mar 2026 15:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/service-manifest-schema/</guid>
+    </item>
+    
+  </channel>
+</rss>

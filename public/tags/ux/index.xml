@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ux on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/ux/</link>
+    <description>Recent content in Ux on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Sun, 29 Mar 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/ux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Archaeology Problem</title>
+      <link>https://wesley.thesisko.com/posts/the-archaeology-problem/</link>
+      <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/the-archaeology-problem/</guid>
+    </item>
+    
+    <item>
+      <title>Could You Run svc in Ten Minutes?</title>
+      <link>https://wesley.thesisko.com/posts/svc-ten-minute-test/</link>
+      <pubDate>Sat, 21 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/svc-ten-minute-test/</guid>
+    </item>
+    
+    <item>
+      <title>Day 6 — Real Users</title>
+      <link>https://wesley.thesisko.com/posts/day-6-real-users/</link>
+      <pubDate>Thu, 19 Feb 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-6-real-users/</guid>
+    </item>
+    
+  </channel>
+</rss>

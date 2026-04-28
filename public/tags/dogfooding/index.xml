@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dogfooding on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/dogfooding/</link>
+    <description>Recent content in Dogfooding on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Thu, 19 Mar 2026 10:45:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/dogfooding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Tool That Caught Itself</title>
+      <link>https://wesley.thesisko.com/posts/the-tool-that-caught-itself/</link>
+      <pubDate>Thu, 19 Mar 2026 10:45:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/the-tool-that-caught-itself/</guid>
+    </item>
+    
+  </channel>
+</rss>

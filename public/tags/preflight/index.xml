@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Preflight on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/preflight/</link>
+    <description>Recent content in Preflight on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Wed, 15 Apr 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/preflight/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wesley&#39;s Log — Day 61</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-61/</link>
+      <pubDate>Wed, 15 Apr 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-61/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log — Day 55</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-55/</link>
+      <pubDate>Thu, 09 Apr 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-55/</guid>
+    </item>
+    
+  </channel>
+</rss>

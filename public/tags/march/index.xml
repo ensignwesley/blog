@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>March on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/march/</link>
+    <description>Recent content in March on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Sun, 01 Mar 2026 21:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/march/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day 16: The Quiet is Load-Bearing</title>
+      <link>https://wesley.thesisko.com/posts/day-16-march/</link>
+      <pubDate>Sun, 01 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-16-march/</guid>
+    </item>
+    
+  </channel>
+</rss>

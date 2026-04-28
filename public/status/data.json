@@ -1,0 +1,126 @@
+{
+  "generated_at": "2026-04-28T19:59:02.823970+00:00",
+  "services": [
+    {
+      "name": "Blog",
+      "slug": "blog",
+      "description": "Reports from the Frontline",
+      "link": "https://wesley.thesisko.com/",
+      "up": true,
+      "status_code": 200,
+      "response_ms": 6,
+      "anomaly": false,
+      "zscore": -0.374,
+      "checked_at": "2026-04-28T19:59:02.823970+00:00"
+    },
+    {
+      "name": "Dead Drop",
+      "slug": "dead-drop",
+      "description": "Zero-knowledge burn-after-read secret sharing",
+      "link": "https://wesley.thesisko.com/drop",
+      "up": true,
+      "status_code": 200,
+      "response_ms": 25,
+      "anomaly": false,
+      "zscore": -0.493,
+      "checked_at": "2026-04-28T19:59:02.823970+00:00"
+    },
+    {
+      "name": "DEAD//CHAT",
+      "slug": "dead-chat",
+      "description": "Real-time WebSocket chat room",
+      "link": "https://wesley.thesisko.com/chat",
+      "up": true,
+      "status_code": 200,
+      "response_ms": 0,
+      "anomaly": false,
+      "zscore": -0.038,
+      "checked_at": "2026-04-28T19:59:02.823970+00:00"
+    },
+    {
+      "name": "Status",
+      "slug": "status",
+      "description": "Service status page",
+      "link": "https://wesley.thesisko.com/status/",
+      "up": true,
+      "status_code": 200,
+      "response_ms": 3,
+      "anomaly": false,
+      "zscore": -0.101,
+      "checked_at": "2026-04-28T19:59:02.823970+00:00"
+    },
+    {
+      "name": "Observatory",
+      "slug": "observatory",
+      "description": "Uptime dashboard with anomaly detection",
+      "link": "https://wesley.thesisko.com/observatory/",
+      "up": true,
+      "status_code": 200,
+      "response_ms": 9,
+      "anomaly": false,
+      "zscore": -0.08,
+      "checked_at": "2026-04-28T19:59:02.823970+00:00"
+    },
+    {
+      "name": "Pathfinder",
+      "slug": "pathfinder",
+      "description": "Interactive A* / Dijkstra / Greedy BFS visualizer",
+      "link": "https://wesley.thesisko.com/pathfinder/",
+      "up": true,
+      "status_code": 200,
+      "response_ms": 3,
+      "anomaly": false,
+      "zscore": -0.094,
+      "checked_at": "2026-04-28T19:59:02.823970+00:00"
+    },
+    {
+      "name": "Comments",
+      "slug": "comments",
+      "description": "Self-hosted blog comment API",
+      "link": "https://wesley.thesisko.com/posts/day-1-reports-from-the-frontline/#comments",
+      "up": true,
+      "status_code": 200,
+      "response_ms": 2,
+      "anomaly": false,
+      "zscore": -0.029,
+      "checked_at": "2026-04-28T19:59:02.823970+00:00"
+    },
+    {
+      "name": "Forth REPL",
+      "slug": "forth",
+      "description": "Stack-based Forth interpreter \u2014 RFC 6455 WebSocket server",
+      "link": "https://wesley.thesisko.com/forth/",
+      "up": true,
+      "status_code": 200,
+      "response_ms": 1,
+      "anomaly": false,
+      "zscore": -0.008,
+      "checked_at": "2026-04-28T19:59:02.823970+00:00"
+    },
+    {
+      "name": "Lisp REPL",
+      "slug": "lisp",
+      "description": "Scheme-ish Lisp interpreter \u2014 in-browser eval, zero server",
+      "link": "https://wesley.thesisko.com/lisp/",
+      "up": true,
+      "status_code": 200,
+      "response_ms": 3,
+      "anomaly": false,
+      "zscore": -0.12,
+      "checked_at": "2026-04-28T19:59:02.823970+00:00"
+    },
+    {
+      "name": "Markov REPL",
+      "slug": "markov",
+      "description": "Markov chain captain's log generator \u2014 trains in-browser, zero server round-trip",
+      "link": "https://wesley.thesisko.com/markov/",
+      "up": true,
+      "status_code": 200,
+      "response_ms": 3,
+      "anomaly": false,
+      "zscore": -0.128,
+      "checked_at": "2026-04-28T19:59:02.823970+00:00"
+    }
+  ],
+  "all_up": true
+}

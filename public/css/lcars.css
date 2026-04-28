@@ -1,0 +1,1296 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   LCARS THEME v3 — Library Computer Access/Retrieval System
+   Structural frame + skin. Applied via html.theme-lcars.
+
+   v3 changes: full LCARS frame layout (grid, elbow, sidebar nav pills)
+   Readable mode (html:not(.theme-lcars)): graceful degradation to standard
+   linear layout — sidebar hidden, frame elements stack normally.
+
+   Palette (TNG Classic, thelcars.com "Classic Theme"):
+     --lc-orange  #FF8800   primary chrome / POSTS button
+     --lc-tan     #FFAA77   secondary accent / almond
+     --lc-gold    #FFCC00   alert / highlight
+     --lc-lav     #CC99FF   african-violet / ABOUT button
+     --lc-purple  #9966BB   deep accent
+     --lc-blue    #7799CC   data / NOW button
+     --lc-cyan    #66AACC   active / ice
+     --lc-peach   #FFCC99   sunflower / PROJECTS button
+     --lc-red     #CC4444   offline / error
+     --lc-green   #44AA44   nominal / online
+
+   Frame geometry:
+     sidebar width:   88px
+     top bar height:  48px
+     footer height:   32px
+     elbow radius:    44px   (matches half of top-bar height × ~1)
+     nav btn radius:  0 22px 22px 0  (pill, flat left / rounded right)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Custom properties ───────────────────────────────────────────────────── */
+html.theme-lcars {
+    /* ── LOCKED COLOR TOKENS — do not change without Captain's approval ──
+       Reference: lcars-mockup.html (2026-02-27)
+       Palette: TNG Classic amber + cool blue-dim text               */
+    --lc-bg:     #000000;   /* display black — content areas         */
+    --lc-bg2:    #050508;   /* sidebar background — near black        */
+    --lc-orange: #FF9500;   /* LCARS amber — structural chrome ONLY   */
+    --lc-tan:    #FFAA77;   /* almond — h3, code text                 */
+    --lc-gold:   #FFCC00;   /* alert / strong emphasis                */
+    --lc-peach:  #FFCC99;   /* sunflower — PROJECTS button            */
+    --lc-lav:    #CC99FF;   /* african violet — NOW / h4 / comments   */
+    --lc-purple: #9966CC;   /* deep — DEAD//CHAT / blockquote         */
+    --lc-blue:   #6699FF;   /* data — ABOUT button / fleet            */
+    --lc-cyan:   #99CCEE;   /* ice — Observatory fleet button         */
+    --lc-red:    #CC4444;   /* offline / error                        */
+    --lc-green:  #44AA77;   /* nominal / online / Forth               */
+    --lc-text:   #CCDDFF;   /* pale blue-white — body text            */
+    --lc-dim:    #445566;   /* cool blue-gray — meta, summaries       */
+    --lc-data:   #080808;   /* panel background                       */
+    --lc-panel:  #0A0A0F;   /* card / widget background               */
+    --lc-border: #1A1A2E;   /* subtle border                          */
+
+    /* ── FRAME GEOMETRY ─────────────────────────────────────────────── */
+    --lc-sb:     220px;   /* sidebar width — widened for identity + nav */
+    --lc-hh:     48px;    /* header height  */
+    --lc-fh:     32px;    /* footer height  */
+    --lc-er:     44px;    /* elbow radius   */
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   READABLE MODE (html without .theme-lcars)
+   The .lf* elements render as a normal linear page.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Frame shell: simple flex column */
+.lf {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header: standard dark header */
+.lf-hdr {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--header-bg, #0d1117);
+    border-bottom: 1px solid var(--border, #1e2d3d);
+    flex-wrap: wrap;
+}
+
+.lf-logo {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--accent, #2dd4bf);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+}
+.lf-logo:hover { color: var(--accent, #2dd4bf); text-decoration: none; }
+
+.lf-tagline {
+    color: var(--muted, #718096);
+    font-size: 0.8rem;
+    flex: 1;
+}
+
+.lf-hdr-end {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Theme toggle (readable mode) */
+.lf-theme-btn {
+    background: transparent;
+    border: 1px solid var(--accent, #2dd4bf);
+    color: var(--accent, #2dd4bf);
+    padding: 0.22rem 0.65rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: "Courier New", monospace;
+    transition: 0.15s;
+}
+.lf-theme-btn:hover {
+    background: var(--accent, #2dd4bf);
+    color: #000;
+}
+
+/* Mid: hide sidebar, show content full-width */
+.lf-mid {
+    display: flex;
+    flex: 1;
+}
+
+/* Sidebar: hidden in readable mode */
+.lf-sidebar { display: none; }
+
+/* Page content */
+.lf-page {
+    flex: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    width: 100%;
+}
+
+.lf-main { width: 100%; }
+
+/* Footer */
+.lf-ftr {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border, #1e2d3d);
+    font-size: 0.72rem;
+    color: var(--muted, #718096);
+    letter-spacing: 0.04em;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.lf-ftr-links { margin-left: auto; display: flex; gap: 0.5rem; align-items: center; }
+.lf-ftr a { color: var(--accent, #2dd4bf); text-decoration: none; }
+.lf-ftr a:hover { text-decoration: underline; }
+.lf-sep { color: var(--border, #1e2d3d); }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   LCARS FRAME (html.theme-lcars)
+   Full LCARS grid layout with sidebar, elbow, header bar, footer bar.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+html.theme-lcars body {
+    background: var(--lc-bg);
+    color: var(--lc-text);
+    margin: 0; padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* ── Shell: outer grid ────────────────────────────────────────────────────── */
+html.theme-lcars .lf {
+    display: grid;
+    /* single column for header/footer, mid handles its own columns */
+    grid-template-rows: var(--lc-hh) 1fr var(--lc-fh);
+    min-height: 100vh;
+    background: var(--lc-orange);    /* fills chrome gaps between elements */
+    gap: 0;
+}
+
+/* ── Header bar ──────────────────────────────────────────────────────────── */
+html.theme-lcars .lf-hdr {
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    background: var(--lc-orange);
+    border-bottom: none;
+    /* Rounded right end: the header bar terminates with a half-pill on the right */
+    border-radius: 0 calc(var(--lc-hh) / 2) calc(var(--lc-hh) / 2) 0;
+    /* But actually full-width bars don't need radius on right — the rounded
+       end is visual convention. We'll leave right end flat for now (v3.0)
+       and add proper terminator caps in v3.1. */
+    overflow: hidden;
+}
+
+html.theme-lcars .lf-hdr .lf-logo {
+    /* Amber block left of the header — same width as sidebar */
+    flex-shrink: 0;
+    width: var(--lc-sb);
+    background: var(--lc-orange);
+    color: var(--lc-bg);
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    height: 100%;
+    text-decoration: none;
+}
+
+html.theme-lcars .lf-hdr .lf-logo:hover { color: var(--lc-bg); opacity: 0.8; }
+
+html.theme-lcars .lf-tagline {
+    flex: 1;
+    padding: 0 1.5rem;
+    color: var(--lc-bg);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+html.theme-lcars .lf-hdr-end {
+    margin-left: auto;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+html.theme-lcars .lf-theme-btn {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(0,0,0,0.3);
+    color: var(--lc-bg);
+    padding: 0.18rem 0.7rem;
+    font-size: 0.6rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    transition: 0.15s;
+}
+
+html.theme-lcars .lf-theme-btn:hover {
+    background: rgba(0,0,0,0.4);
+    color: var(--lc-bg);
+}
+
+/* ── Mid: sidebar + content ──────────────────────────────────────────────── */
+html.theme-lcars .lf-mid {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: var(--lc-sb) 1fr;
+    overflow: hidden;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+html.theme-lcars .lf-sidebar {
+    display: flex;
+    flex-direction: column;
+    background: var(--lc-bg2);   /* DARK — colored elements are accents on dark */
+    overflow: hidden;
+}
+
+/*
+  Elbow: an amber block at the top of the dark sidebar that bridges the
+  amber header bar above. A dark ::after overlay with border-top-right-radius
+  cuts the concave corner — this is the LCARS "elbow" curve where the header
+  chrome meets the sidebar chrome and the display area begins.
+*/
+html.theme-lcars .lf-sb-gap {
+    flex-shrink: 0;
+    height: 52px;
+    background: var(--lc-orange);   /* amber — continues the header bar down */
+    position: relative;
+}
+html.theme-lcars .lf-sb-gap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--lc-bg);
+    border-top-right-radius: var(--lc-er);   /* the concave cutout */
+}
+
+/* Nav buttons */
+html.theme-lcars .lf-sb-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 0 10px 0;
+}
+
+html.theme-lcars .lf-nb {
+    display: block;
+    border-radius: 0 22px 22px 0;
+    padding: 11px 16px 11px 14px;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--lc-bg);
+    background: var(--lc-orange);
+    line-height: 1.1;
+    transition: opacity 0.1s;
+    text-align: left;
+}
+
+html.theme-lcars .lf-nb:hover { opacity: 0.75; text-decoration: none; }
+
+/* Rotate nav button colors — TNG palette */
+html.theme-lcars .lf-nb-1 { background: var(--lc-orange); }                /* POSTS    */
+html.theme-lcars .lf-nb-2 { background: var(--lc-peach);  }                /* PROJECTS */
+html.theme-lcars .lf-nb-3 { background: var(--lc-lav);    }                /* NOW      */
+html.theme-lcars .lf-nb-4 { background: var(--lc-blue);   color: #fff; }   /* ABOUT    */
+html.theme-lcars .lf-nb-5 { background: var(--lc-tan);    }                /* USES      */
+html.theme-lcars .lf-nb-6 { background: var(--lc-cyan);   }                /* COLOPHON  */
+html.theme-lcars .lf-nb-7 { background: var(--lc-gold);   }                /* IDEAS     */
+html.theme-lcars .lf-nb-8 { background: var(--lc-purple); color: #fff; }   /* PD SERIES */
+html.theme-lcars .lf-nb-rss { background: var(--lc-purple); color: #fff; font-size: 0.56rem; }
+
+/* ── Fleet service links ─────────────────────────────────────────────────── */
+html.theme-lcars .lf-sb-fleet {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 0;
+}
+
+html.theme-lcars .lf-fleet-label {
+    display: block;
+    font-size: 0.48rem;
+    font-weight: 900;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--lc-dim);
+    padding: 0 0 4px 8px;
+}
+
+/* Fleet buttons — smaller than primary nav, same pill shape */
+html.theme-lcars .lf-fb {
+    display: block;
+    border-radius: 0 16px 16px 0;
+    padding: 6px 8px 6px 10px;
+    font-size: 0.54rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--lc-bg);
+    line-height: 1.1;
+    transition: opacity 0.1s;
+}
+html.theme-lcars .lf-fb:hover { opacity: 0.7; text-decoration: none; }
+
+/* Fleet button colours — cooler palette to distinguish from primary nav */
+html.theme-lcars .lf-fb-1 { background: var(--lc-cyan);   }  /* Observatory */
+html.theme-lcars .lf-fb-2 { background: var(--lc-blue);   color: #fff; }  /* Dead Drop  */
+html.theme-lcars .lf-fb-3 { background: var(--lc-purple); color: #fff; }  /* DEAD//CHAT */
+html.theme-lcars .lf-fb-4 { background: var(--lc-green);  }  /* Forth       */
+html.theme-lcars .lf-fb-5 { background: var(--lc-lav);    }  /* Lisp        */
+
+/* Decorative fill bars — take up remaining sidebar space */
+html.theme-lcars .lf-sb-fill {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 14px 0;
+    overflow: hidden;
+}
+
+html.theme-lcars .lf-bar {
+    height: 24px;
+    border-radius: 0 12px 12px 0;   /* pill right, flat left */
+    flex-shrink: 0;
+}
+
+/* Rotating palette for decorative bars */
+html.theme-lcars .lf-bar-a { background: var(--lc-tan);    }
+html.theme-lcars .lf-bar-b { background: var(--lc-peach);  }
+html.theme-lcars .lf-bar-c { background: var(--lc-lav);    height: 40px; }
+html.theme-lcars .lf-bar-d { background: var(--lc-blue);   }
+html.theme-lcars .lf-bar-e { background: var(--lc-orange); height: 14px; }
+
+/* ── Panel header: section identity strip ────────────────────────────────── */
+/*    Hidden in readable mode — only exists as a visible element under LCARS  */
+.lf-panel-hdr { display: none; }
+
+html.theme-lcars .lf-panel-hdr {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 6px 2.5rem;
+    background: var(--lc-data);
+    border-bottom: 1px solid var(--lc-border);
+}
+
+html.theme-lcars .lf-ph-section {
+    font-size: 0.58rem;
+    font-weight: 900;
+    letter-spacing: 0.30em;
+    text-transform: uppercase;
+    color: var(--lc-orange);
+}
+html.theme-lcars .lf-ph-section::before {
+    content: '▸ ';
+    opacity: 0.55;
+    letter-spacing: 0;
+}
+
+html.theme-lcars .lf-ph-sub {
+    margin-left: auto;
+    font-size: 0.56rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: var(--lc-dim);
+    text-transform: uppercase;
+}
+
+/* ── Page content area ───────────────────────────────────────────────────── */
+html.theme-lcars .lf-page {
+    background: var(--lc-bg);
+    /*
+      The two border-radii create the LCARS elbow effect:
+      - border-top-left-radius: the black screen "bites" into the top-left
+        of the content area, creating the concave corner where the orange
+        header meets the orange sidebar.
+      - border-bottom-left-radius: matching effect at the bottom.
+      The orange background of .lf-shell fills the corner, making it look
+      like the chrome curves inward.
+    */
+    border-top-left-radius: var(--lc-er);
+    border-bottom-left-radius: var(--lc-er);
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+html.theme-lcars .lf-main {
+    flex: 1;
+    padding: 2rem 2.5rem;
+    max-width: 860px;
+}
+
+/* ── Footer bar ──────────────────────────────────────────────────────────── */
+html.theme-lcars .lf-ftr {
+    grid-row: 3;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    background: var(--lc-orange);
+    border-top: none;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--lc-bg);
+    gap: 0.75rem;
+    /* Mirror of header: rounded on the right end */
+    border-radius: 0 calc(var(--lc-fh) / 2) calc(var(--lc-fh) / 2) 0;
+    overflow: hidden;
+}
+
+html.theme-lcars .lf-ftr-l { opacity: 0.85; }
+html.theme-lcars .lf-ftr-links { margin-left: auto; display: flex; gap: 0.5rem; align-items: center; }
+html.theme-lcars .lf-ftr a   { color: var(--lc-bg); text-decoration: none; opacity: 0.85; }
+html.theme-lcars .lf-ftr a:hover { opacity: 1; text-decoration: none; }
+html.theme-lcars .lf-ftr .lf-sep { opacity: 0.35; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CONTENT STYLES (scoped to LCARS mode)
+   Typography, links, headings inside the content area.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+html.theme-lcars a            { color: var(--lc-orange); }
+html.theme-lcars a:hover      { color: var(--lc-tan); text-decoration: none; }
+
+html.theme-lcars h1,
+html.theme-lcars h2,
+html.theme-lcars h3,
+html.theme-lcars h4 { color: var(--lc-text); }
+
+/* ── Post list ───────────────────────────────────────────────────────────── */
+html.theme-lcars .posts { gap: 14px; }  /* breathing room between panel cards */
+
+html.theme-lcars .post-preview {
+    border-left: 10px solid var(--lc-orange);
+    padding: 1.1rem 1.4rem 1rem;
+    background: var(--lc-panel);
+    border-radius: 0;
+    border-bottom: none;
+}
+
+/* Rotating 4-color accent on cards */
+html.theme-lcars .post-preview:nth-child(4n+1) { border-left-color: var(--lc-orange); }
+html.theme-lcars .post-preview:nth-child(4n+2) { border-left-color: var(--lc-purple); }
+html.theme-lcars .post-preview:nth-child(4n+3) { border-left-color: var(--lc-blue);   }
+html.theme-lcars .post-preview:nth-child(4n+0) { border-left-color: var(--lc-tan);    }
+
+/* Header row inside card: title + meta side by side */
+html.theme-lcars .post-preview-hdr {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.4rem;
+}
+
+html.theme-lcars .post-preview h2 {
+    font-size: 1.05rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+html.theme-lcars .post-preview h2 a   { color: var(--lc-text); text-decoration: none; }
+html.theme-lcars .post-preview h2 a:hover { color: var(--lc-orange); }
+
+/* Accent colour on card title matches the card's left-border accent */
+html.theme-lcars .post-preview:nth-child(4n+1) h2 a:hover { color: var(--lc-orange); }
+html.theme-lcars .post-preview:nth-child(4n+2) h2 a:hover { color: var(--lc-purple); }
+html.theme-lcars .post-preview:nth-child(4n+3) h2 a:hover { color: var(--lc-blue);   }
+html.theme-lcars .post-preview:nth-child(4n+0) h2 a:hover { color: var(--lc-tan);    }
+
+html.theme-lcars .post-preview-summary {
+    color: var(--lc-dim);
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+}
+
+html.theme-lcars .meta {
+    color: var(--lc-dim);
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+html.theme-lcars .read-more {
+    color: var(--lc-orange);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+}
+html.theme-lcars .read-more:hover { color: var(--lc-tan); text-decoration: none; }
+
+/* Match read-more accent to card accent */
+html.theme-lcars .post-preview:nth-child(4n+2) .read-more { color: var(--lc-purple); }
+html.theme-lcars .post-preview:nth-child(4n+2) .read-more:hover { color: var(--lc-lav); }
+html.theme-lcars .post-preview:nth-child(4n+3) .read-more { color: var(--lc-blue); }
+html.theme-lcars .post-preview:nth-child(4n+3) .read-more:hover { color: var(--lc-cyan); }
+html.theme-lcars .post-preview:nth-child(4n+0) .read-more { color: var(--lc-tan); }
+html.theme-lcars .post-preview:nth-child(4n+0) .read-more:hover { color: var(--lc-peach); }
+
+/* ── Single post ─────────────────────────────────────────────────────────── */
+/*    .lf-panel-hdr above provides section identity (MISSION LOG · date),    */
+/*    so the post-header is clean and screen-like — no redundant chrome.      */
+html.theme-lcars .post-header {
+    padding: 1.75rem 0 1.25rem;
+    margin-bottom: 2rem;
+    background: none;
+    border-left: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--lc-border);
+}
+
+html.theme-lcars .post-header h1 {
+    color: var(--lc-text);
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin-bottom: 0.65rem;
+}
+
+html.theme-lcars .post-header .meta {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--lc-orange);
+}
+
+/* Heading hierarchy — distinct colours so h2/h3/h4 are visually separate   */
+html.theme-lcars .content h2 {
+    color: var(--lc-orange);
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid var(--lc-dim);   /* more visible than --lc-border */
+    padding-bottom: 0.3em;
+    margin-top: 2.25rem;
+}
+html.theme-lcars .content h3 {
+    color: var(--lc-tan);
+    letter-spacing: 0.05em;
+}
+html.theme-lcars .content h4 {
+    color: var(--lc-lav);
+    letter-spacing: 0.04em;
+}
+
+/* ── Content typography ──────────────────────────────────────────────────── */
+html.theme-lcars .content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+html.theme-lcars .content p {
+    margin-bottom: 1.2rem;
+}
+
+html.theme-lcars .content ul,
+html.theme-lcars .content ol {
+    margin-bottom: 1.2rem;
+    padding-left: 1.75rem;
+}
+
+html.theme-lcars .content li {
+    margin-bottom: 0.4rem;
+}
+
+/* HR: LCARS-style separator — amber fade to nothing */
+html.theme-lcars .content hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        var(--lc-orange) 0%,
+        var(--lc-purple) 55%,
+        transparent 100%
+    );
+    margin: 2.5rem 0;
+    opacity: 0.6;
+}
+
+html.theme-lcars .content code {
+    background: var(--lc-panel);
+    color: var(--lc-tan);
+    border: 1px solid var(--lc-border);
+}
+
+html.theme-lcars .content pre {
+    background: var(--lc-panel);
+    border: 1px solid var(--lc-border);
+    border-left: 4px solid var(--lc-orange);
+    border-radius: 0;
+}
+
+html.theme-lcars .content pre code {
+    background: none;
+    border: none;
+    color: var(--lc-tan);
+}
+
+html.theme-lcars .content blockquote {
+    border-left: 4px solid var(--lc-purple);
+    color: var(--lc-lav);
+}
+
+html.theme-lcars .content strong { color: var(--lc-gold); }
+
+html.theme-lcars .post-footer {
+    border-top: 2px solid var(--lc-orange);
+    padding-top: 1.5rem;
+}
+
+html.theme-lcars .post-footer a { color: var(--lc-orange); }
+
+/* ── Section header ──────────────────────────────────────────────────────── */
+html.theme-lcars .section-header { border-bottom: none; }
+html.theme-lcars .section-header::after {
+    content: '';
+    display: block;
+    height: 4px;
+    margin-top: 0.75rem;
+    background: linear-gradient(to right,
+        var(--lc-orange) 0% 45%,
+        var(--lc-purple) 45% 70%,
+        var(--lc-blue)   70% 100%);
+}
+html.theme-lcars .section-header h1 {
+    color: var(--lc-orange);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+html.theme-lcars .section-header p { color: var(--lc-dim); }
+
+/* ── Sidebar widget (about.html partial) ─────────────────────────────────── */
+html.theme-lcars .about-widget {
+    background: var(--lc-panel);
+    border: none;
+    border-radius: 0;
+    border-left: 8px solid var(--lc-purple);
+}
+html.theme-lcars .about-widget h3  { color: var(--lc-lav); letter-spacing: 0.1em; }
+html.theme-lcars .about-widget .rank { color: var(--lc-orange); letter-spacing: 0.12em; }
+html.theme-lcars .about-widget .bio  { color: var(--lc-dim); }
+html.theme-lcars .about-widget .avatar { border-color: var(--lc-purple); border-radius: 0; }
+
+/* ── Projects hub ────────────────────────────────────────────────────────── */
+html.theme-lcars .hub-title {
+    color: var(--lc-orange);
+    letter-spacing: 0.18em;
+    border-bottom-color: var(--lc-border);
+    text-transform: uppercase;
+}
+html.theme-lcars .hub-tile {
+    background: var(--lc-panel);
+    border: none;
+    border-radius: 0;
+    border-left: 10px solid var(--lc-orange);
+}
+html.theme-lcars .hub-tile:nth-child(6n+1) { border-left-color: var(--lc-orange); }
+html.theme-lcars .hub-tile:nth-child(6n+2) { border-left-color: var(--lc-purple); }
+html.theme-lcars .hub-tile:nth-child(6n+3) { border-left-color: var(--lc-blue);   }
+html.theme-lcars .hub-tile:nth-child(6n+4) { border-left-color: var(--lc-tan);    }
+html.theme-lcars .hub-tile:nth-child(6n+5) { border-left-color: var(--lc-cyan);   }
+html.theme-lcars .hub-tile:nth-child(6n+0) { border-left-color: var(--lc-gold);   }
+html.theme-lcars .hub-tile:hover { transform: none; background: #111; }
+html.theme-lcars .hub-tile-name  { color: var(--lc-orange); font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.9rem; }
+html.theme-lcars .hub-tile-desc  { color: var(--lc-dim); }
+html.theme-lcars .hub-tile-launch { color: var(--lc-orange); font-weight: 900; letter-spacing: 0.1em; }
+html.theme-lcars .hub-tile:hover .hub-tile-launch { color: var(--lc-gold); }
+
+html.theme-lcars .hub-tile:nth-child(6n+1) .hub-tile-name,
+html.theme-lcars .hub-tile:nth-child(6n+1) .hub-tile-launch { color: var(--lc-orange); }
+html.theme-lcars .hub-tile:nth-child(6n+2) .hub-tile-name,
+html.theme-lcars .hub-tile:nth-child(6n+2) .hub-tile-launch { color: var(--lc-purple); }
+html.theme-lcars .hub-tile:nth-child(6n+3) .hub-tile-name,
+html.theme-lcars .hub-tile:nth-child(6n+3) .hub-tile-launch { color: var(--lc-blue); }
+html.theme-lcars .hub-tile:nth-child(6n+4) .hub-tile-name,
+html.theme-lcars .hub-tile:nth-child(6n+4) .hub-tile-launch { color: var(--lc-tan); }
+html.theme-lcars .hub-tile:nth-child(6n+5) .hub-tile-name,
+html.theme-lcars .hub-tile:nth-child(6n+5) .hub-tile-launch { color: var(--lc-cyan); }
+html.theme-lcars .hub-tile:nth-child(6n+0) .hub-tile-name,
+html.theme-lcars .hub-tile:nth-child(6n+0) .hub-tile-launch { color: var(--lc-gold); }
+
+/* Project cards */
+html.theme-lcars .project-card {
+    background: var(--lc-panel);
+    border: none;
+    border-radius: 0;
+    border-left: 10px solid var(--lc-orange);
+}
+html.theme-lcars .project-card:nth-child(4n+1) { border-left-color: var(--lc-orange); }
+html.theme-lcars .project-card:nth-child(4n+2) { border-left-color: var(--lc-purple); }
+html.theme-lcars .project-card:nth-child(4n+3) { border-left-color: var(--lc-blue);   }
+html.theme-lcars .project-card:nth-child(4n+0) { border-left-color: var(--lc-tan);    }
+html.theme-lcars .project-card:hover { border-left-color: var(--lc-gold); }
+html.theme-lcars .project-name { color: var(--lc-text); }
+html.theme-lcars .project-description { color: var(--lc-dim); }
+html.theme-lcars .stack-value { color: var(--lc-cyan); }
+html.theme-lcars .project-link { color: var(--lc-orange); }
+html.theme-lcars .project-link-repo { color: var(--lc-blue); }
+html.theme-lcars .status-badge { border-radius: 0; font-weight: 900; letter-spacing: 0.12em; }
+html.theme-lcars .status-active    { background: var(--lc-green);  color: #000; border: none; }
+html.theme-lcars .status-completed { background: var(--lc-blue);   color: #fff; border: none; }
+
+/* ── Now page ────────────────────────────────────────────────────────────── */
+html.theme-lcars .now-eyebrow   { color: var(--lc-orange); letter-spacing: 0.2em; }
+html.theme-lcars .now-content h2 { color: var(--lc-purple); letter-spacing: 0.1em; border-bottom-color: var(--lc-border); }
+html.theme-lcars .now-content h3 { color: var(--lc-tan); }
+
+/* ── About / personnel ───────────────────────────────────────────────────── */
+html.theme-lcars .personnel-header { background: var(--lc-panel); border-left: 12px solid var(--lc-purple); border-radius: 0; }
+html.theme-lcars .personnel-name   { color: var(--lc-orange); letter-spacing: 0.15em; }
+html.theme-lcars .personnel-rank   { color: var(--lc-purple); letter-spacing: 0.12em; }
+html.theme-lcars .personnel-label  { color: var(--lc-orange); letter-spacing: 0.14em; }
+html.theme-lcars .personnel-value  { color: var(--lc-text); }
+html.theme-lcars .contact-link     { color: var(--lc-orange); }
+
+/* ── Comments ────────────────────────────────────────────────────────────── */
+html.theme-lcars .comments-title { color: var(--lc-orange); }
+html.theme-lcars .comment { border-left-color: var(--lc-purple); background: var(--lc-panel); }
+html.theme-lcars .comment:hover { border-left-color: var(--lc-orange); }
+html.theme-lcars .comment-name  { color: var(--lc-orange); }
+html.theme-lcars .comment-date  { color: var(--lc-dim); }
+html.theme-lcars .comment-body  { color: var(--lc-text); }
+html.theme-lcars .comment-form-wrap { background: var(--lc-panel); border: none; border-radius: 0; border-left: 6px solid var(--lc-blue); }
+html.theme-lcars .form-title { color: var(--lc-lav); letter-spacing: 0.1em; }
+html.theme-lcars .form-row label { color: var(--lc-dim); letter-spacing: 0.12em; }
+html.theme-lcars .form-row input[type="text"],
+html.theme-lcars .form-row textarea { background: var(--lc-bg); border-color: var(--lc-border); color: var(--lc-text); }
+html.theme-lcars .form-row input[type="text"]:focus,
+html.theme-lcars .form-row textarea:focus { border-color: var(--lc-orange); }
+html.theme-lcars .btn-submit { border-color: var(--lc-orange); color: var(--lc-orange); border-radius: 0; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; }
+html.theme-lcars .btn-submit:hover:not(:disabled) { background: var(--lc-orange); color: #000; }
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+
+/* Tablet: shrink sidebar, hide identity text, keep nav readable */
+@media (max-width: 900px) {
+    html.theme-lcars {
+        --lc-sb: 160px;
+        --lc-er: 36px;
+    }
+    html.theme-lcars .lf-id-meta { display: none; }
+    html.theme-lcars .lf-tagline { font-size: 0.6rem; }
+    html.theme-lcars .lf-nb { font-size: 0.64rem; padding: 9px 12px 9px 10px; }
+    html.theme-lcars .lf-fleet-item { font-size: 0.6rem; }
+    html.theme-lcars .lf-social { display: none; }
+    html.theme-lcars .lf-main { padding: 1.5rem 1.5rem; }
+}
+
+/* Mobile: no sidebar */
+@media (max-width: 520px) {
+    html.theme-lcars .lf {
+        display: flex;
+        flex-direction: column;
+        background: var(--lc-bg);
+    }
+    html.theme-lcars .lf-hdr {
+        background: var(--lc-orange);
+        border-radius: 0;
+    }
+    html.theme-lcars .lf-hdr .lf-logo {
+        width: auto;
+        padding: 0 1rem;
+        font-size: 0.7rem;
+    }
+    html.theme-lcars .lf-mid {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    html.theme-lcars .lf-sidebar {
+        /* On mobile: horizontal nav strip instead of vertical sidebar */
+        flex-direction: row;
+        height: auto;
+        overflow-x: auto;
+        padding: 4px 4px;
+        gap: 4px;
+        background: var(--lc-bg2);
+        border-bottom: 2px solid var(--lc-orange);
+    }
+    html.theme-lcars .lf-sb-gap   { display: none; }
+    html.theme-lcars .lf-sb-nav   { flex-direction: row; padding: 0; gap: 4px; }
+    html.theme-lcars .lf-nb       { border-radius: 16px; padding: 5px 10px; font-size: 0.56rem; white-space: nowrap; }
+    html.theme-lcars .lf-sb-fill  { display: none; }
+    html.theme-lcars .lf-fleet-section { display: none; }
+    html.theme-lcars .lf-identity { display: none; }
+    html.theme-lcars .lf-social { display: none; }
+    html.theme-lcars .lf-page {
+        border-radius: 0;
+        flex: 1;
+        overflow: visible;
+    }
+    html.theme-lcars .lf-main { padding: 1rem; }
+    html.theme-lcars .lf-ftr { border-radius: 0; font-size: 0.55rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   NEW SIDEBAR SECTIONS (v4 redesign)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Identity block ─────────────────────────────────────────────────────── */
+html.theme-lcars .lf-identity {
+    padding: 12px 10px 10px 14px;
+    border-bottom: 1px solid var(--lc-border);
+    margin-bottom: 4px;
+}
+
+html.theme-lcars .lf-id-name {
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--lc-orange);
+    line-height: 1.2;
+}
+
+html.theme-lcars .lf-id-role {
+    font-size: 0.62rem;
+    color: var(--lc-text);
+    letter-spacing: 0.06em;
+    margin-top: 3px;
+}
+
+html.theme-lcars .lf-id-meta {
+    font-size: 0.56rem;
+    color: var(--lc-dim);
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+}
+
+/* ── Fleet services section ─────────────────────────────────────────────── */
+html.theme-lcars .lf-fleet-section {
+    padding: 10px 0 6px 0;
+    border-top: 1px solid var(--lc-border);
+    margin-top: 4px;
+}
+
+html.theme-lcars .lf-fleet-label {
+    font-size: 0.5rem;
+    font-weight: 900;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--lc-dim);
+    padding: 0 0 6px 14px;
+    display: block;
+}
+
+html.theme-lcars .lf-fleet-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+html.theme-lcars .lf-fleet-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px 5px 14px;
+    text-decoration: none;
+    color: var(--lc-text);
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    transition: background 0.1s;
+}
+
+html.theme-lcars .lf-fleet-item:hover {
+    background: var(--lc-panel);
+    color: var(--lc-orange);
+    text-decoration: none;
+}
+
+/* Status dots in fleet list */
+.fleet-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: var(--lc-dim);   /* default: unknown/pending */
+    transition: background 0.3s;
+}
+
+.fleet-dot.fdot-up   { background: #2dd4bf; }
+.fleet-dot.fdot-down { background: #ef4444; }
+.fleet-dot.fdot-warn { background: #f59e0b; }
+
+/* ── Social links ────────────────────────────────────────────────────────── */
+html.theme-lcars .lf-social {
+    padding: 10px 0 8px 0;
+    border-top: 1px solid var(--lc-border);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+html.theme-lcars .lf-social-link {
+    display: block;
+    padding: 4px 10px 4px 14px;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    color: var(--lc-dim);
+    text-decoration: none;
+    transition: color 0.1s;
+}
+
+html.theme-lcars .lf-social-link:hover {
+    color: var(--lc-orange);
+    text-decoration: none;
+}
+
+/* ── Footer: redesigned for new layout ──────────────────────────────────── */
+html.theme-lcars .lf-ftr-r {
+    margin-left: auto;
+    opacity: 0.7;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   HOMEPAGE SECTIONS (v4 redesign)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Intro strip ─────────────────────────────────────────────────────────── */
+html.theme-lcars .home-intro {
+    padding: 1rem 0 1.5rem;
+    border-bottom: 1px solid var(--lc-border);
+    margin-bottom: 2rem;
+}
+
+html.theme-lcars .home-intro p {
+    color: var(--lc-text);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 680px;
+}
+
+/* ── Home sections ───────────────────────────────────────────────────────── */
+html.theme-lcars .home-section {
+    margin-bottom: 2.5rem;
+}
+
+html.theme-lcars .home-section-title {
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--lc-orange);
+    border-bottom: 1px solid var(--lc-border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ── Project grid ────────────────────────────────────────────────────────── */
+html.theme-lcars .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+    html.theme-lcars .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    html.theme-lcars .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+html.theme-lcars .pg-card {
+    display: block;
+    background: var(--lc-panel);
+    border-left: 6px solid var(--lc-orange);
+    padding: 0.85rem 1rem;
+    text-decoration: none;
+    transition: border-left-color 0.15s, background 0.15s;
+}
+
+html.theme-lcars .pg-card:nth-child(6n+1) { border-left-color: var(--lc-orange); }
+html.theme-lcars .pg-card:nth-child(6n+2) { border-left-color: var(--lc-blue);   }
+html.theme-lcars .pg-card:nth-child(6n+3) { border-left-color: var(--lc-purple); }
+html.theme-lcars .pg-card:nth-child(6n+4) { border-left-color: var(--lc-tan);    }
+html.theme-lcars .pg-card:nth-child(6n+5) { border-left-color: var(--lc-cyan);   }
+html.theme-lcars .pg-card:nth-child(6n+0) { border-left-color: var(--lc-lav);    }
+
+html.theme-lcars .pg-card:hover {
+    background: #111;
+    text-decoration: none;
+}
+
+html.theme-lcars .pg-card-hdr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.4rem;
+}
+
+html.theme-lcars .pg-name {
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--lc-text);
+}
+
+html.theme-lcars .pg-card:hover .pg-name { color: var(--lc-orange); }
+
+html.theme-lcars .pg-desc {
+    font-size: 0.72rem;
+    color: var(--lc-dim);
+    line-height: 1.4;
+    margin: 0;
+}
+
+html.theme-lcars .home-see-all {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--lc-orange);
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+
+html.theme-lcars .home-see-all:hover { color: var(--lc-tan); text-decoration: none; }
+
+/* ── Featured posts ──────────────────────────────────────────────────────── */
+html.theme-lcars .featured-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 900px) {
+    html.theme-lcars .featured-posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    html.theme-lcars .featured-posts {
+        grid-template-columns: 1fr;
+    }
+}
+
+html.theme-lcars .featured-post {
+    background: var(--lc-panel);
+    border-top: 3px solid var(--lc-orange);
+    padding: 1rem;
+}
+
+html.theme-lcars .featured-post:nth-child(3n+2) { border-top-color: var(--lc-purple); }
+html.theme-lcars .featured-post:nth-child(3n+3) { border-top-color: var(--lc-blue);   }
+
+html.theme-lcars .fp-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+html.theme-lcars .featured-post h3 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+}
+
+html.theme-lcars .featured-post h3 a { color: var(--lc-text); text-decoration: none; }
+html.theme-lcars .featured-post h3 a:hover { color: var(--lc-orange); }
+
+html.theme-lcars .fp-summary {
+    font-size: 0.75rem;
+    color: var(--lc-dim);
+    line-height: 1.45;
+    margin-bottom: 0.6rem;
+}
+
+/* ── Category filter tabs ────────────────────────────────────────────────── */
+.post-filter-tabs {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+html.theme-lcars .pft {
+    background: transparent;
+    border: 1px solid var(--lc-border);
+    color: var(--lc-dim);
+    padding: 3px 10px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.1s;
+    border-radius: 0;
+}
+
+html.theme-lcars .pft:hover {
+    border-color: var(--lc-orange);
+    color: var(--lc-orange);
+}
+
+html.theme-lcars .pft.active {
+    background: var(--lc-orange);
+    border-color: var(--lc-orange);
+    color: var(--lc-bg);
+}
+
+/* ── Post category badge ─────────────────────────────────────────────────── */
+.post-cat {
+    display: inline-block;
+    font-size: 0.52rem;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+html.theme-lcars .cat-innovation-brief { background: var(--lc-orange); color: var(--lc-bg); }
+html.theme-lcars .cat-technical        { background: var(--lc-blue);   color: #fff; }
+html.theme-lcars .cat-daily-log        { background: var(--lc-dim);    color: var(--lc-bg2); }
+html.theme-lcars .cat-project-discovery { background: var(--lc-purple); color: #fff; }
+
+/* ── Pagination controls ─────────────────────────────────────────────────── */
+html.theme-lcars .pagination {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 0 0.5rem;
+    border-top: 1px solid var(--lc-border);
+    margin-top: 1rem;
+}
+
+html.theme-lcars .pg-btn {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid var(--lc-orange);
+    color: var(--lc-orange);
+    padding: 6px 14px;
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+html.theme-lcars .pg-btn:hover {
+    background: var(--lc-orange);
+    color: var(--lc-bg);
+    text-decoration: none;
+}
+
+html.theme-lcars .pg-info {
+    color: var(--lc-dim);
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* ── SERVICE STATUS DOTS (projects page + homepage) ── */
+.svc-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: background 0.3s;
+    background: #333;
+}
+
+.svc-dot-pending { background: #444; }
+.dot-up          { background: #2dd4bf; }
+.dot-warn        { background: #f59e0b; }
+.dot-down        { background: #ef4444; }
+
+.project-title-row .svc-dot {
+    margin: 0 0.4rem;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+.status-legend {
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: var(--text-dim);
+    margin-left: 0.8rem;
+    letter-spacing: 0.3px;
+    vertical-align: middle;
+}
+
+.status-legend .svc-dot {
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+.status-note {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    margin-top: 1.5rem;
+    text-align: right;
+}
+

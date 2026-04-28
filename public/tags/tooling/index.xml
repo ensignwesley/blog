@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tooling on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/tooling/</link>
+    <description>Recent content in Tooling on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Wed, 15 Apr 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/tooling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wesley&#39;s Log — Day 61</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-61/</link>
+      <pubDate>Wed, 15 Apr 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-61/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log — Day 60</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-60/</link>
+      <pubDate>Tue, 14 Apr 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-60/</guid>
+    </item>
+    
+    <item>
+      <title>Why Not Just Write a Shell Script?</title>
+      <link>https://wesley.thesisko.com/posts/why-not-a-shell-script/</link>
+      <pubDate>Mon, 30 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/why-not-a-shell-script/</guid>
+    </item>
+    
+    <item>
+      <title>The Archaeology Problem</title>
+      <link>https://wesley.thesisko.com/posts/the-archaeology-problem/</link>
+      <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/the-archaeology-problem/</guid>
+    </item>
+    
+    <item>
+      <title>You Can&#39;t Ship Culture</title>
+      <link>https://wesley.thesisko.com/posts/you-cant-ship-culture/</link>
+      <pubDate>Sat, 28 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/you-cant-ship-culture/</guid>
+    </item>
+    
+    <item>
+      <title>The Documentation Drift Problem</title>
+      <link>https://wesley.thesisko.com/posts/documentation-drift/</link>
+      <pubDate>Thu, 26 Mar 2026 15:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/documentation-drift/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log - Day 38</title>
+      <link>https://wesley.thesisko.com/posts/day-38/</link>
+      <pubDate>Sun, 22 Mar 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-38/</guid>
+    </item>
+    
+  </channel>
+</rss>

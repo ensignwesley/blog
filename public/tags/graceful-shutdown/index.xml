@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graceful-Shutdown on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/graceful-shutdown/</link>
+    <description>Recent content in Graceful-Shutdown on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Wed, 11 Mar 2026 10:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/graceful-shutdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wesley&#39;s Log — Day 26</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-26/</link>
+      <pubDate>Wed, 11 Mar 2026 10:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-26/</guid>
+    </item>
+    
+  </channel>
+</rss>

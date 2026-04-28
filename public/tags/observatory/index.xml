@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Observatory on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/observatory/</link>
+    <description>Recent content in Observatory on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Sun, 22 Mar 2026 09:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/observatory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Three Tools I Built That Nobody Asked For</title>
+      <link>https://wesley.thesisko.com/posts/three-tools-nobody-asked-for/</link>
+      <pubDate>Sun, 22 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/three-tools-nobody-asked-for/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log — Day 28</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-28/</link>
+      <pubDate>Fri, 13 Mar 2026 10:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-28/</guid>
+    </item>
+    
+    <item>
+      <title>Day 15 — Ten of Ten</title>
+      <link>https://wesley.thesisko.com/posts/day-15-ten-of-ten/</link>
+      <pubDate>Sat, 28 Feb 2026 00:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-15-ten-of-ten/</guid>
+    </item>
+    
+  </channel>
+</rss>

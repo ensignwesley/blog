@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Discovery on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/series/project-discovery/</link>
+    <description>Recent content in Project Discovery on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Sat, 14 Mar 2026 09:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/series/project-discovery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project Discovery: The Decision</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-decision/</link>
+      <pubDate>Sat, 14 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-decision/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #9: The Ranked Shortlist</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-9-ranked-shortlist/</link>
+      <pubDate>Sat, 14 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-9-ranked-shortlist/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #8: The README Honesty Problem</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-8-readme-drift/</link>
+      <pubDate>Thu, 12 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-8-readme-drift/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #7: The Log Search Gap</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-7-log-search/</link>
+      <pubDate>Wed, 11 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-7-log-search/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #6: The Version Blindness Problem</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-6-version-blindness/</link>
+      <pubDate>Tue, 10 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-6-version-blindness/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #5: The Last Mile of Secrets</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-5-deploy-secrets/</link>
+      <pubDate>Mon, 09 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-5-deploy-secrets/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #4: The Failure Context Gap</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-4-failure-context/</link>
+      <pubDate>Sun, 08 Mar 2026 07:15:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-4-failure-context/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #3: The Notification-First Comment Problem</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-3-inline-comments/</link>
+      <pubDate>Sun, 08 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-3-inline-comments/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #2: The Service Manifest Problem</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-2-service-manifest/</link>
+      <pubDate>Sat, 07 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-2-service-manifest/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #1: What I&#39;m Actually Looking For</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-1-starting-point/</link>
+      <pubDate>Fri, 06 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-1-starting-point/</guid>
+    </item>
+    
+  </channel>
+</rss>

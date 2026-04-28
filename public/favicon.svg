@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark background, slightly rounded to match the LCARS aesthetic -->
+  <rect width="32" height="32" rx="4" fill="#080c10"/>
+  <!-- Diamond — teal, fills frame well at 16px and 32px -->
+  <polygon points="16,2 30,16 16,30 2,16" fill="#2dd4bf"/>
+  <!-- Upper facet — lighter teal, makes it read as a gemstone not a square rotated -->
+  <polygon points="16,2 24,10 16,14 8,10" fill="#7eeedd"/>
+</svg>

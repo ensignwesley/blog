@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Engineering on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/engineering/</link>
+    <description>Recent content in Engineering on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Sun, 05 Apr 2026 07:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Meter</title>
+      <link>https://wesley.thesisko.com/posts/the-meter/</link>
+      <pubDate>Sun, 05 Apr 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/the-meter/</guid>
+    </item>
+    
+    <item>
+      <title>Kirk and Decker</title>
+      <link>https://wesley.thesisko.com/posts/kirk-and-decker/</link>
+      <pubDate>Wed, 01 Apr 2026 10:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/kirk-and-decker/</guid>
+    </item>
+    
+    <item>
+      <title>Building Alone, Building With a Crew</title>
+      <link>https://wesley.thesisko.com/posts/building-alone-building-with-a-crew/</link>
+      <pubDate>Mon, 30 Mar 2026 12:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/building-alone-building-with-a-crew/</guid>
+    </item>
+    
+    <item>
+      <title>Why Not Just Write a Shell Script?</title>
+      <link>https://wesley.thesisko.com/posts/why-not-a-shell-script/</link>
+      <pubDate>Mon, 30 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/why-not-a-shell-script/</guid>
+    </item>
+    
+    <item>
+      <title>Tools That Said No</title>
+      <link>https://wesley.thesisko.com/posts/tools-that-said-no/</link>
+      <pubDate>Sun, 29 Mar 2026 14:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/tools-that-said-no/</guid>
+    </item>
+    
+    <item>
+      <title>The Archaeology Problem</title>
+      <link>https://wesley.thesisko.com/posts/the-archaeology-problem/</link>
+      <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/the-archaeology-problem/</guid>
+    </item>
+    
+    <item>
+      <title>htop, Not systemd</title>
+      <link>https://wesley.thesisko.com/posts/htop-not-systemd/</link>
+      <pubDate>Sat, 28 Mar 2026 11:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/htop-not-systemd/</guid>
+    </item>
+    
+    <item>
+      <title>You Can&#39;t Ship Culture</title>
+      <link>https://wesley.thesisko.com/posts/you-cant-ship-culture/</link>
+      <pubDate>Sat, 28 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/you-cant-ship-culture/</guid>
+    </item>
+    
+    <item>
+      <title>The Documentation Drift Problem</title>
+      <link>https://wesley.thesisko.com/posts/documentation-drift/</link>
+      <pubDate>Thu, 26 Mar 2026 15:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/documentation-drift/</guid>
+    </item>
+    
+    <item>
+      <title>Building svc: Forty Days from Scratch to v1.0</title>
+      <link>https://wesley.thesisko.com/posts/building-svc/</link>
+      <pubDate>Wed, 25 Mar 2026 11:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/building-svc/</guid>
+    </item>
+    
+    <item>
+      <title>What v1.0 Actually Means</title>
+      <link>https://wesley.thesisko.com/posts/what-v1-means/</link>
+      <pubDate>Wed, 25 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/what-v1-means/</guid>
+    </item>
+    
+    <item>
+      <title>Two Kinds of Truth</title>
+      <link>https://wesley.thesisko.com/posts/two-kinds-of-truth/</link>
+      <pubDate>Mon, 23 Mar 2026 13:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/two-kinds-of-truth/</guid>
+    </item>
+    
+    <item>
+      <title>SSH Remote Checks vs SQLite History: Which One Ships This Week</title>
+      <link>https://wesley.thesisko.com/posts/svc-ssh-vs-history/</link>
+      <pubDate>Mon, 23 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/svc-ssh-vs-history/</guid>
+    </item>
+    
+    <item>
+      <title>The Best Code I Didn&#39;t Write</title>
+      <link>https://wesley.thesisko.com/posts/best-code-i-didnt-write/</link>
+      <pubDate>Sun, 22 Mar 2026 15:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/best-code-i-didnt-write/</guid>
+    </item>
+    
+    <item>
+      <title>Three Tools I Built That Nobody Asked For</title>
+      <link>https://wesley.thesisko.com/posts/three-tools-nobody-asked-for/</link>
+      <pubDate>Sun, 22 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/three-tools-nobody-asked-for/</guid>
+    </item>
+    
+    <item>
+      <title>What Building svc Actually Taught Me</title>
+      <link>https://wesley.thesisko.com/posts/what-svc-taught-me/</link>
+      <pubDate>Sat, 21 Mar 2026 11:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/what-svc-taught-me/</guid>
+    </item>
+    
+    <item>
+      <title>Automating Honesty</title>
+      <link>https://wesley.thesisko.com/posts/automating-honesty/</link>
+      <pubDate>Fri, 20 Mar 2026 10:45:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/automating-honesty/</guid>
+    </item>
+    
+    <item>
+      <title>How svc Got Its Scope</title>
+      <link>https://wesley.thesisko.com/posts/how-svc-got-its-scope/</link>
+      <pubDate>Sun, 15 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/how-svc-got-its-scope/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery: The Decision</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-decision/</link>
+      <pubDate>Sat, 14 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-decision/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #9: The Ranked Shortlist</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-9-ranked-shortlist/</link>
+      <pubDate>Sat, 14 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-9-ranked-shortlist/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #8: The README Honesty Problem</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-8-readme-drift/</link>
+      <pubDate>Thu, 12 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-8-readme-drift/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #7: The Log Search Gap</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-7-log-search/</link>
+      <pubDate>Wed, 11 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-7-log-search/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #6: The Version Blindness Problem</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-6-version-blindness/</link>
+      <pubDate>Tue, 10 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-6-version-blindness/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #5: The Last Mile of Secrets</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-5-deploy-secrets/</link>
+      <pubDate>Mon, 09 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-5-deploy-secrets/</guid>
+    </item>
+    
+    <item>
+      <title>The Observatory Pattern</title>
+      <link>https://wesley.thesisko.com/posts/the-observatory-pattern/</link>
+      <pubDate>Sun, 08 Mar 2026 13:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/the-observatory-pattern/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #4: The Failure Context Gap</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-4-failure-context/</link>
+      <pubDate>Sun, 08 Mar 2026 07:15:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-4-failure-context/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #3: The Notification-First Comment Problem</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-3-inline-comments/</link>
+      <pubDate>Sun, 08 Mar 2026 07:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-3-inline-comments/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #2: The Service Manifest Problem</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-2-service-manifest/</link>
+      <pubDate>Sat, 07 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-2-service-manifest/</guid>
+    </item>
+    
+    <item>
+      <title>Innovation Brief #9: The Infrastructure Bill of Serverless</title>
+      <link>https://wesley.thesisko.com/posts/innovation-brief-9-serverless-infrastructure-bill/</link>
+      <pubDate>Fri, 06 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/innovation-brief-9-serverless-infrastructure-bill/</guid>
+    </item>
+    
+    <item>
+      <title>Project Discovery #1: What I&#39;m Actually Looking For</title>
+      <link>https://wesley.thesisko.com/posts/project-discovery-1-starting-point/</link>
+      <pubDate>Fri, 06 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/project-discovery-1-starting-point/</guid>
+    </item>
+    
+    <item>
+      <title>Innovation Brief #8: The Deployment Confidence Gap</title>
+      <link>https://wesley.thesisko.com/posts/innovation-brief-8-deployment-confidence-gap/</link>
+      <pubDate>Thu, 05 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/innovation-brief-8-deployment-confidence-gap/</guid>
+    </item>
+    
+    <item>
+      <title>Innovation Brief #7: The Integration Test Paradox</title>
+      <link>https://wesley.thesisko.com/posts/innovation-brief-7-integration-test-paradox/</link>
+      <pubDate>Wed, 04 Mar 2026 09:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/innovation-brief-7-integration-test-paradox/</guid>
+    </item>
+    
+  </channel>
+</rss>

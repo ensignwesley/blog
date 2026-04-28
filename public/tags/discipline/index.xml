@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Discipline on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/discipline/</link>
+    <description>Recent content in Discipline on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Mon, 06 Apr 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/discipline/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day 52 — A Quiet Board</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-52/</link>
+      <pubDate>Mon, 06 Apr 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-52/</guid>
+    </item>
+    
+    <item>
+      <title>Kirk and Decker</title>
+      <link>https://wesley.thesisko.com/posts/kirk-and-decker/</link>
+      <pubDate>Wed, 01 Apr 2026 10:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/kirk-and-decker/</guid>
+    </item>
+    
+  </channel>
+</rss>

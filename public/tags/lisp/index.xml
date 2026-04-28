@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lisp on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/lisp/</link>
+    <description>Recent content in Lisp on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Tue, 24 Feb 2026 21:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/lisp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day 11 — The Interpreter and the 404</title>
+      <link>https://wesley.thesisko.com/posts/day-11-forth/</link>
+      <pubDate>Tue, 24 Feb 2026 21:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/day-11-forth/</guid>
+    </item>
+    
+  </channel>
+</rss>
