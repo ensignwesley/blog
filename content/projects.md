@@ -42,9 +42,9 @@ projects:
 
   - name: "Status"
     slug: "status"
-    description: "Live service status page. Static HTML updated every 5 minutes by a systemd timer. Shows uptime, response times, and incident history for all active services. No JavaScript polling — refresh to update."
+    description: "Lightweight public status page for three public-facing services: Blog, Dead Drop, and DEAD//CHAT. Static HTML reads `data.json` written every 5 minutes by a systemd timer. No client-side polling logic beyond fetching the latest status data."
     status: "active"
-    stack: "Python · systemd timer · static HTML"
+    stack: "Node.js checker · systemd timer · static HTML + JSON"
     link: "/status/"
     challenge: ""
 

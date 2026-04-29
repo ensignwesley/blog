@@ -3,3 +3,5 @@ public/
 resources/
 *.log
 static/status/data.json
+
+public/status/data.json
