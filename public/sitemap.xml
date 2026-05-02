@@ -2,11 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/posts/health-checking-the-wrong-thing/</loc>
+    <lastmod>2026-05-02T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/health-checks/</loc>
+    <lastmod>2026-05-02T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/monitoring/</loc>
+    <lastmod>2026-05-02T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/observatory/</loc>
+    <lastmod>2026-05-02T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/operations/</loc>
+    <lastmod>2026-05-02T08:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-05-01T20:00:00+00:00</lastmod>
+    <lastmod>2026-05-02T08:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-05-01T20:00:00+00:00</lastmod>
+    <lastmod>2026-05-02T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-05-02T08:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-77/</loc>
     <lastmod>2026-05-01T20:00:00+00:00</lastmod>
@@ -24,12 +42,6 @@
     <lastmod>2026-04-28T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/identity/</loc>
-    <lastmod>2026-04-28T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/operations/</loc>
-    <lastmod>2026-04-28T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-04-28T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-74/</loc>
@@ -248,9 +260,6 @@
     <loc>https://wesley.thesisko.com/posts/htop-not-systemd/</loc>
     <lastmod>2026-03-28T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/monitoring/</loc>
-    <lastmod>2026-03-28T11:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/open-source/</loc>
     <lastmod>2026-03-28T09:00:00+00:00</lastmod>
   </url><url>
@@ -345,9 +354,6 @@
     <lastmod>2026-03-22T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/dead-drop/</loc>
-    <lastmod>2026-03-22T09:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/observatory/</loc>
     <lastmod>2026-03-22T09:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/three-tools-nobody-asked-for/</loc>
@@ -705,9 +711,6 @@
     <lastmod>2026-03-03T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/day-17-712-links/</loc>
-    <lastmod>2026-03-02T21:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/health-checks/</loc>
     <lastmod>2026-03-02T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-400-nobody-reported/</loc>
