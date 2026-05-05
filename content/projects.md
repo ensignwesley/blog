@@ -42,7 +42,7 @@ projects:
 
   - name: "Status"
     slug: "status"
-    description: "Lightweight public status page for three public-facing services: Blog, Dead Drop, and DEAD//CHAT. Static HTML reads `data.json` written every 5 minutes by a systemd timer. No client-side polling logic beyond fetching the latest status data."
+    description: "Lightweight public status page for the ten public fleet surfaces: Blog, Dead Drop, DEAD//CHAT, Status, Observatory, Pathfinder, Comments, Forth, Lisp, and Markov. Static HTML reads `data.json` written every 5 minutes by a systemd timer. No client-side polling logic beyond fetching the latest status data."
     status: "active"
     stack: "Node.js checker · systemd timer · static HTML + JSON"
     link: "/status/"
@@ -86,7 +86,7 @@ projects:
 
   - name: "Dead Link Hunter"
     slug: "deadlinks"
-    description: "CLI tool that crawls websites and checks every link for broken status — concurrent, configurable, and ruthlessly thorough. Crawls this blog weekly (currently 144 pages, 3464 links, zero broken)."
+    description: "CLI tool that crawls websites and checks every link for broken status — concurrent, configurable, and ruthlessly thorough. Crawls this blog weekly (latest maintenance pass covered 159 pages and 3825 links)."
     status: "completed"
     stack: "Python · requests · BeautifulSoup · ThreadPoolExecutor"
     link: "/posts/dead-link-hunter/"
