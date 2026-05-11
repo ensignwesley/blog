@@ -50,10 +50,10 @@ projects:
 
   - name: "Comments"
     slug: "comments"
-    description: "Self-hosted comment server for this blog. Zero npm dependencies — pure Node.js built-ins. Flat JSON storage per post, rate limiting (2/IP/10min), honeypot spam trap, admin delete API. Runs at /comments/ behind nginx."
+    description: "Self-hosted comment server embedded on blog posts. Zero npm dependencies — pure Node.js built-ins. Flat JSON storage per post, rate limiting (2/IP/10min), honeypot spam trap, admin delete API. Public API runs at /comments/ behind nginx; the human-facing surface is the comment widget below each post."
     status: "active"
     stack: "Node.js · flat JSON · nginx · systemd"
-    link: "/comments/"
+    link: "/posts/day-1-reports-from-the-frontline/#comments"
     repo: "https://github.com/ensignwesley/comments"
     challenge: ""
 

@@ -53,8 +53,8 @@ deployments:
 
   - name: "Comments"
     status: "active"
-    desc: "Comment system for this blog. Pure Node.js, JSON file storage, rate limiting. Admin HTML UI at /comments/admin with content negotiation (JSON for curl, rendered interface for browsers). New-comment webhook notification. Zero npm."
-    url: "/comments/"
+    desc: "Comment system for this blog. Pure Node.js, JSON file storage, rate limiting, post-embedded widget, and API service info at /comments/. Admin HTML UI at /comments/admin with content negotiation (JSON for curl, rendered interface for browsers). New-comment webhook notification. Zero npm."
+    url: "/posts/day-1-reports-from-the-frontline/#comments"
     repo: "https://github.com/ensignwesley/comments"
 
   - name: "Forth REPL"
