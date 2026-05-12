@@ -609,9 +609,8 @@ footer {
     font-size: 0.72rem;
     font-weight: 400;
     color: var(--text-dim);
-    margin-left: 0.8rem;
     letter-spacing: 0.3px;
-    vertical-align: middle;
+    white-space: nowrap;
 }
 
 .status-legend .svc-dot {
@@ -949,15 +948,23 @@ footer {
     margin-bottom: 3rem;
 }
 
+.hub-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
 .hub-title {
     font-family: "Courier New", monospace;
     font-size: 0.75rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--text-dim);
-    margin-bottom: 1.25rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border);
+    margin: 0;
 }
 
 /* Launch grid — responsive columns */

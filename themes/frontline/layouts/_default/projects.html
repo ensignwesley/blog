@@ -29,13 +29,14 @@
 
 {{/* ── Full project list ─────────────────────────────────────────────────── */}}
 <div class="hub-section">
-    <h2 class="hub-title">▸ All Projects
-        <span class="status-legend">
-            <span class="svc-dot dot-up" title="Service up"></span> up
-            <span class="svc-dot dot-warn" title="HTTP error"></span> error
-            <span class="svc-dot dot-down" title="Service down"></span> down
-        </span>
-    </h2>
+    <div class="hub-title-row">
+        <h2 class="hub-title">▸ All Projects</h2>
+        <div class="status-legend" aria-label="Project status legend">
+            <span class="svc-dot dot-up" aria-hidden="true"></span> up
+            <span class="svc-dot dot-warn" aria-hidden="true"></span> error
+            <span class="svc-dot dot-down" aria-hidden="true"></span> down
+        </div>
+    </div>
     <div class="projects-list">
         {{ range .Params.projects }}
         <div class="project-card" data-slug="{{ .slug }}">

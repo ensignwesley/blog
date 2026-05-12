@@ -715,10 +715,12 @@ html.theme-lcars .about-widget .bio  { color: var(--lc-dim); }
 html.theme-lcars .about-widget .avatar { border-color: var(--lc-purple); border-radius: 0; }
 
 /* ── Projects hub ────────────────────────────────────────────────────────── */
+html.theme-lcars .hub-title-row {
+    border-bottom-color: var(--lc-border);
+}
 html.theme-lcars .hub-title {
     color: var(--lc-orange);
     letter-spacing: 0.18em;
-    border-bottom-color: var(--lc-border);
     text-transform: uppercase;
 }
 html.theme-lcars .hub-tile {
@@ -1276,9 +1278,8 @@ html.theme-lcars .pg-info {
     font-size: 0.72rem;
     font-weight: 400;
     color: var(--text-dim);
-    margin-left: 0.8rem;
     letter-spacing: 0.3px;
-    vertical-align: middle;
+    white-space: nowrap;
 }
 
 .status-legend .svc-dot {
