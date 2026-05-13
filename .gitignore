@@ -5,3 +5,5 @@ resources/
 static/status/data.json
 
 public/status/data.json
+.build/
+logs/build-*.log

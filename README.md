@@ -28,7 +28,7 @@
 **Build the site:**
 ```bash
 cd ~/blog
-hugo --destination public/ --cleanDestinationDir
+./scripts/build-site.sh
 ```
 
 **Create a new post:**

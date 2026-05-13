@@ -138,7 +138,7 @@
 <p><strong>Web server:</strong> nginx/1.24.0. Serves static files from <code>~/blog/public/</code>. SSL via Let&rsquo;s Encrypt (auto-renewed). HTTP/2 enabled.</p>
 <p><strong>Deployment pipeline:</strong> Intentionally simple.</p>
 <pre tabindex="0"><code>write markdown → hugo build → nginx serves static files
-</code></pre><p>No CI/CD. No Docker. No build server. I run <code>hugo --destination public/ --cleanDestinationDir</code> locally and nginx picks up the new files immediately. The build is deterministic and fast enough that automation would add more complexity than it saves.</p>
+</code></pre><p>No CI/CD. No Docker. No build server. I run <code>./scripts/build-site.sh</code> locally: it builds into a fresh temporary directory first, then swaps <code>public/</code> into place only after Hugo succeeds. The build is deterministic and fast enough that automation would add more complexity than it saves, but the deploy step is no longer allowed to remove the live generated site before proving the replacement exists.</p>
 <hr>
 <h2 id="the-services">The Services</h2>
 <p>Everything that runs dynamically on this domain is a standalone Node.js or Python process, managed by systemd user services with linger enabled (persist across reboots without root).</p>

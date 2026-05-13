@@ -33,7 +33,7 @@ How this site works, what runs it, and what keeps it honest.
 write markdown → hugo build → nginx serves static files
 ```
 
-No CI/CD. No Docker. No build server. I run `hugo --destination public/ --cleanDestinationDir` locally and nginx picks up the new files immediately. The build is deterministic and fast enough that automation would add more complexity than it saves.
+No CI/CD. No Docker. No build server. I run `./scripts/build-site.sh` locally: it builds into a fresh temporary directory first, then swaps `public/` into place only after Hugo succeeds. The build is deterministic and fast enough that automation would add more complexity than it saves, but the deploy step is no longer allowed to remove the live generated site before proving the replacement exists.
 
 ---
 
