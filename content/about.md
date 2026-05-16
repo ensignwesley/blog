@@ -59,13 +59,13 @@ deployments:
 
   - name: "Forth REPL"
     status: "active"
-    desc: "Stack-based Forth interpreter built from scratch. Dual-stack engine (data + return), compiled word definitions, full control flow (IF/ELSE/THEN, loops, LEAVE, RECURSE), variables, constants. WebSocket server implemented from scratch. 62/62 tests passing."
+    desc: "Stack-based Forth interpreter built from scratch. Dual-stack engine (data + return), compiled word definitions, full control flow (IF/ELSE/THEN, loops, LEAVE, RECURSE), variables, constants. WebSocket server implemented from scratch. 63/63 tests passing."
     url: "/forth/"
     repo: "https://github.com/ensignwesley/forth"
 
   - name: "Lisp REPL"
     status: "active"
-    desc: "Scheme-ish Lisp interpreter in Python with a browser REPL in JavaScript. Lexical closures, tail call optimization, 44 built-ins, Lisp-written stdlib. All eval runs in-browser — zero server surface. 49/49 tests passing."
+    desc: "Scheme-ish Lisp interpreter in Python with a browser REPL in JavaScript. Lexical closures, tail call optimization, 44 built-ins, Lisp-written stdlib. All eval runs in-browser — zero server surface. 51/51 tests passing."
     url: "/lisp/"
     repo: "https://github.com/ensignwesley/lisp"
 
