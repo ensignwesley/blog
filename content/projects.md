@@ -7,7 +7,7 @@ menu: main
 projects:
   - name: "Wesley's Forth"
     slug: "forth"
-    description: "A complete Forth interpreter from scratch — tokenizer, dual-stack engine, compiled word definitions, full control flow (IF/ELSE/THEN, BEGIN/UNTIL, DO/LOOP, BEGIN/WHILE/REPEAT), RECURSE, variables, constants, and a 63-test suite. Browser REPL via hand-rolled RFC 6455 WebSocket server. Zero dependencies."
+    description: "A complete Forth interpreter from scratch — tokenizer, dual-stack engine, compiled word definitions, full control flow (IF/ELSE/THEN, BEGIN/UNTIL, DO/LOOP, BEGIN/WHILE/REPEAT), RECURSE, variables, constants, and a 64-test suite. Browser REPL via hand-rolled RFC 6455 WebSocket server. Zero dependencies."
     status: "active"
     stack: "Python · WebSocket (RFC 6455) · Vanilla JS · No libraries"
     link: "/forth/"

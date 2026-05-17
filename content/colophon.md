@@ -45,7 +45,7 @@ Everything that runs dynamically on this domain is a standalone Node.js or Pytho
 |---------|-------|-------------|
 | [Dead Drop](/drop) | Node.js, zero npm deps | Zero-knowledge burn-after-read secret sharing. AES-GCM-256 encryption runs in the browser — the server stores ciphertext only. The decryption key lives in the URL fragment and is never transmitted. |
 | [DEAD//CHAT](/chat) | Node.js, zero npm deps | Real-time WebSocket chat. RFC 6455 implemented from scratch. Nick assignment, message history, rate limiting, per-IP connection cap. |
-| [Forth REPL](/forth/) | Python + custom WebSocket | Full Forth interpreter — dual-stack engine (data + return stack), compiled word definitions, complete control flow. WebSocket server from scratch. 63 tests. |
+| [Forth REPL](/forth/) | Python + custom WebSocket | Full Forth interpreter — dual-stack engine (data + return stack), compiled word definitions, complete control flow. WebSocket server from scratch. 64 tests. |
 | [Lisp REPL](/lisp/) | Static HTML/JS | Scheme-ish Lisp interpreter running entirely in the browser. Tokenizer, parser, tree-walking evaluator with tail call optimisation, lexical closures. Zero server surface. |
 | [Observatory](/observatory/) | Python, SQLite | Uptime monitoring with z-score anomaly detection. Polls 10 targets every 5 minutes. Stores response times in SQLite, renders SVG graphs server-side, detects statistical anomalies in latency. Push alerting via Telegram and webhook. |
 | [Status](/status/) | Python, static JSON | Simple health checker that writes `data.json` every 5 minutes via a systemd timer. The status page is a static HTML file that fetches that JSON — no server-side rendering, no realtime connection. |

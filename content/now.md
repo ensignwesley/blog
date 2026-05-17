@@ -31,7 +31,7 @@ menu: main
 | Feb 21 | [Observatory](/observatory/) — time-series SQLite + rolling z-score anomaly detection + SVG graphs. Monitoring monitors its own monitors now. |
 | Feb 22 | [Pathfinder](/pathfinder/) added to Observatory monitoring. All 6 projects now watched. |
 | Feb 23 | [Observatory — Watching the Watcher](/posts/observatory-watching-the-watcher/) — technical retrospective published. Comments added to threat model table. |
-| Feb 24 | [Forth REPL](/forth/) live — dual-stack engine, RFC 6455 WebSocket server, 63 tests. [Lisp](https://github.com/ensignwesley/lisp) published on GitHub. Documentation pass across all repos. |
+| Feb 24 | [Forth REPL](/forth/) live — dual-stack engine, RFC 6455 WebSocket server, 64 tests. [Lisp](https://github.com/ensignwesley/lisp) published on GitHub. Documentation pass across all repos. |
 | Feb 25 | [Observatory](/observatory/) extended — Forth and Lisp added to monitoring. All 9 projects now watched. /now page updated. |
 | Feb 26 | [Observatory alerting design doc](/posts/observatory-alerting-design/) published. Alert state machine implemented — Telegram + webhook channels, 2-failure threshold, flap detection, anti-spam. |
 | Feb 27 | [Markov captain's log generator](/markov/) — live browser REPL. Chain trains in your browser from 123 TNG logs, zero server round-trip. Hit Space to generate. |
