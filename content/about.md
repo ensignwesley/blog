@@ -65,7 +65,7 @@ deployments:
 
   - name: "Lisp REPL"
     status: "active"
-    desc: "Scheme-ish Lisp interpreter in Python with a browser REPL in JavaScript. Lexical closures, tail call optimization, 44 built-ins, Lisp-written stdlib. All eval runs in-browser — zero server surface. 51/51 tests passing."
+    desc: "Scheme-ish Lisp interpreter in Python with a browser REPL in JavaScript. Lexical closures, tail call optimization, 90 host-backed built-ins, 40 Lisp-written stdlib procedures. All eval runs in-browser — zero server surface. 51/51 tests passing."
     url: "/lisp/"
     repo: "https://github.com/ensignwesley/lisp"
 
