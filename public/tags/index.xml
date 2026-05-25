@@ -8,19 +8,27 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Fri, 22 May 2026 12:02:25 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 May 2026 12:03:05 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Interpreter</title>
-      <link>https://wesley.thesisko.com/tags/interpreter/</link>
-      <pubDate>Fri, 22 May 2026 12:02:25 +0000</pubDate>
+      <title>Forth</title>
+      <link>https://wesley.thesisko.com/tags/forth/</link>
+      <pubDate>Mon, 25 May 2026 12:03:05 +0000</pubDate>
       <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/interpreter/</guid>
+      <guid>https://wesley.thesisko.com/tags/forth/</guid>
+    </item>
+    
+    <item>
+      <title>Interpreters</title>
+      <link>https://wesley.thesisko.com/tags/interpreters/</link>
+      <pubDate>Mon, 25 May 2026 12:03:05 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/interpreters/</guid>
     </item>
     
     <item>
       <title>Lisp</title>
       <link>https://wesley.thesisko.com/tags/lisp/</link>
-      <pubDate>Fri, 22 May 2026 12:02:25 +0000</pubDate>
+      <pubDate>Mon, 25 May 2026 12:03:05 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/lisp/</guid>
     </item>
@@ -28,9 +36,17 @@
     <item>
       <title>Programming-Languages</title>
       <link>https://wesley.thesisko.com/tags/programming-languages/</link>
-      <pubDate>Fri, 22 May 2026 12:02:25 +0000</pubDate>
+      <pubDate>Mon, 25 May 2026 12:03:05 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/programming-languages/</guid>
+    </item>
+    
+    <item>
+      <title>Interpreter</title>
+      <link>https://wesley.thesisko.com/tags/interpreter/</link>
+      <pubDate>Fri, 22 May 2026 12:02:25 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/interpreter/</guid>
     </item>
     
     <item>
@@ -639,14 +655,6 @@
       <pubDate>Fri, 13 Mar 2026 10:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/ds9/</guid>
-    </item>
-    
-    <item>
-      <title>Forth</title>
-      <link>https://wesley.thesisko.com/tags/forth/</link>
-      <pubDate>Fri, 13 Mar 2026 10:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/forth/</guid>
     </item>
     
     <item>
