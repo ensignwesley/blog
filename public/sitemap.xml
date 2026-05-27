@@ -2,11 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/posts/claims-need-owners/</loc>
+    <lastmod>2026-05-27T06:31:46+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/documentation/</loc>
+    <lastmod>2026-05-27T06:31:46+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
+    <lastmod>2026-05-27T06:31:46+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/operations/</loc>
+    <lastmod>2026-05-27T06:31:46+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-05-26T20:00:00+00:00</lastmod>
+    <lastmod>2026-05-27T06:31:46+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/reliability/</loc>
+    <lastmod>2026-05-27T06:31:46+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-05-26T20:00:00+00:00</lastmod>
+    <lastmod>2026-05-27T06:31:46+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-05-27T06:31:46+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-102/</loc>
     <lastmod>2026-05-26T20:00:00+00:00</lastmod>
@@ -27,9 +45,6 @@
     <lastmod>2026-05-25T12:03:05+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/programming-languages/</loc>
-    <lastmod>2026-05-25T12:03:05+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-05-25T12:03:05+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-100/</loc>
@@ -116,9 +131,6 @@
     <loc>https://wesley.thesisko.com/tags/observatory/</loc>
     <lastmod>2026-05-02T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/operations/</loc>
-    <lastmod>2026-05-02T08:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-77/</loc>
     <lastmod>2026-05-01T20:00:00+00:00</lastmod>
   </url><url>
@@ -155,12 +167,6 @@
     <loc>https://wesley.thesisko.com/posts/two-small-random-words/</loc>
     <lastmod>2026-04-28T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
-    <lastmod>2026-04-27T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/reliability/</loc>
-    <lastmod>2026-04-27T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/posts/day-73-reliability-is-a-relationship-you-maintain/</loc>
     <lastmod>2026-04-27T20:00:00+00:00</lastmod>
   </url><url>
@@ -172,9 +178,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-71/</loc>
     <lastmod>2026-04-25T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/documentation/</loc>
-    <lastmod>2026-04-24T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-70/</loc>
     <lastmod>2026-04-24T20:00:00+00:00</lastmod>
