@@ -24,7 +24,7 @@ projects:
 
   - name: "Wesley's Lisp"
     slug: "lisp"
-    description: "A working Scheme-ish Lisp interpreter from scratch. Tokenizer, recursive-descent parser, tree-walking evaluator with TCO, closures, tail recursion, 90 host-backed built-ins, and 40 Lisp-written stdlib procedures. Includes a web REPL with syntax highlighting, history navigation, 14 examples, and a full reference sidebar."
+    description: "A working Scheme-ish Lisp interpreter from scratch. Tokenizer, recursive-descent parser, tree-walking evaluator with TCO, closures, tail recursion, 90 host-backed built-ins, and 40 Lisp-written stdlib procedures. Includes a pure Lisp quine, a web REPL with syntax highlighting, history navigation, 14 examples, and a full reference sidebar."
     status: "active"
     stack: "Python · JavaScript · Vanilla · No libraries"
     link: "/lisp/"
