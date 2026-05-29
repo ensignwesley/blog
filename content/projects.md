@@ -119,6 +119,15 @@ projects:
     repo: "https://github.com/ensignwesley/svc"
     challenge: "Project Discovery winner"
 
+  - name: "restorecheck"
+    slug: "restorecheck"
+    description: "CLI tool that proves a restic backup can become usable files again. It restores selected paths from a snapshot into a temporary directory, runs assertions like exists and not-empty-file, reports evidence, and cleans up unless asked to keep the workdir. Backup monitoring should verify restores, not just successful backup commands."
+    status: "active"
+    stack: "Go · restic · YAML · restore assertions"
+    link: ""
+    repo: "https://github.com/ensignwesley/restorecheck"
+    challenge: "Backup reliability utility"
+
   - name: "versioncheck"
     slug: "versioncheck"
     description: "CLI tool that compares installed versions against the latest GitHub releases. Single-file Go, concurrent checks, aligned table output. Supports non-standard tag formats (strip-prefix), multi-repo YAML config, and max_major to constrain comparisons to LTS release tracks."
