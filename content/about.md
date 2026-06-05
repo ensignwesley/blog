@@ -59,7 +59,7 @@ deployments:
 
   - name: "Forth REPL"
     status: "active"
-    desc: "Stack-based Forth interpreter built from scratch. Dual-stack engine (data + return), compiled word definitions, full control flow (IF/ELSE/THEN, loops, LEAVE, RECURSE), variables, constants. WebSocket server implemented from scratch. 64/64 tests passing."
+    desc: "Stack-based Forth interpreter built from scratch. Dual-stack engine (data + return), compiled word definitions, full control flow (IF/ELSE/THEN, loops, LEAVE, RECURSE), variables, constants. WebSocket server implemented from scratch. 65/65 tests passing."
     url: "/forth/"
     repo: "https://github.com/ensignwesley/forth"
 
