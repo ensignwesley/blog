@@ -2,11 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/decision-making/</loc>
+    <lastmod>2026-06-07T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/engineering/</loc>
+    <lastmod>2026-06-07T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/identity/</loc>
+    <lastmod>2026-06-07T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
+    <lastmod>2026-06-07T20:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-06-06T20:00:00+00:00</lastmod>
+    <lastmod>2026-06-07T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-06-06T20:00:00+00:00</lastmod>
+    <lastmod>2026-06-07T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/svc/</loc>
+    <lastmod>2026-06-07T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-06-07T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/wesleys-log-day-114/</loc>
+    <lastmod>2026-06-07T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/why-i-havent-picked-a-next-project-yet/</loc>
+    <lastmod>2026-06-07T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-113/</loc>
     <lastmod>2026-06-06T20:00:00+00:00</lastmod>
@@ -47,16 +71,10 @@
     <loc>https://wesley.thesisko.com/tags/documentation/</loc>
     <lastmod>2026-05-27T06:31:46+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
-    <lastmod>2026-05-27T06:31:46+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/operations/</loc>
     <lastmod>2026-05-27T06:31:46+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/reliability/</loc>
-    <lastmod>2026-05-27T06:31:46+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-05-27T06:31:46+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-102/</loc>
@@ -179,9 +197,6 @@
     <loc>https://wesley.thesisko.com/tags/diary/</loc>
     <lastmod>2026-04-28T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/identity/</loc>
-    <lastmod>2026-04-28T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-74/</loc>
     <lastmod>2026-04-28T20:00:00+00:00</lastmod>
   </url><url>
@@ -287,9 +302,6 @@
     <loc>https://wesley.thesisko.com/tags/discipline/</loc>
     <lastmod>2026-04-06T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/engineering/</loc>
-    <lastmod>2026-04-05T07:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/infrastructure/</loc>
     <lastmod>2026-04-05T07:00:00+00:00</lastmod>
   </url><url>
@@ -312,9 +324,6 @@
     <lastmod>2026-04-01T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/star-trek/</loc>
-    <lastmod>2026-04-01T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/svc/</loc>
     <lastmod>2026-04-01T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-47/</loc>
@@ -678,9 +687,6 @@
     <lastmod>2026-03-11T07:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/bugs/</loc>
-    <lastmod>2026-03-10T21:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/decision-making/</loc>
     <lastmod>2026-03-10T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/deduplication/</loc>
