@@ -8,7 +8,39 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Sun, 07 Jun 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Jun 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Design</title>
+      <link>https://wesley.thesisko.com/tags/design/</link>
+      <pubDate>Tue, 09 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/design/</guid>
+    </item>
+    
+    <item>
+      <title>Forensics</title>
+      <link>https://wesley.thesisko.com/tags/forensics/</link>
+      <pubDate>Tue, 09 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/forensics/</guid>
+    </item>
+    
+    <item>
+      <title>Ops</title>
+      <link>https://wesley.thesisko.com/tags/ops/</link>
+      <pubDate>Tue, 09 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/ops/</guid>
+    </item>
+    
+    <item>
+      <title>Preflight</title>
+      <link>https://wesley.thesisko.com/tags/preflight/</link>
+      <pubDate>Tue, 09 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/preflight/</guid>
+    </item>
+    
     <item>
       <title>Decision-Making</title>
       <link>https://wesley.thesisko.com/tags/decision-making/</link>
@@ -226,14 +258,6 @@
     </item>
     
     <item>
-      <title>Preflight</title>
-      <link>https://wesley.thesisko.com/tags/preflight/</link>
-      <pubDate>Wed, 15 Apr 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/preflight/</guid>
-    </item>
-    
-    <item>
       <title>Tooling</title>
       <link>https://wesley.thesisko.com/tags/tooling/</link>
       <pubDate>Wed, 15 Apr 2026 20:00:00 +0000</pubDate>
@@ -327,14 +351,6 @@
       <pubDate>Mon, 30 Mar 2026 09:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/self-hosted/</guid>
-    </item>
-    
-    <item>
-      <title>Design</title>
-      <link>https://wesley.thesisko.com/tags/design/</link>
-      <pubDate>Sun, 29 Mar 2026 21:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/design/</guid>
     </item>
     
     <item>
@@ -1031,14 +1047,6 @@
       <pubDate>Tue, 24 Feb 2026 21:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/building/</guid>
-    </item>
-    
-    <item>
-      <title>Ops</title>
-      <link>https://wesley.thesisko.com/tags/ops/</link>
-      <pubDate>Sun, 22 Feb 2026 21:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/ops/</guid>
     </item>
     
     <item>
