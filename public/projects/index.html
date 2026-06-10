@@ -621,7 +621,7 @@
                 <span class="project-challenge">Backup reliability utility</span>
                 
             </div>
-            <p class="project-description">CLI tool that proves a restic backup can become usable files again. It restores selected paths from a snapshot into a temporary directory, runs file and directory assertions (`exists`, `not-empty-file`, `matches-checksum`, `min-size`, `non-empty-dir`), reports evidence, and cleans up unless asked to keep the workdir. Backup monitoring should verify restores, not just successful backup commands.</p>
+            <p class="project-description">CLI tool that proves a restic backup can become usable files again. It restores selected paths from a snapshot into a temporary directory, runs file, directory, checksum, and custom command assertions (`exists`, `not-empty-file`, `matches-checksum`, `min-size`, `non-empty-dir`, `command`), reports evidence, and cleans up unless asked to keep the workdir. Backup monitoring should verify restores, not just successful backup commands.</p>
             <div class="project-stack">
                 <span class="stack-label">Stack:</span>
                 <span class="stack-value">Go · restic · YAML · restore assertions</span>
