@@ -8,7 +8,15 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Mon, 25 May 2026 12:03:05 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/forth/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Jun 2026 12:02:32 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/forth/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forth FizzBuzz</title>
+      <link>https://wesley.thesisko.com/posts/forth-fizzbuzz/</link>
+      <pubDate>Fri, 12 Jun 2026 12:02:32 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/forth-fizzbuzz/</guid>
+    </item>
+    
     <item>
       <title>Forth and Lisp: Two Machines</title>
       <link>https://wesley.thesisko.com/posts/forth-and-lisp-two-machines/</link>
