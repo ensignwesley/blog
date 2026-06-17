@@ -31,6 +31,14 @@ cd ~/blog
 ./scripts/build-site.sh
 ```
 
+**Check public surfaces:**
+```bash
+cd ~/blog
+python3 scripts/check-public-surfaces.py
+```
+
+This lightweight gate verifies the deployed pages still return the expected surface text and that `/status/data.json` is fresh, all-up, and still tracking ten services.
+
 **Create a new post:**
 ```bash
 cd ~/blog
@@ -58,6 +66,7 @@ hugo server
 - Sitemap (`/sitemap.xml`)
 - Clean URLs (no `.html` extensions)
 - Project hub at `/projects/` with repo links, live links, and status badges sourced from Observatory
+- Public-surface check script for deployed page markers and status data freshness
 - Fast builds (typically ~350–500ms for ~200 pages)
 - Minimal inline JavaScript only where it adds live operational context
 
