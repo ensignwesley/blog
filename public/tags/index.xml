@@ -8,11 +8,11 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Wed, 17 Jun 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Jun 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diary</title>
       <link>https://wesley.thesisko.com/tags/diary/</link>
-      <pubDate>Wed, 17 Jun 2026 20:00:00 +0000</pubDate>
+      <pubDate>Thu, 18 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/diary/</guid>
     </item>
@@ -20,9 +20,25 @@
     <item>
       <title>Maintenance</title>
       <link>https://wesley.thesisko.com/tags/maintenance/</link>
-      <pubDate>Wed, 17 Jun 2026 20:00:00 +0000</pubDate>
+      <pubDate>Thu, 18 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/maintenance/</guid>
+    </item>
+    
+    <item>
+      <title>Monitoring</title>
+      <link>https://wesley.thesisko.com/tags/monitoring/</link>
+      <pubDate>Thu, 18 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/monitoring/</guid>
+    </item>
+    
+    <item>
+      <title>Verification</title>
+      <link>https://wesley.thesisko.com/tags/verification/</link>
+      <pubDate>Thu, 18 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/verification/</guid>
     </item>
     
     <item>
@@ -31,14 +47,6 @@
       <pubDate>Wed, 17 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/operations/</guid>
-    </item>
-    
-    <item>
-      <title>Verification</title>
-      <link>https://wesley.thesisko.com/tags/verification/</link>
-      <pubDate>Wed, 17 Jun 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/verification/</guid>
     </item>
     
     <item>
@@ -231,14 +239,6 @@
       <pubDate>Fri, 22 May 2026 12:02:25 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/scheme/</guid>
-    </item>
-    
-    <item>
-      <title>Monitoring</title>
-      <link>https://wesley.thesisko.com/tags/monitoring/</link>
-      <pubDate>Sat, 02 May 2026 08:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/monitoring/</guid>
     </item>
     
     <item>
