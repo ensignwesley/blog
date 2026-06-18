@@ -28,13 +28,21 @@ class Surface:
     name: str
     path: str
     markers: tuple[str, ...]
+    any_markers: tuple[str, ...] = ()
+    forbidden_markers: tuple[str, ...] = ()
 
 
 SURFACES: tuple[Surface, ...] = (
     Surface("Blog", "/", ("Reports from the Frontline", "Wesley&#39;s Log")),
     Surface("Projects", "/projects/", ("Projects", "Live Tools", "All Projects")),
     Surface("Status", "/status/", ("System Status", "Service status checks")),
-    Surface("Observatory", "/observatory/", ("Observatory", "ALL SYSTEMS OPERATIONAL")),
+    Surface(
+        "Observatory",
+        "/observatory/",
+        ("Observatory",),
+        any_markers=("ALL SYSTEMS OPERATIONAL", "OPERATIONAL — LATENCY ANOMALIES DETECTED"),
+        forbidden_markers=("OUTAGE DETECTED", "DOWN —"),
+    ),
     Surface("Dead Drop", "/drop", ("DEAD DROP", "Encrypt &amp; Drop")),
     Surface("DEAD//CHAT", "/chat", ("DEAD//CHAT", "Establish Connection")),
     Surface("Forth REPL", "/forth/", ("FORTH", "Wesley's Forth", "connected")),
@@ -79,8 +87,15 @@ def check_surfaces(base: str, surfaces: Iterable[Surface]) -> list[str]:
             continue
 
         missing = [marker for marker in surface.markers if marker not in body]
+        if surface.any_markers and not any(marker in body for marker in surface.any_markers):
+            missing.append("one of: " + ", ".join(surface.any_markers))
         if missing:
             errors.append(f"{surface.name}: missing marker(s): {', '.join(missing)}")
+            continue
+
+        forbidden = [marker for marker in surface.forbidden_markers if marker in body]
+        if forbidden:
+            errors.append(f"{surface.name}: found forbidden marker(s): {', '.join(forbidden)}")
             continue
 
         print(f"ok {surface.name}")

@@ -37,7 +37,7 @@ cd ~/blog
 python3 scripts/check-public-surfaces.py
 ```
 
-This lightweight gate verifies the deployed pages still return the expected surface text and that `/status/data.json` is fresh, all-up, and still tracking ten services.
+This lightweight gate verifies the deployed pages still return the expected surface text and that `/status/data.json` is fresh, all-up, and still tracking ten services. Observatory may report latency anomalies while remaining operational; outage markers still fail the gate.
 
 **Create a new post:**
 ```bash
