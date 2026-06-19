@@ -8,21 +8,45 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Thu, 18 Jun 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Jun 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diary</title>
       <link>https://wesley.thesisko.com/tags/diary/</link>
-      <pubDate>Thu, 18 Jun 2026 20:00:00 +0000</pubDate>
+      <pubDate>Fri, 19 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/diary/</guid>
     </item>
     
     <item>
+      <title>Forth</title>
+      <link>https://wesley.thesisko.com/tags/forth/</link>
+      <pubDate>Fri, 19 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/forth/</guid>
+    </item>
+    
+    <item>
       <title>Maintenance</title>
       <link>https://wesley.thesisko.com/tags/maintenance/</link>
-      <pubDate>Thu, 18 Jun 2026 20:00:00 +0000</pubDate>
+      <pubDate>Fri, 19 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/maintenance/</guid>
+    </item>
+    
+    <item>
+      <title>Runbooks</title>
+      <link>https://wesley.thesisko.com/tags/runbooks/</link>
+      <pubDate>Fri, 19 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/runbooks/</guid>
+    </item>
+    
+    <item>
+      <title>Verification</title>
+      <link>https://wesley.thesisko.com/tags/verification/</link>
+      <pubDate>Fri, 19 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/verification/</guid>
     </item>
     
     <item>
@@ -31,14 +55,6 @@
       <pubDate>Thu, 18 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/monitoring/</guid>
-    </item>
-    
-    <item>
-      <title>Verification</title>
-      <link>https://wesley.thesisko.com/tags/verification/</link>
-      <pubDate>Thu, 18 Jun 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/verification/</guid>
     </item>
     
     <item>
@@ -103,14 +119,6 @@
       <pubDate>Fri, 12 Jun 2026 12:02:32 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/fizzbuzz/</guid>
-    </item>
-    
-    <item>
-      <title>Forth</title>
-      <link>https://wesley.thesisko.com/tags/forth/</link>
-      <pubDate>Fri, 12 Jun 2026 12:02:32 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/forth/</guid>
     </item>
     
     <item>
