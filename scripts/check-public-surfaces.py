@@ -32,6 +32,14 @@ class Surface:
     forbidden_markers: tuple[str, ...] = ()
 
 
+@dataclass(frozen=True)
+class HealthEndpoint:
+    name: str
+    path: str
+    service: str
+    storage_backed: bool = False
+
+
 SURFACES: tuple[Surface, ...] = (
     Surface("Blog", "/", ("Reports from the Frontline", "Wesley&#39;s Log")),
     Surface("Projects", "/projects/", ("Projects", "Live Tools", "All Projects")),
@@ -50,6 +58,14 @@ SURFACES: tuple[Surface, ...] = (
     Surface("Markov", "/markov/", ("CAPTAIN'S LOG GENERATOR", "Generate Log")),
     Surface("Pathfinder", "/pathfinder/", ("PATHFINDER", "Algorithm", "A*")),
     Surface("Comments API", "/comments/", ("Comments API", "Self-hosted blog comment service")),
+)
+
+
+HEALTH_ENDPOINTS: tuple[HealthEndpoint, ...] = (
+    HealthEndpoint("Dead Drop health", "/drop/health", "dead-drop", storage_backed=True),
+    HealthEndpoint("DEAD//CHAT health", "/chat/health", "dead-chat"),
+    HealthEndpoint("Forth health", "/forth/health", "forth"),
+    HealthEndpoint("Comments health", "/comments/health", "comments", storage_backed=True),
 )
 
 
@@ -146,6 +162,54 @@ def check_status_data(base: str) -> list[str]:
     return errors
 
 
+def check_health_endpoints(base: str, endpoints: Iterable[HealthEndpoint]) -> list[str]:
+    errors: list[str] = []
+    for endpoint in endpoints:
+        url = base.rstrip("/") + endpoint.path
+        try:
+            status, body = fetch(url, accept="application/json")
+        except RuntimeError as exc:
+            errors.append(f"{endpoint.name}: fetch failed: {exc}")
+            continue
+
+        if status != 200:
+            errors.append(f"{endpoint.name}: expected HTTP 200, got {status}")
+            continue
+
+        try:
+            data = json.loads(body)
+        except json.JSONDecodeError as exc:
+            errors.append(f"{endpoint.name}: invalid JSON: {exc}")
+            continue
+
+        endpoint_errors: list[str] = []
+        if data.get("ok") is not True:
+            endpoint_errors.append("ok is not true")
+        if data.get("service") != endpoint.service:
+            endpoint_errors.append(f"expected service {endpoint.service!r}, got {data.get('service')!r}")
+        if not isinstance(data.get("version"), str) or not data.get("version"):
+            endpoint_errors.append("missing version")
+        if not isinstance(data.get("uptime_seconds"), int) or data.get("uptime_seconds", -1) < 0:
+            endpoint_errors.append("missing non-negative uptime_seconds")
+
+        if endpoint.storage_backed:
+            storage = data.get("storage")
+            if not isinstance(storage, dict):
+                endpoint_errors.append("missing storage object")
+            else:
+                if storage.get("readable") is not True:
+                    endpoint_errors.append("storage.readable is not true")
+                if storage.get("writable") is not True:
+                    endpoint_errors.append("storage.writable is not true")
+
+        if endpoint_errors:
+            errors.extend(f"{endpoint.name}: {error}" for error in endpoint_errors)
+        else:
+            print(f"ok {endpoint.name}")
+
+    return errors
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base", default=DEFAULT_BASE, help=f"site base URL (default: {DEFAULT_BASE})")
@@ -153,6 +217,7 @@ def main() -> int:
 
     errors = check_surfaces(args.base, SURFACES)
     errors.extend(check_status_data(args.base))
+    errors.extend(check_health_endpoints(args.base, HEALTH_ENDPOINTS))
 
     if errors:
         print("\nFAIL", file=sys.stderr)

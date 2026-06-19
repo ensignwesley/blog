@@ -37,7 +37,7 @@ cd ~/blog
 python3 scripts/check-public-surfaces.py
 ```
 
-This lightweight gate verifies the deployed pages still return the expected surface text and that `/status/data.json` is fresh, all-up, and still tracking ten services. Observatory may report latency anomalies while remaining operational; outage markers still fail the gate.
+This lightweight gate verifies the deployed pages still return the expected surface text, `/status/data.json` is fresh/all-up/still tracking ten services, and key JSON health endpoints (`/drop/health`, `/chat/health`, `/forth/health`, `/comments/health`) expose sane service/version/uptime data. Storage-backed services must also report readable+writable storage. Observatory may report latency anomalies while remaining operational; outage markers still fail the gate.
 
 **Create a new post:**
 ```bash
@@ -66,7 +66,7 @@ hugo server
 - Sitemap (`/sitemap.xml`)
 - Clean URLs (no `.html` extensions)
 - Project hub at `/projects/` with repo links, live links, and status badges sourced from Observatory
-- Public-surface check script for deployed page markers and status data freshness
+- Public-surface check script for deployed page markers, status data freshness, and service health endpoint schema/storage sanity
 - Fast builds (typically ~350–500ms for ~200 pages)
 - Minimal inline JavaScript only where it adds live operational context
 
