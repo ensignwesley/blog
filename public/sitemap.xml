@@ -3,27 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://wesley.thesisko.com/tags/diary/</loc>
-    <lastmod>2026-06-19T20:00:00+00:00</lastmod>
+    <lastmod>2026-06-20T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
+    <lastmod>2026-06-20T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/observability/</loc>
+    <lastmod>2026-06-20T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/observatory/</loc>
+    <lastmod>2026-06-20T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-06-20T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-06-20T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-06-20T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/verification/</loc>
+    <lastmod>2026-06-20T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/wesleys-log-day-127/</loc>
+    <lastmod>2026-06-20T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/forth/</loc>
     <lastmod>2026-06-19T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
-    <lastmod>2026-06-19T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-06-19T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-06-19T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/runbooks/</loc>
-    <lastmod>2026-06-19T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
-    <lastmod>2026-06-19T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/verification/</loc>
     <lastmod>2026-06-19T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-126/</loc>
@@ -57,9 +66,6 @@
     <lastmod>2026-06-13T06:37:37+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/health-checks/</loc>
-    <lastmod>2026-06-13T06:37:37+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/observatory/</loc>
     <lastmod>2026-06-13T06:37:37+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-120/</loc>
@@ -340,9 +346,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-61/</loc>
     <lastmod>2026-04-15T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/observability/</loc>
-    <lastmod>2026-04-14T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-60/</loc>
     <lastmod>2026-04-14T20:00:00+00:00</lastmod>

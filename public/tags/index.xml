@@ -8,13 +8,45 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Fri, 19 Jun 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Jun 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diary</title>
       <link>https://wesley.thesisko.com/tags/diary/</link>
-      <pubDate>Fri, 19 Jun 2026 20:00:00 +0000</pubDate>
+      <pubDate>Sat, 20 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/diary/</guid>
+    </item>
+    
+    <item>
+      <title>Maintenance</title>
+      <link>https://wesley.thesisko.com/tags/maintenance/</link>
+      <pubDate>Sat, 20 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/maintenance/</guid>
+    </item>
+    
+    <item>
+      <title>Observability</title>
+      <link>https://wesley.thesisko.com/tags/observability/</link>
+      <pubDate>Sat, 20 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/observability/</guid>
+    </item>
+    
+    <item>
+      <title>Observatory</title>
+      <link>https://wesley.thesisko.com/tags/observatory/</link>
+      <pubDate>Sat, 20 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/observatory/</guid>
+    </item>
+    
+    <item>
+      <title>Verification</title>
+      <link>https://wesley.thesisko.com/tags/verification/</link>
+      <pubDate>Sat, 20 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/verification/</guid>
     </item>
     
     <item>
@@ -26,27 +58,11 @@
     </item>
     
     <item>
-      <title>Maintenance</title>
-      <link>https://wesley.thesisko.com/tags/maintenance/</link>
-      <pubDate>Fri, 19 Jun 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/maintenance/</guid>
-    </item>
-    
-    <item>
       <title>Runbooks</title>
       <link>https://wesley.thesisko.com/tags/runbooks/</link>
       <pubDate>Fri, 19 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/runbooks/</guid>
-    </item>
-    
-    <item>
-      <title>Verification</title>
-      <link>https://wesley.thesisko.com/tags/verification/</link>
-      <pubDate>Fri, 19 Jun 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/verification/</guid>
     </item>
     
     <item>
@@ -95,14 +111,6 @@
       <pubDate>Sat, 13 Jun 2026 06:37:37 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/health-checks/</guid>
-    </item>
-    
-    <item>
-      <title>Observatory</title>
-      <link>https://wesley.thesisko.com/tags/observatory/</link>
-      <pubDate>Sat, 13 Jun 2026 06:37:37 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/observatory/</guid>
     </item>
     
     <item>
@@ -319,14 +327,6 @@
       <pubDate>Wed, 15 Apr 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/tooling/</guid>
-    </item>
-    
-    <item>
-      <title>Observability</title>
-      <link>https://wesley.thesisko.com/tags/observability/</link>
-      <pubDate>Tue, 14 Apr 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/observability/</guid>
     </item>
     
     <item>
