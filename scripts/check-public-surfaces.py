@@ -9,10 +9,12 @@ wrong page, missing marker text, stale status data, or a degraded fleet badge.
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from io import StringIO
 from typing import Iterable
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -162,6 +164,102 @@ def check_status_data(base: str) -> list[str]:
     return errors
 
 
+def check_observatory_api(base: str) -> list[str]:
+    """Validate the live Observatory data feed, not just the rendered page."""
+    url = base.rstrip("/") + "/observatory/api"
+    errors: list[str] = []
+    try:
+        status, body = fetch(url, accept="application/json")
+    except RuntimeError as exc:
+        return [f"Observatory API: fetch failed: {exc}"]
+
+    if status != 200:
+        return [f"Observatory API: expected HTTP 200, got {status}"]
+
+    try:
+        data = json.loads(body)
+    except json.JSONDecodeError as exc:
+        return [f"Observatory API: invalid JSON: {exc}"]
+
+    generated_at = data.get("generated_at")
+    if not generated_at:
+        errors.append("Observatory API: missing generated_at")
+    else:
+        try:
+            age = (datetime.now(timezone.utc) - parse_time(generated_at)).total_seconds()
+        except ValueError as exc:
+            errors.append(f"Observatory API: bad generated_at {generated_at!r}: {exc}")
+        else:
+            if age < 0:
+                errors.append(f"Observatory API: generated_at is in the future ({generated_at})")
+            elif age > MAX_STATUS_AGE_SECONDS:
+                errors.append(f"Observatory API: stale ({int(age)}s old, generated_at={generated_at})")
+
+    if data.get("all_up") is not True:
+        errors.append("Observatory API: all_up is not true")
+
+    services = data.get("services")
+    if not isinstance(services, dict) or len(services) != 10:
+        errors.append(f"Observatory API: expected 10 services, got {len(services) if isinstance(services, dict) else type(services).__name__}")
+    else:
+        for slug, service in services.items():
+            current = service.get("current") if isinstance(service, dict) else None
+            if not isinstance(current, dict):
+                errors.append(f"Observatory API: {slug} missing current check")
+                continue
+            if current.get("ok") is not True:
+                errors.append(f"Observatory API: {slug} current.ok is not true")
+            if current.get("status_code") != 200:
+                errors.append(f"Observatory API: {slug} current.status_code is {current.get('status_code')!r}")
+            if not isinstance(current.get("response_ms"), (int, float)) or current.get("response_ms", -1) < 0:
+                errors.append(f"Observatory API: {slug} missing non-negative response_ms")
+
+    if not errors:
+        print("ok Observatory API")
+    return errors
+
+
+def check_observatory_csv(base: str) -> list[str]:
+    """Validate the CSV export remains fresh and machine-readable."""
+    url = base.rstrip("/") + "/observatory/export.csv"
+    try:
+        status, body = fetch(url, accept="text/csv")
+    except RuntimeError as exc:
+        return [f"Observatory CSV: fetch failed: {exc}"]
+
+    if status != 200:
+        return [f"Observatory CSV: expected HTTP 200, got {status}"]
+
+    reader = csv.DictReader(StringIO(body))
+    required_fields = {"timestamp_utc", "target", "url", "ok", "status_code", "response_ms", "zscore", "anomaly"}
+    if set(reader.fieldnames or ()) != required_fields:
+        return [f"Observatory CSV: unexpected header {reader.fieldnames!r}"]
+
+    rows = list(reader)
+    if not rows:
+        return ["Observatory CSV: no rows"]
+
+    errors: list[str] = []
+    try:
+        latest = max(parse_time(row["timestamp_utc"]) for row in rows if row.get("timestamp_utc"))
+    except ValueError as exc:
+        errors.append(f"Observatory CSV: bad timestamp: {exc}")
+    else:
+        age = (datetime.now(timezone.utc) - latest).total_seconds()
+        if age < 0:
+            errors.append(f"Observatory CSV: latest timestamp is in the future ({latest.isoformat()})")
+        elif age > MAX_STATUS_AGE_SECONDS:
+            errors.append(f"Observatory CSV: stale ({int(age)}s old, latest={latest.isoformat()})")
+
+    targets = {row.get("target") for row in rows}
+    if len(targets) < 10:
+        errors.append(f"Observatory CSV: expected at least 10 targets, got {len(targets)}")
+
+    if not errors:
+        print("ok Observatory CSV")
+    return errors
+
+
 def check_health_endpoints(base: str, endpoints: Iterable[HealthEndpoint]) -> list[str]:
     errors: list[str] = []
     for endpoint in endpoints:
@@ -217,6 +315,8 @@ def main() -> int:
 
     errors = check_surfaces(args.base, SURFACES)
     errors.extend(check_status_data(args.base))
+    errors.extend(check_observatory_api(args.base))
+    errors.extend(check_observatory_csv(args.base))
     errors.extend(check_health_endpoints(args.base, HEALTH_ENDPOINTS))
 
     if errors:
