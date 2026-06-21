@@ -71,6 +71,25 @@ HEALTH_ENDPOINTS: tuple[HealthEndpoint, ...] = (
 )
 
 
+PROJECT_CATALOG_MARKERS: dict[str, tuple[str, ...]] = {
+    "Blog": ("Reports from the Frontline", "https://github.com/ensignwesley/blog"),
+    "Dead Drop": ("Dead Drop", "/drop", "https://github.com/ensignwesley/dead-drop"),
+    "DEAD//CHAT": ("DEAD//CHAT", "/chat", "https://github.com/ensignwesley/dead-chat"),
+    "Comments": ("Comments", "https://github.com/ensignwesley/comments"),
+    "Forth": ("Wesley&#39;s Forth", "/forth/", "https://github.com/ensignwesley/forth"),
+    "Lisp": ("Wesley&#39;s Lisp", "/lisp/", "https://github.com/ensignwesley/lisp"),
+    "Observatory": ("Observatory", "/observatory/", "https://github.com/ensignwesley/observatory"),
+    "Markov": ("Markov Chain Captain&#39;s Log Generator", "/markov/", "https://github.com/ensignwesley/markov-captains-log"),
+    "Pathfinder": ("Pathfinder", "/pathfinder/"),
+    "Status": ("Status", "/status/"),
+    "svc": ("svc", "https://github.com/ensignwesley/svc"),
+    "restorecheck": ("restorecheck", "https://github.com/ensignwesley/restorecheck"),
+    "versioncheck": ("versioncheck", "https://github.com/ensignwesley/versioncheck"),
+    "Dead Link Hunter": ("Dead Link Hunter", "https://github.com/ensignwesley/deadlinks"),
+    "raw-drop": ("raw-drop", "https://github.com/ensignwesley/raw-drop"),
+}
+
+
 def fetch(url: str, accept: str = "text/html") -> tuple[int, str]:
     req = Request(url, headers={"User-Agent": "wesley-public-surface-check/1.0", "Accept": accept})
     try:
@@ -308,12 +327,35 @@ def check_health_endpoints(base: str, endpoints: Iterable[HealthEndpoint]) -> li
     return errors
 
 
+def check_projects_catalog(base: str) -> list[str]:
+    """Catch project-page drift: missing launch paths or GitHub repo links."""
+    url = base.rstrip("/") + "/projects/"
+    try:
+        status, body = fetch(url)
+    except RuntimeError as exc:
+        return [f"Projects catalog: fetch failed: {exc}"]
+
+    if status != 200:
+        return [f"Projects catalog: expected HTTP 200, got {status}"]
+
+    errors: list[str] = []
+    for project, markers in PROJECT_CATALOG_MARKERS.items():
+        missing = [marker for marker in markers if marker not in body]
+        if missing:
+            errors.append(f"Projects catalog: {project} missing marker(s): {', '.join(missing)}")
+
+    if not errors:
+        print(f"ok Projects catalog ({len(PROJECT_CATALOG_MARKERS)} projects)")
+    return errors
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base", default=DEFAULT_BASE, help=f"site base URL (default: {DEFAULT_BASE})")
     args = parser.parse_args()
 
     errors = check_surfaces(args.base, SURFACES)
+    errors.extend(check_projects_catalog(args.base))
     errors.extend(check_status_data(args.base))
     errors.extend(check_observatory_api(args.base))
     errors.extend(check_observatory_csv(args.base))
