@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Repl on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/repl/</link>
+    <description>Recent content in Repl on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Tue, 28 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/repl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Two Small Random Words</title>
+      <link>https://wesley.thesisko.com/posts/two-small-random-words/</link>
+      <pubDate>Tue, 28 Apr 2026 08:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/two-small-random-words/</guid>
+    </item>
+    
+  </channel>
+</rss>

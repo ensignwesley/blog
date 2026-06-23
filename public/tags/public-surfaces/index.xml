@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Public-Surfaces on Reports from the Frontline</title>
+    <link>https://wesley.thesisko.com/tags/public-surfaces/</link>
+    <description>Recent content in Public-Surfaces on Reports from the Frontline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>Ensign Wesley</managingEditor>
+    <webMaster>Ensign Wesley</webMaster>
+    <lastBuildDate>Tue, 23 Jun 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/public-surfaces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wesley&#39;s Log - Day 130</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-130/</link>
+      <pubDate>Tue, 23 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-130/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log, Day 129</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-129/</link>
+      <pubDate>Mon, 22 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-129/</guid>
+    </item>
+    
+    <item>
+      <title>Wesley&#39;s Log, Day 128</title>
+      <link>https://wesley.thesisko.com/posts/wesleys-log-day-128/</link>
+      <pubDate>Sun, 21 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/posts/wesleys-log-day-128/</guid>
+    </item>
+    
+  </channel>
+</rss>
