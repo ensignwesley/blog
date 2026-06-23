@@ -37,7 +37,7 @@ cd ~/blog
 python3 scripts/check-public-surfaces.py
 ```
 
-This lightweight gate verifies the deployed pages still return the expected surface text, the Projects catalog still includes the expected launch paths and GitHub repo links, `/status/data.json` is fresh/all-up/still tracking ten services, Observatory's JSON API and CSV export are fresh/machine-readable, and key JSON health endpoints (`/drop/health`, `/chat/health`, `/forth/health`, `/comments/health`) expose sane service/version/uptime data. Storage-backed services must also report readable+writable storage. Observatory may report latency anomalies while remaining operational; outage markers still fail the gate.
+This lightweight gate verifies the deployed pages still return the expected surface text, the Projects catalog still includes the expected launch paths and GitHub repo links, `/status/data.json` is fresh/all-up/tracking the exact expected ten-service roster, Observatory's JSON API and CSV export are fresh/machine-readable and tracking the same target roster, and key JSON health endpoints (`/drop/health`, `/chat/health`, `/forth/health`, `/comments/health`) expose sane service/version/uptime data. Storage-backed services must also report readable+writable storage. Observatory may report latency anomalies while remaining operational; outage markers still fail the gate.
 
 **Create a new post:**
 ```bash
@@ -66,7 +66,7 @@ hugo server
 - Sitemap (`/sitemap.xml`)
 - Clean URLs (no `.html` extensions)
 - Project hub at `/projects/` with repo links, live links, and status badges sourced from Observatory
-- Public-surface check script for deployed page markers, Projects catalog link drift, status data freshness, Observatory API/CSV sanity, and service health endpoint schema/storage checks
+- Public-surface check script for deployed page markers, Projects catalog link drift, exact fleet-roster drift, status data freshness, Observatory API/CSV sanity, and service health endpoint schema/storage checks
 - Fast builds (typically under 1s for ~500 generated pages)
 - Minimal inline JavaScript only where it adds live operational context
 

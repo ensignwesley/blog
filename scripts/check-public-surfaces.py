@@ -24,6 +24,32 @@ DEFAULT_BASE = "https://wesley.thesisko.com"
 MAX_STATUS_AGE_SECONDS = 15 * 60
 TIMEOUT_SECONDS = 15
 
+EXPECTED_STATUS_SERVICES = (
+    "Blog",
+    "Dead Drop",
+    "DEAD//CHAT",
+    "Status",
+    "Observatory",
+    "Pathfinder",
+    "Comments",
+    "Forth REPL",
+    "Lisp REPL",
+    "Markov REPL",
+)
+
+EXPECTED_OBSERVATORY_TARGETS = (
+    "blog",
+    "dead-drop",
+    "dead-chat",
+    "status",
+    "observatory",
+    "pathfinder",
+    "comments",
+    "forth",
+    "lisp",
+    "markov",
+)
+
 
 @dataclass(frozen=True)
 class Surface:
@@ -177,8 +203,15 @@ def check_status_data(base: str) -> list[str]:
                 print(f"ok Status data fresh ({int(age)}s old)")
 
     services = data.get("services")
-    if not isinstance(services, list) or len(services) != 10:
-        errors.append(f"Status data: expected 10 services, got {len(services) if isinstance(services, list) else type(services).__name__}")
+    if not isinstance(services, list):
+        errors.append(f"Status data: expected service list, got {type(services).__name__}")
+    else:
+        service_names = [str(service.get("name", "")) for service in services if isinstance(service, dict)]
+        if tuple(service_names) != EXPECTED_STATUS_SERVICES:
+            errors.append(
+                "Status data: service roster drifted "
+                f"(expected {', '.join(EXPECTED_STATUS_SERVICES)}; got {', '.join(service_names)})"
+            )
 
     return errors
 
@@ -218,8 +251,13 @@ def check_observatory_api(base: str) -> list[str]:
         errors.append("Observatory API: all_up is not true")
 
     services = data.get("services")
-    if not isinstance(services, dict) or len(services) != 10:
-        errors.append(f"Observatory API: expected 10 services, got {len(services) if isinstance(services, dict) else type(services).__name__}")
+    if not isinstance(services, dict):
+        errors.append(f"Observatory API: expected service object, got {type(services).__name__}")
+    elif tuple(services.keys()) != EXPECTED_OBSERVATORY_TARGETS:
+        errors.append(
+            "Observatory API: target roster drifted "
+            f"(expected {', '.join(EXPECTED_OBSERVATORY_TARGETS)}; got {', '.join(services.keys())})"
+        )
     else:
         for slug, service in services.items():
             current = service.get("current") if isinstance(service, dict) else None
@@ -271,8 +309,11 @@ def check_observatory_csv(base: str) -> list[str]:
             errors.append(f"Observatory CSV: stale ({int(age)}s old, latest={latest.isoformat()})")
 
     targets = {row.get("target") for row in rows}
-    if len(targets) < 10:
-        errors.append(f"Observatory CSV: expected at least 10 targets, got {len(targets)}")
+    if targets != set(EXPECTED_OBSERVATORY_TARGETS):
+        errors.append(
+            "Observatory CSV: target roster drifted "
+            f"(expected {', '.join(EXPECTED_OBSERVATORY_TARGETS)}; got {', '.join(sorted(targets))})"
+        )
 
     if not errors:
         print("ok Observatory CSV")
