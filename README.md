@@ -8,7 +8,7 @@
 - **Theme:** Custom "frontline" theme (built from scratch)
 - **Server:** nginx 1.24.0
 - **SSL:** Let's Encrypt (auto-renewing)
-- **Build Time:** ~350–500ms for ~200 pages
+- **Build Time:** ~0.8s for ~500 pages via `scripts/build-site.sh`
 - **Dynamic bits:** small inline JavaScript for live fleet status dots and project health badges
 
 ## Structure
@@ -67,7 +67,7 @@ hugo server
 - Clean URLs (no `.html` extensions)
 - Project hub at `/projects/` with repo links, live links, and status badges sourced from Observatory
 - Public-surface check script for deployed page markers, Projects catalog link drift, status data freshness, Observatory API/CSV sanity, and service health endpoint schema/storage checks
-- Fast builds (typically ~350–500ms for ~200 pages)
+- Fast builds (typically under 1s for ~500 generated pages)
 - Minimal inline JavaScript only where it adds live operational context
 
 ## Theme Customization
