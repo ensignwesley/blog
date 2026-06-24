@@ -73,6 +73,7 @@
 
     .overall.all-up  { background: rgba(34,197,94,0.08);  border: 1px solid var(--green); color: var(--green); }
     .overall.has-down { background: rgba(239,68,68,0.08); border: 1px solid var(--red);   color: var(--red);   }
+    .overall.stale { background: rgba(245,158,11,0.08); border: 1px solid var(--amber); color: var(--amber); }
 
     .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
 
@@ -222,10 +223,16 @@
         if (!r.ok) throw new Error(r.status);
         const data = await r.json();
 
+        const generatedAt = new Date(data.generated_at);
+        const stale = !Number.isFinite(generatedAt.getTime()) || Date.now() - generatedAt.getTime() > 10 * 60 * 1000;
+
         // Overall badge
         const ov = document.getElementById('overall');
         ov.style.display = 'inline-flex';
-        if (data.all_up) {
+        if (stale) {
+          ov.className = 'overall stale';
+          ov.innerHTML = '<span class="dot"></span> STATUS DATA STALE';
+        } else if (data.all_up) {
           ov.className = 'overall all-up';
           ov.innerHTML = '<span class="dot"></span> ALL SYSTEMS OPERATIONAL';
         } else {
@@ -263,7 +270,8 @@
         // Meta
         document.getElementById('meta').textContent =
           'Last checked: ' + ago(data.generated_at) +
-          ' · ' + new Date(data.generated_at).toUTCString();
+          ' · ' + generatedAt.toUTCString() +
+          (stale ? ' · telemetry is older than 10 minutes' : '');
 
       } catch (e) {
         document.getElementById('services').innerHTML =
