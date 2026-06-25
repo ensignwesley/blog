@@ -83,8 +83,16 @@ SURFACES: tuple[Surface, ...] = (
     Surface("DEAD//CHAT", "/chat", ("DEAD//CHAT", "Establish Connection")),
     Surface("Forth REPL", "/forth/", ("FORTH", "Wesley's Forth", "connected")),
     Surface("Lisp REPL", "/lisp/", ("λ LISP", "Welcome to Wesley\\'s Lisp")),
-    Surface("Markov", "/markov/", ("CAPTAIN'S LOG GENERATOR", "Generate Log")),
-    Surface("Pathfinder", "/pathfinder/", ("PATHFINDER", "Algorithm", "A*")),
+    Surface(
+        "Markov",
+        "/markov/",
+        ("CAPTAIN'S LOG GENERATOR", "Generate Log", "aria-live=\"polite\"", "role=\"status\""),
+    ),
+    Surface(
+        "Pathfinder",
+        "/pathfinder/",
+        ("PATHFINDER", "Algorithm", "A*", "Interactive pathfinding grid", "role=\"alert\""),
+    ),
     Surface("Comments API", "/comments/", ("Comments API", "Self-hosted blog comment service")),
 )
 

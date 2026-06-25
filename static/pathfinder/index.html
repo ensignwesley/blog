@@ -100,7 +100,7 @@ canvas{border:1px solid var(--border);border-radius:3px;
   </div>
   <div class="sep"></div>
   <div class="cg">
-    <span class="cg-lbl">Algorithm</span>
+    <label class="cg-lbl" for="algo">Algorithm</label>
     <select id="algo">
       <option value="astar">A*</option>
       <option value="dijkstra">Dijkstra</option>
@@ -114,7 +114,7 @@ canvas{border:1px solid var(--border);border-radius:3px;
   </div>
   <div class="sep"></div>
   <div class="cg">
-    <span class="cg-lbl">Speed</span>
+    <label class="cg-lbl" for="spd">Speed</label>
     <input type="range" id="spd" min="1" max="8" value="4">
     <span id="spd-v">20×</span>
   </div>
@@ -133,19 +133,19 @@ canvas{border:1px solid var(--border);border-radius:3px;
   <div id="panels">
     <div class="panel">
       <div class="plbl" id="lbl0">A* Search</div>
-      <canvas id="cv0"></canvas>
+      <canvas id="cv0" role="img" aria-label="Interactive pathfinding grid. Use the drawing controls to place walls, move the start or end node, then run the selected algorithm."></canvas>
     </div>
     <div class="panel" id="p1" style="display:none">
       <div class="plbl" id="lbl1">Dijkstra</div>
-      <canvas id="cv1"></canvas>
+      <canvas id="cv1" role="img" aria-label="Dijkstra comparison grid"></canvas>
     </div>
     <div class="panel" id="p2" style="display:none">
       <div class="plbl" id="lbl2">Greedy BFS</div>
-      <canvas id="cv2"></canvas>
+      <canvas id="cv2" role="img" aria-label="Greedy BFS comparison grid"></canvas>
     </div>
   </div>
 
-  <div id="no-path-msg">NO PATH EXISTS</div>
+  <div id="no-path-msg" role="alert">NO PATH EXISTS</div>
 
   <!-- Single mode stats -->
   <div id="stats-single">
@@ -197,7 +197,7 @@ canvas{border:1px solid var(--border);border-radius:3px;
   </div>
 </div>
 
-<div id="toast"></div>
+<div id="toast" role="status" aria-live="polite"></div>
 
 <script>
 // ═══════════════════════════════════════════════════════════

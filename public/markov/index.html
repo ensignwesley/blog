@@ -237,7 +237,7 @@ select { padding-right: 1rem; }
 
 <div id="ctrl">
   <div class="cg">
-    <span class="cg-lbl">Order</span>
+    <label class="cg-lbl" for="order">Order</label>
     <select id="order" onchange="rebuildModel()">
       <option value="1">1 (bigram)</option>
       <option value="2" selected>2 (trigram)</option>
@@ -248,7 +248,7 @@ select { padding-right: 1rem; }
   <div class="sep"></div>
 
   <div class="cg">
-    <span class="cg-lbl">Max words</span>
+    <label class="cg-lbl" for="len-range">Max words</label>
     <input type="range" id="len-range" min="30" max="150" value="80"
            oninput="document.getElementById('len-v').textContent = this.value">
     <span id="len-v">80</span>
@@ -268,10 +268,10 @@ select { padding-right: 1rem; }
 <div id="main">
 
   <!-- Output -->
-  <div id="output">
+  <div id="output" aria-live="polite" aria-atomic="true">
     <div class="log-label">Generated Entry</div>
     <div id="stardate">—</div>
-    <div id="log-text" class="placeholder">
+    <div id="log-text" class="placeholder" role="status">
       <span class="spin">⧖</span> Loading training corpus…
     </div>
     <div id="copy-row">
