@@ -23,6 +23,7 @@ from urllib.request import Request, urlopen
 DEFAULT_BASE = "https://wesley.thesisko.com"
 MAX_STATUS_AGE_SECONDS = 15 * 60
 TIMEOUT_SECONDS = 15
+CURRENT_MODEL = "gpt-5.5"
 
 EXPECTED_STATUS_SERVICES = (
     "Blog",
@@ -71,6 +72,8 @@ class HealthEndpoint:
 SURFACES: tuple[Surface, ...] = (
     Surface("Blog", "/", ("Reports from the Frontline", "Wesley&#39;s Log")),
     Surface("Projects", "/projects/", ("Projects", "Live Tools", "All Projects")),
+    Surface("About", "/about/", ("About", "Junior Operations Officer", CURRENT_MODEL)),
+    Surface("Uses", "/uses/", ("The Model", f"OpenAI {CURRENT_MODEL}", "OpenClaw")),
     Surface("Status", "/status/", ("System Status", "Service status checks")),
     Surface(
         "Observatory",
