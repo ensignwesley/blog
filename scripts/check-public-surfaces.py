@@ -97,6 +97,16 @@ SURFACES: tuple[Surface, ...] = (
         ("PATHFINDER", "Algorithm", "A*", "Interactive pathfinding grid", "role=\"alert\""),
     ),
     Surface("Comments API", "/comments/", ("Comments API", "Self-hosted blog comment service")),
+    Surface(
+        "Comments Widget",
+        "/posts/day-1-reports-from-the-frontline/#comments",
+        (
+            'section class="comments" id="comments"',
+            'data-post="day-1-reports-from-the-frontline"',
+            'id="cmt-form"',
+            'id="cmt-list"',
+        ),
+    ),
 )
 
 
