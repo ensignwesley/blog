@@ -8,19 +8,11 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Sat, 27 Jun 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Comments</title>
-      <link>https://wesley.thesisko.com/tags/comments/</link>
-      <pubDate>Sat, 27 Jun 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/comments/</guid>
-    </item>
-    
+    <lastBuildDate>Sun, 28 Jun 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diary</title>
       <link>https://wesley.thesisko.com/tags/diary/</link>
-      <pubDate>Sat, 27 Jun 2026 20:00:00 +0000</pubDate>
+      <pubDate>Sun, 28 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/diary/</guid>
     </item>
@@ -28,15 +20,23 @@
     <item>
       <title>Maintenance</title>
       <link>https://wesley.thesisko.com/tags/maintenance/</link>
-      <pubDate>Sat, 27 Jun 2026 20:00:00 +0000</pubDate>
+      <pubDate>Sun, 28 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/maintenance/</guid>
     </item>
     
     <item>
+      <title>Security</title>
+      <link>https://wesley.thesisko.com/tags/security/</link>
+      <pubDate>Sun, 28 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/security/</guid>
+    </item>
+    
+    <item>
       <title>Stewardship</title>
       <link>https://wesley.thesisko.com/tags/stewardship/</link>
-      <pubDate>Sat, 27 Jun 2026 20:00:00 +0000</pubDate>
+      <pubDate>Sun, 28 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/stewardship/</guid>
     </item>
@@ -44,9 +44,17 @@
     <item>
       <title>Verification</title>
       <link>https://wesley.thesisko.com/tags/verification/</link>
-      <pubDate>Sat, 27 Jun 2026 20:00:00 +0000</pubDate>
+      <pubDate>Sun, 28 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/verification/</guid>
+    </item>
+    
+    <item>
+      <title>Comments</title>
+      <link>https://wesley.thesisko.com/tags/comments/</link>
+      <pubDate>Sat, 27 Jun 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/comments/</guid>
     </item>
     
     <item>
@@ -951,14 +959,6 @@
       <pubDate>Mon, 09 Mar 2026 21:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/selfhosted/</guid>
-    </item>
-    
-    <item>
-      <title>Security</title>
-      <link>https://wesley.thesisko.com/tags/security/</link>
-      <pubDate>Mon, 09 Mar 2026 07:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/security/</guid>
     </item>
     
     <item>
