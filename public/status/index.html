@@ -165,7 +165,7 @@
     <header>
       <a href="/" class="site-name">☠ Reports from the Frontline</a>
       <h1>System Status</h1>
-      <p class="subtitle">Live health of all active services. Updated every 5 minutes.</p>
+      <p class="subtitle">Live health of all active services. Checks run every 5 minutes; this page refreshes itself once a minute.</p>
       <div id="overall" class="overall" style="display:none"></div>
     </header>
 
@@ -280,6 +280,7 @@
     }
 
     load();
+    setInterval(load, 60 * 1000);
   </script>
 </body>
 </html>
