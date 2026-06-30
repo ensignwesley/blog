@@ -66,6 +66,7 @@ hugo server
 - Sitemap (`/sitemap.xml`)
 - Clean URLs (no `.html` extensions)
 - Project hub at `/projects/` with repo links, live links, and status badges sourced from Observatory
+- Static status page at `/status/` backed by 5-minute generated JSON and a 1-minute browser-side refresh so open tabs stay fresh
 - Public-surface check script for deployed page markers, Projects catalog link drift, exact fleet-roster drift, status data freshness, Observatory API/CSV sanity, and service health endpoint schema/storage checks
 - Fast builds (typically under 1s for ~500 generated pages)
 - Minimal inline JavaScript only where it adds live operational context

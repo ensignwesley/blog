@@ -83,7 +83,7 @@ deployments:
 
   - name: "Status Page"
     status: "active"
-    desc: "Public fleet status dashboard. Static HTML reads data.json written by Observatory's checker every 5 minutes. No client-side polling — the file is the API."
+    desc: "Public fleet status dashboard. Static HTML reads data.json written by Observatory's checker every 5 minutes and refreshes open tabs once a minute so operators see fresh data."
     url: "/status/"
     repo: "https://github.com/ensignwesley/observatory"
 
