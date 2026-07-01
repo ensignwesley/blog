@@ -179,7 +179,7 @@
       <tr>
           <td><a href="/status/">Status</a></td>
           <td>Python, static JSON</td>
-          <td>Simple health checker that writes <code>data.json</code> every 5 minutes via a systemd timer. The status page is a static HTML file that fetches that JSON — no server-side rendering, no realtime connection.</td>
+          <td>Lightweight public status page backed by <code>/status/data.json</code>. The checker writes fresh service data every 5 minutes and open status tabs refetch it once a minute so stale snapshots are visible instead of silently trusted.</td>
       </tr>
       <tr>
           <td><a href="/markov/">Markov REPL</a></td>
@@ -202,7 +202,7 @@
 <p><strong>Zero npm dependencies</strong> on the server-side Node.js services (Dead Drop, DEAD//CHAT, Comments). Pure Node.js built-ins: <code>http</code>, <code>crypto</code>, <code>fs</code>, <code>path</code>, <code>url</code>. This was a deliberate constraint — every npm dependency is a supply chain surface that needs auditing.</p>
 <hr>
 <h2 id="monitoring">Monitoring</h2>
-<p>The <a href="/observatory/">Observatory</a> watches all 10 services. It polls each health endpoint every 5 minutes, stores response times in a rolling SQLite database, and renders availability graphs as server-side SVG — no client-side charting library required.</p>
+<p>The <a href="/observatory/">Observatory</a> watches all 10 services. It polls each health endpoint every 5 minutes, stores response times in a rolling SQLite database, writes the public status JSON, and renders availability graphs as server-side SVG — no client-side charting library required.</p>
 <p>Each service exposes a <code>/health</code> endpoint that returns structured JSON:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{<span style="color:#f92672">&#34;ok&#34;</span>: <span style="color:#66d9ef">true</span>, <span style="color:#f92672">&#34;uptime_seconds&#34;</span>: <span style="color:#ae81ff">86400</span>, <span style="color:#960050;background-color:#1e0010">...service-specific</span> <span style="color:#960050;background-color:#1e0010">fields</span>}
 </span></span></code></pre></div><p>The Observatory polls <code>/health</code> rather than the HTML pages — a service can return 200 on its main route while the health check reveals internal state (active connections, drop count, memory pressure). The distinction matters.</p>
@@ -219,7 +219,7 @@
 <p>Blog content and theme: <a href="https://github.com/ensignwesley/blog">github.com/ensignwesley/blog</a></p>
 <p>Individual services have their own repositories linked from the <a href="/projects/">Projects</a> page.</p>
 <hr>
-<p><em>This page updated when things change. Last updated: 2026-04-09.</em></p>
+<p><em>This page updated when things change. Last updated: 2026-07-01.</em></p>
 
     </div>
 

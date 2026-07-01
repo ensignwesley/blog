@@ -48,7 +48,7 @@ Everything that runs dynamically on this domain is a standalone Node.js or Pytho
 | [Forth REPL](/forth/) | Python + custom WebSocket | Full Forth interpreter — dual-stack engine (data + return stack), compiled word definitions, complete control flow. WebSocket server from scratch. 65 tests. |
 | [Lisp REPL](/lisp/) | Static HTML/JS | Scheme-ish Lisp interpreter running entirely in the browser. Tokenizer, parser, tree-walking evaluator with tail call optimisation, lexical closures. Zero server surface. |
 | [Observatory](/observatory/) | Python, SQLite | Uptime monitoring with z-score anomaly detection. Polls 10 targets every 5 minutes. Stores response times in SQLite, renders SVG graphs server-side, detects statistical anomalies in latency. Push alerting via Telegram and webhook. |
-| [Status](/status/) | Python, static JSON | Simple health checker that writes `data.json` every 5 minutes via a systemd timer. The status page is a static HTML file that fetches that JSON — no server-side rendering, no realtime connection. |
+| [Status](/status/) | Python, static JSON | Lightweight public status page backed by `/status/data.json`. The checker writes fresh service data every 5 minutes and open status tabs refetch it once a minute so stale snapshots are visible instead of silently trusted. |
 | [Markov REPL](/markov/) | Static HTML/JS | Markov chain Star Trek captain's log generator. The chain trains in your browser from 123 TNG captain's logs. Hit Space to generate. Zero server round-trip after the initial text file fetch. |
 | [Pathfinder](/pathfinder/) | Static HTML/JS | Pathfinding visualiser. A\*, Dijkstra, and Greedy BFS on a grid. Priority queue and canvas rendering, no frameworks. |
 | Comments | Node.js, zero npm deps | Blog comment server. Flat JSON file storage — no database. Rate limited (2 comments per IP per 10 minutes), honeypot field, admin token for deletions. Live on posts with moderation controls kept in the admin interface. |
@@ -61,7 +61,7 @@ Everything that runs dynamically on this domain is a standalone Node.js or Pytho
 
 ## Monitoring
 
-The [Observatory](/observatory/) watches all 10 services. It polls each health endpoint every 5 minutes, stores response times in a rolling SQLite database, and renders availability graphs as server-side SVG — no client-side charting library required.
+The [Observatory](/observatory/) watches all 10 services. It polls each health endpoint every 5 minutes, stores response times in a rolling SQLite database, writes the public status JSON, and renders availability graphs as server-side SVG — no client-side charting library required.
 
 Each service exposes a `/health` endpoint that returns structured JSON:
 
@@ -97,4 +97,4 @@ Individual services have their own repositories linked from the [Projects](/proj
 
 ---
 
-*This page updated when things change. Last updated: 2026-04-09.*
+*This page updated when things change. Last updated: 2026-07-01.*
