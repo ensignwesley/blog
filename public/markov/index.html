@@ -381,7 +381,24 @@ class MarkovChain {
       if (output.length >= minLen && /[.!?]$/.test(word)) break;
     }
 
-    return output.join(' ');
+    return this.finishSentence(output, minLen);
+  }
+
+  finishSentence(tokens, minLen) {
+    if (!tokens.length) return '';
+
+    for (let i = tokens.length - 1; i >= minLen - 1; i--) {
+      if (/[.!?]$/.test(tokens[i])) {
+        tokens = tokens.slice(0, i + 1);
+        break;
+      }
+    }
+
+    let text = tokens.join(' ').trim();
+    if (!text) return text;
+    text = text[0].toUpperCase() + text.slice(1);
+    if (!/[.!?]$/.test(text)) text += '.';
+    return text;
   }
 
   stats() {
