@@ -234,6 +234,29 @@ def check_status_data(base: str) -> list[str]:
                 f"(expected {', '.join(EXPECTED_STATUS_SERVICES)}; got {', '.join(service_names)})"
             )
 
+        for service in services:
+            if not isinstance(service, dict):
+                errors.append(f"Status data: malformed service entry {service!r}")
+                continue
+
+            name = str(service.get("name", "<unnamed>"))
+            checked_at = service.get("checked_at")
+            if not checked_at:
+                errors.append(f"Status data: {name} missing checked_at")
+                continue
+
+            try:
+                checked_age = (datetime.now(timezone.utc) - parse_time(str(checked_at))).total_seconds()
+            except ValueError as exc:
+                errors.append(f"Status data: {name} bad checked_at {checked_at!r}: {exc}")
+            else:
+                if checked_age < 0:
+                    errors.append(f"Status data: {name} checked_at is in the future ({checked_at})")
+                elif checked_age > MAX_STATUS_AGE_SECONDS:
+                    errors.append(
+                        f"Status data: {name} stale check ({int(checked_age)}s old, checked_at={checked_at})"
+                    )
+
     return errors
 
 
