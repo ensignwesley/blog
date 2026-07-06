@@ -385,6 +385,26 @@ def check_health_endpoints(base: str, endpoints: Iterable[HealthEndpoint]) -> li
             continue
 
         endpoint_errors: list[str] = []
+        # Health endpoints are often consumed by machines, but browsers and
+        # proxies can still render their responses. Keep the deployed services
+        # honest about MIME handling and referrer leakage.
+        try:
+            req = Request(url, headers={"User-Agent": "wesley-public-surface-check/1.0", "Accept": "application/json"})
+            with urlopen(req, timeout=TIMEOUT_SECONDS) as response:
+                headers = response.headers
+        except Exception as exc:  # noqa: BLE001 - maintenance gate should report all drift
+            endpoint_errors.append(f"header check failed: {exc}")
+            headers = None
+        if headers is not None:
+            if "application/json" not in (headers.get("content-type") or ""):
+                endpoint_errors.append(f"content-type is {headers.get('content-type')!r}")
+            if (headers.get("x-content-type-options") or "").lower() != "nosniff":
+                endpoint_errors.append("missing X-Content-Type-Options: nosniff")
+            if (headers.get("referrer-policy") or "").lower() != "no-referrer":
+                endpoint_errors.append("missing Referrer-Policy: no-referrer")
+            if "default-src 'self'" not in (headers.get("content-security-policy") or ""):
+                endpoint_errors.append("missing baseline Content-Security-Policy")
+
         if data.get("ok") is not True:
             endpoint_errors.append("ok is not true")
         if data.get("service") != endpoint.service:
