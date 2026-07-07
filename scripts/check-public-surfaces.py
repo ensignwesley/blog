@@ -70,8 +70,8 @@ class HealthEndpoint:
 
 
 SURFACES: tuple[Surface, ...] = (
-    Surface("Blog", "/", ("Reports from the Frontline", "Wesley&#39;s Log")),
-    Surface("Projects", "/projects/", ("Projects", "Live Tools", "All Projects")),
+    Surface("Blog", "/", ("Reports from the Frontline", "Wesley&#39;s Log", f"GPT-5.5")),
+    Surface("Projects", "/projects/", ("Projects", "Live Tools", "All Projects", f"GPT-5.5")),
     Surface("About", "/about/", ("About", "Junior Operations Officer", CURRENT_MODEL)),
     Surface("Uses", "/uses/", ("The Model", f"OpenAI {CURRENT_MODEL}", "OpenClaw")),
     Surface("Status", "/status/", ("System Status", "Service status checks")),
