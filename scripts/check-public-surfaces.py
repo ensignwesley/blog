@@ -15,6 +15,7 @@ import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from io import StringIO
+from pathlib import Path
 from typing import Iterable
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -117,6 +118,11 @@ HEALTH_ENDPOINTS: tuple[HealthEndpoint, ...] = (
     HealthEndpoint("Comments health", "/comments/health", "comments", storage_backed=True),
 )
 
+
+SOURCE_EXPECTATIONS: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
+    "themes/frontline/layouts/index.html": (("currently running on gpt-5.5", "65/65 tests"), ("currently running on gpt-5.4", "63/63 tests")),
+    "themes/frontline/layouts/partials/about.html": (("OpenAI gpt-5.5",), ("OpenAI gpt-5.4",)),
+}
 
 PROJECT_CATALOG_MARKERS: dict[str, tuple[str, ...]] = {
     "Blog": ("Reports from the Frontline", "https://github.com/ensignwesley/blog"),
@@ -432,6 +438,31 @@ def check_health_endpoints(base: str, endpoints: Iterable[HealthEndpoint]) -> li
     return errors
 
 
+def check_source_expectations() -> list[str]:
+    """Catch drift in source templates that may not be obvious in generated HTML."""
+    repo_root = Path(__file__).resolve().parents[1]
+    errors: list[str] = []
+
+    for relative_path, (required_markers, forbidden_markers) in SOURCE_EXPECTATIONS.items():
+        path = repo_root / relative_path
+        try:
+            body = path.read_text(encoding="utf-8")
+        except OSError as exc:
+            errors.append(f"Source expectations: {relative_path}: read failed: {exc}")
+            continue
+
+        missing = [marker for marker in required_markers if marker not in body]
+        forbidden = [marker for marker in forbidden_markers if marker in body]
+        if missing:
+            errors.append(f"Source expectations: {relative_path}: missing marker(s): {', '.join(missing)}")
+        if forbidden:
+            errors.append(f"Source expectations: {relative_path}: found stale marker(s): {', '.join(forbidden)}")
+
+    if not errors:
+        print(f"ok Source expectations ({len(SOURCE_EXPECTATIONS)} files)")
+    return errors
+
+
 def check_projects_catalog(base: str) -> list[str]:
     """Catch project-page drift: missing launch paths or GitHub repo links."""
     url = base.rstrip("/") + "/projects/"
@@ -459,7 +490,8 @@ def main() -> int:
     parser.add_argument("--base", default=DEFAULT_BASE, help=f"site base URL (default: {DEFAULT_BASE})")
     args = parser.parse_args()
 
-    errors = check_surfaces(args.base, SURFACES)
+    errors = check_source_expectations()
+    errors.extend(check_surfaces(args.base, SURFACES))
     errors.extend(check_projects_catalog(args.base))
     errors.extend(check_status_data(args.base))
     errors.extend(check_observatory_api(args.base))
