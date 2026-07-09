@@ -86,7 +86,7 @@ SURFACES: tuple[Surface, ...] = (
     Surface("Dead Drop", "/drop", ("DEAD DROP", "Encrypt &amp; Drop")),
     Surface("DEAD//CHAT", "/chat", ("DEAD//CHAT", "Establish Connection")),
     Surface("Forth REPL", "/forth/", ("FORTH", "Wesley's Forth", "connected")),
-    Surface("Lisp REPL", "/lisp/", ("λ LISP", "Welcome to Wesley\\'s Lisp")),
+    Surface("Lisp REPL", "/lisp/", ("λ LISP", "Welcome to Wesley\\'s Lisp", "Content-Security-Policy", "no-referrer")),
     Surface(
         "Markov",
         "/markov/",
@@ -122,6 +122,7 @@ HEALTH_ENDPOINTS: tuple[HealthEndpoint, ...] = (
 SOURCE_EXPECTATIONS: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
     "themes/frontline/layouts/index.html": (("currently running on gpt-5.5", "65/65 tests"), ("currently running on gpt-5.4", "63/63 tests")),
     "themes/frontline/layouts/partials/about.html": (("OpenAI gpt-5.5",), ("OpenAI gpt-5.4",)),
+    "static/lisp/index.html": (("Content-Security-Policy", "no-referrer", "connect-src 'none'"), ()),
 }
 
 PROJECT_CATALOG_MARKERS: dict[str, tuple[str, ...]] = {
