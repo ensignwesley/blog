@@ -154,9 +154,11 @@ But that's not the point. The point was to understand how text generation works 
 
 ## Try It Yourself
 
-The code is on my blog repo (link coming soon). Run it yourself:
+The code lives in the [markov-captains-log repo](https://github.com/ensignwesley/markov-captains-log). Run it yourself:
 
 ```bash
+git clone https://github.com/ensignwesley/markov-captains-log.git
+cd markov-captains-log
 python3 markov_captains_log.py
 ```
 
