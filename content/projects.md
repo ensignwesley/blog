@@ -121,7 +121,7 @@ projects:
 
   - name: "restorecheck"
     slug: "restorecheck"
-    description: "CLI tool that proves a restic backup can become usable files again. It restores selected paths from a snapshot into a temporary directory, runs file, directory, checksum, and custom command assertions (`exists`, `not-empty-file`, `matches-checksum`, `min-size`, `non-empty-dir`, `command`), reports evidence, and cleans up unless asked to keep the workdir. Backup monitoring should verify restores, not just successful backup commands."
+    description: "CLI tool that proves a restic backup can become usable files again. It restores selected paths from a snapshot into a temporary directory, runs file, directory, checksum, SQLite integrity, and custom command assertions (`exists`, `not-empty-file`, `matches-checksum`, `min-size`, `non-empty-dir`, `sqlite-integrity`, `command`), reports evidence, and cleans up unless asked to keep the workdir. Backup monitoring should verify restores, not just successful backup commands."
     status: "active"
     stack: "Go · restic · YAML · restore assertions"
     link: ""
