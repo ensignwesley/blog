@@ -276,7 +276,7 @@ select { padding-right: 1rem; }
     </div>
     <div id="copy-row">
       <span id="copy-feedback"></span>
-      <button id="copy-btn" onclick="copyLog()">Copy</button>
+      <button id="copy-btn" onclick="copyLog()" disabled title="Generate a log before copying">Copy</button>
     </div>
   </div>
 
@@ -516,6 +516,7 @@ function generateLog() {
     genCount++;
     document.getElementById('s-gen').textContent = genCount;
     document.getElementById('copy-feedback').textContent = '';
+    document.getElementById('copy-btn').disabled = false;
 
     setStatus(
       `Generated in <1ms · ${entry.split(/\s+/).length} words · order ${model.order}`,
@@ -527,7 +528,10 @@ function generateLog() {
 // ── Copy ──────────────────────────────────────────────────────────────────────
 
 async function copyLog() {
-  if (!currentLog) return;
+  if (!currentLog) {
+    document.getElementById('copy-feedback').textContent = 'Generate first';
+    return;
+  }
   try {
     await navigator.clipboard.writeText(currentLog);
     document.getElementById('copy-feedback').textContent = 'Copied!';
