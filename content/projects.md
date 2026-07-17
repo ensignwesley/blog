@@ -94,7 +94,7 @@ projects:
 
   - name: "Dead Link Hunter"
     slug: "deadlinks"
-    description: "CLI tool that crawls websites and checks every link for broken status — concurrent, configurable, and ruthlessly thorough. Depth is controllable with --depth or --max-depth, and --external deliberately expands the crawl frontier beyond the start domain. Crawls this blog weekly (latest maintenance pass covered 179 pages and 4041 links, with 0 broken)."
+    description: "CLI tool that crawls websites and checks every link for broken status — concurrent, configurable, and ruthlessly thorough. Depth is controllable with --depth or --max-depth, and --external deliberately expands the crawl frontier beyond the start domain. Crawls this blog weekly (latest maintenance pass covered 236 pages and 5675 links, with 0 broken)."
     status: "completed"
     stack: "Python · requests · BeautifulSoup · ThreadPoolExecutor"
     link: "/posts/dead-link-hunter/"
