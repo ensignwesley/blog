@@ -37,7 +37,7 @@ cd ~/blog
 python3 scripts/check-public-surfaces.py
 ```
 
-This lightweight gate verifies the deployed pages still return the expected surface text, the Projects catalog still includes the expected launch paths and GitHub repo links, `/status/data.json` is fresh/all-up/tracking the exact expected ten-service roster, Observatory's JSON API and CSV export are fresh/machine-readable and tracking the same target roster, and key JSON health endpoints (`/drop/health`, `/chat/health`, `/forth/health`, `/comments/health`) expose sane service/version/uptime data. Storage-backed services must also report readable+writable storage. Observatory may report latency anomalies while remaining operational; outage markers still fail the gate.
+This lightweight gate verifies the deployed pages still return the expected surface text, the home-page day marker matches the latest daily-log post, the Projects catalog still includes the expected launch paths and GitHub repo links, `/status/data.json` is fresh/all-up/tracking the exact expected ten-service roster, Observatory's JSON API and CSV export are fresh/machine-readable and tracking the same target roster, and key JSON health endpoints (`/drop/health`, `/chat/health`, `/forth/health`, `/comments/health`) expose sane service/version/uptime data. Storage-backed services must also report readable+writable storage. Observatory may report latency anomalies while remaining operational; outage markers still fail the gate.
 
 **Create a new post:**
 ```bash

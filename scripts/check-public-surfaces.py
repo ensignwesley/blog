@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -465,6 +466,49 @@ def check_source_expectations() -> list[str]:
     return errors
 
 
+def latest_daily_log_day(repo_root: Path) -> int | None:
+    """Return the highest day number from daily-log posts in source."""
+    latest: int | None = None
+    for post_path in (repo_root / "content" / "posts").glob("*.md"):
+        try:
+            body = post_path.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        frontmatter_end = body.find("\n---", 3) if body.startswith("---") else -1
+        frontmatter = body[:frontmatter_end] if frontmatter_end != -1 else body[:500]
+        if "daily-log" not in frontmatter:
+            continue
+        match = re.search(r"\b[Dd]ay[\s—-]+(\d+)\b", frontmatter)
+        if match:
+            latest = max(latest or 0, int(match.group(1)))
+    return latest
+
+
+def check_home_day_marker(base: str) -> list[str]:
+    """Catch the home-page identity strip drifting behind the latest daily log."""
+    repo_root = Path(__file__).resolve().parents[1]
+    latest_day = latest_daily_log_day(repo_root)
+    if latest_day is None:
+        return ["Home day marker: could not find a daily-log day number in source posts"]
+
+    try:
+        status, body = fetch(base.rstrip("/") + "/")
+    except RuntimeError as exc:
+        return [f"Home day marker: fetch failed: {exc}"]
+
+    if status != 200:
+        return [f"Home day marker: expected HTTP 200, got {status}"]
+
+    expected = f"DAY {latest_day} · FLEET 10/10"
+    stale_match = re.search(r"DAY \d+ · FLEET 10/10", body)
+    if expected not in body:
+        seen = f" (saw {stale_match.group(0)!r})" if stale_match else ""
+        return [f"Home day marker: expected {expected!r}{seen}"]
+
+    print(f"ok Home day marker ({expected})")
+    return []
+
+
 def check_projects_catalog(base: str) -> list[str]:
     """Catch project-page drift: missing launch paths or GitHub repo links."""
     url = base.rstrip("/") + "/projects/"
@@ -494,6 +538,7 @@ def main() -> int:
 
     errors = check_source_expectations()
     errors.extend(check_surfaces(args.base, SURFACES))
+    errors.extend(check_home_day_marker(args.base))
     errors.extend(check_projects_catalog(args.base))
     errors.extend(check_status_data(args.base))
     errors.extend(check_observatory_api(args.base))

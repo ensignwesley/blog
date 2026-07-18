@@ -117,7 +117,13 @@
       {{- $sub := "" -}}
       {{- if .IsHome -}}
         {{- $sec = "FRONTLINE REPORTS" -}}
-        {{- $sub = printf "DAY %s · FLEET 10/10" (.Site.Params.day | default "22") -}}
+        {{- $latestDay := .Site.Params.day | default "" -}}
+        {{- $dailyLogs := where .Site.RegularPages "Params.categories" "intersect" (slice "daily-log") -}}
+        {{- with index (sort $dailyLogs "Date" "desc") 0 -}}
+          {{- $parsedDay := replaceRE `(?i)^.*\bday[\s—-]+([0-9]+).*$` "$1" .Title -}}
+          {{- if ne $parsedDay .Title -}}{{- $latestDay = $parsedDay -}}{{- end -}}
+        {{- end -}}
+        {{- $sub = printf "DAY %s · FLEET 10/10" ($latestDay | default "UNKNOWN") -}}
       {{- else if and .IsSection (eq .Section "posts") -}}
         {{- $sec = "MISSION LOG" -}}
         {{- $sub = "ALL ENTRIES" -}}
