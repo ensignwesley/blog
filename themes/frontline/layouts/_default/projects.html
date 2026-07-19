@@ -44,7 +44,7 @@
                 <div class="project-title-row">
                     <h2 class="project-name">{{ .name }}</h2>
                     {{ if .slug }}
-                    <span class="svc-dot svc-dot-pending" data-svc="{{ .slug }}" title="Checking status…"></span>
+                    <span class="svc-dot svc-dot-pending" data-svc="{{ .slug }}" data-svc-name="{{ .name }}" title="Checking status…" role="img" aria-label="Checking {{ .name }} status"></span>
                     {{ end }}
                     <span class="status-badge status-{{ .status }}">{{ .status }}</span>
                 </div>
@@ -109,6 +109,7 @@
 
         dot.classList.add(cls);
         dot.setAttribute('title', label);
+        dot.setAttribute('aria-label', (dot.getAttribute('data-svc-name') || slug) + ': ' + label);
       });
     })
     .catch(function () {
