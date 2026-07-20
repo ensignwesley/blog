@@ -122,10 +122,13 @@
     .badge.up   { background: rgba(34,197,94,0.08);  border: 1px solid var(--green); color: var(--green); }
     .badge.down { background: rgba(239,68,68,0.08);  border: 1px solid var(--red);   color: var(--red);   }
 
-    .rtime {
+    .rtime,
+    .checked-at {
       font-size: 0.72rem;
       color:     var(--muted);
     }
+
+    .checked-at { margin-top: 0.18rem; }
 
     .rtime .fast { color: var(--green); }
     .rtime .ok   { color: var(--amber); }
@@ -217,6 +220,8 @@
       return 'slow';
     }
 
+    const STALE_AFTER_MS = 10 * 60 * 1000;
+
     async function load() {
       try {
         const r    = await fetch('/status/data.json?_=' + Date.now());
@@ -224,7 +229,7 @@
         const data = await r.json();
 
         const generatedAt = new Date(data.generated_at);
-        const stale = !Number.isFinite(generatedAt.getTime()) || Date.now() - generatedAt.getTime() > 10 * 60 * 1000;
+        const stale = !Number.isFinite(generatedAt.getTime()) || Date.now() - generatedAt.getTime() > STALE_AFTER_MS;
 
         // Overall badge
         const ov = document.getElementById('overall');
@@ -251,11 +256,15 @@
           const ms   = msValue !== null
             ? `<span class="${rtClass(msValue)}">${msValue}ms</span>`
             : '<span>—</span>';
+          const checkedAt = new Date(s.checked_at);
+          const checkedLabel = Number.isFinite(checkedAt.getTime())
+            ? `Checked ${ago(s.checked_at)}`
+            : 'Check time unavailable';
           const name = href
             ? `<a href="${href}" target="_blank" rel="noopener">${serviceName}</a>`
             : serviceName;
           return `
-            <article class="card" role="listitem" aria-label="${serviceName}: ${lbl.toLowerCase()}${msValue !== null ? `, ${msValue} milliseconds` : ''}">
+            <article class="card" role="listitem" aria-label="${serviceName}: ${lbl.toLowerCase()}${msValue !== null ? `, ${msValue} milliseconds` : ''}; ${escapeHtml(checkedLabel)}">
               <div class="card-info">
                 <h2 class="card-name">${name}</h2>
                 <div class="card-desc">${serviceDesc}</div>
@@ -263,6 +272,7 @@
               <div class="card-status">
                 <div class="badge ${cl}" aria-label="Status: ${lbl}"><span class="dot" aria-hidden="true"></span>${lbl}</div>
                 <div class="rtime" aria-label="Response time">${ms}</div>
+                <div class="checked-at" aria-label="${escapeHtml(checkedLabel)}">${escapeHtml(checkedLabel)}</div>
               </div>
             </article>`;
         }).join('');
@@ -271,7 +281,7 @@
         document.getElementById('meta').textContent =
           'Last checked: ' + ago(data.generated_at) +
           ' · ' + generatedAt.toUTCString() +
-          (stale ? ' · telemetry is older than 10 minutes' : '');
+          (stale ? ' · telemetry is older than ' + Math.round(STALE_AFTER_MS / 60000) + ' minutes' : '');
 
       } catch (e) {
         document.getElementById('services').innerHTML =

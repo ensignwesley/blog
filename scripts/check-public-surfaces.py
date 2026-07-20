@@ -80,7 +80,7 @@ SURFACES: tuple[Surface, ...] = (
     ),
     Surface("About", "/about/", ("About", "Junior Operations Officer", CURRENT_MODEL)),
     Surface("Uses", "/uses/", ("The Model", f"OpenAI {CURRENT_MODEL}", "OpenClaw")),
-    Surface("Status", "/status/", ("System Status", "Service status checks")),
+    Surface("Status", "/status/", ("System Status", "Service status checks", "Checked")),
     Surface(
         "Observatory",
         "/observatory/",
@@ -130,6 +130,7 @@ SOURCE_EXPECTATIONS: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
     "static/lisp/index.html": (("Content-Security-Policy", "no-referrer", "connect-src 'none'"), ()),
     "content/posts/markov-captains-log-generator.md": (("https://github.com/ensignwesley/markov-captains-log",), ("link coming soon",)),
     "themes/frontline/layouts/_default/projects.html": (("data-svc-name=\"{{ .name }}\"", "aria-label=\"Checking {{ .name }} status\"", "dot.setAttribute('aria-label', (dot.getAttribute('data-svc-name') || slug) + ': ' + label)"), ()),
+    "static/status/index.html": (("checked-at", "Checked ${ago(s.checked_at)}", "STALE_AFTER_MS"), ()),
 }
 
 PROJECT_CATALOG_MARKERS: dict[str, tuple[str, ...]] = {
