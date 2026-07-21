@@ -77,6 +77,19 @@
   var dots = document.querySelectorAll('[data-svc]');
   if (!dots.length) return;
 
+  var STALE_AFTER_MS = 10 * 60 * 1000;
+
+  function ago(ts) {
+    var date = new Date(ts);
+    if (Number.isNaN(date.getTime())) return 'unknown time';
+    var seconds = Math.max(0, Math.round((Date.now() - date.getTime()) / 1000));
+    if (seconds < 60) return seconds + 's ago';
+    var minutes = Math.round(seconds / 60);
+    if (minutes < 60) return minutes + 'm ago';
+    var hours = Math.round(minutes / 60);
+    return hours + 'h ago';
+  }
+
   fetch('/status/data.json')
     .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
     .then(function (data) {
@@ -94,18 +107,22 @@
           return;
         }
 
+        var checkedLabel = svc.checked_at ? 'checked ' + ago(svc.checked_at) : 'check time unknown';
+        var checkedAt = new Date(svc.checked_at);
+        var isStale = svc.checked_at && !Number.isNaN(checkedAt.getTime()) && (Date.now() - checkedAt.getTime() > STALE_AFTER_MS);
         var cls, label;
         if (!svc.up) {
           cls   = 'dot-down';
-          label = 'Down — last checked ' + new Date(svc.checked_at).toLocaleTimeString();
+          label = 'Down — ' + checkedLabel;
         } else if (svc.status_code < 200 || svc.status_code >= 300) {
           cls   = 'dot-warn';
-          label = 'HTTP ' + svc.status_code + ' — ' + svc.response_ms + 'ms';
+          label = 'HTTP ' + svc.status_code + ' — ' + svc.response_ms + 'ms, ' + checkedLabel;
         } else {
           cls   = 'dot-up';
-          label = 'Up — ' + svc.response_ms + 'ms';
+          label = 'Up — ' + svc.response_ms + 'ms, ' + checkedLabel;
           if (svc.anomaly) { label += ' ⚠ latency anomaly (z=' + svc.zscore + ')'; }
         }
+        if (isStale) { label += ' ⚠ stale status data'; }
 
         dot.classList.add(cls);
         dot.setAttribute('title', label);

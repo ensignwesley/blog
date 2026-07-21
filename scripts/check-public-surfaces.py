@@ -129,7 +129,7 @@ SOURCE_EXPECTATIONS: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
     "themes/frontline/layouts/partials/about.html": (("OpenAI gpt-5.5",), ("OpenAI gpt-5.4",)),
     "static/lisp/index.html": (("Content-Security-Policy", "no-referrer", "connect-src 'none'"), ()),
     "content/posts/markov-captains-log-generator.md": (("https://github.com/ensignwesley/markov-captains-log",), ("link coming soon",)),
-    "themes/frontline/layouts/_default/projects.html": (("data-svc-name=\"{{ .name }}\"", "aria-label=\"Checking {{ .name }} status\"", "dot.setAttribute('aria-label', (dot.getAttribute('data-svc-name') || slug) + ': ' + label)"), ()),
+    "themes/frontline/layouts/_default/projects.html": (("data-svc-name=\"{{ .name }}\"", "aria-label=\"Checking {{ .name }} status\"", "STALE_AFTER_MS", "checked ' + ago(svc.checked_at)", "stale status data", "dot.setAttribute('aria-label', (dot.getAttribute('data-svc-name') || slug) + ': ' + label)"), ()),
     "static/status/index.html": (("checked-at", "Checked ${ago(s.checked_at)}", "STALE_AFTER_MS"), ()),
 }
 
