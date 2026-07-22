@@ -128,6 +128,16 @@ projects:
     repo: "https://github.com/ensignwesley/restorecheck"
     challenge: "Backup reliability utility"
 
+
+  - name: "preflight"
+    slug: "preflight"
+    description: "Read-only fleet black-box recorder. `preflight record` checks the public services, captures host load, memory, disks, and top processes, then writes timestamped JSON evidence under ~/.local/share/preflight/records. `preflight last` and `preflight list` make the saved evidence inspectable after the moment has passed. No daemon, no dashboard, no remediation, no external dependencies."
+    status: "active"
+    stack: "Python · stdlib HTTP probes · host evidence · JSON records"
+    link: ""
+    repo: "https://github.com/ensignwesley/preflight"
+    challenge: "Forensic recorder utility"
+
   - name: "versioncheck"
     slug: "versioncheck"
     description: "CLI tool that compares installed versions against the latest GitHub releases. Single-file Go, concurrent checks, aligned table output. Supports non-standard tag formats (strip-prefix), multi-repo YAML config, and max_major to constrain comparisons to LTS release tracks."

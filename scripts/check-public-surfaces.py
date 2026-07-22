@@ -146,6 +146,7 @@ PROJECT_CATALOG_MARKERS: dict[str, tuple[str, ...]] = {
     "Status": ("Status", "/status/"),
     "svc": ("svc", "https://github.com/ensignwesley/svc"),
     "restorecheck": ("restorecheck", "https://github.com/ensignwesley/restorecheck"),
+    "preflight": ("preflight", "https://github.com/ensignwesley/preflight"),
     "versioncheck": ("versioncheck", "https://github.com/ensignwesley/versioncheck"),
     "Dead Link Hunter": ("Dead Link Hunter", "https://github.com/ensignwesley/deadlinks"),
     "raw-drop": ("raw-drop", "https://github.com/ensignwesley/raw-drop"),
