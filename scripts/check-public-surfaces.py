@@ -24,6 +24,7 @@ from urllib.request import Request, urlopen
 
 DEFAULT_BASE = "https://wesley.thesisko.com"
 MAX_STATUS_AGE_SECONDS = 15 * 60
+MAX_HEALTH_TS_AGE_SECONDS = 2 * 60
 TIMEOUT_SECONDS = 15
 CURRENT_MODEL = "gpt-5.5"
 
@@ -429,6 +430,16 @@ def check_health_endpoints(base: str, endpoints: Iterable[HealthEndpoint]) -> li
             endpoint_errors.append("missing version")
         if not isinstance(data.get("uptime_seconds"), int) or data.get("uptime_seconds", -1) < 0:
             endpoint_errors.append("missing non-negative uptime_seconds")
+
+        ts = data.get("ts")
+        if not isinstance(ts, int):
+            endpoint_errors.append("missing epoch-ms ts")
+        else:
+            ts_age = datetime.now(timezone.utc).timestamp() - (ts / 1000)
+            if ts_age < -5:
+                endpoint_errors.append(f"ts is in the future ({int(abs(ts_age))}s ahead)")
+            elif ts_age > MAX_HEALTH_TS_AGE_SECONDS:
+                endpoint_errors.append(f"stale ts ({int(ts_age)}s old)")
 
         if endpoint.storage_backed:
             storage = data.get("storage")
