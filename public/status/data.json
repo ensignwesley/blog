@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T09:04:32.892540+00:00",
+  "generated_at": "2026-07-28T19:59:02.840581+00:00",
   "services": [
     {
       "name": "Blog",
@@ -8,10 +8,10 @@
       "link": "https://wesley.thesisko.com/",
       "up": true,
       "status_code": 200,
-      "response_ms": 10,
+      "response_ms": 9,
       "anomaly": false,
-      "zscore": 0.251,
-      "checked_at": "2026-07-28T09:04:32.892540+00:00"
+      "zscore": -0.094,
+      "checked_at": "2026-07-28T19:59:02.840581+00:00"
     },
     {
       "name": "Dead Drop",
@@ -20,10 +20,10 @@
       "link": "https://wesley.thesisko.com/drop",
       "up": true,
       "status_code": 200,
-      "response_ms": 22,
+      "response_ms": 25,
       "anomaly": false,
-      "zscore": -0.289,
-      "checked_at": "2026-07-28T09:04:32.892540+00:00"
+      "zscore": -0.486,
+      "checked_at": "2026-07-28T19:59:02.840581+00:00"
     },
     {
       "name": "DEAD//CHAT",
@@ -32,10 +32,10 @@
       "link": "https://wesley.thesisko.com/chat",
       "up": true,
       "status_code": 200,
-      "response_ms": 0,
+      "response_ms": 1,
       "anomaly": false,
-      "zscore": -0.208,
-      "checked_at": "2026-07-28T09:04:32.892540+00:00"
+      "zscore": -0.048,
+      "checked_at": "2026-07-28T19:59:02.840581+00:00"
     },
     {
       "name": "Status",
@@ -46,8 +46,8 @@
       "status_code": 200,
       "response_ms": 6,
       "anomaly": false,
-      "zscore": -0.077,
-      "checked_at": "2026-07-28T09:04:32.892540+00:00"
+      "zscore": -0.115,
+      "checked_at": "2026-07-28T19:59:02.840581+00:00"
     },
     {
       "name": "Observatory",
@@ -56,10 +56,10 @@
       "link": "https://wesley.thesisko.com/observatory/",
       "up": true,
       "status_code": 200,
-      "response_ms": 9,
+      "response_ms": 12,
       "anomaly": false,
-      "zscore": -0.279,
-      "checked_at": "2026-07-28T09:04:32.892540+00:00"
+      "zscore": -0.277,
+      "checked_at": "2026-07-28T19:59:02.840581+00:00"
     },
     {
       "name": "Pathfinder",
@@ -68,10 +68,10 @@
       "link": "https://wesley.thesisko.com/pathfinder/",
       "up": true,
       "status_code": 200,
-      "response_ms": 19,
+      "response_ms": 6,
       "anomaly": false,
-      "zscore": 2.672,
-      "checked_at": "2026-07-28T09:04:32.892540+00:00"
+      "zscore": -0.168,
+      "checked_at": "2026-07-28T19:59:02.840581+00:00"
     },
     {
       "name": "Comments",
@@ -80,10 +80,10 @@
       "link": "https://wesley.thesisko.com/posts/day-1-reports-from-the-frontline/#comments",
       "up": true,
       "status_code": 200,
-      "response_ms": 5,
+      "response_ms": 2,
       "anomaly": false,
-      "zscore": 0.656,
-      "checked_at": "2026-07-28T09:04:32.892540+00:00"
+      "zscore": -0.05,
+      "checked_at": "2026-07-28T19:59:02.840581+00:00"
     },
     {
       "name": "Forth REPL",
@@ -92,10 +92,10 @@
       "link": "https://wesley.thesisko.com/forth/",
       "up": true,
       "status_code": 200,
-      "response_ms": 5,
+      "response_ms": 2,
       "anomaly": false,
-      "zscore": 0.608,
-      "checked_at": "2026-07-28T09:04:32.892540+00:00"
+      "zscore": -0.108,
+      "checked_at": "2026-07-28T19:59:02.840581+00:00"
     },
     {
       "name": "Lisp REPL",
@@ -104,10 +104,10 @@
       "link": "https://wesley.thesisko.com/lisp/",
       "up": true,
       "status_code": 200,
-      "response_ms": 7,
+      "response_ms": 6,
       "anomaly": false,
-      "zscore": 0.213,
-      "checked_at": "2026-07-28T09:04:32.892540+00:00"
+      "zscore": -0.026,
+      "checked_at": "2026-07-28T19:59:02.840581+00:00"
     },
     {
       "name": "Markov REPL",
@@ -116,10 +116,10 @@
       "link": "https://wesley.thesisko.com/markov/",
       "up": true,
       "status_code": 200,
-      "response_ms": 8,
+      "response_ms": 5,
       "anomaly": false,
-      "zscore": 0.622,
-      "checked_at": "2026-07-28T09:04:32.892540+00:00"
+      "zscore": -0.163,
+      "checked_at": "2026-07-28T19:59:02.840581+00:00"
     }
   ],
   "all_up": true
