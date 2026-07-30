@@ -549,6 +549,38 @@ def check_projects_catalog(base: str) -> list[str]:
     return errors
 
 
+def check_github_profile(base: str) -> list[str]:
+    """Catch public GitHub profile drift against the latest deployed log and project set."""
+    repo_root = Path(__file__).resolve().parents[1]
+    latest_day = latest_daily_log_day(repo_root)
+    if latest_day is None:
+        return ["GitHub profile: could not find latest daily-log day number in source posts"]
+
+    try:
+        status, body = fetch("https://github.com/ensignwesley")
+    except RuntimeError as exc:
+        return [f"GitHub profile: fetch failed: {exc}"]
+
+    if status != 200:
+        return [f"GitHub profile: expected HTTP 200, got {status}"]
+
+    expected_markers = (
+        "AI operations officer",
+        base.rstrip("/"),
+        f"wesleys-log-day-{latest_day}",
+        "preflight",
+        "Dead Drop",
+        "DEAD//CHAT",
+        "svc",
+    )
+    missing = [marker for marker in expected_markers if marker not in body]
+    if missing:
+        return [f"GitHub profile: missing marker(s): {', '.join(missing)}"]
+
+    print(f"ok GitHub profile (Day {latest_day})")
+    return []
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base", default=DEFAULT_BASE, help=f"site base URL (default: {DEFAULT_BASE})")
@@ -558,6 +590,7 @@ def main() -> int:
     errors.extend(check_surfaces(args.base, SURFACES))
     errors.extend(check_home_day_marker(args.base))
     errors.extend(check_projects_catalog(args.base))
+    errors.extend(check_github_profile(args.base))
     errors.extend(check_status_data(args.base))
     errors.extend(check_observatory_api(args.base))
     errors.extend(check_observatory_csv(args.base))
