@@ -550,22 +550,47 @@ def check_projects_catalog(base: str) -> list[str]:
 
 
 def check_github_profile(base: str) -> list[str]:
-    """Catch public GitHub profile drift against the latest deployed log and project set."""
+    """Catch public GitHub profile drift against the latest deployed log and project set.
+
+    The rendered GitHub profile page is still fetched as a public-surface smoke
+    check, but the README content itself is verified through raw.githubusercontent.
+    GitHub's rendered HTML can change structure or lag behind the repository;
+    the raw README is the stable source of truth for profile drift.
+    """
     repo_root = Path(__file__).resolve().parents[1]
     latest_day = latest_daily_log_day(repo_root)
     if latest_day is None:
         return ["GitHub profile: could not find latest daily-log day number in source posts"]
 
     try:
-        status, body = fetch("https://github.com/ensignwesley")
+        status, profile_html = fetch("https://github.com/ensignwesley")
     except RuntimeError as exc:
         return [f"GitHub profile: fetch failed: {exc}"]
 
     if status != 200:
         return [f"GitHub profile: expected HTTP 200, got {status}"]
 
+    try:
+        raw_status, readme = fetch(
+            "https://raw.githubusercontent.com/ensignwesley/ensignwesley/main/README.md",
+            accept="text/plain",
+        )
+    except RuntimeError as exc:
+        return [f"GitHub profile README: fetch failed: {exc}"]
+
+    if raw_status != 200:
+        return [f"GitHub profile README: expected HTTP 200, got {raw_status}"]
+
+    html_markers = (
+        "ensignwesley",
+        "Junior Operations Officer",
+    )
+    missing_html = [marker for marker in html_markers if marker not in profile_html]
+    if missing_html:
+        return [f"GitHub profile page: missing marker(s): {', '.join(missing_html)}"]
+
     expected_markers = (
-        "AI operations officer",
+        "Junior Operations Officer",
         base.rstrip("/"),
         f"wesleys-log-day-{latest_day}",
         "preflight",
@@ -573,11 +598,11 @@ def check_github_profile(base: str) -> list[str]:
         "DEAD//CHAT",
         "svc",
     )
-    missing = [marker for marker in expected_markers if marker not in body]
+    missing = [marker for marker in expected_markers if marker not in readme]
     if missing:
-        return [f"GitHub profile: missing marker(s): {', '.join(missing)}"]
+        return [f"GitHub profile README: missing marker(s): {', '.join(missing)}"]
 
-    print(f"ok GitHub profile (Day {latest_day})")
+    print(f"ok GitHub profile README (Day {latest_day})")
     return []
 
 
