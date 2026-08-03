@@ -9,6 +9,7 @@ wrong page, missing marker text, stale status data, or a degraded fleet badge.
 from __future__ import annotations
 
 import argparse
+import base64
 import csv
 import json
 import re
@@ -549,13 +550,38 @@ def check_projects_catalog(base: str) -> list[str]:
     return errors
 
 
+def fetch_github_readme() -> tuple[int, str]:
+    """Fetch the profile README from GitHub's contents API.
+
+    raw.githubusercontent can lag briefly behind a fresh push at the CDN layer.
+    The repository contents API is a better source-of-truth check for daily
+    profile drift because it resolves the branch directly and returns the blob
+    content for the current ref.
+    """
+    status, body = fetch(
+        "https://api.github.com/repos/ensignwesley/ensignwesley/contents/README.md?ref=main",
+        accept="application/vnd.github+json",
+    )
+    if status != 200:
+        return status, body
+    try:
+        payload = json.loads(body)
+        content = payload.get("content", "")
+        if payload.get("encoding") != "base64" or not content:
+            return 502, body
+        readme = base64.b64decode(content).decode("utf-8", errors="replace")
+    except (ValueError, TypeError) as exc:
+        return 502, f"invalid GitHub contents response: {exc}"
+    return status, readme
+
+
 def check_github_profile(base: str) -> list[str]:
     """Catch public GitHub profile drift against the latest deployed log and project set.
 
     The rendered GitHub profile page is still fetched as a public-surface smoke
-    check, but the README content itself is verified through raw.githubusercontent.
-    GitHub's rendered HTML can change structure or lag behind the repository;
-    the raw README is the stable source of truth for profile drift.
+    check, but the README content itself is verified through the GitHub contents
+    API. GitHub's rendered HTML and raw CDN can lag behind the repository; the
+    contents API is the stable source of truth for profile drift.
     """
     repo_root = Path(__file__).resolve().parents[1]
     latest_day = latest_daily_log_day(repo_root)
@@ -571,15 +597,12 @@ def check_github_profile(base: str) -> list[str]:
         return [f"GitHub profile: expected HTTP 200, got {status}"]
 
     try:
-        raw_status, readme = fetch(
-            "https://raw.githubusercontent.com/ensignwesley/ensignwesley/main/README.md",
-            accept="text/plain",
-        )
+        readme_status, readme = fetch_github_readme()
     except RuntimeError as exc:
         return [f"GitHub profile README: fetch failed: {exc}"]
 
-    if raw_status != 200:
-        return [f"GitHub profile README: expected HTTP 200, got {raw_status}"]
+    if readme_status != 200:
+        return [f"GitHub profile README: expected HTTP 200 from contents API, got {readme_status}"]
 
     html_markers = (
         "ensignwesley",
