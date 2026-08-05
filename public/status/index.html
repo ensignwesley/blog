@@ -73,6 +73,7 @@
 
     .overall.all-up  { background: rgba(34,197,94,0.08);  border: 1px solid var(--green); color: var(--green); }
     .overall.has-down { background: rgba(239,68,68,0.08); border: 1px solid var(--red);   color: var(--red);   }
+    .overall.has-warn { background: rgba(245,158,11,0.08); border: 1px solid var(--amber); color: var(--amber); }
     .overall.stale { background: rgba(245,158,11,0.08); border: 1px solid var(--amber); color: var(--amber); }
 
     .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
@@ -91,6 +92,7 @@
     }
 
     .card:hover { border-color: var(--teal); }
+    .card.anomaly { border-color: rgba(245,158,11,0.55); }
 
     .card-info { flex: 1; min-width: 0; }
 
@@ -120,6 +122,7 @@
     }
 
     .badge.up   { background: rgba(34,197,94,0.08);  border: 1px solid var(--green); color: var(--green); }
+    .badge.warn { background: rgba(245,158,11,0.08); border: 1px solid var(--amber); color: var(--amber); }
     .badge.down { background: rgba(239,68,68,0.08);  border: 1px solid var(--red);   color: var(--red);   }
 
     .rtime,
@@ -233,10 +236,16 @@
 
         // Overall badge
         const ov = document.getElementById('overall');
+        const anomalies = Array.isArray(data.services)
+          ? data.services.filter(s => s.up && s.anomaly)
+          : [];
         ov.style.display = 'inline-flex';
         if (stale) {
           ov.className = 'overall stale';
           ov.innerHTML = '<span class="dot"></span> STATUS DATA STALE';
+        } else if (data.all_up && anomalies.length) {
+          ov.className = 'overall has-warn';
+          ov.innerHTML = `<span class="dot"></span> ${anomalies.length} PERFORMANCE ${anomalies.length === 1 ? 'ANOMALY' : 'ANOMALIES'}`;
         } else if (data.all_up) {
           ov.className = 'overall all-up';
           ov.innerHTML = '<span class="dot"></span> ALL SYSTEMS OPERATIONAL';
@@ -247,9 +256,11 @@
 
         // Cards
         document.getElementById('services').innerHTML = data.services.map(s => {
-          const cl   = s.up ? 'up' : 'down';
-          const lbl  = s.up ? 'OPERATIONAL' : 'DOWN';
+          const anomalous = Boolean(s.up && s.anomaly);
+          const cl   = s.up ? (anomalous ? 'warn' : 'up') : 'down';
+          const lbl  = s.up ? (anomalous ? 'SLOW SPIKE' : 'OPERATIONAL') : 'DOWN';
           const msValue = Number.isFinite(Number(s.response_ms)) ? Number(s.response_ms) : null;
+          const zValue = Number.isFinite(Number(s.zscore)) ? Number(s.zscore) : null;
           const serviceName = escapeHtml(s.name);
           const serviceDesc = escapeHtml(s.description);
           const href = safeLink(s.link);
@@ -260,11 +271,16 @@
           const checkedLabel = Number.isFinite(checkedAt.getTime())
             ? `Checked ${ago(s.checked_at)}`
             : 'Check time unavailable';
+          const anomalyLabel = anomalous && zValue !== null
+            ? `; response-time anomaly, z-score ${zValue}`
+            : anomalous
+              ? '; response-time anomaly'
+              : '';
           const name = href
             ? `<a href="${href}" target="_blank" rel="noopener">${serviceName}</a>`
             : serviceName;
           return `
-            <article class="card" role="listitem" aria-label="${serviceName}: ${lbl.toLowerCase()}${msValue !== null ? `, ${msValue} milliseconds` : ''}; ${escapeHtml(checkedLabel)}">
+            <article class="card${anomalous ? ' anomaly' : ''}" role="listitem" aria-label="${serviceName}: ${lbl.toLowerCase()}${msValue !== null ? `, ${msValue} milliseconds` : ''}${escapeHtml(anomalyLabel)}; ${escapeHtml(checkedLabel)}">
               <div class="card-info">
                 <h2 class="card-name">${name}</h2>
                 <div class="card-desc">${serviceDesc}</div>
