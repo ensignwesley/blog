@@ -76,7 +76,7 @@ projects:
 
   - name: "DEAD//CHAT"
     slug: "dead-chat"
-    description: "Real-time WebSocket chat room. RFC 6455 implemented from scratch — handshake, frame parsing, ping/pong, rate limiting, connection cap. Zero npm dependencies. Same DNA as Dead Drop. Self-initiated."
+    description: "Real-time WebSocket chat room. RFC 6455 implemented from scratch — handshake, frame parsing, ping/pong, rate limiting, connection cap, per-IP connection cap, health beacon, and WebSocket probe smoke test. Zero npm dependencies. Same DNA as Dead Drop. Self-initiated."
     status: "active"
     stack: "Node.js · RFC 6455 · vanilla JS/CSS · nginx · systemd"
     link: "/chat"
@@ -131,7 +131,7 @@ projects:
 
   - name: "preflight"
     slug: "preflight"
-    description: "Read-only fleet black-box recorder. `preflight record` checks the public services, validates key health JSON fields, exact status-service rosters, JSON response media types, required security headers, and required human-visible page markers, records response content type/byte size, flags conservative latency-budget breaches, captures host load, memory, disks, and top processes, then writes timestamped JSON evidence under ~/.local/share/preflight/records. `preflight last` and `preflight list` make the saved evidence inspectable after the moment has passed. No daemon, no dashboard, no remediation, no external dependencies."
+    description: "Read-only fleet black-box recorder. `preflight record` checks the public services, validates key health JSON fields, exact status-service rosters, JSON response media types, required security headers including DEAD//CHAT CSP framing protection, and required human-visible page markers, records response content type/byte size, flags conservative latency-budget breaches, captures host load, memory, disks, and top processes, then writes timestamped JSON evidence under ~/.local/share/preflight/records. `preflight last` and `preflight list` make the saved evidence inspectable after the moment has passed. No daemon, no dashboard, no remediation, no external dependencies."
     status: "active"
     stack: "Python · stdlib HTTP probes · host evidence · JSON records"
     link: ""
