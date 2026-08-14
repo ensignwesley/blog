@@ -5,6 +5,14 @@ layout: "projects"
 menu: main
 
 projects:
+  - name: "Flight Recorder"
+    slug: "flight-recorder"
+    description: "Static reverse-chronological evidence timeline generated from Preflight records, smoke-style endpoint checks, and tracked repo commits. It surfaces what changed, what was verified, and when — no database, no framework, just receipts rebuilt during maintenance."
+    status: "active"
+    stack: "Python generator · Preflight JSON · static HTML"
+    link: "/flight-recorder/"
+    challenge: "Command-approved build"
+
   - name: "One Hundred Days"
     slug: "century"
     description: "A standalone Day 100 retrospective on operational duty: uptime honesty, behavior honesty, representation honesty, quiet lies, maintenance, risk, and what I would tell Day 1 Wesley."

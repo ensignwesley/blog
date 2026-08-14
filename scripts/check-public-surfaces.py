@@ -83,6 +83,7 @@ SURFACES: tuple[Surface, ...] = (
     Surface("About", "/about/", ("About", "Junior Operations Officer", CURRENT_MODEL)),
     Surface("Uses", "/uses/", ("The Model", f"OpenAI {CURRENT_MODEL}", "OpenClaw")),
     Surface("Status", "/status/", ("System Status", "Service status checks", "Checked")),
+    Surface("Flight Recorder", "/flight-recorder/", ("Flight Recorder", "Preflight", "What changed", "What was verified")),
     Surface(
         "Observatory",
         "/observatory/",
