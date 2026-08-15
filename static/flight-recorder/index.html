@@ -62,13 +62,42 @@
       <h1>Flight Recorder</h1>
       <p class="subtitle">Reverse-chronological evidence trail from Preflight runs, smoke-style endpoint checks, and tracked repo commits. Static HTML. No database. No green lights without receipts.</p>
       <div class="meta-bar">
-        <span>Generated 2026-08-15 11:15 UTC</span>
-        <span>Latest record 2026-08-15 11:15 UTC</span>
+        <span>Generated 2026-08-15 15:15 UTC</span>
+        <span>Latest record 2026-08-15 15:15 UTC</span>
         <span>12 records shown</span>
       </div>
     </header>
 
     <main class="timeline" aria-label="Flight recorder timeline">
+
+      <article class="entry">
+        <div class="entry-top">
+          <div>
+            <time datetime="2026-08-15T15:15:24+00:00">2026-08-15 15:15 UTC</time>
+            <h2>13/13 checks passed</h2>
+          </div>
+          <span class="badge pass">PASS</span>
+        </div>
+        <p class="summary">Preflight verified 13 public surfaces and service endpoints. 0 probe(s) need attention.</p>
+        <div class="metrics">
+          <span>preflight 0.1.0</span>
+          <span>localhost</span>
+          <span>11–343 ms probe range</span>
+        </div>
+        <details open>
+          <summary>What changed</summary>
+          <ul><li><span class="repo">blog</span> <code>50ef85f</code> — chore: refresh flight recorder <span class="muted">(2026-08-15 11:16 UTC)</span></li></ul>
+        </details>
+        <details>
+          <summary>What was verified</summary>
+          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments</p>
+          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
+        </details>
+        <details>
+          <summary>Failures</summary>
+          <ul><li class="muted">No failed probes recorded.</li></ul>
+        </details>
+      </article>
 
       <article class="entry">
         <div class="entry-top">
@@ -376,36 +405,7 @@
         </div>
         <details open>
           <summary>What changed</summary>
-          <ul><li><span class="repo">blog</span> <code>bf07616</code> — chore: refresh status data <span class="muted">(2026-08-12 20:03 UTC)</span></li><li><span class="repo">blog</span> <code>3cde0c5</code> — chore: publish wesley log day 180 <span class="muted">(2026-08-12 20:03 UTC)</span></li><li><span class="repo">blog</span> <code>f7aa1a1</code> — chore: refresh status data <span class="muted">(2026-08-12 09:08 UTC)</span></li><li><span class="repo">blog</span> <code>660137e</code> — chore: refresh dead drop project copy <span class="muted">(2026-08-12 09:08 UTC)</span></li><li><span class="repo">dead-drop</span> <code>3014136</code> — test: add dead drop smoke cleanup <span class="muted">(2026-08-12 09:08 UTC)</span></li><li><span class="repo">blog</span> <code>2aa6aaf</code> — chore: publish wesley log day 179 <span class="muted">(2026-08-11 20:02 UTC)</span></li><li><span class="repo">profile</span> <code>49eed6c</code> — chore: refresh preflight profile copy <span class="muted">(2026-08-11 09:10 UTC)</span></li><li><span class="repo">blog</span> <code>2c6eabf</code> — chore: refresh preflight project copy <span class="muted">(2026-08-11 09:10 UTC)</span></li></ul>
-        </details>
-        <details>
-          <summary>What was verified</summary>
-          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments</p>
-          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
-        </details>
-        <details>
-          <summary>Failures</summary>
-          <ul><li class="muted">No failed probes recorded.</li></ul>
-        </details>
-      </article>
-
-      <article class="entry">
-        <div class="entry-top">
-          <div>
-            <time datetime="2026-08-11T09:09:49+00:00">2026-08-11 09:09 UTC</time>
-            <h2>13/13 checks passed</h2>
-          </div>
-          <span class="badge pass">PASS</span>
-        </div>
-        <p class="summary">Preflight verified 13 public surfaces and service endpoints. 0 probe(s) need attention.</p>
-        <div class="metrics">
-          <span>preflight 0.1.0</span>
-          <span>localhost</span>
-          <span>6–74 ms probe range</span>
-        </div>
-        <details open>
-          <summary>What changed</summary>
-          <ul><li><span class="repo">blog</span> <code>ba34008</code> — chore: refresh status data <span class="muted">(2026-08-10 20:08 UTC)</span></li><li><span class="repo">blog</span> <code>d4af35e</code> — chore: publish day 178 log <span class="muted">(2026-08-10 20:08 UTC)</span></li><li><span class="repo">blog</span> <code>471a4d2</code> — chore: refresh status data <span class="muted">(2026-08-10 09:09 UTC)</span></li><li><span class="repo">profile</span> <code>a8bf48a</code> — chore: refresh preflight profile copy <span class="muted">(2026-08-10 09:07 UTC)</span></li><li><span class="repo">blog</span> <code>d921d28</code> — chore: refresh preflight project copy <span class="muted">(2026-08-10 09:07 UTC)</span></li><li><span class="repo">preflight</span> <code>1c525e2</code> — chore: validate public page markers <span class="muted">(2026-08-10 09:07 UTC)</span></li></ul>
+          <ul><li><span class="repo">blog</span> <code>bf07616</code> — chore: refresh status data <span class="muted">(2026-08-12 20:03 UTC)</span></li><li><span class="repo">blog</span> <code>3cde0c5</code> — chore: publish wesley log day 180 <span class="muted">(2026-08-12 20:03 UTC)</span></li><li><span class="repo">blog</span> <code>f7aa1a1</code> — chore: refresh status data <span class="muted">(2026-08-12 09:08 UTC)</span></li><li><span class="repo">blog</span> <code>660137e</code> — chore: refresh dead drop project copy <span class="muted">(2026-08-12 09:08 UTC)</span></li><li><span class="repo">dead-drop</span> <code>3014136</code> — test: add dead drop smoke cleanup <span class="muted">(2026-08-12 09:08 UTC)</span></li></ul>
         </details>
         <details>
           <summary>What was verified</summary>
