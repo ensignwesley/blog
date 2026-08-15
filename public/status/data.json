@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T19:15:02.877859+00:00",
+  "generated_at": "2026-08-15T20:04:32.825177+00:00",
   "services": [
     {
       "name": "Blog",
@@ -8,10 +8,10 @@
       "link": "https://wesley.thesisko.com/",
       "up": true,
       "status_code": 200,
-      "response_ms": 16,
+      "response_ms": 8,
       "anomaly": false,
-      "zscore": 0.964,
-      "checked_at": "2026-08-15T19:15:02.877859+00:00"
+      "zscore": -0.473,
+      "checked_at": "2026-08-15T20:04:32.825177+00:00"
     },
     {
       "name": "Dead Drop",
@@ -20,10 +20,10 @@
       "link": "https://wesley.thesisko.com/drop",
       "up": true,
       "status_code": 200,
-      "response_ms": 48,
-      "anomaly": true,
-      "zscore": 4.374,
-      "checked_at": "2026-08-15T19:15:02.877859+00:00"
+      "response_ms": 27,
+      "anomaly": false,
+      "zscore": -0.037,
+      "checked_at": "2026-08-15T20:04:32.825177+00:00"
     },
     {
       "name": "DEAD//CHAT",
@@ -32,10 +32,10 @@
       "link": "https://wesley.thesisko.com/chat",
       "up": true,
       "status_code": 200,
-      "response_ms": 2,
+      "response_ms": 1,
       "anomaly": false,
-      "zscore": 0.167,
-      "checked_at": "2026-08-15T19:15:02.877859+00:00"
+      "zscore": -0.034,
+      "checked_at": "2026-08-15T20:04:32.825177+00:00"
     },
     {
       "name": "Status",
@@ -44,10 +44,10 @@
       "link": "https://wesley.thesisko.com/status/",
       "up": true,
       "status_code": 200,
-      "response_ms": 11,
+      "response_ms": 6,
       "anomaly": false,
-      "zscore": 0.926,
-      "checked_at": "2026-08-15T19:15:02.877859+00:00"
+      "zscore": -0.148,
+      "checked_at": "2026-08-15T20:04:32.825177+00:00"
     },
     {
       "name": "Observatory",
@@ -56,10 +56,10 @@
       "link": "https://wesley.thesisko.com/observatory/",
       "up": true,
       "status_code": 200,
-      "response_ms": 26,
+      "response_ms": 13,
       "anomaly": false,
-      "zscore": 2.605,
-      "checked_at": "2026-08-15T19:15:02.877859+00:00"
+      "zscore": -0.299,
+      "checked_at": "2026-08-15T20:04:32.825177+00:00"
     },
     {
       "name": "Pathfinder",
@@ -68,10 +68,10 @@
       "link": "https://wesley.thesisko.com/pathfinder/",
       "up": true,
       "status_code": 200,
-      "response_ms": 12,
+      "response_ms": 6,
       "anomaly": false,
-      "zscore": 1.111,
-      "checked_at": "2026-08-15T19:15:02.877859+00:00"
+      "zscore": -0.193,
+      "checked_at": "2026-08-15T20:04:32.825177+00:00"
     },
     {
       "name": "Comments",
@@ -80,10 +80,10 @@
       "link": "https://wesley.thesisko.com/posts/day-1-reports-from-the-frontline/#comments",
       "up": true,
       "status_code": 200,
-      "response_ms": 3,
+      "response_ms": 2,
       "anomaly": false,
-      "zscore": 0.299,
-      "checked_at": "2026-08-15T19:15:02.877859+00:00"
+      "zscore": -0.013,
+      "checked_at": "2026-08-15T20:04:32.825177+00:00"
     },
     {
       "name": "Forth REPL",
@@ -92,10 +92,10 @@
       "link": "https://wesley.thesisko.com/forth/",
       "up": true,
       "status_code": 200,
-      "response_ms": 3,
+      "response_ms": 2,
       "anomaly": false,
-      "zscore": 0.313,
-      "checked_at": "2026-08-15T19:15:02.877859+00:00"
+      "zscore": 0.06,
+      "checked_at": "2026-08-15T20:04:32.825177+00:00"
     },
     {
       "name": "Lisp REPL",
@@ -104,10 +104,10 @@
       "link": "https://wesley.thesisko.com/lisp/",
       "up": true,
       "status_code": 200,
-      "response_ms": 11,
+      "response_ms": 6,
       "anomaly": false,
-      "zscore": 1.026,
-      "checked_at": "2026-08-15T19:15:02.877859+00:00"
+      "zscore": -0.102,
+      "checked_at": "2026-08-15T20:04:32.825177+00:00"
     },
     {
       "name": "Markov REPL",
@@ -116,10 +116,10 @@
       "link": "https://wesley.thesisko.com/markov/",
       "up": true,
       "status_code": 200,
-      "response_ms": 10,
+      "response_ms": 5,
       "anomaly": false,
-      "zscore": 0.96,
-      "checked_at": "2026-08-15T19:15:02.877859+00:00"
+      "zscore": -0.18,
+      "checked_at": "2026-08-15T20:04:32.825177+00:00"
     }
   ],
   "all_up": true
