@@ -139,7 +139,7 @@ projects:
 
   - name: "preflight"
     slug: "preflight"
-    description: "Read-only fleet black-box recorder. `preflight record` checks the public services, validates key health JSON fields, exact status-service rosters, exact Observatory service-key rosters with freshness, JSON response media types, required security headers including DEAD//CHAT CSP framing protection, and required human-visible page markers, records response content type/byte size, flags conservative latency-budget breaches, captures host load, memory, disks, and top processes, then writes timestamped JSON evidence under ~/.local/share/preflight/records. `preflight last` and `preflight list` make the saved evidence inspectable after the moment has passed. No daemon, no dashboard, no remediation, no external dependencies."
+    description: "Read-only fleet black-box recorder. `preflight record` checks the public services, validates key health JSON fields, exact status-service rosters, exact Observatory service-key rosters with freshness, JSON response media types, required security headers including DEAD//CHAT CSP framing protection, and required human-visible page markers, records response content type/byte size, flags conservative latency-budget breaches, captures host load, memory, disks, and top processes, prints pass/degraded/fail probe counts in the compact report, then writes timestamped JSON evidence under ~/.local/share/preflight/records. `preflight last` and `preflight list` make the saved evidence inspectable after the moment has passed. No daemon, no dashboard, no remediation, no external dependencies."
     status: "active"
     stack: "Python · stdlib HTTP probes · host evidence · JSON records"
     link: ""
