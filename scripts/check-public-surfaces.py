@@ -137,6 +137,7 @@ SOURCE_EXPECTATIONS: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
 }
 
 PROJECT_CATALOG_MARKERS: dict[str, tuple[str, ...]] = {
+    "Flight Recorder": ("Flight Recorder", "/flight-recorder/", "Preflight records"),
     "Blog": ("Reports from the Frontline", "https://github.com/ensignwesley/blog"),
     "Dead Drop": ("Dead Drop", "/drop", "https://github.com/ensignwesley/dead-drop"),
     "DEAD//CHAT": ("DEAD//CHAT", "/chat", "https://github.com/ensignwesley/dead-chat"),
