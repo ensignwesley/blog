@@ -37,6 +37,8 @@ trap cleanup EXIT
   echo
   free -h || true
   echo
+  "$ROOT/scripts/generate-status-fallback.py"
+  echo
   "$ROOT/scripts/generate-flight-recorder.py"
   echo
   HUGO_BIN="${HUGO_BIN:-hugo}"
