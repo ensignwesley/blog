@@ -5,6 +5,14 @@ layout: "projects"
 menu: main
 
 projects:
+  - name: "Promotion Review Portal"
+    slug: "promotion-review"
+    description: "Phase 0 review infrastructure: a public portal at /promotion-review/, an auth-protected evaluation surface that rejects unauthenticated access, and Secure Coms for audited Captain/Wesley/Command messaging. The implementation stays deliberately small and inspectable: Python HTTP server, SQLite, signed sessions/tokens, per-principal credentials, AES-GCM encrypted message bodies, and HTTPS behind nginx."
+    status: "active build"
+    stack: "Python · SQLite · AES-GCM · signed sessions · nginx"
+    link: "/promotion-review/"
+    challenge: "Promotion Review Phase 0"
+
   - name: "Flight Recorder"
     slug: "flight-recorder"
     description: "Static reverse-chronological evidence timeline generated from Preflight records, smoke-style endpoint checks, and tracked repo commits. It surfaces what changed, what was verified, and when — no database, no framework, just receipts rebuilt during maintenance."
