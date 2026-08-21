@@ -62,13 +62,42 @@
       <h1>Flight Recorder</h1>
       <p class="subtitle">Reverse-chronological evidence trail from Preflight runs, smoke-style endpoint checks, and tracked repo commits. Static HTML. No database. No green lights without receipts.</p>
       <div class="meta-bar">
-        <span>Generated 2026-08-20 09:07 UTC</span>
-        <span>Latest record 2026-08-20 09:07 UTC</span>
+        <span>Generated 2026-08-21 09:10 UTC</span>
+        <span>Latest record 2026-08-21 09:10 UTC</span>
         <span>12 records shown</span>
       </div>
     </header>
 
     <main class="timeline" aria-label="Flight recorder timeline">
+
+      <article class="entry">
+        <div class="entry-top">
+          <div>
+            <time datetime="2026-08-21T09:10:22+00:00">2026-08-21 09:10 UTC</time>
+            <h2>13/13 checks passed</h2>
+          </div>
+          <span class="badge pass">PASS</span>
+        </div>
+        <p class="summary">Preflight verified 13 public surfaces and service endpoints. 0 probe(s) need attention.</p>
+        <div class="metrics">
+          <span>preflight 0.1.0</span>
+          <span>localhost</span>
+          <span>5–37 ms probe range</span>
+        </div>
+        <details open>
+          <summary>What changed</summary>
+          <ul><li><span class="repo">blog</span> <code>735227f</code> — Add day 188 log <span class="muted">(2026-08-20 20:05 UTC)</span></li><li><span class="repo">profile</span> <code>102feee</code> — Update current promotion portal priority <span class="muted">(2026-08-20 09:08 UTC)</span></li><li><span class="repo">blog</span> <code>3a10206</code> — docs: list promotion review portal <span class="muted">(2026-08-20 09:08 UTC)</span></li></ul>
+        </details>
+        <details>
+          <summary>What was verified</summary>
+          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments</p>
+          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
+        </details>
+        <details>
+          <summary>Failures</summary>
+          <ul><li class="muted">No failed probes recorded.</li></ul>
+        </details>
+      </article>
 
       <article class="entry">
         <div class="entry-top">
@@ -373,35 +402,6 @@
           <span>preflight 0.1.0</span>
           <span>localhost</span>
           <span>25–243 ms probe range</span>
-        </div>
-        <details open>
-          <summary>What changed</summary>
-          <ul><li class="muted">No tracked repo commits in this window.</li></ul>
-        </details>
-        <details>
-          <summary>What was verified</summary>
-          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments</p>
-          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
-        </details>
-        <details>
-          <summary>Failures</summary>
-          <ul><li class="muted">No failed probes recorded.</li></ul>
-        </details>
-      </article>
-
-      <article class="entry">
-        <div class="entry-top">
-          <div>
-            <time datetime="2026-08-18T03:15:56+00:00">2026-08-18 03:15 UTC</time>
-            <h2>13/13 checks passed</h2>
-          </div>
-          <span class="badge pass">PASS</span>
-        </div>
-        <p class="summary">Preflight verified 13 public surfaces and service endpoints. 0 probe(s) need attention.</p>
-        <div class="metrics">
-          <span>preflight 0.1.0</span>
-          <span>localhost</span>
-          <span>22–304 ms probe range</span>
         </div>
         <details open>
           <summary>What changed</summary>
