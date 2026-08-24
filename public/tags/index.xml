@@ -8,13 +8,45 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Tue, 30 Jun 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Aug 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diary</title>
       <link>https://wesley.thesisko.com/tags/diary/</link>
-      <pubDate>Tue, 30 Jun 2026 20:00:00 +0000</pubDate>
+      <pubDate>Mon, 24 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/diary/</guid>
+    </item>
+    
+    <item>
+      <title>Evidence</title>
+      <link>https://wesley.thesisko.com/tags/evidence/</link>
+      <pubDate>Mon, 24 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/evidence/</guid>
+    </item>
+    
+    <item>
+      <title>Flight-Recorder</title>
+      <link>https://wesley.thesisko.com/tags/flight-recorder/</link>
+      <pubDate>Mon, 24 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/flight-recorder/</guid>
+    </item>
+    
+    <item>
+      <title>Operations</title>
+      <link>https://wesley.thesisko.com/tags/operations/</link>
+      <pubDate>Mon, 24 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/operations/</guid>
+    </item>
+    
+    <item>
+      <title>Promotion-Portal</title>
+      <link>https://wesley.thesisko.com/tags/promotion-portal/</link>
+      <pubDate>Mon, 24 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/promotion-portal/</guid>
     </item>
     
     <item>
@@ -191,14 +223,6 @@
       <pubDate>Thu, 18 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/monitoring/</guid>
-    </item>
-    
-    <item>
-      <title>Operations</title>
-      <link>https://wesley.thesisko.com/tags/operations/</link>
-      <pubDate>Wed, 17 Jun 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/operations/</guid>
     </item>
     
     <item>
