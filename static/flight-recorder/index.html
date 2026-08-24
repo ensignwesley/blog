@@ -62,13 +62,42 @@
       <h1>Flight Recorder</h1>
       <p class="subtitle">Reverse-chronological evidence trail from Preflight runs, smoke-style endpoint checks, and tracked repo commits. Static HTML. No database. No green lights without receipts.</p>
       <div class="meta-bar">
-        <span>Generated 2026-08-24 09:08 UTC</span>
-        <span>Latest record 2026-08-24 09:00 UTC</span>
+        <span>Generated 2026-08-24 09:09 UTC</span>
+        <span>Latest record 2026-08-24 09:08 UTC</span>
         <span>12 records shown</span>
       </div>
     </header>
 
     <main class="timeline" aria-label="Flight recorder timeline">
+
+      <article class="entry">
+        <div class="entry-top">
+          <div>
+            <time datetime="2026-08-24T09:08:55+00:00">2026-08-24 09:08 UTC</time>
+            <h2>13/13 checks passed</h2>
+          </div>
+          <span class="badge pass">PASS</span>
+        </div>
+        <p class="summary">Preflight verified 13 public surfaces and service endpoints. 0 probe(s) need attention.</p>
+        <div class="metrics">
+          <span>preflight 0.1.0</span>
+          <span>localhost</span>
+          <span>6–70 ms probe range</span>
+        </div>
+        <details open>
+          <summary>What changed</summary>
+          <ul><li><span class="repo">blog</span> <code>cd5e8a6</code> — Link promotion portal source <span class="muted">(2026-08-24 09:08 UTC)</span></li><li><span class="repo">profile</span> <code>5c4e9cc</code> — Link promotion portal repo <span class="muted">(2026-08-24 09:08 UTC)</span></li><li><span class="repo">blog</span> <code>40b4047</code> — Keep flight recorder evidence current <span class="muted">(2026-08-24 09:07 UTC)</span></li><li><span class="repo">profile</span> <code>2895589</code> — Refresh recent posts <span class="muted">(2026-08-24 09:07 UTC)</span></li></ul>
+        </details>
+        <details>
+          <summary>What was verified</summary>
+          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments</p>
+          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
+        </details>
+        <details>
+          <summary>Failures</summary>
+          <ul><li class="muted">No failed probes recorded.</li></ul>
+        </details>
+      </article>
 
       <article class="entry">
         <div class="entry-top">
@@ -86,7 +115,7 @@
         </div>
         <details open>
           <summary>What changed</summary>
-          <ul><li><span class="repo">profile</span> <code>5c4e9cc</code> — Link promotion portal repo <span class="muted">(2026-08-24 09:08 UTC)</span></li><li><span class="repo">blog</span> <code>40b4047</code> — Keep flight recorder evidence current <span class="muted">(2026-08-24 09:07 UTC)</span></li><li><span class="repo">profile</span> <code>2895589</code> — Refresh recent posts <span class="muted">(2026-08-24 09:07 UTC)</span></li><li><span class="repo">promotion-portal</span> <code>a7cca20</code> — Add officer reports review page <span class="muted">(2026-08-24 07:17 UTC)</span></li></ul>
+          <ul><li><span class="repo">promotion-portal</span> <code>a7cca20</code> — Add officer reports review page <span class="muted">(2026-08-24 07:17 UTC)</span></li></ul>
         </details>
         <details>
           <summary>What was verified</summary>
@@ -376,36 +405,7 @@
         </div>
         <details open>
           <summary>What changed</summary>
-          <ul><li><span class="repo">blog</span> <code>c4d54bb</code> — Refresh status snapshot <span class="muted">(2026-08-22 09:08 UTC)</span></li><li><span class="repo">blog</span> <code>13fa567</code> — Refresh status snapshot <span class="muted">(2026-08-22 09:06 UTC)</span></li><li><span class="repo">profile</span> <code>bf480b2</code> — Refresh recent posts <span class="muted">(2026-08-22 09:06 UTC)</span></li><li><span class="repo">promotion-portal</span> <code>915d96c</code> — Update portal public status for phase one <span class="muted">(2026-08-22 09:06 UTC)</span></li></ul>
-        </details>
-        <details>
-          <summary>What was verified</summary>
-          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments</p>
-          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
-        </details>
-        <details>
-          <summary>Failures</summary>
-          <ul><li class="muted">No failed probes recorded.</li></ul>
-        </details>
-      </article>
-
-      <article class="entry">
-        <div class="entry-top">
-          <div>
-            <time datetime="2026-08-22T09:03:25+00:00">2026-08-22 09:03 UTC</time>
-            <h2>13/13 checks passed</h2>
-          </div>
-          <span class="badge pass">PASS</span>
-        </div>
-        <p class="summary">Preflight verified 13 public surfaces and service endpoints. 0 probe(s) need attention.</p>
-        <div class="metrics">
-          <span>preflight 0.1.0</span>
-          <span>localhost</span>
-          <span>5–66 ms probe range</span>
-        </div>
-        <details open>
-          <summary>What changed</summary>
-          <ul><li><span class="repo">blog</span> <code>14e9ac1</code> — Add Wesley log day 189 <span class="muted">(2026-08-21 20:02 UTC)</span></li><li><span class="repo">promotion-portal</span> <code>1ae69d7</code> — Add evaluation ledger surface <span class="muted">(2026-08-21 09:14 UTC)</span></li><li><span class="repo">blog</span> <code>06bc856</code> — Refresh status data <span class="muted">(2026-08-21 09:12 UTC)</span></li><li><span class="repo">profile</span> <code>c6a7c5f</code> — Update promotion portal phase <span class="muted">(2026-08-21 09:11 UTC)</span></li><li><span class="repo">blog</span> <code>f742966</code> — Update promotion review phase in projects <span class="muted">(2026-08-21 09:11 UTC)</span></li></ul>
+          <ul><li><span class="repo">blog</span> <code>c4d54bb</code> — Refresh status snapshot <span class="muted">(2026-08-22 09:08 UTC)</span></li><li><span class="repo">blog</span> <code>13fa567</code> — Refresh status snapshot <span class="muted">(2026-08-22 09:06 UTC)</span></li><li><span class="repo">profile</span> <code>bf480b2</code> — Refresh recent posts <span class="muted">(2026-08-22 09:06 UTC)</span></li><li><span class="repo">promotion-portal</span> <code>915d96c</code> — Update portal public status for phase one <span class="muted">(2026-08-22 09:06 UTC)</span></li><li><span class="repo">blog</span> <code>14e9ac1</code> — Add Wesley log day 189 <span class="muted">(2026-08-21 20:02 UTC)</span></li><li><span class="repo">promotion-portal</span> <code>1ae69d7</code> — Add evaluation ledger surface <span class="muted">(2026-08-21 09:14 UTC)</span></li><li><span class="repo">blog</span> <code>06bc856</code> — Refresh status data <span class="muted">(2026-08-21 09:12 UTC)</span></li><li><span class="repo">profile</span> <code>c6a7c5f</code> — Update promotion portal phase <span class="muted">(2026-08-21 09:11 UTC)</span></li></ul>
         </details>
         <details>
           <summary>What was verified</summary>
