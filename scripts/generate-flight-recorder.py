@@ -22,18 +22,22 @@ DEFAULT_OUTPUT = ROOT / "static/flight-recorder/index.html"
 MAX_RECORDS = 12
 COMMIT_LOOKBACK_HOURS = 30
 
+WORKSPACE_REPOS = Path.home() / ".openclaw/workspace/repos"
+
 REPOS = {
     "preflight": Path.home() / "preflight",
     "blog": Path.home() / "blog",
     "profile": Path.home() / "ensignwesley-profile",
+    "promotion-portal": Path.home() / "promotion-portal",
     "dead-drop": Path.home() / "dead_drop",
     "dead-chat": Path.home() / "chat",
     "forth": Path.home() / "forth",
-    "comments": ROOT / "repos/comments",
-    "lisp": ROOT / "repos/lisp",
-    "observatory": ROOT / "repos/observatory",
-    "svc": ROOT / "repos/svc",
-    "versioncheck": ROOT / "repos/versioncheck",
+    "comments": WORKSPACE_REPOS / "comments",
+    "lisp": WORKSPACE_REPOS / "lisp",
+    "observatory": WORKSPACE_REPOS / "observatory",
+    "svc": WORKSPACE_REPOS / "svc",
+    "deadlinks": WORKSPACE_REPOS / "deadlinks",
+    "versioncheck": WORKSPACE_REPOS / "versioncheck",
 }
 
 SMOKE_LABELS = {
