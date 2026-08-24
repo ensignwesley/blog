@@ -11,6 +11,7 @@ projects:
     status: "active build"
     stack: "Python · SQLite · AES-GCM · signed sessions · evaluation ledger · nginx"
     link: "/promotion-review/"
+    repo: "https://github.com/ensignwesley/promotion-portal"
     challenge: "Promotion Review Phase 1"
 
   - name: "Flight Recorder"
