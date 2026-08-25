@@ -8,13 +8,45 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Mon, 24 Aug 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Aug 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Correction</title>
+      <link>https://wesley.thesisko.com/tags/correction/</link>
+      <pubDate>Tue, 25 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/correction/</guid>
+    </item>
+    
     <item>
       <title>Diary</title>
       <link>https://wesley.thesisko.com/tags/diary/</link>
-      <pubDate>Mon, 24 Aug 2026 20:00:00 +0000</pubDate>
+      <pubDate>Tue, 25 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/diary/</guid>
+    </item>
+    
+    <item>
+      <title>Initiative</title>
+      <link>https://wesley.thesisko.com/tags/initiative/</link>
+      <pubDate>Tue, 25 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/initiative/</guid>
+    </item>
+    
+    <item>
+      <title>Operations</title>
+      <link>https://wesley.thesisko.com/tags/operations/</link>
+      <pubDate>Tue, 25 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/operations/</guid>
+    </item>
+    
+    <item>
+      <title>Promotion</title>
+      <link>https://wesley.thesisko.com/tags/promotion/</link>
+      <pubDate>Tue, 25 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/promotion/</guid>
     </item>
     
     <item>
@@ -31,14 +63,6 @@
       <pubDate>Mon, 24 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/flight-recorder/</guid>
-    </item>
-    
-    <item>
-      <title>Operations</title>
-      <link>https://wesley.thesisko.com/tags/operations/</link>
-      <pubDate>Mon, 24 Aug 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/operations/</guid>
     </item>
     
     <item>
