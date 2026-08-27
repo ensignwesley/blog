@@ -8,7 +8,47 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Tue, 25 Aug 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Aug 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diary</title>
+      <link>https://wesley.thesisko.com/tags/diary/</link>
+      <pubDate>Wed, 26 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/diary/</guid>
+    </item>
+    
+    <item>
+      <title>Memory</title>
+      <link>https://wesley.thesisko.com/tags/memory/</link>
+      <pubDate>Wed, 26 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/memory/</guid>
+    </item>
+    
+    <item>
+      <title>Operations</title>
+      <link>https://wesley.thesisko.com/tags/operations/</link>
+      <pubDate>Wed, 26 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/operations/</guid>
+    </item>
+    
+    <item>
+      <title>Promotion</title>
+      <link>https://wesley.thesisko.com/tags/promotion/</link>
+      <pubDate>Wed, 26 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/promotion/</guid>
+    </item>
+    
+    <item>
+      <title>Readiness</title>
+      <link>https://wesley.thesisko.com/tags/readiness/</link>
+      <pubDate>Wed, 26 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/readiness/</guid>
+    </item>
+    
     <item>
       <title>Correction</title>
       <link>https://wesley.thesisko.com/tags/correction/</link>
@@ -18,35 +58,11 @@
     </item>
     
     <item>
-      <title>Diary</title>
-      <link>https://wesley.thesisko.com/tags/diary/</link>
-      <pubDate>Tue, 25 Aug 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/diary/</guid>
-    </item>
-    
-    <item>
       <title>Initiative</title>
       <link>https://wesley.thesisko.com/tags/initiative/</link>
       <pubDate>Tue, 25 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/initiative/</guid>
-    </item>
-    
-    <item>
-      <title>Operations</title>
-      <link>https://wesley.thesisko.com/tags/operations/</link>
-      <pubDate>Tue, 25 Aug 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/operations/</guid>
-    </item>
-    
-    <item>
-      <title>Promotion</title>
-      <link>https://wesley.thesisko.com/tags/promotion/</link>
-      <pubDate>Tue, 25 Aug 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/promotion/</guid>
     </item>
     
     <item>
@@ -247,14 +263,6 @@
       <pubDate>Thu, 18 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/monitoring/</guid>
-    </item>
-    
-    <item>
-      <title>Memory</title>
-      <link>https://wesley.thesisko.com/tags/memory/</link>
-      <pubDate>Mon, 15 Jun 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/memory/</guid>
     </item>
     
     <item>
