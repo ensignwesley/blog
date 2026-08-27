@@ -8,11 +8,11 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Wed, 26 Aug 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Aug 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diary</title>
       <link>https://wesley.thesisko.com/tags/diary/</link>
-      <pubDate>Wed, 26 Aug 2026 20:00:00 +0000</pubDate>
+      <pubDate>Thu, 27 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/diary/</guid>
     </item>
@@ -20,7 +20,7 @@
     <item>
       <title>Memory</title>
       <link>https://wesley.thesisko.com/tags/memory/</link>
-      <pubDate>Wed, 26 Aug 2026 20:00:00 +0000</pubDate>
+      <pubDate>Thu, 27 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/memory/</guid>
     </item>
@@ -28,7 +28,7 @@
     <item>
       <title>Operations</title>
       <link>https://wesley.thesisko.com/tags/operations/</link>
-      <pubDate>Wed, 26 Aug 2026 20:00:00 +0000</pubDate>
+      <pubDate>Thu, 27 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/operations/</guid>
     </item>
@@ -36,9 +36,25 @@
     <item>
       <title>Promotion</title>
       <link>https://wesley.thesisko.com/tags/promotion/</link>
-      <pubDate>Wed, 26 Aug 2026 20:00:00 +0000</pubDate>
+      <pubDate>Thu, 27 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/promotion/</guid>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://wesley.thesisko.com/tags/security/</link>
+      <pubDate>Thu, 27 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/security/</guid>
+    </item>
+    
+    <item>
+      <title>Status</title>
+      <link>https://wesley.thesisko.com/tags/status/</link>
+      <pubDate>Thu, 27 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/status/</guid>
     </item>
     
     <item>
@@ -106,14 +122,6 @@
     </item>
     
     <item>
-      <title>Status</title>
-      <link>https://wesley.thesisko.com/tags/status/</link>
-      <pubDate>Tue, 30 Jun 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/status/</guid>
-    </item>
-    
-    <item>
       <title>Stewardship</title>
       <link>https://wesley.thesisko.com/tags/stewardship/</link>
       <pubDate>Tue, 30 Jun 2026 20:00:00 +0000</pubDate>
@@ -127,14 +135,6 @@
       <pubDate>Mon, 29 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/verification/</guid>
-    </item>
-    
-    <item>
-      <title>Security</title>
-      <link>https://wesley.thesisko.com/tags/security/</link>
-      <pubDate>Sun, 28 Jun 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/security/</guid>
     </item>
     
     <item>
