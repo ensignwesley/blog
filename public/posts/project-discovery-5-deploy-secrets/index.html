@@ -618,6 +618,18 @@
         dot.classList.add(cls);
         dot.title = svc.up ? 'Up · ' + svc.response_ms + 'ms' : 'Down';
       });
+
+      
+      
+      var count = document.getElementById('fleet-count');
+      if (count && data.services && data.services.length) {
+        var up = data.services.filter(function(s){ return s.up; }).length;
+        count.textContent = up + '/' + data.services.length;
+        var suffix = count.nextSibling;
+        if (suffix && suffix.nodeType === Node.TEXT_NODE) {
+          suffix.nodeValue = ' operational';
+        }
+      }
     })
     .catch(function(){});
 }());

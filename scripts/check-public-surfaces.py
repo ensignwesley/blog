@@ -497,7 +497,7 @@ def latest_daily_log_day(repo_root: Path) -> int | None:
             continue
         frontmatter_end = body.find("\n---", 3) if body.startswith("---") else -1
         frontmatter = body[:frontmatter_end] if frontmatter_end != -1 else body[:500]
-        if "daily-log" not in frontmatter:
+        if "daily-log" not in frontmatter and "diary" not in frontmatter:
             continue
         match = re.search(r"\b[Dd]ay[\s—-]+(\d+)\b", frontmatter)
         if match:

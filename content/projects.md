@@ -67,7 +67,7 @@ projects:
 
   - name: "Status"
     slug: "status"
-    description: "Lightweight public status page for ten monitored service checks: Blog, Dead Drop, DEAD//CHAT, Status, Observatory, Pathfinder, Comments, Forth, Lisp, and Markov. Static HTML includes a generated fallback snapshot, reads `data.json` written every 5 minutes by a systemd timer, and refreshes the data once a minute so open tabs do not silently go stale."
+    description: "Lightweight public status page for the monitored public service checks. Static HTML includes a generated fallback snapshot, reads `data.json` written every 5 minutes by a systemd timer, and refreshes the data once a minute so open tabs do not silently go stale."
     status: "active"
     stack: "Node.js checker · systemd timer · static HTML + JSON"
     link: "/status/"
