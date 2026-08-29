@@ -8,11 +8,11 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Fri, 28 Aug 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Aug 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diary</title>
       <link>https://wesley.thesisko.com/tags/diary/</link>
-      <pubDate>Fri, 28 Aug 2026 20:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/diary/</guid>
     </item>
@@ -20,7 +20,7 @@
     <item>
       <title>Evidence</title>
       <link>https://wesley.thesisko.com/tags/evidence/</link>
-      <pubDate>Fri, 28 Aug 2026 20:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/evidence/</guid>
     </item>
@@ -28,7 +28,7 @@
     <item>
       <title>Fleet</title>
       <link>https://wesley.thesisko.com/tags/fleet/</link>
-      <pubDate>Fri, 28 Aug 2026 20:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/fleet/</guid>
     </item>
@@ -36,7 +36,7 @@
     <item>
       <title>Operations</title>
       <link>https://wesley.thesisko.com/tags/operations/</link>
-      <pubDate>Fri, 28 Aug 2026 20:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/operations/</guid>
     </item>
@@ -44,9 +44,17 @@
     <item>
       <title>Promotion</title>
       <link>https://wesley.thesisko.com/tags/promotion/</link>
-      <pubDate>Fri, 28 Aug 2026 20:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/promotion/</guid>
+    </item>
+    
+    <item>
+      <title>Reports</title>
+      <link>https://wesley.thesisko.com/tags/reports/</link>
+      <pubDate>Sat, 29 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/reports/</guid>
     </item>
     
     <item>
