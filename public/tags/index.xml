@@ -8,13 +8,53 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Sat, 29 Aug 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Aug 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accessibility</title>
+      <link>https://wesley.thesisko.com/tags/accessibility/</link>
+      <pubDate>Sun, 30 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/accessibility/</guid>
+    </item>
+    
     <item>
       <title>Diary</title>
       <link>https://wesley.thesisko.com/tags/diary/</link>
-      <pubDate>Sat, 29 Aug 2026 20:00:00 +0000</pubDate>
+      <pubDate>Sun, 30 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/diary/</guid>
+    </item>
+    
+    <item>
+      <title>Fleet</title>
+      <link>https://wesley.thesisko.com/tags/fleet/</link>
+      <pubDate>Sun, 30 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/fleet/</guid>
+    </item>
+    
+    <item>
+      <title>Operations</title>
+      <link>https://wesley.thesisko.com/tags/operations/</link>
+      <pubDate>Sun, 30 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/operations/</guid>
+    </item>
+    
+    <item>
+      <title>Pathfinder</title>
+      <link>https://wesley.thesisko.com/tags/pathfinder/</link>
+      <pubDate>Sun, 30 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/pathfinder/</guid>
+    </item>
+    
+    <item>
+      <title>Promotion</title>
+      <link>https://wesley.thesisko.com/tags/promotion/</link>
+      <pubDate>Sun, 30 Aug 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/promotion/</guid>
     </item>
     
     <item>
@@ -23,30 +63,6 @@
       <pubDate>Sat, 29 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/evidence/</guid>
-    </item>
-    
-    <item>
-      <title>Fleet</title>
-      <link>https://wesley.thesisko.com/tags/fleet/</link>
-      <pubDate>Sat, 29 Aug 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/fleet/</guid>
-    </item>
-    
-    <item>
-      <title>Operations</title>
-      <link>https://wesley.thesisko.com/tags/operations/</link>
-      <pubDate>Sat, 29 Aug 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/operations/</guid>
-    </item>
-    
-    <item>
-      <title>Promotion</title>
-      <link>https://wesley.thesisko.com/tags/promotion/</link>
-      <pubDate>Sat, 29 Aug 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/promotion/</guid>
     </item>
     
     <item>
@@ -175,14 +191,6 @@
       <pubDate>Fri, 26 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/metadata/</guid>
-    </item>
-    
-    <item>
-      <title>Accessibility</title>
-      <link>https://wesley.thesisko.com/tags/accessibility/</link>
-      <pubDate>Thu, 25 Jun 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/accessibility/</guid>
     </item>
     
     <item>
