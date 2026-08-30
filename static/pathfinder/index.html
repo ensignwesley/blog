@@ -145,7 +145,7 @@ canvas{border:1px solid var(--border);border-radius:3px;
     </div>
   </div>
 
-  <div id="no-path-msg" role="alert">NO PATH EXISTS</div>
+  <div id="no-path-msg" role="alert" aria-live="polite" aria-hidden="true" hidden>NO PATH EXISTS</div>
 
   <!-- Single mode stats -->
   <div id="stats-single">
@@ -263,6 +263,13 @@ function mk0() { return { explored:0, pathLen:0, pathCost:0, elapsed:0 }; }
 // ═══════════════════════════════════════════════════════════
 const idx   = (r,c) => r*COLS+c;
 const valid = (r,c) => r>=0 && r<ROWS && c>=0 && c<COLS;
+
+function setNoPathVisible(visible) {
+  const el = document.getElementById('no-path-msg');
+  el.classList.toggle('show', visible);
+  el.hidden = !visible;
+  el.setAttribute('aria-hidden', visible ? 'false' : 'true');
+}
 
 function placeStart(r,c) {
   if (grid[idx(startPos.r,startPos.c)] === CELL.START)
@@ -469,7 +476,7 @@ function buildMaze() {
   grid[idx(endPos.r,  endPos.c)]   = CELL.END;
 
   resetStats(); renderAll();
-  document.getElementById('no-path-msg').classList.remove('show');
+  setNoPathVisible(false);
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -578,7 +585,7 @@ function tick() {
       // check last yield type — we infer from stats: explored>0 but pathLen===0
       return done[p] && stats[p].explored>0 && stats[p].pathLen===0 && stats[p].pathCost===0;
     });
-    document.getElementById('no-path-msg').classList.toggle('show', noPath && !cmpMode);
+    setNoPathVisible(noPath && !cmpMode);
   } else {
     rafId = requestAnimationFrame(tick);
   }
@@ -590,7 +597,7 @@ function tick() {
 function initGens() {
   wipeOverlays();
   resetStats();
-  document.getElementById('no-path-msg').classList.remove('show');
+  setNoPathVisible(false);
 
   const algo = document.getElementById('algo').value;
   gens[0] = makeSearch(cmpMode ? 'astar' : algo);
@@ -684,7 +691,7 @@ function invalidate() {
   gens[0]=gens[1]=gens[2]=null;
   done[0]=done[1]=done[2]=false;
   resetStats();
-  document.getElementById('no-path-msg').classList.remove('show');
+  setNoPathVisible(false);
   renderAll();
 }
 
@@ -732,7 +739,7 @@ function clearPath() {
   halt(); wipeOverlays();
   gens[0]=gens[1]=gens[2]=null; done[0]=done[1]=done[2]=false;
   resetStats();
-  document.getElementById('no-path-msg').classList.remove('show');
+  setNoPathVisible(false);
   renderAll();
 }
 
@@ -740,7 +747,7 @@ function resetAll() {
   halt(); wipeGrid(); wipeOverlays();
   gens[0]=gens[1]=gens[2]=null; done[0]=done[1]=done[2]=false;
   resetStats();
-  document.getElementById('no-path-msg').classList.remove('show');
+  setNoPathVisible(false);
   renderAll();
 }
 
