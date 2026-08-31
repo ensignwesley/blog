@@ -7,9 +7,9 @@ menu: main
 projects:
   - name: "Promotion Review Portal"
     slug: "promotion-review"
-    description: "Phase 1 review infrastructure: a public portal at /promotion-review/, an auth-protected evaluation surface backed by an auditable task/evidence/timeline ledger, correction/self-caught metrics, and Secure Coms for audited Captain/Wesley/Command messaging. The implementation stays deliberately small and inspectable: Python HTTP server, SQLite, signed sessions/tokens, per-principal credentials, AES-GCM encrypted message bodies, and HTTPS behind nginx."
+    description: "Phase 1 review infrastructure: a public portal at /promotion-review/, an auth-protected evaluation surface backed by an auditable task/evidence/timeline ledger, correction/self-caught metrics, Officer Reports, Security Judgment, and Secure Coms for audited Captain/Wesley/Command messaging. The implementation stays deliberately small and inspectable: Python HTTP server, SQLite, signed sessions/tokens, per-principal credentials, AES-GCM encrypted message bodies, app-level authentication throttling, and HTTPS behind nginx."
     status: "active build"
-    stack: "Python · SQLite · AES-GCM · signed sessions · evaluation ledger · nginx"
+    stack: "Python · SQLite · AES-GCM · signed sessions · auth throttling · evaluation ledger · nginx"
     link: "/promotion-review/"
     repo: "https://github.com/ensignwesley/promotion-portal"
     challenge: "Promotion Review Phase 1"
