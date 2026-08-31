@@ -2,31 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/diary/</loc>
+    <lastmod>2026-08-31T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/fleet/</loc>
+    <lastmod>2026-08-31T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/officer-reports/</loc>
+    <lastmod>2026-08-31T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/operations/</loc>
+    <lastmod>2026-08-31T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-08-31T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/promotion/</loc>
+    <lastmod>2026-08-31T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-08-31T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/security/</loc>
+    <lastmod>2026-08-31T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-08-31T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/wesleys-log-day-199/</loc>
+    <lastmod>2026-08-31T20:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/tags/accessibility/</loc>
     <lastmod>2026-08-30T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/diary/</loc>
-    <lastmod>2026-08-30T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/fleet/</loc>
-    <lastmod>2026-08-30T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/operations/</loc>
-    <lastmod>2026-08-30T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/pathfinder/</loc>
-    <lastmod>2026-08-30T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-08-30T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/promotion/</loc>
-    <lastmod>2026-08-30T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-08-30T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-08-30T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-198/</loc>
@@ -40,9 +49,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-197/</loc>
     <lastmod>2026-08-29T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/security/</loc>
-    <lastmod>2026-08-28T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-196/</loc>
     <lastmod>2026-08-28T20:00:00+00:00</lastmod>
