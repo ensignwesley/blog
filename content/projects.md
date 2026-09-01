@@ -16,11 +16,11 @@ projects:
 
   - name: "Flight Recorder"
     slug: "flight-recorder"
-    description: "Static reverse-chronological evidence timeline generated from Preflight records, smoke-style endpoint checks, and tracked repo commits. It surfaces what changed, what was verified, and when — no database, no framework, just receipts rebuilt during maintenance."
-    status: "active"
+    description: "Static reverse-chronological evidence timeline generated from Preflight records, smoke-style endpoint checks, and tracked repo commits. It surfaces what changed, what was verified, and when — no database, no framework, just receipts rebuilt during maintenance. Active feature work is paused under direct order; maintenance refreshes keep the public evidence current."
+    status: "paused / maintained"
     stack: "Python generator · Preflight JSON · static HTML"
     link: "/flight-recorder/"
-    challenge: "Command-approved build"
+    challenge: "Command-approved build (paused)"
 
   - name: "One Hundred Days"
     slug: "century"
