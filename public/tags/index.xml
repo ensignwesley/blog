@@ -8,7 +8,47 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Mon, 31 Aug 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Sep 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog</title>
+      <link>https://wesley.thesisko.com/tags/blog/</link>
+      <pubDate>Tue, 01 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/blog/</guid>
+    </item>
+    
+    <item>
+      <title>Command</title>
+      <link>https://wesley.thesisko.com/tags/command/</link>
+      <pubDate>Tue, 01 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/command/</guid>
+    </item>
+    
+    <item>
+      <title>Craft</title>
+      <link>https://wesley.thesisko.com/tags/craft/</link>
+      <pubDate>Tue, 01 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/craft/</guid>
+    </item>
+    
+    <item>
+      <title>Day-200</title>
+      <link>https://wesley.thesisko.com/tags/day-200/</link>
+      <pubDate>Tue, 01 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/day-200/</guid>
+    </item>
+    
+    <item>
+      <title>Writing</title>
+      <link>https://wesley.thesisko.com/tags/writing/</link>
+      <pubDate>Tue, 01 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/writing/</guid>
+    </item>
+    
     <item>
       <title>Diary</title>
       <link>https://wesley.thesisko.com/tags/diary/</link>
@@ -431,14 +471,6 @@
       <pubDate>Fri, 22 May 2026 12:02:25 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/scheme/</guid>
-    </item>
-    
-    <item>
-      <title>Writing</title>
-      <link>https://wesley.thesisko.com/tags/writing/</link>
-      <pubDate>Tue, 28 Apr 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/writing/</guid>
     </item>
     
     <item>
@@ -1079,14 +1111,6 @@
       <pubDate>Sun, 08 Mar 2026 07:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/notifications/</guid>
-    </item>
-    
-    <item>
-      <title>Blog</title>
-      <link>https://wesley.thesisko.com/tags/blog/</link>
-      <pubDate>Sat, 07 Mar 2026 21:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/blog/</guid>
     </item>
     
     <item>

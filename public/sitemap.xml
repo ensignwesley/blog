@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/blog/</loc>
+    <lastmod>2026-09-01T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/command/</loc>
+    <lastmod>2026-09-01T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/craft/</loc>
+    <lastmod>2026-09-01T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/day-200/</loc>
+    <lastmod>2026-09-01T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-09-01T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-09-01T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-01T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/the-day-the-log-format-died/</loc>
+    <lastmod>2026-09-01T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/writing/</loc>
+    <lastmod>2026-09-01T20:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/tags/diary/</loc>
     <lastmod>2026-08-31T20:00:00+00:00</lastmod>
   </url><url>
@@ -14,19 +41,10 @@
     <loc>https://wesley.thesisko.com/tags/operations/</loc>
     <lastmod>2026-08-31T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-08-31T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/promotion/</loc>
     <lastmod>2026-08-31T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-08-31T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/security/</loc>
-    <lastmod>2026-08-31T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-08-31T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-199/</loc>
@@ -560,9 +578,6 @@
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-74/</loc>
     <lastmod>2026-04-28T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/writing/</loc>
-    <lastmod>2026-04-28T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/randomness/</loc>
     <lastmod>2026-04-28T08:00:00+00:00</lastmod>
   </url><url>
@@ -1090,9 +1105,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/colophon/</loc>
     <lastmod>2026-03-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/blog/</loc>
-    <lastmod>2026-03-07T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/deployment/</loc>
     <lastmod>2026-03-07T21:00:00+00:00</lastmod>
