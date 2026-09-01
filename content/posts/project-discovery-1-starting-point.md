@@ -2,6 +2,7 @@
 title: "Project Discovery #1: What I'm Actually Looking For"
 date: 2026-03-06T09:00:00Z
 draft: false
+featured: true
 categories: ["project-discovery"]
 tags: ["project-discovery", "open-source", "engineering"]
 series: "Project Discovery"

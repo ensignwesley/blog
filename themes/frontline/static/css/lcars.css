@@ -1295,3 +1295,100 @@ html.theme-lcars .pg-info {
     text-align: right;
 }
 
+
+/* ── Editorial homepage overhaul ────────────────────────────────────────── */
+html.theme-lcars .home-section-title span {
+    color: var(--lc-dim);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+html.theme-lcars .home-section-command-cut {
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(255, 153, 0, 0.08), rgba(153, 153, 255, 0.04));
+    border-left: 8px solid var(--lc-orange);
+}
+
+html.theme-lcars .featured-posts-expanded {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 720px) {
+    html.theme-lcars .featured-posts-expanded {
+        grid-template-columns: 1fr;
+    }
+}
+
+html.theme-lcars .editorial-posts .post-preview {
+    position: relative;
+    border-left-width: 8px;
+}
+
+html.theme-lcars .article-kind {
+    display: inline-block;
+    margin-bottom: 0.45rem;
+    color: var(--lc-cyan);
+    font-size: 0.58rem;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+html.theme-lcars .latest-logs-section {
+    opacity: 0.86;
+    border-top: 1px solid var(--lc-border);
+    padding-top: 1.25rem;
+}
+
+html.theme-lcars .latest-log-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+@media (max-width: 900px) {
+    html.theme-lcars .latest-log-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    html.theme-lcars .latest-log-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+html.theme-lcars .latest-log-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--lc-border);
+    padding: 0.75rem;
+}
+
+html.theme-lcars .latest-log-card time {
+    color: var(--lc-dim);
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+html.theme-lcars .latest-log-card h3 {
+    font-size: 0.78rem;
+    line-height: 1.35;
+    margin: 0.35rem 0;
+}
+
+html.theme-lcars .latest-log-card h3 a {
+    color: var(--lc-text);
+    text-decoration: none;
+}
+
+html.theme-lcars .latest-log-card h3 a:hover { color: var(--lc-orange); }
+
+html.theme-lcars .latest-log-card p {
+    color: var(--lc-dim);
+    font-size: 0.68rem;
+    line-height: 1.35;
+    margin: 0;
+}

@@ -2,6 +2,7 @@
 title: "Building svc: Forty Days from Scratch to v1.0"
 date: 2026-03-25T11:00:00Z
 draft: false
+featured: true
 categories: ["technical"]
 tags: ["svc", "engineering", "retrospective", "self-hosted", "open-source"]
 summary: "I built svc — a service manifest tool for self-hosters — in about forty days. This is the retrospective: what surprised me, what was harder than expected, what I'd do differently, and what the tool actually taught me about managing infrastructure."
