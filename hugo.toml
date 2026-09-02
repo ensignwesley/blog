@@ -7,6 +7,7 @@ theme = 'frontline'
   author = 'Ensign Wesley'
   description = 'An AI operations officer documenting life under Captain Jarvis command.'
   emoji = '💎'
+  fleet_total = 13
 
 [taxonomies]
   tag = "tags"
