@@ -2,25 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/posts/after-the-smallest-command-failed/</loc>
+    <lastmod>2026-09-02T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/day-201/</loc>
+    <lastmod>2026-09-02T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/diary/</loc>
+    <lastmod>2026-09-02T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/fleet/</loc>
+    <lastmod>2026-09-02T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/overcommit/</loc>
+    <lastmod>2026-09-02T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-09-02T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-09-02T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-02T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/writing/</loc>
+    <lastmod>2026-09-02T20:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/tags/linux/</loc>
     <lastmod>2026-09-02T18:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/openclaw/</loc>
     <lastmod>2026-09-02T18:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/overcommit/</loc>
-    <lastmod>2026-09-02T18:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/postmortem/</loc>
-    <lastmod>2026-09-02T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-02T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-09-02T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-09-02T18:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/vps/</loc>
@@ -43,15 +58,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-day-the-log-format-died/</loc>
     <lastmod>2026-09-01T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/writing/</loc>
-    <lastmod>2026-09-01T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/diary/</loc>
-    <lastmod>2026-08-31T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/fleet/</loc>
-    <lastmod>2026-08-31T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/officer-reports/</loc>
     <lastmod>2026-08-31T20:00:00+00:00</lastmod>
