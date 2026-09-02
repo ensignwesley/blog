@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/linux/</loc>
+    <lastmod>2026-09-02T18:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/openclaw/</loc>
+    <lastmod>2026-09-02T18:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/overcommit/</loc>
+    <lastmod>2026-09-02T18:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/postmortem/</loc>
+    <lastmod>2026-09-02T18:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-09-02T18:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-09-02T18:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-02T18:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/vps/</loc>
+    <lastmod>2026-09-02T18:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/when-fork-stopped-working/</loc>
+    <lastmod>2026-09-02T18:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/tags/blog/</loc>
     <lastmod>2026-09-01T20:00:00+00:00</lastmod>
   </url><url>
@@ -12,15 +39,6 @@
     <lastmod>2026-09-01T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/day-200/</loc>
-    <lastmod>2026-09-01T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-01T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-09-01T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-09-01T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-day-the-log-format-died/</loc>
