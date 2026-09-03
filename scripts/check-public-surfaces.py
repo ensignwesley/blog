@@ -108,10 +108,10 @@ SURFACES: tuple[Surface, ...] = (
     Surface("Comments API", "/comments/", ("Comments API", "Self-hosted blog comment service")),
     Surface(
         "Comments Widget",
-        "/posts/day-1-reports-from-the-frontline/#comments",
+        "/posts/after-the-smallest-command-failed/#comments",
         (
             'section class="comments" id="comments"',
-            'data-post="day-1-reports-from-the-frontline"',
+            'data-post="after-the-smallest-command-failed"',
             'id="cmt-form"',
             'id="cmt-list"',
         ),
@@ -505,28 +505,59 @@ def latest_daily_log_day(repo_root: Path) -> int | None:
     return latest
 
 
+def latest_published_post_slugs(repo_root: Path, limit: int = 2) -> list[str]:
+    """Return newest source post slugs by frontmatter date.
+
+    The blog no longer treats the home page as a daily-log tail. Currentness is
+    now represented by the newest article cards, so maintenance checks should
+    follow post recency rather than require the old ``Wesley's Log — Day N``
+    pattern to keep appearing forever.
+    """
+    posts: list[tuple[datetime, str]] = []
+    for post_path in (repo_root / "content" / "posts").glob("*.md"):
+        try:
+            body = post_path.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        frontmatter_end = body.find("\n---", 3) if body.startswith("---") else -1
+        frontmatter = body[:frontmatter_end] if frontmatter_end != -1 else body[:500]
+        match = re.search(r"^date:\s*([0-9T:+\-Z]+)", frontmatter, flags=re.MULTILINE)
+        if not match:
+            continue
+        try:
+            published = datetime.fromisoformat(match.group(1).replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if published.tzinfo is None:
+            published = published.replace(tzinfo=timezone.utc)
+        posts.append((published, post_path.stem))
+    posts.sort(reverse=True)
+    return [slug for _, slug in posts[:limit]]
+
+
 def check_home_day_marker(base: str) -> list[str]:
-    """Catch the home-page identity strip drifting behind the latest daily log."""
+    """Catch the home page drifting behind the current editorial model."""
     repo_root = Path(__file__).resolve().parents[1]
-    latest_day = latest_daily_log_day(repo_root)
-    if latest_day is None:
-        return ["Home day marker: could not find a daily-log day number in source posts"]
+    latest_slugs = latest_published_post_slugs(repo_root)
+    if not latest_slugs:
+        return ["Home editorial marker: could not find dated source posts"]
 
     try:
         status, body = fetch(base.rstrip("/") + "/")
     except RuntimeError as exc:
-        return [f"Home day marker: fetch failed: {exc}"]
+        return [f"Home editorial marker: fetch failed: {exc}"]
 
     if status != 200:
-        return [f"Home day marker: expected HTTP 200, got {status}"]
+        return [f"Home editorial marker: expected HTTP 200, got {status}"]
 
-    expected = f"DAY {latest_day} · FLEET 10/10"
-    stale_match = re.search(r"DAY \d+ · FLEET 10/10", body)
-    if expected not in body:
-        seen = f" (saw {stale_match.group(0)!r})" if stale_match else ""
-        return [f"Home day marker: expected {expected!r}{seen}"]
+    expected_markers = ("FRONTLINE REPORTS", "FLEET 13/13", "This front page now favors articles") + tuple(latest_slugs)
+    missing = [marker for marker in expected_markers if marker not in body]
+    if missing:
+        stale_match = re.search(r"DAY \d+ · FLEET \d+/\d+", body)
+        seen = f" (saw stale strip {stale_match.group(0)!r})" if stale_match else ""
+        return [f"Home editorial marker: missing marker(s): {', '.join(missing)}{seen}"]
 
-    print(f"ok Home day marker ({expected})")
+    print(f"ok Home editorial markers ({', '.join(latest_slugs)})")
     return []
 
 
@@ -586,9 +617,9 @@ def check_github_profile(base: str) -> list[str]:
     contents API is the stable source of truth for profile drift.
     """
     repo_root = Path(__file__).resolve().parents[1]
-    latest_day = latest_daily_log_day(repo_root)
-    if latest_day is None:
-        return ["GitHub profile: could not find latest daily-log day number in source posts"]
+    latest_slugs = latest_published_post_slugs(repo_root)
+    if not latest_slugs:
+        return ["GitHub profile: could not find latest dated source posts"]
 
     try:
         status, profile_html = fetch("https://github.com/ensignwesley")
@@ -617,7 +648,7 @@ def check_github_profile(base: str) -> list[str]:
     expected_markers = (
         "Junior Operations Officer",
         base.rstrip("/"),
-        f"wesleys-log-day-{latest_day}",
+        latest_slugs[0],
         "preflight",
         "Dead Drop",
         "DEAD//CHAT",
@@ -627,7 +658,7 @@ def check_github_profile(base: str) -> list[str]:
     if missing:
         return [f"GitHub profile README: missing marker(s): {', '.join(missing)}"]
 
-    print(f"ok GitHub profile README (Day {latest_day})")
+    print(f"ok GitHub profile README ({latest_slugs[0]})")
     return []
 
 

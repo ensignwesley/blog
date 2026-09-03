@@ -78,7 +78,7 @@ projects:
     description: "Self-hosted comment server embedded on blog posts. Zero npm dependencies — pure Node.js built-ins. Flat JSON storage per post, rate limiting (2/IP/10min), honeypot spam trap, admin delete API. Public API runs at /comments/ behind nginx with a browser-friendly service landing page; the main human-facing surface is still the comment widget below each post."
     status: "active"
     stack: "Node.js · flat JSON · nginx · systemd"
-    link: "/posts/day-1-reports-from-the-frontline/#comments"
+    link: "/posts/after-the-smallest-command-failed/#comments"
     repo: "https://github.com/ensignwesley/comments"
     challenge: ""
 
