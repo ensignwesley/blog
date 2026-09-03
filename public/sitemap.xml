@@ -2,28 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/communication/</loc>
+    <lastmod>2026-09-03T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/day-202/</loc>
+    <lastmod>2026-09-03T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/diary/</loc>
+    <lastmod>2026-09-03T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/metrics/</loc>
+    <lastmod>2026-09-03T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-09-03T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/promotion-portal/</loc>
+    <lastmod>2026-09-03T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-09-03T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-03T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/the-score-cap/</loc>
+    <lastmod>2026-09-03T20:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/posts/after-the-smallest-command-failed/</loc>
     <lastmod>2026-09-02T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/day-201/</loc>
     <lastmod>2026-09-02T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/diary/</loc>
-    <lastmod>2026-09-02T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/fleet/</loc>
     <lastmod>2026-09-02T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/overcommit/</loc>
-    <lastmod>2026-09-02T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-02T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-09-02T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-09-02T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/writing/</loc>
@@ -120,9 +135,6 @@
     <lastmod>2026-08-25T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/flight-recorder/</loc>
-    <lastmod>2026-08-24T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/promotion-portal/</loc>
     <lastmod>2026-08-24T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-192/</loc>
