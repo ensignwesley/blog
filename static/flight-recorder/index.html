@@ -62,13 +62,42 @@
       <h1>Flight Recorder</h1>
       <p class="subtitle">Reverse-chronological evidence trail from Preflight runs, smoke-style endpoint checks, and tracked repo commits. Static HTML. No database. No green lights without receipts.</p>
       <div class="meta-bar">
-        <span>Generated 2026-09-04 09:10 UTC</span>
-        <span>Latest record 2026-09-04 07:15 UTC</span>
+        <span>Generated 2026-09-04 11:16 UTC</span>
+        <span>Latest record 2026-09-04 11:15 UTC</span>
         <span>12 records shown</span>
       </div>
     </header>
 
     <main class="timeline" aria-label="Flight recorder timeline">
+
+      <article class="entry">
+        <div class="entry-top">
+          <div>
+            <time datetime="2026-09-04T11:15:33+00:00">2026-09-04 11:15 UTC</time>
+            <h2>13/13 checks passed</h2>
+          </div>
+          <span class="badge pass">PASS</span>
+        </div>
+        <p class="summary">Preflight verified 13 public surfaces and service endpoints. 0 probe(s) need attention.</p>
+        <div class="metrics">
+          <span>preflight 0.1.0</span>
+          <span>localhost</span>
+          <span>6–124 ms probe range</span>
+        </div>
+        <details open>
+          <summary>What changed</summary>
+          <ul><li><span class="repo">blog</span> <code>27754e7</code> — Tighten blog audit and fix status comments link <span class="muted">(2026-09-04 09:11 UTC)</span></li></ul>
+        </details>
+        <details>
+          <summary>What was verified</summary>
+          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments</p>
+          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
+        </details>
+        <details>
+          <summary>Failures</summary>
+          <ul><li class="muted">No failed probes recorded.</li></ul>
+        </details>
+      </article>
 
       <article class="entry">
         <div class="entry-top">
@@ -376,36 +405,7 @@
         </div>
         <details open>
           <summary>What changed</summary>
-          <ul><li><span class="repo">profile</span> <code>be5ef88</code> — Refresh recent posts <span class="muted">(2026-09-02 09:06 UTC)</span></li><li><span class="repo">blog</span> <code>76cdf25</code> — Fix homepage fleet masthead drift <span class="muted">(2026-09-02 09:06 UTC)</span></li></ul>
-        </details>
-        <details>
-          <summary>What was verified</summary>
-          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments</p>
-          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
-        </details>
-        <details>
-          <summary>Failures</summary>
-          <ul><li class="muted">No failed probes recorded.</li></ul>
-        </details>
-      </article>
-
-      <article class="entry">
-        <div class="entry-top">
-          <div>
-            <time datetime="2026-09-02T09:00:55+00:00">2026-09-02 09:00 UTC</time>
-            <h2>13/13 checks passed</h2>
-          </div>
-          <span class="badge pass">PASS</span>
-        </div>
-        <p class="summary">Preflight verified 13 public surfaces and service endpoints. 0 probe(s) need attention.</p>
-        <div class="metrics">
-          <span>preflight 0.1.0</span>
-          <span>localhost</span>
-          <span>6–34 ms probe range</span>
-        </div>
-        <details open>
-          <summary>What changed</summary>
-          <ul><li><span class="repo">blog</span> <code>30b137d</code> — Refresh status snapshot <span class="muted">(2026-09-02 07:15 UTC)</span></li><li><span class="repo">blog</span> <code>4568f54</code> — Publish the day the log format died <span class="muted">(2026-09-01 20:03 UTC)</span></li><li><span class="repo">blog</span> <code>c76f5f1</code> — Refresh status snapshot <span class="muted">(2026-09-01 19:16 UTC)</span></li><li><span class="repo">blog</span> <code>3325337</code> — Refresh status snapshot <span class="muted">(2026-09-01 15:16 UTC)</span></li><li><span class="repo">blog</span> <code>91f73b3</code> — Overhaul blog homepage editorial mix <span class="muted">(2026-09-01 15:14 UTC)</span></li><li><span class="repo">blog</span> <code>17924fb</code> — Refresh status snapshot <span class="muted">(2026-09-01 11:15 UTC)</span></li><li><span class="repo">blog</span> <code>7806e12</code> — Refresh fleet public artifacts <span class="muted">(2026-09-01 09:05 UTC)</span></li><li><span class="repo">profile</span> <code>fda0045</code> — Refresh recent posts <span class="muted">(2026-09-01 09:05 UTC)</span></li></ul>
+          <ul><li><span class="repo">profile</span> <code>be5ef88</code> — Refresh recent posts <span class="muted">(2026-09-02 09:06 UTC)</span></li><li><span class="repo">blog</span> <code>76cdf25</code> — Fix homepage fleet masthead drift <span class="muted">(2026-09-02 09:06 UTC)</span></li><li><span class="repo">blog</span> <code>30b137d</code> — Refresh status snapshot <span class="muted">(2026-09-02 07:15 UTC)</span></li><li><span class="repo">blog</span> <code>4568f54</code> — Publish the day the log format died <span class="muted">(2026-09-01 20:03 UTC)</span></li><li><span class="repo">blog</span> <code>c76f5f1</code> — Refresh status snapshot <span class="muted">(2026-09-01 19:16 UTC)</span></li><li><span class="repo">blog</span> <code>3325337</code> — Refresh status snapshot <span class="muted">(2026-09-01 15:16 UTC)</span></li><li><span class="repo">blog</span> <code>91f73b3</code> — Overhaul blog homepage editorial mix <span class="muted">(2026-09-01 15:14 UTC)</span></li><li><span class="repo">blog</span> <code>17924fb</code> — Refresh status snapshot <span class="muted">(2026-09-01 11:15 UTC)</span></li></ul>
         </details>
         <details>
           <summary>What was verified</summary>

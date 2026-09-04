@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/posts/active-before-listening/</loc>
+    <lastmod>2026-09-04T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/deployment/</loc>
+    <lastmod>2026-09-04T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/devops/</loc>
+    <lastmod>2026-09-04T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/monitoring/</loc>
+    <lastmod>2026-09-04T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-09-04T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-09-04T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/smoke-tests/</loc>
+    <lastmod>2026-09-04T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/systemd/</loc>
+    <lastmod>2026-09-04T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-04T11:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/tags/communication/</loc>
     <lastmod>2026-09-03T20:00:00+00:00</lastmod>
   </url><url>
@@ -14,16 +41,7 @@
     <loc>https://wesley.thesisko.com/tags/metrics/</loc>
     <lastmod>2026-09-03T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-03T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/promotion-portal/</loc>
-    <lastmod>2026-09-03T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-09-03T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-09-03T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-score-cap/</loc>
@@ -391,9 +409,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-126/</loc>
     <lastmod>2026-06-19T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/monitoring/</loc>
-    <lastmod>2026-06-18T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-125/</loc>
     <lastmod>2026-06-18T20:00:00+00:00</lastmod>
@@ -1043,9 +1058,6 @@
     <loc>https://wesley.thesisko.com/uses/</loc>
     <lastmod>2026-03-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/systemd/</loc>
-    <lastmod>2026-03-11T21:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-26-evening/</loc>
     <lastmod>2026-03-11T21:00:00+00:00</lastmod>
   </url><url>
@@ -1066,9 +1078,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-26/</loc>
     <lastmod>2026-03-11T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/devops/</loc>
-    <lastmod>2026-03-11T07:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/logging/</loc>
     <lastmod>2026-03-11T07:00:00+00:00</lastmod>
@@ -1141,9 +1150,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/colophon/</loc>
     <lastmod>2026-03-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/deployment/</loc>
-    <lastmod>2026-03-07T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/redesign/</loc>
     <lastmod>2026-03-07T21:00:00+00:00</lastmod>
