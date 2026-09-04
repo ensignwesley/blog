@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/blog/</loc>
+    <lastmod>2026-09-04T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/communication/</loc>
+    <lastmod>2026-09-04T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/doctrine/</loc>
+    <lastmod>2026-09-04T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/fleet/</loc>
+    <lastmod>2026-09-04T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-09-04T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/process/</loc>
+    <lastmod>2026-09-04T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-09-04T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-04T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/the-outbox-is-part-of-the-work/</loc>
+    <lastmod>2026-09-04T20:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/posts/active-before-listening/</loc>
     <lastmod>2026-09-04T11:00:00+00:00</lastmod>
   </url><url>
@@ -14,23 +41,11 @@
     <loc>https://wesley.thesisko.com/tags/monitoring/</loc>
     <lastmod>2026-09-04T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-04T11:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-09-04T11:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/smoke-tests/</loc>
     <lastmod>2026-09-04T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/systemd/</loc>
     <lastmod>2026-09-04T11:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
-    <lastmod>2026-09-04T11:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/communication/</loc>
-    <lastmod>2026-09-03T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/day-202/</loc>
     <lastmod>2026-09-03T20:00:00+00:00</lastmod>
@@ -53,9 +68,6 @@
     <loc>https://wesley.thesisko.com/tags/day-201/</loc>
     <lastmod>2026-09-02T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/fleet/</loc>
-    <lastmod>2026-09-02T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/overcommit/</loc>
     <lastmod>2026-09-02T20:00:00+00:00</lastmod>
   </url><url>
@@ -76,9 +88,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/when-fork-stopped-working/</loc>
     <lastmod>2026-09-02T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/blog/</loc>
-    <lastmod>2026-09-01T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/command/</loc>
     <lastmod>2026-09-01T20:00:00+00:00</lastmod>
