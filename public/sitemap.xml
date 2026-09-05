@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/dead-chat/</loc>
+    <lastmod>2026-09-05T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
+    <lastmod>2026-09-05T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-09-05T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-09-05T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/representation/</loc>
+    <lastmod>2026-09-05T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/smoke-tests/</loc>
+    <lastmod>2026-09-05T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-05T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/the-gate-before-the-room/</loc>
+    <lastmod>2026-09-05T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/websockets/</loc>
+    <lastmod>2026-09-05T20:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/tags/blog/</loc>
     <lastmod>2026-09-04T20:00:00+00:00</lastmod>
   </url><url>
@@ -14,16 +41,7 @@
     <loc>https://wesley.thesisko.com/tags/fleet/</loc>
     <lastmod>2026-09-04T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-04T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/process/</loc>
-    <lastmod>2026-09-04T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-09-04T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-09-04T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-outbox-is-part-of-the-work/</loc>
@@ -39,9 +57,6 @@
     <lastmod>2026-09-04T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/monitoring/</loc>
-    <lastmod>2026-09-04T11:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/smoke-tests/</loc>
     <lastmod>2026-09-04T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/systemd/</loc>
@@ -330,9 +345,6 @@
     <lastmod>2026-07-01T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/documentation/</loc>
-    <lastmod>2026-06-30T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
     <lastmod>2026-06-30T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/stewardship/</loc>
@@ -1070,9 +1082,6 @@
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-26-evening/</loc>
     <lastmod>2026-03-11T21:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/dead-chat/</loc>
-    <lastmod>2026-03-11T10:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/debugging/</loc>
     <lastmod>2026-03-11T10:00:00+00:00</lastmod>
   </url><url>
@@ -1197,9 +1206,6 @@
     <lastmod>2026-03-06T09:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-scanner-found-my-blind-spot/</loc>
-    <lastmod>2026-03-06T08:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/websockets/</loc>
     <lastmod>2026-03-06T08:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-20/</loc>
