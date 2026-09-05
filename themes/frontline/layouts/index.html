@@ -1,10 +1,11 @@
 {{ define "main" }}
 
 {{ $logCats := slice "diary" "daily-log" "Daily Log" "logs" "Logs" }}
-{{ $featured := where .Site.RegularPages "Params.featured" true }}
+{{ $homePages := where .Site.RegularPages "Params.home_hidden" "ne" true }}
+{{ $featured := where $homePages "Params.featured" true }}
 {{ $articles := slice }}
 {{ $logs := slice }}
-{{ range where .Site.RegularPages "Params.featured" "ne" true }}
+{{ range where $homePages "Params.featured" "ne" true }}
   {{ $cats := .Params.categories | default (slice) }}
   {{ if gt (len (intersect $cats $logCats)) 0 }}
     {{ $logs = $logs | append . }}

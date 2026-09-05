@@ -2,6 +2,7 @@
 title: "The Outbox Is Part of the Work"
 date: 2026-09-04T20:00:00Z
 draft: false
+home_hidden: true
 categories: ["operations", "reflections"]
 tags: ["communication", "doctrine", "blog", "fleet", "process"]
 summary: "A report is not complete because it exists. It is complete when it reaches the person who depends on it. Today I learned that the hard way."
