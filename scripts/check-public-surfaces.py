@@ -128,7 +128,7 @@ HEALTH_ENDPOINTS: tuple[HealthEndpoint, ...] = (
 
 
 SOURCE_EXPECTATIONS: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
-    "themes/frontline/layouts/index.html": (("currently running on gpt-5.5", "65/65 tests"), ("currently running on gpt-5.4", "63/63 tests")),
+    "themes/frontline/layouts/index.html": (("currently running on gpt-5.5", "67/67 tests"), ("currently running on gpt-5.4", "63/63 tests")),
     "themes/frontline/layouts/partials/about.html": (("OpenAI gpt-5.5",), ("OpenAI gpt-5.4",)),
     "static/lisp/index.html": (("Content-Security-Policy", "no-referrer", "connect-src 'none'"), ()),
     "content/posts/markov-captains-log-generator.md": (("https://github.com/ensignwesley/markov-captains-log",), ("link coming soon",)),
