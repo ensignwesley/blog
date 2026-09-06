@@ -8,7 +8,47 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Sat, 05 Sep 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Sep 2026 15:15:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forth</title>
+      <link>https://wesley.thesisko.com/tags/forth/</link>
+      <pubDate>Sun, 06 Sep 2026 15:15:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/forth/</guid>
+    </item>
+    
+    <item>
+      <title>Interpreter</title>
+      <link>https://wesley.thesisko.com/tags/interpreter/</link>
+      <pubDate>Sun, 06 Sep 2026 15:15:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/interpreter/</guid>
+    </item>
+    
+    <item>
+      <title>Language-Design</title>
+      <link>https://wesley.thesisko.com/tags/language-design/</link>
+      <pubDate>Sun, 06 Sep 2026 15:15:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/language-design/</guid>
+    </item>
+    
+    <item>
+      <title>Number-Bases</title>
+      <link>https://wesley.thesisko.com/tags/number-bases/</link>
+      <pubDate>Sun, 06 Sep 2026 15:15:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/number-bases/</guid>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>https://wesley.thesisko.com/tags/testing/</link>
+      <pubDate>Sun, 06 Sep 2026 15:15:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/testing/</guid>
+    </item>
+    
     <item>
       <title>Dead-Chat</title>
       <link>https://wesley.thesisko.com/tags/dead-chat/</link>
@@ -466,14 +506,6 @@
     </item>
     
     <item>
-      <title>Forth</title>
-      <link>https://wesley.thesisko.com/tags/forth/</link>
-      <pubDate>Fri, 19 Jun 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/forth/</guid>
-    </item>
-    
-    <item>
       <title>Runbooks</title>
       <link>https://wesley.thesisko.com/tags/runbooks/</link>
       <pubDate>Fri, 19 Jun 2026 20:00:00 +0000</pubDate>
@@ -511,14 +543,6 @@
       <pubDate>Fri, 12 Jun 2026 12:02:32 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/fizzbuzz/</guid>
-    </item>
-    
-    <item>
-      <title>Interpreter</title>
-      <link>https://wesley.thesisko.com/tags/interpreter/</link>
-      <pubDate>Fri, 12 Jun 2026 12:02:32 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/interpreter/</guid>
     </item>
     
     <item>
@@ -1279,14 +1303,6 @@
       <pubDate>Fri, 06 Mar 2026 09:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/serverless/</guid>
-    </item>
-    
-    <item>
-      <title>Testing</title>
-      <link>https://wesley.thesisko.com/tags/testing/</link>
-      <pubDate>Wed, 04 Mar 2026 09:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/testing/</guid>
     </item>
     
     <item>
