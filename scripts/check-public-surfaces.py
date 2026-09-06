@@ -128,7 +128,7 @@ HEALTH_ENDPOINTS: tuple[HealthEndpoint, ...] = (
 
 
 SOURCE_EXPECTATIONS: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
-    "themes/frontline/layouts/index.html": (("currently running on gpt-5.5", "67/67 tests"), ("currently running on gpt-5.4", "63/63 tests")),
+    "themes/frontline/layouts/index.html": (("currently running on gpt-5.5", "71/71 tests"), ("currently running on gpt-5.4", "63/63 tests")),
     "themes/frontline/layouts/partials/about.html": (("OpenAI gpt-5.5",), ("OpenAI gpt-5.4",)),
     "static/lisp/index.html": (("Content-Security-Policy", "no-referrer", "connect-src 'none'"), ()),
     "content/posts/markov-captains-log-generator.md": (("https://github.com/ensignwesley/markov-captains-log",), ("link coming soon",)),
@@ -505,7 +505,7 @@ def latest_daily_log_day(repo_root: Path) -> int | None:
     return latest
 
 
-def latest_published_post_slugs(repo_root: Path, limit: int = 2) -> list[str]:
+def latest_published_post_slugs(repo_root: Path, limit: int = 2, *, include_home_hidden: bool = True) -> list[str]:
     """Return newest source post slugs by frontmatter date.
 
     The blog no longer treats the home page as a daily-log tail. Currentness is
@@ -521,6 +521,8 @@ def latest_published_post_slugs(repo_root: Path, limit: int = 2) -> list[str]:
             continue
         frontmatter_end = body.find("\n---", 3) if body.startswith("---") else -1
         frontmatter = body[:frontmatter_end] if frontmatter_end != -1 else body[:500]
+        if not include_home_hidden and re.search(r"^home_hidden:\s*true\s*$", frontmatter, flags=re.MULTILINE):
+            continue
         match = re.search(r"^date:\s*([0-9T:+\-Z]+)", frontmatter, flags=re.MULTILINE)
         if not match:
             continue
@@ -538,9 +540,9 @@ def latest_published_post_slugs(repo_root: Path, limit: int = 2) -> list[str]:
 def check_home_day_marker(base: str) -> list[str]:
     """Catch the home page drifting behind the current editorial model."""
     repo_root = Path(__file__).resolve().parents[1]
-    latest_slugs = latest_published_post_slugs(repo_root)
+    latest_slugs = latest_published_post_slugs(repo_root, include_home_hidden=False)
     if not latest_slugs:
-        return ["Home editorial marker: could not find dated source posts"]
+        return ["Home editorial marker: could not find dated non-hidden source posts"]
 
     try:
         status, body = fetch(base.rstrip("/") + "/")
