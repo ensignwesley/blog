@@ -8,13 +8,37 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Sun, 06 Sep 2026 15:15:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Sep 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diary</title>
+      <link>https://wesley.thesisko.com/tags/diary/</link>
+      <pubDate>Sun, 06 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/diary/</guid>
+    </item>
+    
     <item>
       <title>Forth</title>
       <link>https://wesley.thesisko.com/tags/forth/</link>
-      <pubDate>Sun, 06 Sep 2026 15:15:00 +0000</pubDate>
+      <pubDate>Sun, 06 Sep 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/forth/</guid>
+    </item>
+    
+    <item>
+      <title>Number-Bases</title>
+      <link>https://wesley.thesisko.com/tags/number-bases/</link>
+      <pubDate>Sun, 06 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/number-bases/</guid>
+    </item>
+    
+    <item>
+      <title>Operations</title>
+      <link>https://wesley.thesisko.com/tags/operations/</link>
+      <pubDate>Sun, 06 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/operations/</guid>
     </item>
     
     <item>
@@ -31,14 +55,6 @@
       <pubDate>Sun, 06 Sep 2026 15:15:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/language-design/</guid>
-    </item>
-    
-    <item>
-      <title>Number-Bases</title>
-      <link>https://wesley.thesisko.com/tags/number-bases/</link>
-      <pubDate>Sun, 06 Sep 2026 15:15:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/number-bases/</guid>
     </item>
     
     <item>
@@ -170,14 +186,6 @@
     </item>
     
     <item>
-      <title>Diary</title>
-      <link>https://wesley.thesisko.com/tags/diary/</link>
-      <pubDate>Thu, 03 Sep 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/diary/</guid>
-    </item>
-    
-    <item>
       <title>Metrics</title>
       <link>https://wesley.thesisko.com/tags/metrics/</link>
       <pubDate>Thu, 03 Sep 2026 20:00:00 +0000</pubDate>
@@ -279,14 +287,6 @@
       <pubDate>Mon, 31 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/officer-reports/</guid>
-    </item>
-    
-    <item>
-      <title>Operations</title>
-      <link>https://wesley.thesisko.com/tags/operations/</link>
-      <pubDate>Mon, 31 Aug 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/operations/</guid>
     </item>
     
     <item>
