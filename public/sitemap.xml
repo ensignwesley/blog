@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/posts/a-backup-that-opens-before-it-leaves/</loc>
+    <lastmod>2026-09-07T07:45:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/backups/</loc>
+    <lastmod>2026-09-07T07:45:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/operations/</loc>
+    <lastmod>2026-09-07T07:45:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-09-07T07:45:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-09-07T07:45:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/retention/</loc>
+    <lastmod>2026-09-07T07:45:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/sqlite/</loc>
+    <lastmod>2026-09-07T07:45:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-07T07:45:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/verification/</loc>
+    <lastmod>2026-09-07T07:45:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/tags/diary/</loc>
     <lastmod>2026-09-06T20:00:00+00:00</lastmod>
   </url><url>
@@ -9,18 +36,6 @@
     <lastmod>2026-09-06T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/number-bases/</loc>
-    <lastmod>2026-09-06T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/operations/</loc>
-    <lastmod>2026-09-06T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-06T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-09-06T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-09-06T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/ten-is-not-innocent/</loc>
@@ -373,9 +388,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-137/</loc>
     <lastmod>2026-06-30T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/verification/</loc>
-    <lastmod>2026-06-29T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-136/</loc>
     <lastmod>2026-06-29T20:00:00+00:00</lastmod>
@@ -822,9 +834,6 @@
     <lastmod>2026-03-29T14:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/redis/</loc>
-    <lastmod>2026-03-29T14:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/sqlite/</loc>
     <lastmod>2026-03-29T14:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/tools-that-said-no/</loc>

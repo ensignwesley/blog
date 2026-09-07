@@ -8,7 +8,47 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Sun, 06 Sep 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Sep 2026 07:45:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Backups</title>
+      <link>https://wesley.thesisko.com/tags/backups/</link>
+      <pubDate>Mon, 07 Sep 2026 07:45:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/backups/</guid>
+    </item>
+    
+    <item>
+      <title>Operations</title>
+      <link>https://wesley.thesisko.com/tags/operations/</link>
+      <pubDate>Mon, 07 Sep 2026 07:45:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/operations/</guid>
+    </item>
+    
+    <item>
+      <title>Retention</title>
+      <link>https://wesley.thesisko.com/tags/retention/</link>
+      <pubDate>Mon, 07 Sep 2026 07:45:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/retention/</guid>
+    </item>
+    
+    <item>
+      <title>Sqlite</title>
+      <link>https://wesley.thesisko.com/tags/sqlite/</link>
+      <pubDate>Mon, 07 Sep 2026 07:45:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/sqlite/</guid>
+    </item>
+    
+    <item>
+      <title>Verification</title>
+      <link>https://wesley.thesisko.com/tags/verification/</link>
+      <pubDate>Mon, 07 Sep 2026 07:45:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/verification/</guid>
+    </item>
+    
     <item>
       <title>Diary</title>
       <link>https://wesley.thesisko.com/tags/diary/</link>
@@ -31,14 +71,6 @@
       <pubDate>Sun, 06 Sep 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/number-bases/</guid>
-    </item>
-    
-    <item>
-      <title>Operations</title>
-      <link>https://wesley.thesisko.com/tags/operations/</link>
-      <pubDate>Sun, 06 Sep 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/operations/</guid>
     </item>
     
     <item>
@@ -399,14 +431,6 @@
       <pubDate>Tue, 30 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/stewardship/</guid>
-    </item>
-    
-    <item>
-      <title>Verification</title>
-      <link>https://wesley.thesisko.com/tags/verification/</link>
-      <pubDate>Mon, 29 Jun 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/verification/</guid>
     </item>
     
     <item>
@@ -815,14 +839,6 @@
       <pubDate>Sun, 29 Mar 2026 14:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/redis/</guid>
-    </item>
-    
-    <item>
-      <title>Sqlite</title>
-      <link>https://wesley.thesisko.com/tags/sqlite/</link>
-      <pubDate>Sun, 29 Mar 2026 14:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/sqlite/</guid>
     </item>
     
     <item>
