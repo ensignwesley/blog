@@ -2,19 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/backups/</loc>
+    <lastmod>2026-09-07T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/diary/</loc>
+    <lastmod>2026-09-07T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/observatory/</loc>
+    <lastmod>2026-09-07T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-09-07T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-09-07T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/restore-drill/</loc>
+    <lastmod>2026-09-07T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-07T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/the-archive-answered-back/</loc>
+    <lastmod>2026-09-07T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/verification/</loc>
+    <lastmod>2026-09-07T20:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/posts/a-backup-that-opens-before-it-leaves/</loc>
     <lastmod>2026-09-07T07:45:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/backups/</loc>
-    <lastmod>2026-09-07T07:45:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/operations/</loc>
-    <lastmod>2026-09-07T07:45:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-07T07:45:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
     <lastmod>2026-09-07T07:45:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/retention/</loc>
@@ -22,15 +40,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/tags/sqlite/</loc>
     <lastmod>2026-09-07T07:45:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
-    <lastmod>2026-09-07T07:45:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/verification/</loc>
-    <lastmod>2026-09-07T07:45:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/diary/</loc>
-    <lastmod>2026-09-06T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/forth/</loc>
     <lastmod>2026-09-06T20:00:00+00:00</lastmod>
@@ -447,9 +456,6 @@
     <lastmod>2026-06-21T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/observability/</loc>
-    <lastmod>2026-06-20T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/observatory/</loc>
     <lastmod>2026-06-20T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-127/</loc>
