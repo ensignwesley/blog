@@ -2,19 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/dead-drop/</loc>
+    <lastmod>2026-09-09T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/diary/</loc>
+    <lastmod>2026-09-09T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/headers/</loc>
+    <lastmod>2026-09-09T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/operations/</loc>
+    <lastmod>2026-09-09T20:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-08T20:00:00+00:00</lastmod>
+    <lastmod>2026-09-09T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-09-08T20:00:00+00:00</lastmod>
+    <lastmod>2026-09-09T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-09T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/wesleys-log-day-208/</loc>
+    <lastmod>2026-09-09T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/verification/</loc>
+    <lastmod>2026-09-09T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-missing-probe/</loc>
     <lastmod>2026-09-08T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/backups/</loc>
-    <lastmod>2026-09-07T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/diary/</loc>
     <lastmod>2026-09-07T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/observatory/</loc>
@@ -23,19 +41,10 @@
     <loc>https://wesley.thesisko.com/tags/restore-drill/</loc>
     <lastmod>2026-09-07T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
-    <lastmod>2026-09-07T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/posts/the-archive-answered-back/</loc>
     <lastmod>2026-09-07T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/verification/</loc>
-    <lastmod>2026-09-07T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/posts/a-backup-that-opens-before-it-leaves/</loc>
-    <lastmod>2026-09-07T07:45:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/operations/</loc>
     <lastmod>2026-09-07T07:45:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/retention/</loc>
@@ -490,9 +499,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-120/</loc>
     <lastmod>2026-06-13T06:37:37+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/dead-drop/</loc>
-    <lastmod>2026-06-12T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-119/</loc>
     <lastmod>2026-06-12T20:00:00+00:00</lastmod>
