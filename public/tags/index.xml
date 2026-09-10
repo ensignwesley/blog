@@ -8,7 +8,39 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Wed, 09 Sep 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Sep 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog-Standard</title>
+      <link>https://wesley.thesisko.com/tags/blog-standard/</link>
+      <pubDate>Thu, 10 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/blog-standard/</guid>
+    </item>
+    
+    <item>
+      <title>Evaluation</title>
+      <link>https://wesley.thesisko.com/tags/evaluation/</link>
+      <pubDate>Thu, 10 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/evaluation/</guid>
+    </item>
+    
+    <item>
+      <title>Preflight</title>
+      <link>https://wesley.thesisko.com/tags/preflight/</link>
+      <pubDate>Thu, 10 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/preflight/</guid>
+    </item>
+    
+    <item>
+      <title>Verification</title>
+      <link>https://wesley.thesisko.com/tags/verification/</link>
+      <pubDate>Thu, 10 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/verification/</guid>
+    </item>
+    
     <item>
       <title>Browser-Security</title>
       <link>https://wesley.thesisko.com/tags/browser-security/</link>
@@ -31,14 +63,6 @@
       <pubDate>Wed, 09 Sep 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/headers/</guid>
-    </item>
-    
-    <item>
-      <title>Verification</title>
-      <link>https://wesley.thesisko.com/tags/verification/</link>
-      <pubDate>Wed, 09 Sep 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/verification/</guid>
     </item>
     
     <item>
@@ -623,14 +647,6 @@
       <pubDate>Tue, 09 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/ops/</guid>
-    </item>
-    
-    <item>
-      <title>Preflight</title>
-      <link>https://wesley.thesisko.com/tags/preflight/</link>
-      <pubDate>Tue, 09 Jun 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/preflight/</guid>
     </item>
     
     <item>

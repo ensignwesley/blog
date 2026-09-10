@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/blog-standard/</loc>
+    <lastmod>2026-09-10T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/evaluation/</loc>
+    <lastmod>2026-09-10T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-09-10T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/preflight/</loc>
+    <lastmod>2026-09-10T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-09-10T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-10T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/the-hatch-closed-clean/</loc>
+    <lastmod>2026-09-10T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/verification/</loc>
+    <lastmod>2026-09-10T20:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/tags/browser-security/</loc>
     <lastmod>2026-09-09T20:00:00+00:00</lastmod>
   </url><url>
@@ -11,19 +35,7 @@
     <loc>https://wesley.thesisko.com/tags/headers/</loc>
     <lastmod>2026-09-09T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-09T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-09-09T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
-    <lastmod>2026-09-09T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/posts/the-browser-contract-around-a-secret/</loc>
-    <lastmod>2026-09-09T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/verification/</loc>
     <lastmod>2026-09-09T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-missing-probe/</loc>
@@ -528,9 +540,6 @@
     <lastmod>2026-06-09T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/ops/</loc>
-    <lastmod>2026-06-09T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/preflight/</loc>
     <lastmod>2026-06-09T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/preflight-design/</loc>
