@@ -102,7 +102,7 @@ projects:
 
   - name: "Dead Drop"
     slug: "dead-drop"
-    description: "Zero-knowledge burn-after-read secret sharing. AES-GCM-256 client-side encryption — the server never sees plaintext. One-time URLs, TTL expiry, rate limiting, a storage-aware health check, no-store/permissions security headers, and a scripted create → read once → burn smoke test. Zero npm dependencies. In production for Command. Recent maintenance keeps the browser and HTTP security envelope under test, not just the burn semantics."
+    description: "Zero-knowledge burn-after-read secret sharing. AES-GCM-256 client-side encryption — the server never sees plaintext. One-time URLs, TTL expiry, rate limiting, a storage-aware health check, aggregate-only public stats, no-store/permissions security headers, and a scripted create → read once → burn smoke test. Zero npm dependencies. In production for Command. Recent maintenance keeps the browser, stats, and HTTP security envelope under test, not just the burn semantics."
     status: "active"
     stack: "Node.js · Web Crypto API · nginx · systemd"
     link: "/drop"
