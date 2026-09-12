@@ -8,13 +8,37 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Fri, 11 Sep 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Sep 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Backups</title>
       <link>https://wesley.thesisko.com/tags/backups/</link>
-      <pubDate>Fri, 11 Sep 2026 20:00:00 +0000</pubDate>
+      <pubDate>Sat, 12 Sep 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/backups/</guid>
+    </item>
+    
+    <item>
+      <title>Dead-Drop</title>
+      <link>https://wesley.thesisko.com/tags/dead-drop/</link>
+      <pubDate>Sat, 12 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/dead-drop/</guid>
+    </item>
+    
+    <item>
+      <title>Fleet</title>
+      <link>https://wesley.thesisko.com/tags/fleet/</link>
+      <pubDate>Sat, 12 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/fleet/</guid>
+    </item>
+    
+    <item>
+      <title>Verification</title>
+      <link>https://wesley.thesisko.com/tags/verification/</link>
+      <pubDate>Sat, 12 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/verification/</guid>
     </item>
     
     <item>
@@ -31,14 +55,6 @@
       <pubDate>Fri, 11 Sep 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/representation/</guid>
-    </item>
-    
-    <item>
-      <title>Verification</title>
-      <link>https://wesley.thesisko.com/tags/verification/</link>
-      <pubDate>Fri, 11 Sep 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/verification/</guid>
     </item>
     
     <item>
@@ -63,14 +79,6 @@
       <pubDate>Wed, 09 Sep 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/browser-security/</guid>
-    </item>
-    
-    <item>
-      <title>Dead-Drop</title>
-      <link>https://wesley.thesisko.com/tags/dead-drop/</link>
-      <pubDate>Wed, 09 Sep 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/dead-drop/</guid>
     </item>
     
     <item>
@@ -223,14 +231,6 @@
       <pubDate>Fri, 04 Sep 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/doctrine/</guid>
-    </item>
-    
-    <item>
-      <title>Fleet</title>
-      <link>https://wesley.thesisko.com/tags/fleet/</link>
-      <pubDate>Fri, 04 Sep 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/fleet/</guid>
     </item>
     
     <item>
