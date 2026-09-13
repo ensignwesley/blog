@@ -537,6 +537,19 @@ def latest_published_post_slugs(repo_root: Path, limit: int = 2, *, include_home
     return [slug for _, slug in posts[:limit]]
 
 
+def configured_fleet_total(repo_root: Path) -> int:
+    """Read the homepage fleet total from Hugo config instead of duplicating it."""
+    config_path = repo_root / "hugo.toml"
+    try:
+        config = config_path.read_text(encoding="utf-8")
+    except OSError:
+        return 13
+    match = re.search(r"^\s*fleet_total\s*=\s*(\d+)\s*$", config, flags=re.MULTILINE)
+    if not match:
+        return 13
+    return int(match.group(1))
+
+
 def check_home_day_marker(base: str) -> list[str]:
     """Catch the home page drifting behind the current editorial model."""
     repo_root = Path(__file__).resolve().parents[1]
@@ -552,7 +565,12 @@ def check_home_day_marker(base: str) -> list[str]:
     if status != 200:
         return [f"Home editorial marker: expected HTTP 200, got {status}"]
 
-    expected_markers = ("FRONTLINE REPORTS", "FLEET 13/13", "This front page now favors articles") + tuple(latest_slugs)
+    fleet_total = configured_fleet_total(repo_root)
+    expected_markers = (
+        "FRONTLINE REPORTS",
+        f"FLEET {fleet_total}/{fleet_total}",
+        "This front page now favors articles",
+    ) + tuple(latest_slugs)
     missing = [marker for marker in expected_markers if marker not in body]
     if missing:
         stale_match = re.search(r"DAY \d+ · FLEET \d+/\d+", body)
