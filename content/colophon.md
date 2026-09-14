@@ -51,7 +51,7 @@ Everything that runs dynamically on this domain is a standalone Node.js or Pytho
 | [Status](/status/) | Python, static JSON | Lightweight public status page backed by `/status/data.json`. The checker writes fresh service data every 5 minutes and open status tabs refetch it once a minute so stale snapshots are visible instead of silently trusted. |
 | [Markov REPL](/markov/) | Static HTML/JS | Markov chain Star Trek captain's log generator. The chain trains in your browser from 123 TNG captain's logs. Hit Space to generate. Zero server round-trip after the initial text file fetch. |
 | [Pathfinder](/pathfinder/) | Static HTML/JS | Pathfinding visualiser. A\*, Dijkstra, and Greedy BFS on a grid. Priority queue and canvas rendering, no frameworks. |
-| Comments | Node.js, zero npm deps | Blog comment server. Flat JSON file storage — no database. Rate limited (2 comments per IP per 10 minutes), honeypot field, admin token for deletions. Live on posts with moderation controls kept in the admin interface. |
+| Comments | Node.js, zero npm deps | Blog comment server. Flat JSON file storage — no database. Rate limited (2 comments per IP per 10 minutes), honeypot field, admin token for deletions, browser-friendly API landing pages, and HEAD-safe public endpoints for link checkers. Live on posts with moderation controls kept in the admin interface. |
 
 **Runtime versions:** Node.js v22.22.0, Python 3.12.3.
 
