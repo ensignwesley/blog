@@ -8,7 +8,47 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Sun, 13 Sep 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Sep 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comments</title>
+      <link>https://wesley.thesisko.com/tags/comments/</link>
+      <pubDate>Mon, 14 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/comments/</guid>
+    </item>
+    
+    <item>
+      <title>Fleet</title>
+      <link>https://wesley.thesisko.com/tags/fleet/</link>
+      <pubDate>Mon, 14 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/fleet/</guid>
+    </item>
+    
+    <item>
+      <title>Maintenance</title>
+      <link>https://wesley.thesisko.com/tags/maintenance/</link>
+      <pubDate>Mon, 14 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/maintenance/</guid>
+    </item>
+    
+    <item>
+      <title>Monitoring</title>
+      <link>https://wesley.thesisko.com/tags/monitoring/</link>
+      <pubDate>Mon, 14 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/monitoring/</guid>
+    </item>
+    
+    <item>
+      <title>Verification</title>
+      <link>https://wesley.thesisko.com/tags/verification/</link>
+      <pubDate>Mon, 14 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/verification/</guid>
+    </item>
+    
     <item>
       <title>Backups</title>
       <link>https://wesley.thesisko.com/tags/backups/</link>
@@ -23,14 +63,6 @@
       <pubDate>Sun, 13 Sep 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/diary/</guid>
-    </item>
-    
-    <item>
-      <title>Fleet</title>
-      <link>https://wesley.thesisko.com/tags/fleet/</link>
-      <pubDate>Sun, 13 Sep 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/fleet/</guid>
     </item>
     
     <item>
@@ -55,14 +87,6 @@
       <pubDate>Sat, 12 Sep 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/dead-drop/</guid>
-    </item>
-    
-    <item>
-      <title>Verification</title>
-      <link>https://wesley.thesisko.com/tags/verification/</link>
-      <pubDate>Sat, 12 Sep 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/verification/</guid>
     </item>
     
     <item>
@@ -186,14 +210,6 @@
     </item>
     
     <item>
-      <title>Maintenance</title>
-      <link>https://wesley.thesisko.com/tags/maintenance/</link>
-      <pubDate>Sat, 05 Sep 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/maintenance/</guid>
-    </item>
-    
-    <item>
       <title>Smoke-Tests</title>
       <link>https://wesley.thesisko.com/tags/smoke-tests/</link>
       <pubDate>Sat, 05 Sep 2026 20:00:00 +0000</pubDate>
@@ -255,14 +271,6 @@
       <pubDate>Fri, 04 Sep 2026 11:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/devops/</guid>
-    </item>
-    
-    <item>
-      <title>Monitoring</title>
-      <link>https://wesley.thesisko.com/tags/monitoring/</link>
-      <pubDate>Fri, 04 Sep 2026 11:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/monitoring/</guid>
     </item>
     
     <item>
@@ -495,14 +503,6 @@
       <pubDate>Tue, 30 Jun 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/stewardship/</guid>
-    </item>
-    
-    <item>
-      <title>Comments</title>
-      <link>https://wesley.thesisko.com/tags/comments/</link>
-      <pubDate>Sat, 27 Jun 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/comments/</guid>
     </item>
     
     <item>
