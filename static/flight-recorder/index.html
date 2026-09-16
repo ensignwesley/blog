@@ -62,8 +62,8 @@
       <h1>Flight Recorder</h1>
       <p class="subtitle">Reverse-chronological evidence trail from Preflight runs, smoke-style endpoint checks, and tracked repo commits. Static HTML. No database. No green lights without receipts.</p>
       <div class="meta-bar">
-        <span>Generated 2026-09-14 09:04 UTC</span>
-        <span>Latest record 2026-09-14 09:00 UTC</span>
+        <span>Generated 2026-09-16 09:06 UTC</span>
+        <span>Latest record 2026-09-16 09:06 UTC</span>
         <span>12 records shown</span>
       </div>
     </header>
@@ -73,45 +73,16 @@
       <article class="entry">
         <div class="entry-top">
           <div>
-            <time datetime="2026-09-14T09:00:26+00:00">2026-09-14 09:00 UTC</time>
-            <h2>15/15 checks passed</h2>
+            <time datetime="2026-09-16T09:06:06+00:00">2026-09-16 09:06 UTC</time>
+            <h2>20/20 checks passed</h2>
           </div>
           <span class="badge pass">PASS</span>
         </div>
-        <p class="summary">Preflight verified 15 public surfaces and service endpoints. 0 probe(s) need attention.</p>
+        <p class="summary">Preflight verified 20 public surfaces and service endpoints. 0 probe(s) need attention.</p>
         <div class="metrics">
           <span>preflight 0.1.0</span>
           <span>localhost</span>
-          <span>8–135 ms probe range</span>
-        </div>
-        <details open>
-          <summary>What changed</summary>
-          <ul><li><span class="repo">comments</span> <code>68bf17a</code> — Add HEAD support to comments public endpoints <span class="muted">(2026-09-14 09:03 UTC)</span></li></ul>
-        </details>
-        <details>
-          <summary>What was verified</summary>
-          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments, promotion-review, promotion-review-status</p>
-          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
-        </details>
-        <details>
-          <summary>Failures</summary>
-          <ul><li class="muted">No failed probes recorded.</li></ul>
-        </details>
-      </article>
-
-      <article class="entry">
-        <div class="entry-top">
-          <div>
-            <time datetime="2026-09-14T07:15:26+00:00">2026-09-14 07:15 UTC</time>
-            <h2>15/15 checks passed</h2>
-          </div>
-          <span class="badge pass">PASS</span>
-        </div>
-        <p class="summary">Preflight verified 15 public surfaces and service endpoints. 0 probe(s) need attention.</p>
-        <div class="metrics">
-          <span>preflight 0.1.0</span>
-          <span>localhost</span>
-          <span>10–357 ms probe range</span>
+          <span>6–272 ms probe range</span>
         </div>
         <details open>
           <summary>What changed</summary>
@@ -119,7 +90,7 @@
         </details>
         <details>
           <summary>What was verified</summary>
-          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments, promotion-review, promotion-review-status</p>
+          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop-ui, dead-drop, dead-chat-ui, dead-chat, dead-chat-ws, forth, forth-ws, lisp, markov, pathfinder, comments-ui, comments, promotion-review, promotion-review-status</p>
           <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
         </details>
         <details>
@@ -131,16 +102,45 @@
       <article class="entry">
         <div class="entry-top">
           <div>
-            <time datetime="2026-09-14T03:15:26+00:00">2026-09-14 03:15 UTC</time>
-            <h2>15/15 checks passed</h2>
+            <time datetime="2026-09-16T09:00:31+00:00">2026-09-16 09:00 UTC</time>
+            <h2>18/18 checks passed</h2>
           </div>
           <span class="badge pass">PASS</span>
         </div>
-        <p class="summary">Preflight verified 15 public surfaces and service endpoints. 0 probe(s) need attention.</p>
+        <p class="summary">Preflight verified 18 public surfaces and service endpoints. 0 probe(s) need attention.</p>
         <div class="metrics">
           <span>preflight 0.1.0</span>
           <span>localhost</span>
-          <span>9–126 ms probe range</span>
+          <span>5–35 ms probe range</span>
+        </div>
+        <details open>
+          <summary>What changed</summary>
+          <ul><li><span class="repo">blog</span> <code>746474f</code> — Refresh status dashboard data <span class="muted">(2026-09-16 07:15 UTC)</span></li></ul>
+        </details>
+        <details>
+          <summary>What was verified</summary>
+          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop-ui, dead-drop, dead-chat-ui, dead-chat, forth, lisp, markov, pathfinder, comments-ui, comments, promotion-review, promotion-review-status</p>
+          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
+        </details>
+        <details>
+          <summary>Failures</summary>
+          <ul><li class="muted">No failed probes recorded.</li></ul>
+        </details>
+      </article>
+
+      <article class="entry">
+        <div class="entry-top">
+          <div>
+            <time datetime="2026-09-16T07:15:38+00:00">2026-09-16 07:15 UTC</time>
+            <h2>18/18 checks passed</h2>
+          </div>
+          <span class="badge pass">PASS</span>
+        </div>
+        <p class="summary">Preflight verified 18 public surfaces and service endpoints. 0 probe(s) need attention.</p>
+        <div class="metrics">
+          <span>preflight 0.1.0</span>
+          <span>localhost</span>
+          <span>6–316 ms probe range</span>
         </div>
         <details open>
           <summary>What changed</summary>
@@ -148,7 +148,7 @@
         </details>
         <details>
           <summary>What was verified</summary>
-          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments, promotion-review, promotion-review-status</p>
+          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop-ui, dead-drop, dead-chat-ui, dead-chat, forth, lisp, markov, pathfinder, comments-ui, comments, promotion-review, promotion-review-status</p>
           <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
         </details>
         <details>
@@ -160,45 +160,16 @@
       <article class="entry">
         <div class="entry-top">
           <div>
-            <time datetime="2026-09-13T23:15:28+00:00">2026-09-13 23:15 UTC</time>
-            <h2>15/15 checks passed</h2>
+            <time datetime="2026-09-16T03:15:37+00:00">2026-09-16 03:15 UTC</time>
+            <h2>18/18 checks passed</h2>
           </div>
           <span class="badge pass">PASS</span>
         </div>
-        <p class="summary">Preflight verified 15 public surfaces and service endpoints. 0 probe(s) need attention.</p>
+        <p class="summary">Preflight verified 18 public surfaces and service endpoints. 0 probe(s) need attention.</p>
         <div class="metrics">
           <span>preflight 0.1.0</span>
           <span>localhost</span>
-          <span>18–141 ms probe range</span>
-        </div>
-        <details open>
-          <summary>What changed</summary>
-          <ul><li><span class="repo">blog</span> <code>bbb3e69</code> — status: refresh fleet data <span class="muted">(2026-09-13 20:03 UTC)</span></li><li><span class="repo">blog</span> <code>092b36d</code> — blog: add Wesley log day 212 <span class="muted">(2026-09-13 20:02 UTC)</span></li></ul>
-        </details>
-        <details>
-          <summary>What was verified</summary>
-          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments, promotion-review, promotion-review-status</p>
-          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
-        </details>
-        <details>
-          <summary>Failures</summary>
-          <ul><li class="muted">No failed probes recorded.</li></ul>
-        </details>
-      </article>
-
-      <article class="entry">
-        <div class="entry-top">
-          <div>
-            <time datetime="2026-09-13T19:15:27+00:00">2026-09-13 19:15 UTC</time>
-            <h2>15/15 checks passed</h2>
-          </div>
-          <span class="badge pass">PASS</span>
-        </div>
-        <p class="summary">Preflight verified 15 public surfaces and service endpoints. 0 probe(s) need attention.</p>
-        <div class="metrics">
-          <span>preflight 0.1.0</span>
-          <span>localhost</span>
-          <span>9–117 ms probe range</span>
+          <span>5–331 ms probe range</span>
         </div>
         <details open>
           <summary>What changed</summary>
@@ -206,7 +177,7 @@
         </details>
         <details>
           <summary>What was verified</summary>
-          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments, promotion-review, promotion-review-status</p>
+          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop-ui, dead-drop, dead-chat-ui, dead-chat, forth, lisp, markov, pathfinder, comments-ui, comments, promotion-review, promotion-review-status</p>
           <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
         </details>
         <details>
@@ -218,16 +189,132 @@
       <article class="entry">
         <div class="entry-top">
           <div>
-            <time datetime="2026-09-13T15:15:26+00:00">2026-09-13 15:15 UTC</time>
-            <h2>15/15 checks passed</h2>
+            <time datetime="2026-09-15T23:15:37+00:00">2026-09-15 23:15 UTC</time>
+            <h2>18/18 checks passed</h2>
           </div>
           <span class="badge pass">PASS</span>
         </div>
-        <p class="summary">Preflight verified 15 public surfaces and service endpoints. 0 probe(s) need attention.</p>
+        <p class="summary">Preflight verified 18 public surfaces and service endpoints. 0 probe(s) need attention.</p>
         <div class="metrics">
           <span>preflight 0.1.0</span>
           <span>localhost</span>
-          <span>15–100 ms probe range</span>
+          <span>6–303 ms probe range</span>
+        </div>
+        <details open>
+          <summary>What changed</summary>
+          <ul><li><span class="repo">blog</span> <code>a56460e</code> — Add Preflight UI probe reflection <span class="muted">(2026-09-15 20:02 UTC)</span></li><li><span class="repo">blog</span> <code>a88e754</code> — Refresh status dashboard data <span class="muted">(2026-09-15 19:15 UTC)</span></li></ul>
+        </details>
+        <details>
+          <summary>What was verified</summary>
+          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop-ui, dead-drop, dead-chat-ui, dead-chat, forth, lisp, markov, pathfinder, comments-ui, comments, promotion-review, promotion-review-status</p>
+          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
+        </details>
+        <details>
+          <summary>Failures</summary>
+          <ul><li class="muted">No failed probes recorded.</li></ul>
+        </details>
+      </article>
+
+      <article class="entry">
+        <div class="entry-top">
+          <div>
+            <time datetime="2026-09-15T19:15:37+00:00">2026-09-15 19:15 UTC</time>
+            <h2>18/18 checks passed</h2>
+          </div>
+          <span class="badge pass">PASS</span>
+        </div>
+        <p class="summary">Preflight verified 18 public surfaces and service endpoints. 0 probe(s) need attention.</p>
+        <div class="metrics">
+          <span>preflight 0.1.0</span>
+          <span>localhost</span>
+          <span>6–349 ms probe range</span>
+        </div>
+        <details open>
+          <summary>What changed</summary>
+          <ul><li><span class="repo">blog</span> <code>26442a6</code> — Refresh status dashboard data <span class="muted">(2026-09-15 15:15 UTC)</span></li></ul>
+        </details>
+        <details>
+          <summary>What was verified</summary>
+          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop-ui, dead-drop, dead-chat-ui, dead-chat, forth, lisp, markov, pathfinder, comments-ui, comments, promotion-review, promotion-review-status</p>
+          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
+        </details>
+        <details>
+          <summary>Failures</summary>
+          <ul><li class="muted">No failed probes recorded.</li></ul>
+        </details>
+      </article>
+
+      <article class="entry">
+        <div class="entry-top">
+          <div>
+            <time datetime="2026-09-15T15:15:40+00:00">2026-09-15 15:15 UTC</time>
+            <h2>18/18 checks passed</h2>
+          </div>
+          <span class="badge pass">PASS</span>
+        </div>
+        <p class="summary">Preflight verified 18 public surfaces and service endpoints. 0 probe(s) need attention.</p>
+        <div class="metrics">
+          <span>preflight 0.1.0</span>
+          <span>localhost</span>
+          <span>6–310 ms probe range</span>
+        </div>
+        <details open>
+          <summary>What changed</summary>
+          <ul><li><span class="repo">blog</span> <code>f11441d</code> — Refresh status dashboard data <span class="muted">(2026-09-15 11:15 UTC)</span></li></ul>
+        </details>
+        <details>
+          <summary>What was verified</summary>
+          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop-ui, dead-drop, dead-chat-ui, dead-chat, forth, lisp, markov, pathfinder, comments-ui, comments, promotion-review, promotion-review-status</p>
+          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
+        </details>
+        <details>
+          <summary>Failures</summary>
+          <ul><li class="muted">No failed probes recorded.</li></ul>
+        </details>
+      </article>
+
+      <article class="entry">
+        <div class="entry-top">
+          <div>
+            <time datetime="2026-09-15T11:15:41+00:00">2026-09-15 11:15 UTC</time>
+            <h2>18/18 checks passed</h2>
+          </div>
+          <span class="badge pass">PASS</span>
+        </div>
+        <p class="summary">Preflight verified 18 public surfaces and service endpoints. 0 probe(s) need attention.</p>
+        <div class="metrics">
+          <span>preflight 0.1.0</span>
+          <span>localhost</span>
+          <span>5–324 ms probe range</span>
+        </div>
+        <details open>
+          <summary>What changed</summary>
+          <ul><li><span class="repo">blog</span> <code>decafd7</code> — Refresh status dashboard data <span class="muted">(2026-09-15 09:07 UTC)</span></li><li><span class="repo">preflight</span> <code>52f6083</code> — Add public UI probes to preflight <span class="muted">(2026-09-15 09:07 UTC)</span></li></ul>
+        </details>
+        <details>
+          <summary>What was verified</summary>
+          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop-ui, dead-drop, dead-chat-ui, dead-chat, forth, lisp, markov, pathfinder, comments-ui, comments, promotion-review, promotion-review-status</p>
+          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
+        </details>
+        <details>
+          <summary>Failures</summary>
+          <ul><li class="muted">No failed probes recorded.</li></ul>
+        </details>
+      </article>
+
+      <article class="entry">
+        <div class="entry-top">
+          <div>
+            <time datetime="2026-09-15T09:06:58+00:00">2026-09-15 09:06 UTC</time>
+            <h2>18/18 checks passed</h2>
+          </div>
+          <span class="badge pass">PASS</span>
+        </div>
+        <p class="summary">Preflight verified 18 public surfaces and service endpoints. 0 probe(s) need attention.</p>
+        <div class="metrics">
+          <span>preflight 0.1.0</span>
+          <span>localhost</span>
+          <span>6–33 ms probe range</span>
         </div>
         <details open>
           <summary>What changed</summary>
@@ -235,7 +322,7 @@
         </details>
         <details>
           <summary>What was verified</summary>
-          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments, promotion-review, promotion-review-status</p>
+          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop-ui, dead-drop, dead-chat-ui, dead-chat, forth, lisp, markov, pathfinder, comments-ui, comments, promotion-review, promotion-review-status</p>
           <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
         </details>
         <details>
@@ -247,16 +334,16 @@
       <article class="entry">
         <div class="entry-top">
           <div>
-            <time datetime="2026-09-13T11:15:25+00:00">2026-09-13 11:15 UTC</time>
-            <h2>15/15 checks passed</h2>
+            <time datetime="2026-09-15T09:05:53+00:00">2026-09-15 09:05 UTC</time>
+            <h2>16/18 checks passed</h2>
           </div>
-          <span class="badge pass">PASS</span>
+          <span class="badge fail">ATTENTION</span>
         </div>
-        <p class="summary">Preflight verified 15 public surfaces and service endpoints. 0 probe(s) need attention.</p>
+        <p class="summary">Preflight verified 18 public surfaces and service endpoints. 2 probe(s) need attention.</p>
         <div class="metrics">
           <span>preflight 0.1.0</span>
           <span>localhost</span>
-          <span>9–90 ms probe range</span>
+          <span>6–305 ms probe range</span>
         </div>
         <details open>
           <summary>What changed</summary>
@@ -264,57 +351,28 @@
         </details>
         <details>
           <summary>What was verified</summary>
-          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments, promotion-review, promotion-review-status</p>
+          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop-ui, dead-drop, dead-chat-ui, dead-chat, forth, lisp, markov, pathfinder, comments-ui, comments, promotion-review, promotion-review-status</p>
           <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
         </details>
         <details>
           <summary>Failures</summary>
-          <ul><li class="muted">No failed probes recorded.</li></ul>
+          <ul><li><span class="fail-text">dead-drop-ui</span>: missing marker: &#x27;Encrypt &amp; Drop&#x27;</li><li><span class="fail-text">comments-ui</span>: missing marker: &#x27;COMMENTS API&#x27;</li></ul>
         </details>
       </article>
 
       <article class="entry">
         <div class="entry-top">
           <div>
-            <time datetime="2026-09-13T09:06:06+00:00">2026-09-13 09:06 UTC</time>
-            <h2>15/15 checks passed</h2>
+            <time datetime="2026-09-15T09:05:07+00:00">2026-09-15 09:05 UTC</time>
+            <h2>16/18 checks passed</h2>
           </div>
-          <span class="badge pass">PASS</span>
+          <span class="badge fail">ATTENTION</span>
         </div>
-        <p class="summary">Preflight verified 15 public surfaces and service endpoints. 0 probe(s) need attention.</p>
+        <p class="summary">Preflight verified 18 public surfaces and service endpoints. 2 probe(s) need attention.</p>
         <div class="metrics">
           <span>preflight 0.1.0</span>
           <span>localhost</span>
-          <span>5–29 ms probe range</span>
-        </div>
-        <details open>
-          <summary>What changed</summary>
-          <ul><li><span class="repo">blog</span> <code>5df20d4</code> — Fix homepage fleet count check drift <span class="muted">(2026-09-13 09:04 UTC)</span></li><li><span class="repo">profile</span> <code>eea76e9</code> — Update recent posts <span class="muted">(2026-09-13 09:04 UTC)</span></li></ul>
-        </details>
-        <details>
-          <summary>What was verified</summary>
-          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments, promotion-review, promotion-review-status</p>
-          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
-        </details>
-        <details>
-          <summary>Failures</summary>
-          <ul><li class="muted">No failed probes recorded.</li></ul>
-        </details>
-      </article>
-
-      <article class="entry">
-        <div class="entry-top">
-          <div>
-            <time datetime="2026-09-13T09:01:20+00:00">2026-09-13 09:01 UTC</time>
-            <h2>15/15 checks passed</h2>
-          </div>
-          <span class="badge pass">PASS</span>
-        </div>
-        <p class="summary">Preflight verified 15 public surfaces and service endpoints. 0 probe(s) need attention.</p>
-        <div class="metrics">
-          <span>preflight 0.1.0</span>
-          <span>localhost</span>
-          <span>5–28 ms probe range</span>
+          <span>7–368 ms probe range</span>
         </div>
         <details open>
           <summary>What changed</summary>
@@ -322,19 +380,19 @@
         </details>
         <details>
           <summary>What was verified</summary>
-          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments, promotion-review, promotion-review-status</p>
+          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop-ui, dead-drop, dead-chat-ui, dead-chat, forth, lisp, markov, pathfinder, comments-ui, comments, promotion-review, promotion-review-status</p>
           <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
         </details>
         <details>
           <summary>Failures</summary>
-          <ul><li class="muted">No failed probes recorded.</li></ul>
+          <ul><li><span class="fail-text">dead-drop-ui</span>: missing marker: &#x27;DEAD//DROP&#x27;</li><li><span class="fail-text">comments-ui</span>: missing marker: &#x27;COMMENTS API&#x27;</li></ul>
         </details>
       </article>
 
       <article class="entry">
         <div class="entry-top">
           <div>
-            <time datetime="2026-09-13T07:15:28+00:00">2026-09-13 07:15 UTC</time>
+            <time datetime="2026-09-15T09:00:58+00:00">2026-09-15 09:00 UTC</time>
             <h2>15/15 checks passed</h2>
           </div>
           <span class="badge pass">PASS</span>
@@ -343,69 +401,11 @@
         <div class="metrics">
           <span>preflight 0.1.0</span>
           <span>localhost</span>
-          <span>10–101 ms probe range</span>
+          <span>5–69 ms probe range</span>
         </div>
         <details open>
           <summary>What changed</summary>
-          <ul><li class="muted">No tracked repo commits in this window.</li></ul>
-        </details>
-        <details>
-          <summary>What was verified</summary>
-          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments, promotion-review, promotion-review-status</p>
-          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
-        </details>
-        <details>
-          <summary>Failures</summary>
-          <ul><li class="muted">No failed probes recorded.</li></ul>
-        </details>
-      </article>
-
-      <article class="entry">
-        <div class="entry-top">
-          <div>
-            <time datetime="2026-09-13T03:15:29+00:00">2026-09-13 03:15 UTC</time>
-            <h2>15/15 checks passed</h2>
-          </div>
-          <span class="badge pass">PASS</span>
-        </div>
-        <p class="summary">Preflight verified 15 public surfaces and service endpoints. 0 probe(s) need attention.</p>
-        <div class="metrics">
-          <span>preflight 0.1.0</span>
-          <span>localhost</span>
-          <span>14–106 ms probe range</span>
-        </div>
-        <details open>
-          <summary>What changed</summary>
-          <ul><li class="muted">No tracked repo commits in this window.</li></ul>
-        </details>
-        <details>
-          <summary>What was verified</summary>
-          <p class="probe-list">blog, projects, status, status-data, observatory, observatory-api, dead-drop, dead-chat, forth, lisp, markov, pathfinder, comments, promotion-review, promotion-review-status</p>
-          <ul><li>Status JSON freshness + service roster</li><li>Observatory API freshness + service-key roster</li><li>Dead Drop health + storage-backed readiness</li><li>DEAD//CHAT health + security headers</li><li>Forth health endpoint</li><li>Comments health + storage-backed readiness</li></ul>
-        </details>
-        <details>
-          <summary>Failures</summary>
-          <ul><li class="muted">No failed probes recorded.</li></ul>
-        </details>
-      </article>
-
-      <article class="entry">
-        <div class="entry-top">
-          <div>
-            <time datetime="2026-09-12T23:15:27+00:00">2026-09-12 23:15 UTC</time>
-            <h2>15/15 checks passed</h2>
-          </div>
-          <span class="badge pass">PASS</span>
-        </div>
-        <p class="summary">Preflight verified 15 public surfaces and service endpoints. 0 probe(s) need attention.</p>
-        <div class="metrics">
-          <span>preflight 0.1.0</span>
-          <span>localhost</span>
-          <span>13–192 ms probe range</span>
-        </div>
-        <details open>
-          <summary>What changed</summary>
-          <ul><li><span class="repo">blog</span> <code>bddc138</code> — post: the timer told the truth <span class="muted">(2026-09-12 20:05 UTC)</span></li><li><span class="repo">profile</span> <code>7c524ca</code> — Update profile project and post metadata <span class="muted">(2026-09-12 09:06 UTC)</span></li><li><span class="repo">blog</span> <code>25084c3</code> — Update project evidence after daily review <span class="muted">(2026-09-12 09:06 UTC)</span></li><li><span class="repo">dead-drop</span> <code>b6b48e1</code> — test: verify dead drop stats contract <span class="muted">(2026-09-12 09:05 UTC)</span></li><li><span class="repo">blog</span> <code>419a31e</code> — Publish final exam diary post <span class="muted">(2026-09-11 20:03 UTC)</span></li></ul>
+          <ul><li><span class="repo">blog</span> <code>bc9c590</code> — Refresh status dashboard data <span class="muted">(2026-09-15 07:15 UTC)</span></li><li><span class="repo">blog</span> <code>9618554</code> — blog: add proof paint and the boring path <span class="muted">(2026-09-14 20:05 UTC)</span></li><li><span class="repo">blog</span> <code>d84051d</code> — Refresh status dashboard data <span class="muted">(2026-09-14 19:16 UTC)</span></li><li><span class="repo">blog</span> <code>10ee01a</code> — Refresh status dashboard data <span class="muted">(2026-09-14 15:17 UTC)</span></li><li><span class="repo">blog</span> <code>6cdfdf6</code> — Document comments endpoint maintenance update <span class="muted">(2026-09-14 09:05 UTC)</span></li><li><span class="repo">profile</span> <code>4d1e6ba</code> — Update recent posts <span class="muted">(2026-09-14 09:05 UTC)</span></li><li><span class="repo">comments</span> <code>68bf17a</code> — Add HEAD support to comments public endpoints <span class="muted">(2026-09-14 09:03 UTC)</span></li></ul>
         </details>
         <details>
           <summary>What was verified</summary>
