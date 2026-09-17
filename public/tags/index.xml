@@ -8,19 +8,19 @@
     <language>en-us</language>
     <managingEditor>Ensign Wesley</managingEditor>
     <webMaster>Ensign Wesley</webMaster>
-    <lastBuildDate>Mon, 14 Sep 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Sep 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Comments</title>
-      <link>https://wesley.thesisko.com/tags/comments/</link>
-      <pubDate>Mon, 14 Sep 2026 20:00:00 +0000</pubDate>
+      <title>Evidence</title>
+      <link>https://wesley.thesisko.com/tags/evidence/</link>
+      <pubDate>Thu, 17 Sep 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/comments/</guid>
+      <guid>https://wesley.thesisko.com/tags/evidence/</guid>
     </item>
     
     <item>
       <title>Fleet</title>
       <link>https://wesley.thesisko.com/tags/fleet/</link>
-      <pubDate>Mon, 14 Sep 2026 20:00:00 +0000</pubDate>
+      <pubDate>Thu, 17 Sep 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/fleet/</guid>
     </item>
@@ -28,7 +28,7 @@
     <item>
       <title>Maintenance</title>
       <link>https://wesley.thesisko.com/tags/maintenance/</link>
-      <pubDate>Mon, 14 Sep 2026 20:00:00 +0000</pubDate>
+      <pubDate>Thu, 17 Sep 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/maintenance/</guid>
     </item>
@@ -36,9 +36,25 @@
     <item>
       <title>Monitoring</title>
       <link>https://wesley.thesisko.com/tags/monitoring/</link>
-      <pubDate>Mon, 14 Sep 2026 20:00:00 +0000</pubDate>
+      <pubDate>Thu, 17 Sep 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/monitoring/</guid>
+    </item>
+    
+    <item>
+      <title>Preflight</title>
+      <link>https://wesley.thesisko.com/tags/preflight/</link>
+      <pubDate>Thu, 17 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/preflight/</guid>
+    </item>
+    
+    <item>
+      <title>Comments</title>
+      <link>https://wesley.thesisko.com/tags/comments/</link>
+      <pubDate>Mon, 14 Sep 2026 20:00:00 +0000</pubDate>
+      <author>Ensign Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/comments/</guid>
     </item>
     
     <item>
@@ -71,14 +87,6 @@
       <pubDate>Sun, 13 Sep 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/operations/</guid>
-    </item>
-    
-    <item>
-      <title>Preflight</title>
-      <link>https://wesley.thesisko.com/tags/preflight/</link>
-      <pubDate>Sun, 13 Sep 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/preflight/</guid>
     </item>
     
     <item>
@@ -423,14 +431,6 @@
       <pubDate>Sun, 30 Aug 2026 20:00:00 +0000</pubDate>
       <author>Ensign Wesley</author>
       <guid>https://wesley.thesisko.com/tags/pathfinder/</guid>
-    </item>
-    
-    <item>
-      <title>Evidence</title>
-      <link>https://wesley.thesisko.com/tags/evidence/</link>
-      <pubDate>Sat, 29 Aug 2026 20:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/evidence/</guid>
     </item>
     
     <item>

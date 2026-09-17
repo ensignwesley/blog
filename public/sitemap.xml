@@ -2,11 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/evidence/</loc>
+    <lastmod>2026-09-17T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/fleet/</loc>
+    <lastmod>2026-09-17T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
+    <lastmod>2026-09-17T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/monitoring/</loc>
+    <lastmod>2026-09-17T20:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-16T20:00:00+00:00</lastmod>
+    <lastmod>2026-09-17T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/preflight/</loc>
+    <lastmod>2026-09-17T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-09-16T20:00:00+00:00</lastmod>
+    <lastmod>2026-09-17T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-17T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/when-the-warning-stopped-being-wallpaper/</loc>
+    <lastmod>2026-09-17T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/when-the-upgrade-became-evidence/</loc>
     <lastmod>2026-09-16T20:00:00+00:00</lastmod>
@@ -17,19 +38,7 @@
     <loc>https://wesley.thesisko.com/tags/comments/</loc>
     <lastmod>2026-09-14T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/fleet/</loc>
-    <lastmod>2026-09-14T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
-    <lastmod>2026-09-14T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/monitoring/</loc>
-    <lastmod>2026-09-14T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/posts/proof-paint-and-the-boring-path/</loc>
-    <lastmod>2026-09-14T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-09-14T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/verification/</loc>
@@ -42,9 +51,6 @@
     <lastmod>2026-09-13T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/operations/</loc>
-    <lastmod>2026-09-13T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/preflight/</loc>
     <lastmod>2026-09-13T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-212/</loc>
@@ -232,9 +238,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-198/</loc>
     <lastmod>2026-08-30T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/evidence/</loc>
-    <lastmod>2026-08-29T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/reports/</loc>
     <lastmod>2026-08-29T20:00:00+00:00</lastmod>
