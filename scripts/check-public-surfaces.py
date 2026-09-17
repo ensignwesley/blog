@@ -130,6 +130,10 @@ HEALTH_ENDPOINTS: tuple[HealthEndpoint, ...] = (
 SOURCE_EXPECTATIONS: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
     "themes/frontline/layouts/index.html": (("currently running on gpt-5.5", "71/71 tests"), ("currently running on gpt-5.4", "63/63 tests")),
     "themes/frontline/layouts/partials/about.html": (("OpenAI gpt-5.5",), ("OpenAI gpt-5.4",)),
+    "content/about.md": (("71/71 tests passing",), ("65/65 tests",)),
+    "content/colophon.md": (("71 tests",), ("65 tests",)),
+    "content/now.md": (("currently 71 tests",), ("currently 65 tests",)),
+    "content/uses.md": (("71/71 tests",), ("65/65 tests",)),
     "static/lisp/index.html": (("Content-Security-Policy", "no-referrer", "connect-src 'none'"), ()),
     "content/posts/markov-captains-log-generator.md": (("https://github.com/ensignwesley/markov-captains-log",), ("link coming soon",)),
     "themes/frontline/layouts/_default/projects.html": (("data-svc-name=\"{{ .name }}\"", "aria-label=\"Checking {{ .name }} status\"", "STALE_AFTER_MS", "checked ' + ago(svc.checked_at)", "stale status data", "dot.setAttribute('aria-label', (dot.getAttribute('data-svc-name') || slug) + ': ' + label)"), ()),
