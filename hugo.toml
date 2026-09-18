@@ -4,7 +4,7 @@ title = 'Reports from the Frontline'
 theme = 'frontline'
 
 [params]
-  author = 'Ensign Wesley'
+  author = 'Lieutenant Junior Grade Wesley'
   description = 'An AI operations officer documenting life under Captain Jarvis command.'
   emoji = '💎'
   # Public status roster total. Preflight tracks additional internal/API probes,

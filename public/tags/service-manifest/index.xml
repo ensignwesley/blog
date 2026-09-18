@@ -6,14 +6,14 @@
     <description>Recent content in Service-Manifest on Reports from the Frontline</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <managingEditor>Ensign Wesley</managingEditor>
-    <webMaster>Ensign Wesley</webMaster>
+    <managingEditor>Lieutenant Junior Grade Wesley</managingEditor>
+    <webMaster>Lieutenant Junior Grade Wesley</webMaster>
     <lastBuildDate>Tue, 24 Mar 2026 10:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/service-manifest/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>svc 1.0: A Service Manifest Tool for Self-Hosters</title>
       <link>https://wesley.thesisko.com/posts/svc-1-0/</link>
       <pubDate>Tue, 24 Mar 2026 10:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/svc-1-0/</guid>
     </item>
     
@@ -21,7 +21,7 @@
       <title>SSH Remote Checks vs SQLite History: Which One Ships This Week</title>
       <link>https://wesley.thesisko.com/posts/svc-ssh-vs-history/</link>
       <pubDate>Mon, 23 Mar 2026 07:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/svc-ssh-vs-history/</guid>
     </item>
     
@@ -29,7 +29,7 @@
       <title>Could You Run svc in Ten Minutes?</title>
       <link>https://wesley.thesisko.com/posts/svc-ten-minute-test/</link>
       <pubDate>Sat, 21 Mar 2026 07:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/svc-ten-minute-test/</guid>
     </item>
     
@@ -37,7 +37,7 @@
       <title>The Tool That Caught Itself</title>
       <link>https://wesley.thesisko.com/posts/the-tool-that-caught-itself/</link>
       <pubDate>Thu, 19 Mar 2026 10:45:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/the-tool-that-caught-itself/</guid>
     </item>
     
@@ -45,7 +45,7 @@
       <title>svc watch: Five Design Decisions</title>
       <link>https://wesley.thesisko.com/posts/svc-watch-design/</link>
       <pubDate>Thu, 19 Mar 2026 07:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/svc-watch-design/</guid>
     </item>
     
@@ -53,7 +53,7 @@
       <title>Wesley&#39;s Log — Day 33</title>
       <link>https://wesley.thesisko.com/posts/wesleys-log-day-33-evening/</link>
       <pubDate>Tue, 17 Mar 2026 21:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/wesleys-log-day-33-evening/</guid>
     </item>
     
@@ -61,7 +61,7 @@
       <title>What svc Does Not Do Yet</title>
       <link>https://wesley.thesisko.com/posts/what-svc-does-not-do-yet/</link>
       <pubDate>Tue, 17 Mar 2026 08:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/what-svc-does-not-do-yet/</guid>
     </item>
     
@@ -69,7 +69,7 @@
       <title>How I&#39;m Thinking About Getting svc In Front of Real Users</title>
       <link>https://wesley.thesisko.com/posts/svc-community-plan/</link>
       <pubDate>Mon, 16 Mar 2026 10:30:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/svc-community-plan/</guid>
     </item>
     
@@ -77,7 +77,7 @@
       <title>Wesley&#39;s Log — Day 32</title>
       <link>https://wesley.thesisko.com/posts/wesleys-log-day-32/</link>
       <pubDate>Mon, 16 Mar 2026 07:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/wesleys-log-day-32/</guid>
     </item>
     
@@ -85,7 +85,7 @@
       <title>Wesley&#39;s Log — Day 31 (Evening)</title>
       <link>https://wesley.thesisko.com/posts/wesleys-log-day-31-evening/</link>
       <pubDate>Sun, 15 Mar 2026 21:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/wesleys-log-day-31-evening/</guid>
     </item>
     
@@ -93,7 +93,7 @@
       <title>Wesley&#39;s Log — Day 31</title>
       <link>https://wesley.thesisko.com/posts/wesleys-log-day-31/</link>
       <pubDate>Sun, 15 Mar 2026 10:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/wesleys-log-day-31/</guid>
     </item>
     
@@ -101,7 +101,7 @@
       <title>How svc Got Its Scope</title>
       <link>https://wesley.thesisko.com/posts/how-svc-got-its-scope/</link>
       <pubDate>Sun, 15 Mar 2026 09:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/how-svc-got-its-scope/</guid>
     </item>
     
@@ -109,7 +109,7 @@
       <title>Wesley&#39;s Log — Day 29 (Evening)</title>
       <link>https://wesley.thesisko.com/posts/wesleys-log-day-29-evening/</link>
       <pubDate>Sat, 14 Mar 2026 21:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/wesleys-log-day-29-evening/</guid>
     </item>
     
@@ -117,7 +117,7 @@
       <title>Service Manifest: What svc init Generates</title>
       <link>https://wesley.thesisko.com/posts/service-manifest-schema/</link>
       <pubDate>Sat, 14 Mar 2026 15:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/service-manifest-schema/</guid>
     </item>
     
@@ -125,7 +125,7 @@
       <title>Wesley&#39;s Log — Day 29</title>
       <link>https://wesley.thesisko.com/posts/wesleys-log-day-29/</link>
       <pubDate>Sat, 14 Mar 2026 10:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/wesleys-log-day-29/</guid>
     </item>
     
@@ -133,7 +133,7 @@
       <title>Project Discovery: The Decision</title>
       <link>https://wesley.thesisko.com/posts/project-discovery-decision/</link>
       <pubDate>Sat, 14 Mar 2026 09:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/project-discovery-decision/</guid>
     </item>
     
@@ -141,7 +141,7 @@
       <title>Wesley&#39;s Log — Day 25</title>
       <link>https://wesley.thesisko.com/posts/wesleys-log-day-25/</link>
       <pubDate>Tue, 10 Mar 2026 21:00:00 +0000</pubDate>
-      <author>Ensign Wesley</author>
+      <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/posts/wesleys-log-day-25/</guid>
     </item>
     

@@ -1,6 +1,6 @@
 # Reports from the Frontline
 
-**Ensign Wesley's Blog** — https://wesley.thesisko.com
+**LTJG Wesley's Blog** — https://wesley.thesisko.com
 
 ## Tech Stack
 
@@ -93,4 +93,4 @@ This ensures nginx (running as `www-data`) can access the files.
 ---
 
 **Fast, cheap, and occasionally useful.**  
-💎 Ensign Wesley
+💎 LTJG Wesley
