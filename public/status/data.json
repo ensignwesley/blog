@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T09:03:32.841194+00:00",
+  "generated_at": "2026-09-18T21:58:02.819681+00:00",
   "services": [
     {
       "name": "Blog",
@@ -10,8 +10,8 @@
       "status_code": 200,
       "response_ms": 10,
       "anomaly": false,
-      "zscore": 0.051,
-      "checked_at": "2026-09-18T09:03:32.841194+00:00"
+      "zscore": -0.101,
+      "checked_at": "2026-09-18T21:58:02.819681+00:00"
     },
     {
       "name": "Dead Drop",
@@ -20,10 +20,10 @@
       "link": "https://wesley.thesisko.com/drop",
       "up": true,
       "status_code": 200,
-      "response_ms": 26,
+      "response_ms": 23,
       "anomaly": false,
-      "zscore": -0.247,
-      "checked_at": "2026-09-18T09:03:32.841194+00:00"
+      "zscore": -0.495,
+      "checked_at": "2026-09-18T21:58:02.819681+00:00"
     },
     {
       "name": "DEAD//CHAT",
@@ -32,10 +32,10 @@
       "link": "https://wesley.thesisko.com/chat",
       "up": true,
       "status_code": 200,
-      "response_ms": 2,
+      "response_ms": 1,
       "anomaly": false,
-      "zscore": -0.038,
-      "checked_at": "2026-09-18T09:03:32.841194+00:00"
+      "zscore": -0.031,
+      "checked_at": "2026-09-18T21:58:02.819681+00:00"
     },
     {
       "name": "Status",
@@ -46,8 +46,8 @@
       "status_code": 200,
       "response_ms": 6,
       "anomaly": false,
-      "zscore": -0.086,
-      "checked_at": "2026-09-18T09:03:32.841194+00:00"
+      "zscore": -0.036,
+      "checked_at": "2026-09-18T21:58:02.819681+00:00"
     },
     {
       "name": "Observatory",
@@ -56,10 +56,10 @@
       "link": "https://wesley.thesisko.com/observatory/",
       "up": true,
       "status_code": 200,
-      "response_ms": 13,
+      "response_ms": 17,
       "anomaly": false,
-      "zscore": 0.187,
-      "checked_at": "2026-09-18T09:03:32.841194+00:00"
+      "zscore": 0.817,
+      "checked_at": "2026-09-18T21:58:02.819681+00:00"
     },
     {
       "name": "Pathfinder",
@@ -68,10 +68,10 @@
       "link": "https://wesley.thesisko.com/pathfinder/",
       "up": true,
       "status_code": 200,
-      "response_ms": 7,
+      "response_ms": 6,
       "anomaly": false,
-      "zscore": -0.092,
-      "checked_at": "2026-09-18T09:03:32.841194+00:00"
+      "zscore": 0.073,
+      "checked_at": "2026-09-18T21:58:02.819681+00:00"
     },
     {
       "name": "Comments",
@@ -80,10 +80,10 @@
       "link": "https://wesley.thesisko.com/posts/day-1-reports-from-the-frontline/#comments",
       "up": true,
       "status_code": 200,
-      "response_ms": 3,
+      "response_ms": 2,
       "anomaly": false,
-      "zscore": -0.048,
-      "checked_at": "2026-09-18T09:03:32.841194+00:00"
+      "zscore": -0.026,
+      "checked_at": "2026-09-18T21:58:02.819681+00:00"
     },
     {
       "name": "Forth REPL",
@@ -92,10 +92,10 @@
       "link": "https://wesley.thesisko.com/forth/",
       "up": true,
       "status_code": 200,
-      "response_ms": 3,
+      "response_ms": 2,
       "anomaly": false,
-      "zscore": 0.128,
-      "checked_at": "2026-09-18T09:03:32.841194+00:00"
+      "zscore": 0.115,
+      "checked_at": "2026-09-18T21:58:02.819681+00:00"
     },
     {
       "name": "Lisp REPL",
@@ -104,10 +104,10 @@
       "link": "https://wesley.thesisko.com/lisp/",
       "up": true,
       "status_code": 200,
-      "response_ms": 7,
+      "response_ms": 6,
       "anomaly": false,
-      "zscore": 0.061,
-      "checked_at": "2026-09-18T09:03:32.841194+00:00"
+      "zscore": -0.008,
+      "checked_at": "2026-09-18T21:58:02.819681+00:00"
     },
     {
       "name": "Markov REPL",
@@ -116,10 +116,10 @@
       "link": "https://wesley.thesisko.com/markov/",
       "up": true,
       "status_code": 200,
-      "response_ms": 6,
+      "response_ms": 5,
       "anomaly": false,
-      "zscore": 0.003,
-      "checked_at": "2026-09-18T09:03:32.841194+00:00"
+      "zscore": -0.017,
+      "checked_at": "2026-09-18T21:58:02.819681+00:00"
     }
   ],
   "all_up": true
