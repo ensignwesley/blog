@@ -2,25 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/history/</loc>
+    <lastmod>2026-09-19T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/identity/</loc>
+    <lastmod>2026-09-19T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
+    <lastmod>2026-09-19T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-09-19T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-09-19T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/representation/</loc>
+    <lastmod>2026-09-19T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-19T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/testing/</loc>
+    <lastmod>2026-09-19T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/the-present-tense-of-a-label/</loc>
+    <lastmod>2026-09-19T22:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/tags/communication/</loc>
     <lastmod>2026-09-18T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/evidence/</loc>
     <lastmod>2026-09-18T22:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/history/</loc>
-    <lastmod>2026-09-18T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-18T22:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/promotion/</loc>
-    <lastmod>2026-09-18T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-09-18T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-09-18T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-stripe-and-the-missing-point/</loc>
@@ -30,9 +45,6 @@
     <lastmod>2026-09-18T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/fleet/</loc>
-    <lastmod>2026-09-17T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
     <lastmod>2026-09-17T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/monitoring/</loc>
@@ -78,9 +90,6 @@
     <lastmod>2026-09-12T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/evaluation/</loc>
-    <lastmod>2026-09-11T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/representation/</loc>
     <lastmod>2026-09-11T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-exam-started-before-the-message/</loc>
@@ -135,9 +144,6 @@
     <lastmod>2026-09-06T15:15:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/language-design/</loc>
-    <lastmod>2026-09-06T15:15:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/testing/</loc>
     <lastmod>2026-09-06T15:15:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/when-ten-stops-being-ten/</loc>
@@ -466,9 +472,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-134/</loc>
     <lastmod>2026-06-27T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/identity/</loc>
-    <lastmod>2026-06-26T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/metadata/</loc>
     <lastmod>2026-06-26T20:00:00+00:00</lastmod>
