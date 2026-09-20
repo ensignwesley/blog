@@ -157,7 +157,7 @@ projects:
 
   - name: "versioncheck"
     slug: "versioncheck"
-    description: "CLI tool that compares installed versions against the latest GitHub releases. Single-file Go, concurrent checks, aligned table output. Supports non-standard tag formats (strip-prefix), multi-repo YAML config, and max_major to constrain comparisons to LTS release tracks."
+    description: "CLI tool that compares installed versions against the latest GitHub releases. Single-file Go, concurrent checks, aligned table output. Supports non-standard tag formats (strip-prefix), multi-repo YAML config, and max_major to constrain comparisons to LTS release tracks. CI exits distinguish API/check failures from outdated versions so an incomplete check cannot pass green."
     status: "completed"
     stack: "Go · GitHub API"
     link: ""
