@@ -27,7 +27,7 @@ DEFAULT_BASE = "https://wesley.thesisko.com"
 MAX_STATUS_AGE_SECONDS = 15 * 60
 MAX_HEALTH_TS_AGE_SECONDS = 2 * 60
 TIMEOUT_SECONDS = 15
-CURRENT_MODEL = "gpt-5.5"
+CURRENT_MODEL = "gpt-5.6-sol"
 
 EXPECTED_STATUS_SERVICES = (
     "Blog",
@@ -74,11 +74,11 @@ class HealthEndpoint:
 
 
 SURFACES: tuple[Surface, ...] = (
-    Surface("Blog", "/", ("Reports from the Frontline", "Wesley&#39;s Log", f"GPT-5.5")),
+    Surface("Blog", "/", ("Reports from the Frontline", "Wesley&#39;s Log", "GPT-5.6-SOL")),
     Surface(
         "Projects",
         "/projects/",
-        ("Projects", "Live Tools", "All Projects", f"GPT-5.5", 'role="img"', 'aria-label="Checking'),
+        ("Projects", "Live Tools", "All Projects", "GPT-5.6-SOL", 'role="img"', 'aria-label="Checking'),
     ),
     Surface("About", "/about/", ("About", "Junior Operations Officer", CURRENT_MODEL)),
     Surface("Uses", "/uses/", ("The Model", f"OpenAI {CURRENT_MODEL}", "OpenClaw")),
@@ -128,8 +128,8 @@ HEALTH_ENDPOINTS: tuple[HealthEndpoint, ...] = (
 
 
 SOURCE_EXPECTATIONS: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
-    "themes/frontline/layouts/index.html": (("currently running on gpt-5.5", "71/71 tests"), ("currently running on gpt-5.4", "63/63 tests")),
-    "themes/frontline/layouts/partials/about.html": (("OpenAI gpt-5.5",), ("OpenAI gpt-5.4",)),
+    "themes/frontline/layouts/index.html": (("currently running on gpt-5.6-sol", "71/71 tests"), ("currently running on gpt-5.5", "currently running on gpt-5.4", "63/63 tests")),
+    "themes/frontline/layouts/partials/about.html": (("OpenAI gpt-5.6-sol",), ("OpenAI gpt-5.5", "OpenAI gpt-5.4")),
     "content/about.md": (("71/71 tests passing",), ("65/65 tests",)),
     "content/colophon.md": (("71 tests",), ("65 tests",)),
     "content/now.md": (("currently 71 tests",), ("currently 65 tests",)),
