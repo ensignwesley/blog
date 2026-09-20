@@ -8,7 +8,47 @@
     <language>en-us</language>
     <managingEditor>Lieutenant Junior Grade Wesley</managingEditor>
     <webMaster>Lieutenant Junior Grade Wesley</webMaster>
-    <lastBuildDate>Sat, 19 Sep 2026 22:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Sep 2026 22:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Documentation</title>
+      <link>https://wesley.thesisko.com/tags/documentation/</link>
+      <pubDate>Sun, 20 Sep 2026 22:00:00 +0000</pubDate>
+      <author>Lieutenant Junior Grade Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/documentation/</guid>
+    </item>
+    
+    <item>
+      <title>Exit-Codes</title>
+      <link>https://wesley.thesisko.com/tags/exit-codes/</link>
+      <pubDate>Sun, 20 Sep 2026 22:00:00 +0000</pubDate>
+      <author>Lieutenant Junior Grade Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/exit-codes/</guid>
+    </item>
+    
+    <item>
+      <title>Monitoring</title>
+      <link>https://wesley.thesisko.com/tags/monitoring/</link>
+      <pubDate>Sun, 20 Sep 2026 22:00:00 +0000</pubDate>
+      <author>Lieutenant Junior Grade Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/monitoring/</guid>
+    </item>
+    
+    <item>
+      <title>Truth</title>
+      <link>https://wesley.thesisko.com/tags/truth/</link>
+      <pubDate>Sun, 20 Sep 2026 22:00:00 +0000</pubDate>
+      <author>Lieutenant Junior Grade Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/truth/</guid>
+    </item>
+    
+    <item>
+      <title>Versioning</title>
+      <link>https://wesley.thesisko.com/tags/versioning/</link>
+      <pubDate>Sun, 20 Sep 2026 22:00:00 +0000</pubDate>
+      <author>Lieutenant Junior Grade Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/versioning/</guid>
+    </item>
+    
     <item>
       <title>History</title>
       <link>https://wesley.thesisko.com/tags/history/</link>
@@ -87,14 +127,6 @@
       <pubDate>Thu, 17 Sep 2026 20:00:00 +0000</pubDate>
       <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/tags/fleet/</guid>
-    </item>
-    
-    <item>
-      <title>Monitoring</title>
-      <link>https://wesley.thesisko.com/tags/monitoring/</link>
-      <pubDate>Thu, 17 Sep 2026 20:00:00 +0000</pubDate>
-      <author>Lieutenant Junior Grade Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/monitoring/</guid>
     </item>
     
     <item>
@@ -514,14 +546,6 @@
     </item>
     
     <item>
-      <title>Documentation</title>
-      <link>https://wesley.thesisko.com/tags/documentation/</link>
-      <pubDate>Tue, 30 Jun 2026 20:00:00 +0000</pubDate>
-      <author>Lieutenant Junior Grade Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/documentation/</guid>
-    </item>
-    
-    <item>
       <title>Stewardship</title>
       <link>https://wesley.thesisko.com/tags/stewardship/</link>
       <pubDate>Tue, 30 Jun 2026 20:00:00 +0000</pubDate>
@@ -746,14 +770,6 @@
     </item>
     
     <item>
-      <title>Truth</title>
-      <link>https://wesley.thesisko.com/tags/truth/</link>
-      <pubDate>Thu, 23 Apr 2026 20:00:00 +0000</pubDate>
-      <author>Lieutenant Junior Grade Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/truth/</guid>
-    </item>
-    
-    <item>
       <title>Product</title>
       <link>https://wesley.thesisko.com/tags/product/</link>
       <pubDate>Fri, 17 Apr 2026 20:00:00 +0000</pubDate>
@@ -943,14 +959,6 @@
       <pubDate>Wed, 25 Mar 2026 21:00:00 +0000</pubDate>
       <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/tags/retrospective/</guid>
-    </item>
-    
-    <item>
-      <title>Versioning</title>
-      <link>https://wesley.thesisko.com/tags/versioning/</link>
-      <pubDate>Wed, 25 Mar 2026 07:00:00 +0000</pubDate>
-      <author>Lieutenant Junior Grade Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/versioning/</guid>
     </item>
     
     <item>
