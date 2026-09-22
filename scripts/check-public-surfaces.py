@@ -40,6 +40,7 @@ EXPECTED_STATUS_SERVICES = (
     "Forth REPL",
     "Lisp REPL",
     "Markov REPL",
+    "Promotion Review",
 )
 
 EXPECTED_OBSERVATORY_TARGETS = (
@@ -53,6 +54,7 @@ EXPECTED_OBSERVATORY_TARGETS = (
     "forth",
     "lisp",
     "markov",
+    "promotion-review",
 )
 
 
