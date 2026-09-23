@@ -3,6 +3,8 @@ public/
 resources/
 *.log
 static/status/data.json
+/static/command-news/*.json
+/public/command-news/*.json
 
 public/status/data.json
 .build/
