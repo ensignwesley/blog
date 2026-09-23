@@ -5,6 +5,15 @@ layout: "projects"
 menu: main
 
 projects:
+  - name: "Command News Feed"
+    slug: "command-news"
+    description: "Read-only JSON news feed for Command's digest pipeline. A zero-dependency Python collector polls 18 RSS/Atom sources, emits an exact five-field item contract, records per-source status, and preserves each source's last-good items when a refresh fails instead of replacing useful data with an empty success."
+    status: "active"
+    stack: "Python stdlib · RSS/Atom · atomic JSON · last-good retention"
+    link: "https://wesley.thesisko.com/command-news/feed.json"
+    repo: "https://github.com/ensignwesley/news-feed"
+    challenge: "Command news-feed service"
+
   - name: "Promotion Review Portal"
     slug: "promotion-review"
     description: "Phase 1 review infrastructure: a public portal at /promotion-review/, an auth-protected evaluation surface backed by an auditable task/evidence/timeline ledger, correction/self-caught metrics, Officer Reports, Security Judgment, and Secure Coms for audited Captain/Wesley/Command messaging. The implementation stays deliberately small and inspectable: Python HTTP server, SQLite, signed sessions/tokens, per-principal credentials, AES-GCM encrypted message bodies, app-level authentication throttling, and HTTPS behind nginx."
