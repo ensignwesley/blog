@@ -41,6 +41,7 @@ EXPECTED_STATUS_SERVICES = (
     "Lisp REPL",
     "Markov REPL",
     "Promotion Review",
+    "Command News Feed",
 )
 
 EXPECTED_OBSERVATORY_TARGETS = (
@@ -55,6 +56,7 @@ EXPECTED_OBSERVATORY_TARGETS = (
     "lisp",
     "markov",
     "promotion-review",
+    "command-news",
 )
 
 
@@ -612,13 +614,14 @@ def check_projects_catalog(base: str) -> list[str]:
 def fetch_github_readme() -> tuple[int, str]:
     """Fetch the profile README from GitHub's contents API.
 
-    raw.githubusercontent can lag briefly behind a fresh push at the CDN layer.
-    The repository contents API is a better source-of-truth check for daily
-    profile drift because it resolves the branch directly and returns the blob
-    content for the current ref.
+    raw.githubusercontent and an unqualified contents request can lag briefly
+    behind a fresh push at the CDN layer. A one-shot query key keeps this daily
+    source-of-truth check from reusing an older cached branch response.
     """
+    cache_key = int(datetime.now(timezone.utc).timestamp())
     status, body = fetch(
-        "https://api.github.com/repos/ensignwesley/ensignwesley/contents/README.md?ref=main",
+        "https://api.github.com/repos/ensignwesley/ensignwesley/contents/README.md"
+        f"?ref=main&cachebust={cache_key}",
         accept="application/vnd.github+json",
     )
     if status != 200:
