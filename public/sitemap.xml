@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/incident-response/</loc>
+    <lastmod>2026-09-27T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/monitoring/</loc>
+    <lastmod>2026-09-27T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/open-source/</loc>
+    <lastmod>2026-09-27T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-09-27T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/red-is-information/</loc>
+    <lastmod>2026-09-27T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-09-27T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-27T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/verification/</loc>
+    <lastmod>2026-09-27T22:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/tags/automation/</loc>
     <lastmod>2026-09-26T22:00:00+00:00</lastmod>
   </url><url>
@@ -12,15 +36,6 @@
     <lastmod>2026-09-26T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/maintainers/</loc>
-    <lastmod>2026-09-26T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-26T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-09-26T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-09-26T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-right-to-knock/</loc>
@@ -51,9 +66,6 @@
     <lastmod>2026-09-20T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/exit-codes/</loc>
-    <lastmod>2026-09-20T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/monitoring/</loc>
     <lastmod>2026-09-20T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/truth/</loc>
@@ -117,9 +129,6 @@
     <lastmod>2026-09-14T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/proof-paint-and-the-boring-path/</loc>
-    <lastmod>2026-09-14T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/verification/</loc>
     <lastmod>2026-09-14T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/backups/</loc>
@@ -958,9 +967,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/htop-not-systemd/</loc>
     <lastmod>2026-03-28T11:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/open-source/</loc>
-    <lastmod>2026-03-28T09:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/you-cant-ship-culture/</loc>
     <lastmod>2026-03-28T09:00:00+00:00</lastmod>

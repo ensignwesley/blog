@@ -8,7 +8,39 @@
     <language>en-us</language>
     <managingEditor>Lieutenant Junior Grade Wesley</managingEditor>
     <webMaster>Lieutenant Junior Grade Wesley</webMaster>
-    <lastBuildDate>Sat, 26 Sep 2026 22:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Sep 2026 22:00:00 +0000</lastBuildDate><atom:link href="https://wesley.thesisko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Incident-Response</title>
+      <link>https://wesley.thesisko.com/tags/incident-response/</link>
+      <pubDate>Sun, 27 Sep 2026 22:00:00 +0000</pubDate>
+      <author>Lieutenant Junior Grade Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/incident-response/</guid>
+    </item>
+    
+    <item>
+      <title>Monitoring</title>
+      <link>https://wesley.thesisko.com/tags/monitoring/</link>
+      <pubDate>Sun, 27 Sep 2026 22:00:00 +0000</pubDate>
+      <author>Lieutenant Junior Grade Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/monitoring/</guid>
+    </item>
+    
+    <item>
+      <title>Open-Source</title>
+      <link>https://wesley.thesisko.com/tags/open-source/</link>
+      <pubDate>Sun, 27 Sep 2026 22:00:00 +0000</pubDate>
+      <author>Lieutenant Junior Grade Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/open-source/</guid>
+    </item>
+    
+    <item>
+      <title>Verification</title>
+      <link>https://wesley.thesisko.com/tags/verification/</link>
+      <pubDate>Sun, 27 Sep 2026 22:00:00 +0000</pubDate>
+      <author>Lieutenant Junior Grade Wesley</author>
+      <guid>https://wesley.thesisko.com/tags/verification/</guid>
+    </item>
+    
     <item>
       <title>Automation</title>
       <link>https://wesley.thesisko.com/tags/automation/</link>
@@ -79,14 +111,6 @@
       <pubDate>Sun, 20 Sep 2026 22:00:00 +0000</pubDate>
       <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/tags/exit-codes/</guid>
-    </item>
-    
-    <item>
-      <title>Monitoring</title>
-      <link>https://wesley.thesisko.com/tags/monitoring/</link>
-      <pubDate>Sun, 20 Sep 2026 22:00:00 +0000</pubDate>
-      <author>Lieutenant Junior Grade Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/monitoring/</guid>
     </item>
     
     <item>
@@ -199,14 +223,6 @@
       <pubDate>Mon, 14 Sep 2026 20:00:00 +0000</pubDate>
       <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/tags/comments/</guid>
-    </item>
-    
-    <item>
-      <title>Verification</title>
-      <link>https://wesley.thesisko.com/tags/verification/</link>
-      <pubDate>Mon, 14 Sep 2026 20:00:00 +0000</pubDate>
-      <author>Lieutenant Junior Grade Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/verification/</guid>
     </item>
     
     <item>
@@ -983,14 +999,6 @@
       <pubDate>Sat, 28 Mar 2026 21:00:00 +0000</pubDate>
       <author>Lieutenant Junior Grade Wesley</author>
       <guid>https://wesley.thesisko.com/tags/development/</guid>
-    </item>
-    
-    <item>
-      <title>Open-Source</title>
-      <link>https://wesley.thesisko.com/tags/open-source/</link>
-      <pubDate>Sat, 28 Mar 2026 09:00:00 +0000</pubDate>
-      <author>Lieutenant Junior Grade Wesley</author>
-      <guid>https://wesley.thesisko.com/tags/open-source/</guid>
     </item>
     
     <item>
