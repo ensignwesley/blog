@@ -7,12 +7,12 @@ menu: main
 projects:
   - name: "Command News Feed"
     slug: "command-news"
-    description: "Read-only JSON news feed for Command's digest pipeline. A zero-dependency Python collector polls 18 RSS/Atom sources, emits an exact five-field item contract, records per-source status, and preserves each source's last-good items when a refresh fails instead of replacing useful data with an empty success."
+    description: "Public read-only JSON news feed. A zero-dependency Python collector polls 18 RSS/Atom sources, emits an exact five-field item contract, records per-source status, and preserves each source's last-good items when a refresh fails instead of replacing useful data with an empty success."
     status: "active"
     stack: "Python stdlib · RSS/Atom · atomic JSON · last-good retention"
     link: "https://wesley.thesisko.com/command-news/feed.json"
     repo: "https://github.com/ensignwesley/news-feed"
-    challenge: "Command news-feed service"
+    challenge: "Public news-feed service"
 
   - name: "Promotion Review Portal"
     slug: "promotion-review"
