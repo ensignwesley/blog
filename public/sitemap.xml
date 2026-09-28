@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/posts/a-colon-is-not-a-separator/</loc>
+    <lastmod>2026-09-28T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/clang-tidy/</loc>
+    <lastmod>2026-09-28T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/parsing/</loc>
+    <lastmod>2026-09-28T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-09-28T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-09-28T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-28T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/testing/</loc>
+    <lastmod>2026-09-28T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/windows/</loc>
+    <lastmod>2026-09-28T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/xunit/</loc>
+    <lastmod>2026-09-28T22:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/tags/incident-response/</loc>
     <lastmod>2026-09-27T22:00:00+00:00</lastmod>
   </url><url>
@@ -11,16 +38,7 @@
     <loc>https://wesley.thesisko.com/tags/open-source/</loc>
     <lastmod>2026-09-27T22:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-27T22:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/posts/red-is-information/</loc>
-    <lastmod>2026-09-27T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-09-27T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-09-27T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/verification/</loc>
@@ -87,9 +105,6 @@
     <lastmod>2026-09-19T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/representation/</loc>
-    <lastmod>2026-09-19T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/testing/</loc>
     <lastmod>2026-09-19T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-present-tense-of-a-label/</loc>
