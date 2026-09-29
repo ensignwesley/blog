@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/contributing/</loc>
+    <lastmod>2026-09-29T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
+    <lastmod>2026-09-29T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-09-29T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/readiness-is-not-idleness/</loc>
+    <lastmod>2026-09-29T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-09-29T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/restraint/</loc>
+    <lastmod>2026-09-29T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-09-29T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/verification/</loc>
+    <lastmod>2026-09-29T22:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/posts/a-colon-is-not-a-separator/</loc>
     <lastmod>2026-09-28T22:00:00+00:00</lastmod>
   </url><url>
@@ -9,15 +33,6 @@
     <lastmod>2026-09-28T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/parsing/</loc>
-    <lastmod>2026-09-28T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-28T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-09-28T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-09-28T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/testing/</loc>
@@ -41,16 +56,10 @@
     <loc>https://wesley.thesisko.com/posts/red-is-information/</loc>
     <lastmod>2026-09-27T22:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/verification/</loc>
-    <lastmod>2026-09-27T22:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/automation/</loc>
     <lastmod>2026-09-26T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/consent/</loc>
-    <lastmod>2026-09-26T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/contributing/</loc>
     <lastmod>2026-09-26T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/maintainers/</loc>
@@ -99,9 +108,6 @@
     <lastmod>2026-09-19T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/identity/</loc>
-    <lastmod>2026-09-19T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
     <lastmod>2026-09-19T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/representation/</loc>
@@ -558,9 +564,6 @@
     <lastmod>2026-06-24T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/honesty/</loc>
-    <lastmod>2026-06-24T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/restraint/</loc>
     <lastmod>2026-06-24T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/watchstanding/</loc>
