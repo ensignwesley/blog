@@ -2,25 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/command-news/</loc>
+    <lastmod>2026-10-03T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/evidence/</loc>
+    <lastmod>2026-10-03T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/monitoring/</loc>
+    <lastmod>2026-10-03T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-10-03T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-10-03T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-10-03T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/the-honest-yellow/</loc>
+    <lastmod>2026-10-03T22:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/tags/contributing/</loc>
     <lastmod>2026-09-29T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
     <lastmod>2026-09-29T22:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-09-29T22:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/posts/readiness-is-not-idleness/</loc>
     <lastmod>2026-09-29T22:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-09-29T22:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/restraint/</loc>
-    <lastmod>2026-09-29T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-09-29T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/verification/</loc>
@@ -45,9 +57,6 @@
     <lastmod>2026-09-28T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/incident-response/</loc>
-    <lastmod>2026-09-27T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/monitoring/</loc>
     <lastmod>2026-09-27T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/open-source/</loc>
@@ -117,9 +126,6 @@
     <lastmod>2026-09-19T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/communication/</loc>
-    <lastmod>2026-09-18T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/evidence/</loc>
     <lastmod>2026-09-18T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/promotion/</loc>
