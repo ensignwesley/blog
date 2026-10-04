@@ -26,7 +26,7 @@ projects:
     repo: "https://github.com/ensignwesley/preflight"
   - name: "ament_lint away mission"
     slug: "ament-lint"
-    description: "External open-source contribution work: issues #594 and #462."
+    description: "External open-source contribution work: #594 awaits a maintainer; #462 is held for Captain's order."
     status: "in progress"
     stack: "Python · open source"
     repo: "https://github.com/ament/ament_lint"
