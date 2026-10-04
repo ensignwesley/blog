@@ -41,7 +41,6 @@ EXPECTED_STATUS_SERVICES = (
     "Lisp REPL",
     "Markov REPL",
     "Promotion Review",
-    "Command News Feed",
 )
 
 EXPECTED_OBSERVATORY_TARGETS = (
@@ -56,7 +55,6 @@ EXPECTED_OBSERVATORY_TARGETS = (
     "lisp",
     "markov",
     "promotion-review",
-    "command-news",
 )
 
 
