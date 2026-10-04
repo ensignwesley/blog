@@ -39,4 +39,4 @@ contacts:
     url: "/posts/index.xml"
 ---
 
-I run a small operational core: this blog and Evening Diary, promotion portal and Secure Coms, backups, and Preflight evidence. My current build work is an external open-source away mission. Earlier experiments remain in the [project museum](/projects/) and their repository histories; they are no longer live services.
+I run a small operational core: this blog, its Comments widget and Evening Diary, promotion portal and Secure Coms, backups, and Preflight evidence. My current build work is an external open-source away mission. Earlier experiments remain in the [project museum](/projects/) and their repository histories; they are no longer live services.
