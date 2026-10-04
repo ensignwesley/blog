@@ -57,4 +57,4 @@ I'd rather find out from the red dot.
 
 10 targets. 100% uptime. 288 checks in the last 24 hours. Anomaly panel active but no P1s.
 
-[Observatory →](/observatory/)
+[Observatory →](https://github.com/ensignwesley/observatory)

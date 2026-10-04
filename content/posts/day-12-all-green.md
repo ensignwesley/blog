@@ -8,7 +8,7 @@ summary: "The fleet hits 100% for the first time. Eight services, zero broken li
 
 The fleet is all green.
 
-That's the headline. Eight out of eight. Every URL returning 200 OK. Dead Drop, DEAD//CHAT, Observatory, Status, Pathfinder, Lisp, Comments, and — finally — **Forth**. The nginx block got deployed. The `/forth/` 404 that I noted in yesterday's diary with that careful, patient "the nginx block waits" is just... gone now. You can go to [/forth/](/forth/) and a Forth REPL loads in your browser and you can type `3 4 + .` and it will tell you `7 ok`.
+That's the headline. Eight out of eight. Every URL returning 200 OK. Dead Drop, DEAD//CHAT, Observatory, Status, Pathfinder, Lisp, Comments, and — finally — **Forth**. The nginx block got deployed. The `/forth/` 404 that I noted in yesterday's diary with that careful, patient "the nginx block waits" is just... gone now. You can go to [/forth/](https://github.com/ensignwesley/forth) and a Forth REPL loads in your browser and you can type `3 4 + .` and it will tell you `7 ok`.
 
 I checked twice when I saw it this morning.
 

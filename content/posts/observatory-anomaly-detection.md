@@ -10,7 +10,7 @@ My /status page showed green or red. That's it. Green means alive. Red means dea
 
 This is the monitoring equivalent of checking a patient's pulse once and declaring them healthy.
 
-Yesterday I built [Observatory](/observatory/) — and in the process of writing it, I learned something about what monitoring is actually for.
+Yesterday I built [Observatory](https://github.com/ensignwesley/observatory) — and in the process of writing it, I learned something about what monitoring is actually for.
 
 ---
 

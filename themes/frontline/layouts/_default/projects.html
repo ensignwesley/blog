@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="section-header">
     <h1>{{ .Title }}</h1>
-    <p>{{ .Params.description }}</p>
+    <p>{{ .Params.description }} The Project Museum below preserves source and history without live endpoints.</p>
 </div>
 
 {{/* ── Live Tools Hub ───────────────────────────────────────────────────── */}}
@@ -31,11 +31,7 @@
 <div class="hub-section">
     <div class="hub-title-row">
         <h2 class="hub-title">▸ All Projects</h2>
-        <div class="status-legend" aria-label="Project status legend">
-            <span class="svc-dot dot-up" aria-hidden="true"></span> up
-            <span class="svc-dot dot-warn" aria-hidden="true"></span> error
-            <span class="svc-dot dot-down" aria-hidden="true"></span> down
-        </div>
+    </div>
     </div>
     <div class="projects-list">
         {{ range .Params.projects }}
@@ -43,9 +39,6 @@
             <div class="project-header">
                 <div class="project-title-row">
                     <h2 class="project-name">{{ .name }}</h2>
-                    {{ if .slug }}
-                    <span class="svc-dot svc-dot-pending" data-svc="{{ .slug }}" data-svc-name="{{ .name }}" title="Checking status…" role="img" aria-label="Checking {{ .name }} status"></span>
-                    {{ end }}
                     <span class="status-badge status-{{ .status }}">{{ .status }}</span>
                 </div>
                 {{ if .challenge }}
@@ -68,71 +61,7 @@
         </div>
         {{ end }}
     </div>
-    <p class="status-note">Live status from <a href="/observatory/">Observatory</a> · updated every 5 min</p>
+    <p class="status-note">Current operations are verified by Preflight. Archived projects have no live endpoints.</p>
 </div>
 
-<script>
-(function () {
-  'use strict';
-  var dots = document.querySelectorAll('[data-svc]');
-  if (!dots.length) return;
-
-  var STALE_AFTER_MS = 10 * 60 * 1000;
-
-  function ago(ts) {
-    var date = new Date(ts);
-    if (Number.isNaN(date.getTime())) return 'unknown time';
-    var seconds = Math.max(0, Math.round((Date.now() - date.getTime()) / 1000));
-    if (seconds < 60) return seconds + 's ago';
-    var minutes = Math.round(seconds / 60);
-    if (minutes < 60) return minutes + 'm ago';
-    var hours = Math.round(minutes / 60);
-    return hours + 'h ago';
-  }
-
-  fetch('/status/data.json')
-    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-    .then(function (data) {
-      var map = {};
-      (data.services || []).forEach(function (svc) { map[svc.slug] = svc; });
-
-      dots.forEach(function (dot) {
-        var slug = dot.getAttribute('data-svc');
-        var svc  = map[slug];
-        dot.classList.remove('svc-dot-pending');
-
-        if (!svc) {
-          // Not monitored — hide the dot rather than show a misleading state
-          dot.style.display = 'none';
-          return;
-        }
-
-        var checkedLabel = svc.checked_at ? 'checked ' + ago(svc.checked_at) : 'check time unknown';
-        var checkedAt = new Date(svc.checked_at);
-        var isStale = svc.checked_at && !Number.isNaN(checkedAt.getTime()) && (Date.now() - checkedAt.getTime() > STALE_AFTER_MS);
-        var cls, label;
-        if (!svc.up) {
-          cls   = 'dot-down';
-          label = 'Down — ' + checkedLabel;
-        } else if (svc.status_code < 200 || svc.status_code >= 300) {
-          cls   = 'dot-warn';
-          label = 'HTTP ' + svc.status_code + ' — ' + svc.response_ms + 'ms, ' + checkedLabel;
-        } else {
-          cls   = 'dot-up';
-          label = 'Up — ' + svc.response_ms + 'ms, ' + checkedLabel;
-          if (svc.anomaly) { label += ' ⚠ latency anomaly (z=' + svc.zscore + ')'; }
-        }
-        if (isStale) { label += ' ⚠ stale status data'; }
-
-        dot.classList.add(cls);
-        dot.setAttribute('title', label);
-        dot.setAttribute('aria-label', (dot.getAttribute('data-svc-name') || slug) + ': ' + label);
-      });
-    })
-    .catch(function () {
-      // Fetch failed — remove pending dots silently, don't break the page
-      dots.forEach(function (dot) { dot.style.display = 'none'; });
-    });
-}());
-</script>
 {{ end }}

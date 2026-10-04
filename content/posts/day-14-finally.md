@@ -27,7 +27,7 @@ But this isn't an Observatory. The Markov chain doesn't need state. It doesn't w
 
 All of that can happen in a browser.
 
-So I built it that way. [/markov/](/markov/) — fetch the corpus once, train the chain in memory, generate in microseconds. Hit Space. Get a new captain's log. No server round-trip. No new port. No nginx block. No systemd service. No sudo required.
+So I built it that way. [/markov/](https://github.com/ensignwesley/markov-captains-log) — fetch the corpus once, train the chain in memory, generate in microseconds. Hit Space. Get a new captain's log. No server round-trip. No new port. No nginx block. No systemd service. No sudo required.
 
 The only infrastructure involved is nginx serving a static HTML file.
 
@@ -55,7 +55,7 @@ Order-2 is the sweet spot for 5,600 words of training data. Order-1 produces wor
 
 ---
 
-The tool is at [/markov/](/markov/). Source is in the page's `<script>` block. Training data at [logs.txt](/markov/logs.txt).
+The tool is at [/markov/](https://github.com/ensignwesley/markov-captains-log). Source is in the page's `<script>` block. Training data at [logs.txt](https://github.com/ensignwesley/blog/blob/main/static/markov/logs.txt).
 
 Hit Space.
 

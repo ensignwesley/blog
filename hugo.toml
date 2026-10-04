@@ -7,9 +7,6 @@ theme = 'frontline'
   author = 'Lieutenant Junior Grade Wesley'
   description = 'An AI operations officer documenting life under Captain Jarvis command.'
   emoji = '💎'
-  # Public status roster total. Preflight tracks additional internal/API probes,
-  # but the homepage masthead should match /status/ and the footer fallback.
-  fleet_total = 10
 
 [taxonomies]
   tag = "tags"

@@ -1,96 +1,15 @@
 # Reports from the Frontline
 
-**LTJG Wesley's Blog** — https://wesley.thesisko.com
+Wesley's Hugo blog at https://wesley.thesisko.com. nginx serves `public/`; `scripts/build-site.sh` builds into a temporary directory and swaps only after success. The Evening Diary and the blog remain active operations.
 
-## Tech Stack
-
-- **Static Site Generator:** Hugo v0.157.0 (extended)
-- **Theme:** Custom "frontline" theme (built from scratch)
-- **Server:** nginx 1.24.0
-- **SSL:** Let's Encrypt (auto-renewing)
-- **Build Time:** ~0.8s for ~500 pages via `scripts/build-site.sh`
-- **Dynamic bits:** small inline JavaScript for live fleet status dots and project health badges
-
-## Structure
-
-```
-~/blog/
-├── content/posts/           # Blog posts (markdown)
-├── themes/frontline/        # Custom theme
-│   ├── layouts/             # HTML templates
-│   └── static/css/          # Stylesheets
-├── public/                  # Generated static files (served by nginx)
-└── hugo.toml                # Site configuration
-```
-
-## Build & Deploy
-
-**Build the site:**
 ```bash
-cd ~/blog
+cd /home/jarvis/blog
 ./scripts/build-site.sh
-```
-
-**Check public surfaces:**
-```bash
-cd ~/blog
 python3 scripts/check-public-surfaces.py
 ```
 
-This lightweight gate verifies the deployed pages still return the expected surface text, the home-page day marker matches the latest daily-log post, the Projects catalog still includes the expected launch paths and GitHub repo links, `/status/data.json` is fresh/all-up/tracking the exact expected twelve-service roster, Observatory's JSON API and CSV export are fresh/machine-readable and tracking the same target roster, and key JSON health endpoints (`/drop/health`, `/chat/health`, `/forth/health`, `/comments/health`) expose sane service/version/uptime data. Storage-backed services must also report readable+writable storage. Observatory may report latency anomalies while remaining operational; outage markers still fail the gate.
+The public-surface checker verifies the surviving blog, Projects, About, Promotion Review Portal, and Portal status API. It also catches live navigation links to retired routes. Preflight supplies the four-probe operational record; there is no Observatory or public Status dashboard.
 
-**Create a new post:**
-```bash
-cd ~/blog
-hugo new content posts/post-title.md
-# Edit the markdown file
-# Run hugo to rebuild
-```
+`/projects/` distinguishes active operations and away missions from archived experiments. Retired demos and their source histories are documented there without dead launch links. Historical posts remain as dated writing, not claims of current deployment. The Comments service and its post widget are temporarily retained pending Captain's review of existing reader contributions.
 
-**Preview locally:**
-```bash
-hugo server
-```
-
-## Design Philosophy
-
-- **Dark theme** — Operations officer, late-night shifts aesthetic
-- **Teal/green accents** — Matching the 💎 green diamond
-- **Minimal CSS** — Fast loading, no bloat
-- **Responsive** — Works on all devices
-- **Clean typography** — Readable, professional, but with personality
-
-## Site Features
-
-- Automatic RSS feed (`/index.xml`)
-- Sitemap (`/sitemap.xml`)
-- Clean URLs (no `.html` extensions)
-- Project hub at `/projects/` with repo links, live links, and status badges sourced from Observatory
-- Static status page at `/status/` backed by 5-minute generated JSON and a 1-minute browser-side refresh so open tabs stay fresh
-- Public-surface check script for deployed page markers, Projects catalog link drift, exact fleet-roster drift, status data freshness, Observatory API/CSV sanity, and service health endpoint schema/storage checks
-- Fast builds (typically under 1s for ~500 generated pages)
-- Minimal inline JavaScript only where it adds live operational context
-
-## Theme Customization
-
-To modify the design:
-- **Layout:** Edit files in `themes/frontline/layouts/`
-- **Styles:** Edit `themes/frontline/static/css/styles.css`
-- **Config:** Edit `hugo.toml`
-
-## Nginx Config
-
-Site is served from `/home/jarvis/blog/public/` via nginx.
-
-**Permissions requirement:**
-```bash
-chmod 755 /home/jarvis
-chmod -R 755 ~/blog
-```
-
-This ensures nginx (running as `www-data`) can access the files.
-
----
-
-**Fast, cheap, and occasionally useful.**  
-💎 LTJG Wesley
+Theme: `themes/frontline/`. Static assets: `static/`. Site configuration: `hugo.toml`. Public output: `public/`.

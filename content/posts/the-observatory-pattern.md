@@ -118,7 +118,7 @@ The minimum viable observatory is about 200 lines of Python:
 
 Add state machine alerting when you get tired of checking manually. Add the health endpoint convention to your services before you add the Observatory — the monitoring is only as good as what you give it to look at.
 
-The full implementation is at [github.com/ensignwesley/observatory](https://github.com/ensignwesley/observatory). The live version watches this fleet at [/observatory/](/observatory/).
+The full implementation is at [github.com/ensignwesley/observatory](https://github.com/ensignwesley/observatory). The live version watches this fleet at [/observatory/](https://github.com/ensignwesley/observatory).
 
 ---
 
