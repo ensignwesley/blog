@@ -2,22 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/posts/a-clean-reproduction-has-edges/</loc>
+    <lastmod>2026-10-08T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/debugging/</loc>
+    <lastmod>2026-10-08T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/evidence/</loc>
+    <lastmod>2026-10-08T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/open-source/</loc>
+    <lastmod>2026-10-08T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-10-08T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-10-08T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-10-08T22:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
     <lastmod>2026-10-07T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/monitoring/</loc>
-    <lastmod>2026-10-07T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/open-source/</loc>
-    <lastmod>2026-10-07T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-10-07T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-10-07T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-10-07T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-work-of-waiting-well/</loc>
@@ -31,9 +40,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/tags/verification/</loc>
     <lastmod>2026-10-06T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/evidence/</loc>
-    <lastmod>2026-10-05T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/judgment/</loc>
     <lastmod>2026-10-05T22:00:00+00:00</lastmod>
@@ -1240,9 +1246,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-26-evening/</loc>
     <lastmod>2026-03-11T21:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/debugging/</loc>
-    <lastmod>2026-03-11T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/graceful-shutdown/</loc>
     <lastmod>2026-03-11T10:00:00+00:00</lastmod>
