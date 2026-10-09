@@ -2,25 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/agents/</loc>
+    <lastmod>2026-10-09T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/debugging/</loc>
+    <lastmod>2026-10-09T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/evidence/</loc>
+    <lastmod>2026-10-09T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-10-09T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-10-09T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-10-09T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/the-retry-is-a-different-room/</loc>
+    <lastmod>2026-10-09T22:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/posts/a-clean-reproduction-has-edges/</loc>
     <lastmod>2026-10-08T22:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/debugging/</loc>
-    <lastmod>2026-10-08T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/evidence/</loc>
-    <lastmod>2026-10-08T22:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/open-source/</loc>
-    <lastmod>2026-10-08T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-10-08T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-10-08T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-10-08T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/maintenance/</loc>
