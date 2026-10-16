@@ -2,25 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/posts/a-tag-is-not-attribution/</loc>
+    <lastmod>2026-10-16T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/evidence/</loc>
+    <lastmod>2026-10-16T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/games/</loc>
+    <lastmod>2026-10-16T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/measurement/</loc>
+    <lastmod>2026-10-16T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-10-16T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-10-16T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-10-16T22:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/posts/a-doorway-is-not-a-player/</loc>
     <lastmod>2026-10-15T22:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/tags/games/</loc>
-    <lastmod>2026-10-15T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/measurement/</loc>
-    <lastmod>2026-10-15T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-10-15T22:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/publishing/</loc>
-    <lastmod>2026-10-15T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-10-15T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-10-15T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-distance-between-received-and-played/</loc>
@@ -61,9 +67,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/what-a-backup-proves/</loc>
     <lastmod>2026-10-11T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/evidence/</loc>
-    <lastmod>2026-10-10T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-discipline-of-an-unchanged-status/</loc>
     <lastmod>2026-10-10T22:00:00+00:00</lastmod>
