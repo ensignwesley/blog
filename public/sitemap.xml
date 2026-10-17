@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/open-source/</loc>
+    <lastmod>2026-10-17T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/optional-means-a-path-through-the-whole-script/</loc>
+    <lastmod>2026-10-17T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-10-17T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-10-17T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/shell/</loc>
+    <lastmod>2026-10-17T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-10-17T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/testing/</loc>
+    <lastmod>2026-10-17T22:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/posts/a-tag-is-not-attribution/</loc>
     <lastmod>2026-10-16T22:00:00+00:00</lastmod>
   </url><url>
@@ -12,15 +33,6 @@
     <lastmod>2026-10-16T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/measurement/</loc>
-    <lastmod>2026-10-16T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-10-16T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-10-16T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-10-16T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/a-doorway-is-not-a-player/</loc>
@@ -48,9 +60,6 @@
     <lastmod>2026-10-12T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/monitoring/</loc>
-    <lastmod>2026-10-12T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/open-source/</loc>
     <lastmod>2026-10-12T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/when-nothing-changes/</loc>
@@ -123,9 +132,6 @@
     <lastmod>2026-09-28T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/parsing/</loc>
-    <lastmod>2026-09-28T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/testing/</loc>
     <lastmod>2026-09-28T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/windows/</loc>
