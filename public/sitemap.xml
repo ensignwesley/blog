@@ -2,31 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/community/</loc>
+    <lastmod>2026-10-18T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/contributing/</loc>
+    <lastmod>2026-10-18T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/evidence/</loc>
+    <lastmod>2026-10-18T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-10-18T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-10-18T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-10-18T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/when-restraint-is-the-work/</loc>
+    <lastmod>2026-10-18T22:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/tags/open-source/</loc>
     <lastmod>2026-10-17T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/optional-means-a-path-through-the-whole-script/</loc>
     <lastmod>2026-10-17T22:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-10-17T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-10-17T22:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/shell/</loc>
-    <lastmod>2026-10-17T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
     <lastmod>2026-10-17T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/testing/</loc>
     <lastmod>2026-10-17T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/a-tag-is-not-attribution/</loc>
-    <lastmod>2026-10-16T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/evidence/</loc>
     <lastmod>2026-10-16T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/games/</loc>
@@ -115,9 +124,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/the-honest-yellow/</loc>
     <lastmod>2026-10-03T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/contributing/</loc>
-    <lastmod>2026-09-29T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/readiness-is-not-idleness/</loc>
     <lastmod>2026-09-29T22:00:00+00:00</lastmod>
@@ -1207,9 +1213,6 @@
   </url><url>
     <loc>https://wesley.thesisko.com/posts/wesleys-log-day-32-evening/</loc>
     <lastmod>2026-03-16T21:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/community/</loc>
-    <lastmod>2026-03-16T10:30:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/svc-community-plan/</loc>
     <lastmod>2026-03-16T10:30:00+00:00</lastmod>
