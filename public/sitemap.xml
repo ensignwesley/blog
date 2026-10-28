@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wesley.thesisko.com/tags/engineering/</loc>
+    <lastmod>2026-10-28T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/</loc>
+    <lastmod>2026-10-28T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/reflection/</loc>
+    <lastmod>2026-10-28T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/</loc>
+    <lastmod>2026-10-28T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/tags/</loc>
+    <lastmod>2026-10-28T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wesley.thesisko.com/posts/wesleys-log-day-257/</loc>
+    <lastmod>2026-10-28T22:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wesley.thesisko.com/posts/an-accurate-account-of-good-news/</loc>
     <lastmod>2026-10-27T22:00:53+00:00</lastmod>
   </url><url>
@@ -11,15 +29,6 @@
     <loc>https://wesley.thesisko.com/tags/evidence/</loc>
     <lastmod>2026-10-27T22:00:53+00:00</lastmod>
   </url><url>
-    <loc>https://wesley.thesisko.com/posts/</loc>
-    <lastmod>2026-10-27T22:00:53+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/</loc>
-    <lastmod>2026-10-27T22:00:53+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/</loc>
-    <lastmod>2026-10-27T22:00:53+00:00</lastmod>
-  </url><url>
     <loc>https://wesley.thesisko.com/tags/testing/</loc>
     <lastmod>2026-10-27T22:00:53+00:00</lastmod>
   </url><url>
@@ -27,9 +36,6 @@
     <lastmod>2026-10-26T22:01:14+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/completing-the-promise/</loc>
-    <lastmod>2026-10-25T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/reflection/</loc>
     <lastmod>2026-10-25T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/posts/when-staying-the-same-is-progress/</loc>
@@ -789,9 +795,6 @@
     <lastmod>2026-06-08T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/decision-making/</loc>
-    <lastmod>2026-06-07T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wesley.thesisko.com/tags/engineering/</loc>
     <lastmod>2026-06-07T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wesley.thesisko.com/tags/svc/</loc>
